@@ -237,7 +237,7 @@ m_EG_OMathMathElements =
   | element sSubSup { m_CT_SSubSup }
   | element sSup { m_CT_SSup }
   | element r { m_CT_R }
-m_EG_OMathElements = m_EG_OMathMathElements | w_EG_RunLevelElts
+m_EG_OMathElements = m_EG_OMathMathElements | w_EG_PContentMath
 m_CT_OMathArgPr = element argSz { m_CT_Integer2 }?
 m_CT_OMathArg =
   element argPr { m_CT_OMathArgPr }?,

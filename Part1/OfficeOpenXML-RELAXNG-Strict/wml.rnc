@@ -617,6 +617,15 @@ w_CT_ParaRPrChange =
   element rPr { w_CT_ParaRPrOriginal }
 w_CT_RunTrackChange =
   w_CT_TrackChange, (w_EG_ContentRunContent | m_EG_OMathMathElements)*
+w_EG_PContentMath = w_EG_PContentBase* | w_EG_ContentRunContentBase*
+w_EG_PContentBase =
+  element customXml { w_CT_CustomXmlRun }
+  | element fldSimple { w_CT_SimpleField }*
+  | element hyperlink { w_CT_Hyperlink }
+w_EG_ContentRunContentBase =
+  element smartTag { w_CT_SmartTagRun }
+  | element sdt { w_CT_SdtRun }
+  | w_EG_RunLevelElts*
 w_EG_CellMarkupElements =
   element cellIns { w_CT_TrackChange }?
   | element cellDel { w_CT_TrackChange }?
@@ -1133,8 +1142,15 @@ w_CT_RPr = w_EG_RPrContent?
 w_EG_RPr = element rPr { w_CT_RPr }?
 w_EG_RPrMath =
   w_EG_RPr
-  | element ins { w_CT_RPrChange }
-  | element del { w_CT_RPrChange }
+  | element ins { w_CT_MathCtrlIns }
+  | element del { w_CT_MathCtrlDel }
+w_CT_MathCtrlIns =
+  w_CT_TrackChange,
+  (element del { w_CT_RPrChange }
+   | element rPr { w_CT_RPr })?
+w_CT_MathCtrlDel =
+  w_CT_TrackChange,
+  (element rPr { w_CT_RPr })?
 w_CT_RPrOriginal = w_EG_RPrBase*
 w_CT_ParaRPrOriginal = w_EG_ParaRPrTrackChanges?, w_EG_RPrBase*
 w_CT_ParaRPr =

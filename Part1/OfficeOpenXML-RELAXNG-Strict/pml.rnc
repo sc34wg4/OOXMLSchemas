@@ -603,7 +603,6 @@ p_CT_PhotoAlbum =
   element extLst { p_CT_ExtensionList }?
 p_ST_SlideSizeCoordinate =
   xsd:int {
-    minInclusive = "0"
     minInclusive = "914400"
     maxInclusive = "51206400"
   }
@@ -862,6 +861,7 @@ p_CT_GraphicalObjectFrameNonVisual =
   element cNvGraphicFramePr { a_CT_NonVisualGraphicFrameProperties },
   element nvPr { p_CT_ApplicationNonVisualDrawingProps }
 p_CT_GraphicalObjectFrame =
+  attribute bwMode { a_ST_BlackWhiteMode }?,
   element nvGraphicFramePr { p_CT_GraphicalObjectFrameNonVisual },
   element xfrm { a_CT_Transform2D },
   a_graphic,

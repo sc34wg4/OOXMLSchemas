@@ -307,7 +307,7 @@
   </xsd:complexType>
   <xsd:simpleType name="ST_HoleSize">
     <xsd:restriction base="xsd:unsignedByte">
-      <xsd:minInclusive value="10"/>
+      <xsd:minInclusive value="1"/>
       <xsd:maxInclusive value="90"/>
     </xsd:restriction>
   </xsd:simpleType>
@@ -432,6 +432,7 @@
       <xsd:enumeration value="star"/>
       <xsd:enumeration value="triangle"/>
       <xsd:enumeration value="x"/>
+      <xsd:enumeration value="auto"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_MarkerStyle">
@@ -489,9 +490,8 @@
     <xsd:attribute name="val" type="ST_Order" default="2"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_Period">
-    <xsd:restriction base="xsd:unsignedByte">
+    <xsd:restriction base="xsd:unsignedInt">
       <xsd:minInclusive value="2"/>
-      <xsd:maxInclusive value="255"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_Period">
@@ -1020,7 +1020,7 @@
     <xsd:attribute name="val" type="ST_TickLblPos" default="nextTo"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_Skip">
-    <xsd:restriction base="xsd:unsignedShort">
+    <xsd:restriction base="xsd:unsignedInt">
       <xsd:minInclusive value="1"/>
     </xsd:restriction>
   </xsd:simpleType>
