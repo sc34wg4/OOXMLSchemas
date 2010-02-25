@@ -190,7 +190,7 @@ dchrt_CT_FirstSliceAng =
   ## default value: 0
   attribute val { dchrt_ST_FirstSliceAng }?
 dchrt_ST_HoleSize =
-  xsd:unsignedByte { minInclusive = "10" maxInclusive = "90" }
+  xsd:unsignedByte { minInclusive = "1" maxInclusive = "90" }
 dchrt_CT_HoleSize =
   
   ## default value: 10
@@ -270,6 +270,7 @@ dchrt_ST_MarkerStyle =
   | string "star"
   | string "triangle"
   | string "x"
+  | string "auto"
 dchrt_CT_MarkerStyle = attribute val { dchrt_ST_MarkerStyle }
 dchrt_ST_MarkerSize =
   xsd:unsignedByte { minInclusive = "2" maxInclusive = "72" }
@@ -309,7 +310,7 @@ dchrt_CT_Order =
   ## default value: 2
   attribute val { dchrt_ST_Order }?
 dchrt_ST_Period =
-  xsd:unsignedByte { minInclusive = "2" maxInclusive = "255" }
+  xsd:unsignedInt { minInclusive = "2" }
 dchrt_CT_Period =
   
   ## default value: 2
@@ -649,7 +650,7 @@ dchrt_CT_TickLblPos =
   
   ## default value: nextTo
   attribute val { dchrt_ST_TickLblPos }?
-dchrt_ST_Skip = xsd:unsignedShort { minInclusive = "1" }
+dchrt_ST_Skip = xsd:unsignedInt { minInclusive = "1" }
 dchrt_CT_Skip = attribute val { dchrt_ST_Skip }
 dchrt_ST_TimeUnit = string "days" | string "months" | string "years"
 dchrt_CT_TimeUnit =

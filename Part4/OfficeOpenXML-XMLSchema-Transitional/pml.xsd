@@ -11,7 +11,7 @@
     schemaLocation="shared-relationshipReference.xsd"/>
   <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/main"
     schemaLocation="dml-main.xsd"/>
-  <xsd:import id="s" namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
     schemaLocation="shared-commonSimpleTypes.xsd"/>
   <xsd:simpleType name="ST_TransitionSideDirectionType">
     <xsd:restriction base="xsd:token">
@@ -1325,6 +1325,7 @@
       <xsd:element ref="a:graphic" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="extLst" type="CT_ExtensionListModify" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
+    <xsd:attribute name="bwMode" type="a:ST_BlackWhiteMode" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_GroupShapeNonVisual">
     <xsd:sequence>

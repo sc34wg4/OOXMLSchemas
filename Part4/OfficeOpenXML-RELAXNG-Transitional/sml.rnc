@@ -216,7 +216,7 @@ sml_CT_CalcChain =
   element c { sml_CT_CalcCell }+,
   element extLst { sml_CT_ExtensionList }?
 sml_CT_CalcCell =
-  attribute r { sml_ST_CellRef },
+  attribute (r | ref) { sml_ST_CellRef }, 
   
   ## default value: 0
   attribute i { xsd:int }?,
@@ -4080,10 +4080,10 @@ sml_AG_AutoFormat =
   attribute applyWidthHeightFormats { xsd:boolean }?
 sml_externalLink = element externalLink { sml_CT_ExternalLink }
 sml_CT_ExternalLink =
-  element externalBook { sml_CT_ExternalBook }?
-  | element ddeLink { sml_CT_DdeLink }?
-  | element oleLink { sml_CT_OleLink }?
-  | element extLst { sml_CT_ExtensionList }?
+  (element externalBook { sml_CT_ExternalBook }?
+   | element ddeLink { sml_CT_DdeLink }?
+   | element oleLink { sml_CT_OleLink }?),
+  element extLst { sml_CT_ExtensionList }?
 sml_CT_ExternalBook =
   r_id,
   element sheetNames { sml_CT_ExternalSheetNames }?,

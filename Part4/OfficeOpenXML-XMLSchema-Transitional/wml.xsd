@@ -994,6 +994,26 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  <xsd:group name="EG_PContentMath">
+    <xsd:choice>
+      <xsd:group ref="EG_PContentBase" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:group ref="EG_ContentRunContentBase" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="EG_PContentBase">
+    <xsd:choice>
+      <xsd:element name="customXml" type="CT_CustomXmlRun"/>
+      <xsd:element name="fldSimple" type="CT_SimpleField" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="hyperlink" type="CT_Hyperlink"/>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="EG_ContentRunContentBase">
+    <xsd:choice>
+      <xsd:element name="smartTag" type="CT_SmartTagRun"/>
+      <xsd:element name="sdt" type="CT_SdtRun"/>
+      <xsd:group ref="EG_RunLevelElts" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:choice>
+  </xsd:group>
   <xsd:group name="EG_CellMarkupElements">
     <xsd:choice>
       <xsd:element name="cellIns" type="CT_TrackChange" minOccurs="0"/>
@@ -1850,10 +1870,29 @@
   <xsd:group name="EG_RPrMath">
     <xsd:choice>
       <xsd:group ref="EG_RPr"/>
-      <xsd:element name="ins" type="CT_RPrChange"/>
-      <xsd:element name="del" type="CT_RPrChange"/>
+      <xsd:element name="ins" type="CT_MathCtrlIns"/>
+      <xsd:element name="del" type="CT_MathCtrlIns "/>
     </xsd:choice>
   </xsd:group>
+  <xsd:complexType name="CT_MathCtrlIns">
+    <xsd:complexContent>
+      <xsd:extension base="CT_TrackChange">
+        <xsd:choice minOccurs="0">
+          <xsd:element name="del" type="CT_RPrChange" minOccurs="1"/>
+          <xsd:element name="rPr" type="CT_RPr" minOccurs="1"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CT_MathCtrlDel">
+    <xsd:complexContent>
+      <xsd:extension base="CT_TrackChange">
+        <xsd:choice minOccurs="0">
+          <xsd:element name="rPr" type="CT_RPr" minOccurs="1"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
   <xsd:complexType name="CT_RPrOriginal">
     <xsd:sequence>
       <xsd:group ref="EG_RPrBase" minOccurs="0" maxOccurs="unbounded"/>

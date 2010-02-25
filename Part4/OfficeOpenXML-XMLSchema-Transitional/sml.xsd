@@ -8,9 +8,9 @@
   elementFormDefault="qualified">
   <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
     schemaLocation="shared-relationshipReference.xsd"/>
-  <xsd:import id="s" namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
     schemaLocation="shared-commonSimpleTypes.xsd"/>
-  <xsd:import id="xdr"
+  <xsd:import 
     namespace="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
     schemaLocation="dml-spreadsheetDrawing.xsd"/>
   <xsd:complexType name="CT_AutoFilter">
@@ -262,7 +262,8 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_CalcCell">
-    <xsd:attribute name="r" type="ST_CellRef" use="required"/>
+    <xsd:attribute name="r" type="ST_CellRef" use="optional"/>
+    <xsd:attribute name="ref" type="ST_CellRef" use="optional"/>
     <xsd:attribute name="i" type="xsd:int" use="optional" default="0"/>
     <xsd:attribute name="s" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="l" type="xsd:boolean" use="optional" default="false"/>
@@ -3797,12 +3798,14 @@
   </xsd:attributeGroup>
   <xsd:element name="externalLink" type="CT_ExternalLink"/>
   <xsd:complexType name="CT_ExternalLink">
-    <xsd:choice>
-      <xsd:element name="externalBook" type="CT_ExternalBook" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="ddeLink" type="CT_DdeLink" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="oleLink" type="CT_OleLink" minOccurs="0" maxOccurs="1"/>
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="externalBook" type="CT_ExternalBook" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="ddeLink" type="CT_DdeLink" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="oleLink" type="CT_OleLink" minOccurs="0" maxOccurs="1"/>
+      </xsd:choice>
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
-    </xsd:choice>
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_ExternalBook">
     <xsd:sequence>
