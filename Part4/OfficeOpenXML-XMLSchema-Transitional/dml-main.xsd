@@ -184,9 +184,9 @@
   </xsd:complexType>
   <xsd:complexType name="CT_OfficeArtExtension">
     <xsd:sequence>
-      <xsd:any processContents="lax"/>
+      <xsd:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="uri" type="xsd:token"/>
+    <xsd:attribute name="uri" type="xsd:token" use="required"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_Coordinate">
     <xsd:union memberTypes="ST_CoordinateUnqualified s:ST_UniversalMeasure"/>
@@ -616,7 +616,7 @@
     <xsd:sequence>
       <xsd:group ref="EG_ColorTransform" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="val" type="ST_PresetColorVal"/>
+    <xsd:attribute name="val" type="ST_PresetColorVal" use="required"/>
   </xsd:complexType>
   <xsd:group name="EG_OfficeArtExtensionList">
     <xsd:sequence>
@@ -854,7 +854,7 @@
     <xsd:sequence>
       <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="strict"/>
     </xsd:sequence>
-    <xsd:attribute name="uri" type="xsd:token"/>
+    <xsd:attribute name="uri" type="xsd:token" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_GraphicalObject">
     <xsd:sequence>
@@ -1621,7 +1621,7 @@
     <xsd:attribute name="blend" type="ST_BlendMode" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_EffectReference">
-    <xsd:attribute name="ref" type="xsd:token"/>
+    <xsd:attribute name="ref" type="xsd:token" use="required"/>
   </xsd:complexType>
   <xsd:group name="EG_Effect">
     <xsd:choice>
@@ -2732,7 +2732,15 @@
       <xsd:element name="buClr" type="CT_Color" minOccurs="1" maxOccurs="1"/>
     </xsd:choice>
   </xsd:group>
+  <xsd:simpleType name="ST_TextBulletSize">
+    <xsd:union memberTypes="ST_TextBulletSizePercent ST_TextBulletSizeDecimal"/>
+  </xsd:simpleType>
   <xsd:simpleType name="ST_TextBulletSizePercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*((2[5-9])|([3-9][0-9])|([1-3][0-9][0-9])|400)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_TextBulletSizeDecimal">
     <xsd:restriction base="ST_PercentageDecimal">
       <xsd:minInclusive value="25000"/>
       <xsd:maxInclusive value="400000"/>
@@ -2740,10 +2748,10 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_TextBulletSizeFollowText"/>
   <xsd:complexType name="CT_TextBulletSizePercent">
-    <xsd:attribute name="val" type="ST_TextBulletSizePercent"/>
+    <xsd:attribute name="val" type="ST_TextBulletSizePercent" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TextBulletSizePoint">
-    <xsd:attribute name="val" type="ST_TextFontSize"/>
+    <xsd:attribute name="val" type="ST_TextFontSize" use="required"/>
   </xsd:complexType>
   <xsd:group name="EG_TextBulletSize">
     <xsd:choice>
@@ -2805,7 +2813,7 @@
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
   <xsd:complexType name="CT_TextFont">
-    <xsd:attribute name="typeface" type="ST_TextTypeface"/>
+    <xsd:attribute name="typeface" type="ST_TextTypeface" use="required"/>
     <xsd:attribute name="panose" type="s:ST_Panose" use="optional"/>
     <xsd:attribute name="pitchFamily" type="xsd:byte" use="optional" default="0"/>
     <xsd:attribute name="charset" type="xsd:byte" use="optional" default="1"/>

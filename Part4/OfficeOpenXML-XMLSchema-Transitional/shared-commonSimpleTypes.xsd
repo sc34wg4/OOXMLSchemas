@@ -62,7 +62,13 @@
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="ST_OnOff">
-    <xsd:restriction base="xsd:boolean"/>
+    <xsd:union memberTypes="xsd:boolean ST_OnOff1"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_OnOff1">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="on"/>
+      <xsd:enumeration value="off"/>
+    </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="ST_String">
     <xsd:restriction base="xsd:string"/>

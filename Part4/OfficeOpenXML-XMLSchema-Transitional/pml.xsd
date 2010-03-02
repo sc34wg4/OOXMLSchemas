@@ -760,9 +760,9 @@
   </xsd:complexType>
   <xsd:complexType name="CT_Extension">
     <xsd:sequence>
-      <xsd:any processContents="lax"/>
+      <xsd:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="uri" type="xsd:token"/>
+    <xsd:attribute name="uri" type="xsd:token" use="required"/>
   </xsd:complexType>
   <xsd:group name="EG_ExtensionList">
     <xsd:sequence>
@@ -841,11 +841,13 @@
     <xsd:attribute name="updateAutomatic" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_OleObject">
-    <xsd:choice minOccurs="1" maxOccurs="1">
-      <xsd:element name="embed" type="CT_OleObjectEmbed"/>
-      <xsd:element name="link" type="CT_OleObjectLink"/>
-      <xsd:element name="pic" type="CT_Picture"/>
-    </xsd:choice>
+    <xsd:sequence>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+        <xsd:element name="embed" type="CT_OleObjectEmbed"/>
+        <xsd:element name="link" type="CT_OleObjectLink"/>
+      </xsd:choice>
+      <xsd:element name="pic" type="CT_Picture" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
     <xsd:attributeGroup ref="AG_Ole"/>
     <xsd:attribute name="progId" type="xsd:string" use="optional"/>
   </xsd:complexType>
@@ -1544,8 +1546,8 @@
   </xsd:complexType>
   <xsd:element name="sldSyncPr" type="CT_SlideSyncProperties"/>
   <xsd:complexType name="CT_StringTag">
-    <xsd:attribute name="name" type="xsd:string"/>
-    <xsd:attribute name="val" type="xsd:string"/>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="val" type="xsd:string" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TagList">
     <xsd:sequence>

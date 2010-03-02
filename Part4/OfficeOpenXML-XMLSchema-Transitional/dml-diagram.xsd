@@ -404,6 +404,9 @@
   <xsd:simpleType name="ST_ModelId">
     <xsd:union memberTypes="xsd:int s:ST_Guid"/>
   </xsd:simpleType>
+  <xsd:simpleType name="ST_PrSetCustVal">
+    <xsd:union memberTypes="s:ST_Percentage xsd:int"/>
+  </xsd:simpleType>
   <xsd:complexType name="CT_ElemPropSet">
     <xsd:sequence>
       <xsd:element name="presLayoutVars" type="CT_LayoutVariablePropertySet" minOccurs="0"
@@ -429,15 +432,15 @@
     <xsd:attribute name="custFlipHor" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="custSzX" type="xsd:int" use="optional"/>
     <xsd:attribute name="custSzY" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custScaleX" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custScaleY" type="xsd:int" use="optional"/>
+    <xsd:attribute name="custScaleX" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custScaleY" type="ST_PrSetCustVal" use="optional"/>
     <xsd:attribute name="custT" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="custLinFactX" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custLinFactY" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custLinFactNeighborX" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custLinFactNeighborY" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custRadScaleRad" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custRadScaleInc" type="xsd:int" use="optional"/>
+    <xsd:attribute name="custLinFactX" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custLinFactY" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custLinFactNeighborX" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custLinFactNeighborY" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custRadScaleRad" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custRadScaleInc" type="ST_PrSetCustVal" use="optional"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_Direction" final="restriction">
     <xsd:restriction base="xsd:token">

@@ -195,13 +195,21 @@
     <xsd:attribute name="val" type="ST_RotX" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_HPercent">
+    <xsd:union memberTypes="ST_HPercentWithSymbol ST_HPercentUShort"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_HPercentWithSymbol">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(([5-9])|([1-9][0-9])|([1-4][0-9][0-9])|500)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_HPercentUShort">
     <xsd:restriction base="xsd:unsignedShort">
       <xsd:minInclusive value="5"/>
       <xsd:maxInclusive value="500"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_HPercent">
-    <xsd:attribute name="val" type="ST_HPercent" default="100"/>
+    <xsd:attribute name="val" type="ST_HPercent" default="100%"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_RotY">
     <xsd:restriction base="xsd:unsignedShort">
@@ -213,22 +221,38 @@
     <xsd:attribute name="val" type="ST_RotY" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_DepthPercent">
+    <xsd:union memberTypes="ST_DepthPercentWithSymbol ST_DepthPercentUShort"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_DepthPercentWithSymbol">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(([2-9][0-9])|([1-9][0-9][0-9])|(1[0-9][0-9][0-9])|2000)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_DepthPercentUShort">
     <xsd:restriction base="xsd:unsignedShort">
       <xsd:minInclusive value="20"/>
       <xsd:maxInclusive value="2000"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_DepthPercent">
-    <xsd:attribute name="val" type="ST_DepthPercent" default="100"/>
+    <xsd:attribute name="val" type="ST_DepthPercent" default="100%"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_Perspective">
+    <xsd:union memberTypes="ST_PerspectivePercent ST_PerspectiveUByte"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_PerspectivePercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(([0-9])|([1-9][0-9])|(1[0-9][0-9])|(2|[0-3][0-9])|240)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_PerspectiveUByte">
     <xsd:restriction base="xsd:unsignedByte">
       <xsd:minInclusive value="0"/>
       <xsd:maxInclusive value="240"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_Perspective">
-    <xsd:attribute name="val" type="ST_Perspective" default="30"/>
+    <xsd:attribute name="val" type="ST_Perspective" default="30%"/>
   </xsd:complexType>
   <xsd:complexType name="CT_View3D">
     <xsd:sequence>
@@ -243,11 +267,22 @@
   </xsd:complexType>
   <xsd:complexType name="CT_Surface">
     <xsd:sequence>
-      <xsd:element name="thickness" type="CT_UnsignedInt" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="thickness" type="CT_Thickness" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="spPr" type="a:CT_ShapeProperties" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="pictureOptions" type="CT_PictureOptions" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extLst" type="CT_ExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="ST_Thickness">
+    <xsd:union memberTypes="ST_ThicknessPercent xsd:unsignedInt"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_ThicknessPercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="([0-9]+)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CT_Thickness">
+    <xsd:attribute name="val" type="ST_Thickness" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_DTable">
     <xsd:sequence>
@@ -261,31 +296,55 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:simpleType name="ST_GapAmount">
+    <xsd:union memberTypes="ST_GapAmountPercent ST_GapAmountUShort"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_GapAmountPercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(([0-9])|([1-9][0-9])|([1-4][0-9][0-9])|500)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_GapAmountUShort">
     <xsd:restriction base="xsd:unsignedShort">
       <xsd:minInclusive value="0"/>
       <xsd:maxInclusive value="500"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_GapAmount">
-    <xsd:attribute name="val" type="ST_GapAmount" default="150"/>
+    <xsd:attribute name="val" type="ST_GapAmount" default="150%"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_Overlap">
+    <xsd:union memberTypes="ST_OverlapPercent ST_OverlapByte"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_OverlapPercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="(-?0*(([0-9])|([1-9][0-9])|100))%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_OverlapByte">
     <xsd:restriction base="xsd:byte">
       <xsd:minInclusive value="-100"/>
       <xsd:maxInclusive value="100"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_Overlap">
-    <xsd:attribute name="val" type="ST_Overlap" default="0"/>
+    <xsd:attribute name="val" type="ST_Overlap" default="0%"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_BubbleScale">
+    <xsd:union memberTypes="ST_BubbleScalePercent ST_BubbleScaleUInt"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_BubbleScalePercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(([0-9])|([1-9][0-9])|([1-2][0-9][0-9])|300)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_BubbleScaleUInt">
     <xsd:restriction base="xsd:unsignedInt">
       <xsd:minInclusive value="0"/>
       <xsd:maxInclusive value="300"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_BubbleScale">
-    <xsd:attribute name="val" type="ST_BubbleScale" default="100"/>
+    <xsd:attribute name="val" type="ST_BubbleScale" default="100%"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_SizeRepresents">
     <xsd:restriction base="xsd:string">
@@ -306,13 +365,21 @@
     <xsd:attribute name="val" type="ST_FirstSliceAng" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_HoleSize">
+    <xsd:union memberTypes="ST_HoleSizePercent ST_HoleSizeUByte"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_HoleSizePercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*([1-9]|([1-8][0-9])|90)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_HoleSizeUByte">
     <xsd:restriction base="xsd:unsignedByte">
       <xsd:minInclusive value="1"/>
       <xsd:maxInclusive value="90"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_HoleSize">
-    <xsd:attribute name="val" type="ST_HoleSize" default="10"/>
+    <xsd:attribute name="val" type="ST_HoleSize" default="10%"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_SplitType">
     <xsd:restriction base="xsd:string">
@@ -332,13 +399,21 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:simpleType name="ST_SecondPieSize">
+    <xsd:union memberTypes="ST_SecondPieSizePercent ST_SecondPieSizeUShort"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_SecondPieSizePercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(([5-9])|([1-9][0-9])|(1[0-9][0-9])|200)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_SecondPieSizeUShort">
     <xsd:restriction base="xsd:unsignedShort">
       <xsd:minInclusive value="5"/>
       <xsd:maxInclusive value="200"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_SecondPieSize">
-    <xsd:attribute name="val" type="ST_SecondPieSize" default="75"/>
+    <xsd:attribute name="val" type="ST_SecondPieSize" default="75%"/>
   </xsd:complexType>
   <xsd:complexType name="CT_NumFmt">
     <xsd:attribute name="formatCode" type="s:ST_Xstring" use="required"/>
@@ -1134,13 +1209,21 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:simpleType name="ST_LblOffset">
+    <xsd:union memberTypes="ST_LblOffsetPercent ST_LblOffsetUShort"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_LblOffsetPercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(([0-9])|([1-9][0-9])|([1-9][0-9][0-9])|1000)%"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_LblOffsetUShort">
     <xsd:restriction base="xsd:unsignedShort">
       <xsd:minInclusive value="0"/>
       <xsd:maxInclusive value="1000"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_LblOffset">
-    <xsd:attribute name="val" type="ST_LblOffset" default="100"/>
+    <xsd:attribute name="val" type="ST_LblOffset" default="100%"/>
   </xsd:complexType>
   <xsd:group name="EG_AxShared">
     <xsd:sequence>
