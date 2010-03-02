@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://schemas.openxmlformats.org/presentationml/2006/main"
-  xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"
-  xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
-  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-  xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
-  elementFormDefault="qualified"
-  targetNamespace="http://schemas.openxmlformats.org/presentationml/2006/main">
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+  xmlns="http://purl.oclc.org/ooxml/presentationml/main"
+  xmlns:p="http://purl.oclc.org/ooxml/presentationml/main"
+  xmlns:a="http://purl.oclc.org/ooxml/drawingml/main"
+  xmlns:r="http://purl.oclc.org/ooxml/officeDocument/relationships"
+  xmlns:s="http://purl.oclc.org/ooxml/officeDocument/sharedTypes" elementFormDefault="qualified"
+  targetNamespace="http://purl.oclc.org/ooxml/presentationml/main">
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/relationships"
     schemaLocation="shared-relationshipReference.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/main"
-    schemaLocation="dml-main.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/drawingml/main" schemaLocation="dml-main.xsd"/>
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
     schemaLocation="shared-commonSimpleTypes.xsd"/>
   <xsd:simpleType name="ST_TransitionSideDirectionType">
     <xsd:restriction base="xsd:token">
@@ -760,9 +758,9 @@
   </xsd:complexType>
   <xsd:complexType name="CT_Extension">
     <xsd:sequence>
-      <xsd:any processContents="lax"/>
+      <xsd:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
-    <xsd:attribute name="uri" type="xsd:token"/>
+    <xsd:attribute name="uri" type="xsd:token" use="required"/>
   </xsd:complexType>
   <xsd:group name="EG_ExtensionList">
     <xsd:sequence>
@@ -840,11 +838,13 @@
     <xsd:attribute name="updateAutomatic" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_OleObject">
-    <xsd:choice minOccurs="1" maxOccurs="1">
-      <xsd:element name="embed" type="CT_OleObjectEmbed"/>
-      <xsd:element name="link" type="CT_OleObjectLink"/>
-      <xsd:element name="pic" type="CT_Picture"/>
-    </xsd:choice>
+    <xsd:sequence>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+        <xsd:element name="embed" type="CT_OleObjectEmbed"/>
+        <xsd:element name="link" type="CT_OleObjectLink"/>
+      </xsd:choice>
+      <xsd:element name="pic" type="CT_Picture" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
     <xsd:attributeGroup ref="AG_Ole"/>
     <xsd:attribute name="progId" type="xsd:string" use="optional"/>
   </xsd:complexType>
@@ -1487,8 +1487,8 @@
   </xsd:complexType>
   <xsd:element name="sldSyncPr" type="CT_SlideSyncProperties"/>
   <xsd:complexType name="CT_StringTag">
-    <xsd:attribute name="name" type="xsd:string"/>
-    <xsd:attribute name="val" type="xsd:string"/>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="val" type="xsd:string" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TagList">
     <xsd:sequence>

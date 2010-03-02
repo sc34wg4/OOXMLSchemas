@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
-  targetNamespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  xmlns="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+  targetNamespace="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
   elementFormDefault="qualified">
   <xsd:simpleType name="ST_Lang">
     <xsd:restriction base="xsd:string"/>
@@ -40,7 +40,7 @@
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="ST_OnOff">
-    <xsd:restriction base="xsd:boolean"/>
+    <xsd:union memberTypes="xsd:boolean"/>
   </xsd:simpleType>
   <xsd:simpleType name="ST_String">
     <xsd:restriction base="xsd:string"/>

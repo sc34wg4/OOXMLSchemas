@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://schemas.openxmlformats.org/drawingml/2006/diagram"
-  xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
-  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-  xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
-  targetNamespace="http://schemas.openxmlformats.org/drawingml/2006/diagram"
-  elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+  xmlns="http://purl.oclc.org/ooxml/drawingml/diagram"
+  xmlns:a="http://purl.oclc.org/ooxml/drawingml/main"
+  xmlns:r="http://purl.oclc.org/ooxml/officeDocument/relationships"
+  xmlns:s="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+  targetNamespace="http://purl.oclc.org/ooxml/drawingml/diagram" elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/relationships"
     schemaLocation="shared-relationshipReference.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/main"
-    schemaLocation="dml-main.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/drawingml/main" schemaLocation="dml-main.xsd"/>
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
     schemaLocation="shared-commonSimpleTypes.xsd"/>
   <xsd:complexType name="CT_CTName">
     <xsd:attribute name="lang" type="xsd:string" use="optional" default=""/>
@@ -71,7 +70,7 @@
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="optional" default=""/>
     <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://schemas.openxmlformats.org/drawingml/2006/diagram"/>
+      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
   </xsd:complexType>
   <xsd:element name="colorsDef" type="CT_ColorTransform"/>
   <xsd:complexType name="CT_ColorTransformHeader">
@@ -83,7 +82,7 @@
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
     <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://schemas.openxmlformats.org/drawingml/2006/diagram"/>
+      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
     <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:element name="colorsDefHdr" type="CT_ColorTransformHeader"/>
@@ -364,7 +363,7 @@
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="optional" default=""/>
     <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://schemas.openxmlformats.org/drawingml/2006/diagram"/>
+      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
     <xsd:attribute name="defStyle" type="xsd:string" use="optional" default=""/>
   </xsd:complexType>
   <xsd:element name="layoutDef" type="CT_DiagramDefinition"/>
@@ -377,7 +376,7 @@
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
     <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://schemas.openxmlformats.org/drawingml/2006/diagram"/>
+      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
     <xsd:attribute name="defStyle" type="xsd:string" use="optional" default=""/>
     <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
   </xsd:complexType>
@@ -404,6 +403,9 @@
   <xsd:simpleType name="ST_ModelId">
     <xsd:union memberTypes="xsd:int s:ST_Guid"/>
   </xsd:simpleType>
+  <xsd:simpleType name="ST_PrSetCustVal">
+    <xsd:union memberTypes="s:ST_Percentage"/>
+  </xsd:simpleType>
   <xsd:complexType name="CT_ElemPropSet">
     <xsd:sequence>
       <xsd:element name="presLayoutVars" type="CT_LayoutVariablePropertySet" minOccurs="0"
@@ -429,15 +431,15 @@
     <xsd:attribute name="custFlipHor" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="custSzX" type="xsd:int" use="optional"/>
     <xsd:attribute name="custSzY" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custScaleX" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custScaleY" type="xsd:int" use="optional"/>
+    <xsd:attribute name="custScaleX" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custScaleY" type="ST_PrSetCustVal" use="optional"/>
     <xsd:attribute name="custT" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="custLinFactX" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custLinFactY" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custLinFactNeighborX" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custLinFactNeighborY" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custRadScaleRad" type="xsd:int" use="optional"/>
-    <xsd:attribute name="custRadScaleInc" type="xsd:int" use="optional"/>
+    <xsd:attribute name="custLinFactX" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custLinFactY" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custLinFactNeighborX" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custLinFactNeighborY" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custRadScaleRad" type="ST_PrSetCustVal" use="optional"/>
+    <xsd:attribute name="custRadScaleInc" type="ST_PrSetCustVal" use="optional"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_Direction" final="restriction">
     <xsd:restriction base="xsd:token">
@@ -562,7 +564,7 @@
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="optional" default=""/>
     <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://schemas.openxmlformats.org/drawingml/2006/diagram"/>
+      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
   </xsd:complexType>
   <xsd:element name="styleDef" type="CT_StyleDefinition"/>
   <xsd:complexType name="CT_StyleDefinitionHeader">
@@ -574,7 +576,7 @@
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
     <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://schemas.openxmlformats.org/drawingml/2006/diagram"/>
+      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
     <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:element name="styleDefHdr" type="CT_StyleDefinitionHeader"/>

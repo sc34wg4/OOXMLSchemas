@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-  xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
-  xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
-  targetNamespace="http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-  elementFormDefault="qualified">
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+  xmlns="http://purl.oclc.org/ooxml/spreadsheetml/main"
+  xmlns:r="http://purl.oclc.org/ooxml/officeDocument/relationships"
+  xmlns:xdr="http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
+  xmlns:s="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+  targetNamespace="http://purl.oclc.org/ooxml/spreadsheetml/main" elementFormDefault="qualified">
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/relationships"
     schemaLocation="shared-relationshipReference.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
     schemaLocation="shared-commonSimpleTypes.xsd"/>
-  <xsd:import 
-    namespace="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
     schemaLocation="dml-spreadsheetDrawing.xsd"/>
   <xsd:complexType name="CT_AutoFilter">
     <xsd:sequence>
@@ -3740,11 +3738,20 @@
       <xsd:enumeration value="none"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:complexType name="CT_FontFamily">
+    <xsd:attribute name="val" type="ST_FontFamily" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType name="ST_FontFamily">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="14"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType name="CT_Font">
     <xsd:choice maxOccurs="unbounded">
       <xsd:element name="name" type="CT_FontName" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="charset" type="CT_IntProperty" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="family" type="CT_IntProperty" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="family" type="CT_FontFamily" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="b" type="CT_BooleanProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="i" type="CT_BooleanProperty" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="strike" type="CT_BooleanProperty" minOccurs="0" maxOccurs="1"/>

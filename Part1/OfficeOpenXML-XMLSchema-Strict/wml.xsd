@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
-  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-  xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main"
-  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-  xmlns="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
-  xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
-  elementFormDefault="qualified" attributeFormDefault="qualified" blockDefault="#all"
-  targetNamespace="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-  <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+  xmlns:m="http://purl.oclc.org/ooxml/officeDocument/math"
+  xmlns:r="http://purl.oclc.org/ooxml/officeDocument/relationships"
+  xmlns:sl="http://purl.oclc.org/ooxml/schemaLibrary/main"
+  xmlns:wp="http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+  xmlns="http://purl.oclc.org/ooxml/wordprocessingml/main"
+  xmlns:s="http://purl.oclc.org/ooxml/officeDocument/sharedTypes" elementFormDefault="qualified"
+  attributeFormDefault="qualified" blockDefault="#all"
+  targetNamespace="http://purl.oclc.org/ooxml/wordprocessingml/main">
+  <xsd:import namespace="http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
     schemaLocation="dml-wordprocessingDrawing.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/math"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/math"
     schemaLocation="shared-math.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/relationships"
     schemaLocation="shared-relationshipReference.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
     schemaLocation="shared-commonSimpleTypes.xsd"/>
-  <xsd:import namespace="http://schemas.openxmlformats.org/schemaLibrary/2006/main"
+  <xsd:import namespace="http://purl.oclc.org/ooxml/schemaLibrary/main"
     schemaLocation="shared-customXmlSchemaProperties.xsd"/>
   <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
   <xsd:complexType name="CT_Empty"/>
@@ -107,9 +107,11 @@
     <xsd:attribute name="val" type="s:ST_String" use="required"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextScale">
-    <xsd:restriction base="xsd:integer">
-      <xsd:minInclusive value="0"/>
-      <xsd:maxInclusive value="600"/>
+    <xsd:union memberTypes="ST_TextScalePercent"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_TextScalePercent">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="0*(600|([0-5]?[0-9]?[0-9]))%"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_TextScale">
@@ -2178,8 +2180,11 @@
     <xsd:attribute name="val" type="s:ST_TwipsMeasure"/>
     <xsd:attribute name="hRule" type="ST_HeightRule"/>
   </xsd:complexType>
+  <xsd:simpleType name="ST_MeasurementOrPercent">
+    <xsd:union memberTypes="ST_DecimalNumberOrPercent s:ST_UniversalMeasure"/>
+  </xsd:simpleType>
   <xsd:complexType name="CT_TblWidth">
-    <xsd:attribute name="w" type="ST_DecimalNumberOrPercent"/>
+    <xsd:attribute name="w" type="ST_MeasurementOrPercent"/>
     <xsd:attribute name="type" type="ST_TblWidth"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TblGridCol">
@@ -2537,8 +2542,11 @@
     <xsd:sequence>
       <xsd:element name="active" type="CT_OnOff" minOccurs="0"/>
       <xsd:element name="column" type="CT_DecimalNumber" minOccurs="1"/>
-      <xsd:element name="uniqueTag" type="xsd:base64Binary" minOccurs="1"/>
+      <xsd:element name="uniqueTag" type="CT_Base64Binary" minOccurs="1"/>
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CT_Base64Binary">
+    <xsd:attribute name="val" type="xsd:base64Binary" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Recipients">
     <xsd:sequence>
