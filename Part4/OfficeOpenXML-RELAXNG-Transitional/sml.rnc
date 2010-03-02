@@ -4057,7 +4057,7 @@ sml_ST_UnderlineValues =
 sml_CT_Font =
   (element name { sml_CT_FontName }?
    | element charset { sml_CT_IntProperty }?
-   | element family { sml_CT_IntProperty }?
+   | element family { sml_CT_FontFamily }?
    | element b { sml_CT_BooleanProperty }?
    | element i { sml_CT_BooleanProperty }?
    | element strike { sml_CT_BooleanProperty }?
@@ -4070,6 +4070,9 @@ sml_CT_Font =
    | element u { sml_CT_UnderlineProperty }?
    | element vertAlign { sml_CT_VerticalAlignFontProperty }?
    | element scheme { sml_CT_FontScheme }?)+
+sml_CT_FontFamily = attribute val { sml_ST_FontFamily }
+sml_ST_FontFamily =
+  xsd:integer { minInclusive = "0" maxInclusive = "14" }
 sml_AG_AutoFormat =
   attribute autoFormatId { xsd:unsignedInt }?,
   attribute applyNumberFormats { xsd:boolean }?,

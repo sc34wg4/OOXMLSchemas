@@ -49,7 +49,11 @@ w_CT_MacroName = attribute w:val { w_ST_MacroName }
 w_ST_EighthPointMeasure = s_ST_UnsignedDecimalNumber
 w_ST_PointMeasure = s_ST_UnsignedDecimalNumber
 w_CT_String = attribute w:val { s_ST_String }
-w_ST_TextScale = xsd:integer { minInclusive = "0" maxInclusive = "600" }
+w_ST_TextScale = w_ST_TextScalePercent | w_ST_TextScaleDecimal
+w_ST_TextScalePercent =
+  xsd:string { pattern = "0*(600|([0-5]?[0-9]?[0-9]))%" }
+w_ST_TextScaleDecimal =
+  xsd:integer { minInclusive = "0" maxInclusive = "600" }
 w_CT_TextScale = attribute w:val { w_ST_TextScale }?
 w_ST_HighlightColor =
   string "black"
@@ -1402,8 +1406,10 @@ w_ST_TblWidth =
 w_CT_Height =
   attribute w:val { s_ST_TwipsMeasure }?,
   attribute w:hRule { w_ST_HeightRule }?
+w_ST_MeasurementOrPercent =
+  w_ST_DecimalNumberOrPercent | s_ST_UniversalMeasure
 w_CT_TblWidth =
-  attribute w:w { w_ST_DecimalNumberOrPercent }?,
+  attribute w:w { w_ST_MeasurementOrPercent }?,
   attribute w:type { w_ST_TblWidth }?
 w_CT_TblGridCol = attribute w:w { s_ST_TwipsMeasure }?
 w_CT_TblGridBase = element gridCol { w_CT_TblGridCol }*
@@ -1616,7 +1622,8 @@ w_CT_EdnDocProps =
 w_CT_RecipientData =
   element active { w_CT_OnOff }?,
   element column { w_CT_DecimalNumber },
-  element uniqueTag { xsd:base64Binary }
+  element uniqueTag { w_CT_Base64Binary }
+w_CT_Base64Binary = attribute w:val { xsd:base64Binary }
 w_CT_Recipients = element recipientData { w_CT_RecipientData }+
 w_recipients = element recipients { w_CT_Recipients }
 w_CT_OdsoFieldMapData =

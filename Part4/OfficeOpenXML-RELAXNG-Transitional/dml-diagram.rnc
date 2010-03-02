@@ -371,6 +371,7 @@ ddgrm_ST_ParameterVal =
   | xsd:string
   | ddgrm_ST_ConnectorPoint
 ddgrm_ST_ModelId = xsd:int | s_ST_Guid
+ddgrm_ST_PrSetCustVal = s_ST_Percentage | xsd:int
 ddgrm_CT_ElemPropSet =
   attribute presAssocID { ddgrm_ST_ModelId }?,
   attribute presName { xsd:string }?,
@@ -391,15 +392,15 @@ ddgrm_CT_ElemPropSet =
   attribute custFlipHor { xsd:boolean }?,
   attribute custSzX { xsd:int }?,
   attribute custSzY { xsd:int }?,
-  attribute custScaleX { xsd:int }?,
-  attribute custScaleY { xsd:int }?,
+  attribute custScaleX { ddgrm_ST_PrSetCustVal }?,
+  attribute custScaleY { ddgrm_ST_PrSetCustVal }?,
   attribute custT { xsd:boolean }?,
-  attribute custLinFactX { xsd:int }?,
-  attribute custLinFactY { xsd:int }?,
-  attribute custLinFactNeighborX { xsd:int }?,
-  attribute custLinFactNeighborY { xsd:int }?,
-  attribute custRadScaleRad { xsd:int }?,
-  attribute custRadScaleInc { xsd:int }?,
+  attribute custLinFactX { ddgrm_ST_PrSetCustVal }?,
+  attribute custLinFactY { ddgrm_ST_PrSetCustVal }?,
+  attribute custLinFactNeighborX { ddgrm_ST_PrSetCustVal }?,
+  attribute custLinFactNeighborY { ddgrm_ST_PrSetCustVal }?,
+  attribute custRadScaleRad { ddgrm_ST_PrSetCustVal }?,
+  attribute custRadScaleInc { ddgrm_ST_PrSetCustVal }?,
   element presLayoutVars { ddgrm_CT_LayoutVariablePropertySet }?,
   element style { a_CT_ShapeStyle }?
 ddgrm_ST_Direction = "norm" | "rev"

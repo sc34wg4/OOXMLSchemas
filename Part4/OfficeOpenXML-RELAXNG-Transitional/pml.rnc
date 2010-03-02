@@ -468,8 +468,8 @@ p_CT_CustomerDataList =
   (element custData { p_CT_CustomerData }*,
    element tags { p_CT_TagsData }?)?
 p_CT_Extension =
-  attribute uri { xsd:token }?,
-  p_CT_Extension_any
+  attribute uri { xsd:token },
+  p_CT_Extension_any*
 p_CT_Extension_any =
   element * - (o:* | v:* | w10:* | x:*) {
     anyAttribute*,
@@ -524,8 +524,8 @@ p_CT_OleObject =
   p_AG_Ole,
   attribute progId { xsd:string }?,
   (element embed { p_CT_OleObjectEmbed }
-   | element link { p_CT_OleObjectLink }
-   | element pic { p_CT_Picture })
+   | element link { p_CT_OleObjectLink }),
+  element pic { p_CT_Picture }?
 p_oleObj = element oleObj { p_CT_OleObject }
 p_CT_Control =
   p_AG_Ole,
@@ -1092,8 +1092,8 @@ p_CT_SlideSyncProperties =
   element extLst { p_CT_ExtensionList }?
 p_sldSyncPr = element sldSyncPr { p_CT_SlideSyncProperties }
 p_CT_StringTag =
-  attribute name { xsd:string }?,
-  attribute val { xsd:string }?
+  attribute name { xsd:string },
+  attribute val { xsd:string }
 p_CT_TagList = element tag { p_CT_StringTag }*
 p_tagLst = element tagLst { p_CT_TagList }
 p_ST_SplitterBarState = "minimized" | "restored" | "maximized"
