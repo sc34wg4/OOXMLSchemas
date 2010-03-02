@@ -1,11 +1,11 @@
 default namespace =
-  "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
+  "http://purl.oclc.org/ooxml/officeDocument/extendedProperties"
 namespace o = "urn:schemas-microsoft-com:office:office"
 namespace shdDcEP =
-  "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
+  "http://purl.oclc.org/ooxml/officeDocument/extendedProperties"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace vt =
-  "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"
+  "http://purl.oclc.org/ooxml/officeDocument/docPropsVTypes"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
 

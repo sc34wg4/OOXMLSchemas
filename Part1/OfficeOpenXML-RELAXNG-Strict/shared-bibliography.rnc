@@ -1,10 +1,9 @@
 default namespace =
-  "http://schemas.openxmlformats.org/officeDocument/2006/bibliography"
+  "http://purl.oclc.org/ooxml/officeDocument/bibliography"
 namespace o = "urn:schemas-microsoft-com:office:office"
-namespace s =
-  "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
 namespace shrdBib =
-  "http://schemas.openxmlformats.org/officeDocument/2006/bibliography"
+  "http://purl.oclc.org/ooxml/officeDocument/bibliography"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"

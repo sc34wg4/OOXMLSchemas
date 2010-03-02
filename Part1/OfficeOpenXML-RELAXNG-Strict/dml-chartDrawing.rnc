@@ -1,8 +1,6 @@
-default namespace =
-  "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing"
-namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
-namespace cdr =
-  "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing"
+default namespace = "http://purl.oclc.org/ooxml/drawingml/chartDrawing"
+namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+namespace cdr = "http://purl.oclc.org/ooxml/drawingml/chartDrawing"
 namespace o = "urn:schemas-microsoft-com:office:office"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w10 = "urn:schemas-microsoft-com:office:word"

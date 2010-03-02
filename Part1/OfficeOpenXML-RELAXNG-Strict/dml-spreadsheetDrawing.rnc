@@ -1,14 +1,13 @@
 default namespace =
-  "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
-namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+  "http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
+namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
 namespace o = "urn:schemas-microsoft-com:office:office"
-namespace r =
-  "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
 namespace xdr =
-  "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
+  "http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
 
 xdr_from = element from { xdr_CT_Marker }
 xdr_to = element to { xdr_CT_Marker }

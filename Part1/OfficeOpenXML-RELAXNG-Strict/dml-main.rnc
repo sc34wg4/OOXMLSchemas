@@ -1,11 +1,8 @@
-default namespace =
-  "http://schemas.openxmlformats.org/drawingml/2006/main"
-namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+default namespace = "http://purl.oclc.org/ooxml/drawingml/main"
+namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
 namespace o = "urn:schemas-microsoft-com:office:office"
-namespace r =
-  "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-namespace s =
-  "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
@@ -105,8 +102,8 @@ a_CT_BaseStyles =
   element fmtScheme { a_CT_StyleMatrix },
   element extLst { a_CT_OfficeArtExtensionList }?
 a_CT_OfficeArtExtension =
-  attribute uri { xsd:token }?,
-  a_CT_OfficeArtExtension_any
+  attribute uri { xsd:token },
+  a_CT_OfficeArtExtension_any*
 a_CT_OfficeArtExtension_any =
   element * - (o:* | v:* | w10:* | x:*) {
     anyAttribute*,
@@ -131,7 +128,6 @@ a_ST_PositiveFixedAngle =
   xsd:int { minInclusive = "0" maxExclusive = "21600000" }
 a_CT_PositiveFixedAngle = attribute val { a_ST_PositiveFixedAngle }
 a_ST_Percentage = s_ST_Percentage
-a_ST_PercentageDecimal = xsd:int
 a_CT_Percentage = attribute val { a_ST_Percentage }
 a_ST_PositivePercentage = s_ST_PositivePercentage
 a_CT_PositivePercentage = attribute val { a_ST_PositivePercentage }
@@ -444,7 +440,7 @@ a_ST_PresetColorVal =
   | "yellow"
   | "yellowGreen"
 a_CT_PresetColor =
-  attribute val { a_ST_PresetColorVal }?,
+  attribute val { a_ST_PresetColorVal },
   a_EG_ColorTransform*
 a_EG_OfficeArtExtensionList = element ext { a_CT_OfficeArtExtension }*
 a_CT_OfficeArtExtensionList = a_EG_OfficeArtExtensionList
@@ -671,7 +667,7 @@ a_CT_NonVisualGraphicFrameProperties =
   element graphicFrameLocks { a_CT_GraphicalObjectFrameLocking }?,
   element extLst { a_CT_OfficeArtExtensionList }?
 a_CT_GraphicalObjectData =
-  attribute uri { xsd:token }?,
+  attribute uri { xsd:token },
   a_CT_GraphicalObjectData_any*
 a_CT_GraphicalObjectData_any =
   element * - (o:* | v:* | w10:* | x:*) {
@@ -1304,7 +1300,7 @@ a_ST_BlendMode = "over" | "mult" | "screen" | "darken" | "lighten"
 a_CT_FillOverlayEffect =
   attribute blend { a_ST_BlendMode },
   a_EG_FillProperties
-a_CT_EffectReference = attribute ref { xsd:token }?
+a_CT_EffectReference = attribute ref { xsd:token }
 a_EG_Effect =
   element cont { a_CT_EffectContainer }
   | element effect { a_CT_EffectReference }
@@ -2112,12 +2108,15 @@ a_CT_TextBulletColorFollowText = empty
 a_EG_TextBulletColor =
   element buClrTx { a_CT_TextBulletColorFollowText }
   | element buClr { a_CT_Color }
+a_ST_TextBulletSize = a_ST_TextBulletSizePercent
 a_ST_TextBulletSizePercent =
-  xsd:int { minInclusive = "25000" maxInclusive = "400000" }
+  xsd:string {
+    pattern = "0*((2[5-9])|([3-9][0-9])|([1-3][0-9][0-9])|400)%"
+  }
 a_CT_TextBulletSizeFollowText = empty
 a_CT_TextBulletSizePercent =
-  attribute val { a_ST_TextBulletSizePercent }?
-a_CT_TextBulletSizePoint = attribute val { a_ST_TextFontSize }?
+  attribute val { a_ST_TextBulletSizePercent }
+a_CT_TextBulletSizePoint = attribute val { a_ST_TextFontSize }
 a_EG_TextBulletSize =
   element buSzTx { a_CT_TextBulletSizeFollowText }
   | element buSzPct { a_CT_TextBulletSizePercent }
@@ -2148,7 +2147,7 @@ a_ST_TextFontSize =
   xsd:int { minInclusive = "100" maxInclusive = "400000" }
 a_ST_TextTypeface = xsd:string
 a_CT_TextFont =
-  attribute typeface { a_ST_TextTypeface }?,
+  attribute typeface { a_ST_TextTypeface },
   attribute panose { s_ST_Panose }?,
   
   ## default value: 0

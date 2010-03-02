@@ -1,13 +1,9 @@
-default namespace =
-  "http://schemas.openxmlformats.org/drawingml/2006/diagram"
-namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
-namespace ddgrm =
-  "http://schemas.openxmlformats.org/drawingml/2006/diagram"
+default namespace = "http://purl.oclc.org/ooxml/drawingml/diagram"
+namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+namespace ddgrm = "http://purl.oclc.org/ooxml/drawingml/diagram"
 namespace o = "urn:schemas-microsoft-com:office:office"
-namespace r =
-  "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-namespace s =
-  "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
@@ -44,7 +40,7 @@ ddgrm_CT_CTStyleLabel =
 ddgrm_CT_ColorTransform =
   attribute uniqueId { xsd:string }?,
   
-  ## default value: http://schemas.openxmlformats.org/drawingml/2006/diagram
+  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   element title { ddgrm_CT_CTName }*,
   element desc { ddgrm_CT_CTDescription }*,
@@ -55,7 +51,7 @@ ddgrm_colorsDef = element colorsDef { ddgrm_CT_ColorTransform }
 ddgrm_CT_ColorTransformHeader =
   attribute uniqueId { xsd:string },
   
-  ## default value: http://schemas.openxmlformats.org/drawingml/2006/diagram
+  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   
   ## default value: 0
@@ -300,7 +296,7 @@ ddgrm_CT_Description =
 ddgrm_CT_DiagramDefinition =
   attribute uniqueId { xsd:string }?,
   
-  ## default value: http://schemas.openxmlformats.org/drawingml/2006/diagram
+  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   attribute defStyle { xsd:string }?,
   element title { ddgrm_CT_Name }*,
@@ -315,7 +311,7 @@ ddgrm_layoutDef = element layoutDef { ddgrm_CT_DiagramDefinition }
 ddgrm_CT_DiagramDefinitionHeader =
   attribute uniqueId { xsd:string },
   
-  ## default value: http://schemas.openxmlformats.org/drawingml/2006/diagram
+  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   attribute defStyle { xsd:string }?,
   
@@ -371,6 +367,7 @@ ddgrm_ST_ParameterVal =
   | xsd:string
   | ddgrm_ST_ConnectorPoint
 ddgrm_ST_ModelId = xsd:int | s_ST_Guid
+ddgrm_ST_PrSetCustVal = s_ST_Percentage
 ddgrm_CT_ElemPropSet =
   attribute presAssocID { ddgrm_ST_ModelId }?,
   attribute presName { xsd:string }?,
@@ -391,15 +388,15 @@ ddgrm_CT_ElemPropSet =
   attribute custFlipHor { xsd:boolean }?,
   attribute custSzX { xsd:int }?,
   attribute custSzY { xsd:int }?,
-  attribute custScaleX { xsd:int }?,
-  attribute custScaleY { xsd:int }?,
+  attribute custScaleX { ddgrm_ST_PrSetCustVal }?,
+  attribute custScaleY { ddgrm_ST_PrSetCustVal }?,
   attribute custT { xsd:boolean }?,
-  attribute custLinFactX { xsd:int }?,
-  attribute custLinFactY { xsd:int }?,
-  attribute custLinFactNeighborX { xsd:int }?,
-  attribute custLinFactNeighborY { xsd:int }?,
-  attribute custRadScaleRad { xsd:int }?,
-  attribute custRadScaleInc { xsd:int }?,
+  attribute custLinFactX { ddgrm_ST_PrSetCustVal }?,
+  attribute custLinFactY { ddgrm_ST_PrSetCustVal }?,
+  attribute custLinFactNeighborX { ddgrm_ST_PrSetCustVal }?,
+  attribute custLinFactNeighborY { ddgrm_ST_PrSetCustVal }?,
+  attribute custRadScaleRad { ddgrm_ST_PrSetCustVal }?,
+  attribute custRadScaleInc { ddgrm_ST_PrSetCustVal }?,
   element presLayoutVars { ddgrm_CT_LayoutVariablePropertySet }?,
   element style { a_CT_ShapeStyle }?
 ddgrm_ST_Direction = "norm" | "rev"
@@ -475,7 +472,7 @@ ddgrm_CT_StyleLabel =
 ddgrm_CT_StyleDefinition =
   attribute uniqueId { xsd:string }?,
   
-  ## default value: http://schemas.openxmlformats.org/drawingml/2006/diagram
+  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   element title { ddgrm_CT_SDName }*,
   element desc { ddgrm_CT_SDDescription }*,
@@ -487,7 +484,7 @@ ddgrm_styleDef = element styleDef { ddgrm_CT_StyleDefinition }
 ddgrm_CT_StyleDefinitionHeader =
   attribute uniqueId { xsd:string },
   
-  ## default value: http://schemas.openxmlformats.org/drawingml/2006/diagram
+  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   
   ## default value: 0

@@ -1,15 +1,12 @@
 namespace o = "urn:schemas-microsoft-com:office:office"
-namespace r =
-  "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-namespace s =
-  "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
-default namespace sml =
-  "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+default namespace sml = "http://purl.oclc.org/ooxml/spreadsheetml/main"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
 namespace xdr =
-  "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
+  "http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
 
 sml_CT_AutoFilter =
   attribute ref { sml_ST_Ref }?,
@@ -4029,10 +4026,13 @@ sml_ST_UnderlineValues =
   | string "singleAccounting"
   | string "doubleAccounting"
   | string "none"
+sml_CT_FontFamily = attribute val { sml_ST_FontFamily }
+sml_ST_FontFamily =
+  xsd:integer { minInclusive = "0" maxInclusive = "14" }
 sml_CT_Font =
   (element name { sml_CT_FontName }?
    | element charset { sml_CT_IntProperty }?
-   | element family { sml_CT_IntProperty }?
+   | element family { sml_CT_FontFamily }?
    | element b { sml_CT_BooleanProperty }?
    | element i { sml_CT_BooleanProperty }?
    | element strike { sml_CT_BooleanProperty }?

@@ -1,15 +1,10 @@
-default namespace =
-  "http://schemas.openxmlformats.org/drawingml/2006/chart"
-namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
-namespace cdr =
-  "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing"
-namespace dchrt =
-  "http://schemas.openxmlformats.org/drawingml/2006/chart"
+default namespace = "http://purl.oclc.org/ooxml/drawingml/chart"
+namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+namespace cdr = "http://purl.oclc.org/ooxml/drawingml/chartDrawing"
+namespace dchrt = "http://purl.oclc.org/ooxml/drawingml/chart"
 namespace o = "urn:schemas-microsoft-com:office:office"
-namespace r =
-  "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-namespace s =
-  "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
@@ -115,11 +110,14 @@ dchrt_CT_RotX =
   
   ## default value: 0
   attribute val { dchrt_ST_RotX }?
-dchrt_ST_HPercent =
-  xsd:unsignedShort { minInclusive = "5" maxInclusive = "500" }
+dchrt_ST_HPercent = dchrt_ST_HPercentWithSymbol
+dchrt_ST_HPercentWithSymbol =
+  xsd:string {
+    pattern = "0*(([5-9])|([1-9][0-9])|([1-4][0-9][0-9])|500)%"
+  }
 dchrt_CT_HPercent =
   
-  ## default value: 100
+  ## default value: 100%
   attribute val { dchrt_ST_HPercent }?
 dchrt_ST_RotY =
   xsd:unsignedShort { minInclusive = "0" maxInclusive = "360" }
@@ -127,17 +125,25 @@ dchrt_CT_RotY =
   
   ## default value: 0
   attribute val { dchrt_ST_RotY }?
-dchrt_ST_DepthPercent =
-  xsd:unsignedShort { minInclusive = "20" maxInclusive = "2000" }
+dchrt_ST_DepthPercent = dchrt_ST_DepthPercentWithSymbol
+dchrt_ST_DepthPercentWithSymbol =
+  xsd:string {
+    pattern =
+      "0*(([2-9][0-9])|([1-9][0-9][0-9])|(1[0-9][0-9][0-9])|2000)%"
+  }
 dchrt_CT_DepthPercent =
   
-  ## default value: 100
+  ## default value: 100%
   attribute val { dchrt_ST_DepthPercent }?
-dchrt_ST_Perspective =
-  xsd:unsignedByte { minInclusive = "0" maxInclusive = "240" }
+dchrt_ST_Perspective = dchrt_ST_PerspectivePercent
+dchrt_ST_PerspectivePercent =
+  xsd:string {
+    pattern =
+      "0*(([0-9])|([1-9][0-9])|(1[0-9][0-9])|(2|[0-3][0-9])|240)%"
+  }
 dchrt_CT_Perspective =
   
-  ## default value: 30
+  ## default value: 30%
   attribute val { dchrt_ST_Perspective }?
 dchrt_CT_View3D =
   element rotX { dchrt_CT_RotX }?,
@@ -148,10 +154,13 @@ dchrt_CT_View3D =
   element perspective { dchrt_CT_Perspective }?,
   element extLst { dchrt_CT_ExtensionList }?
 dchrt_CT_Surface =
-  element thickness { dchrt_CT_UnsignedInt }?,
+  element thickness { dchrt_CT_Thickness }?,
   element spPr { a_CT_ShapeProperties }?,
   element pictureOptions { dchrt_CT_PictureOptions }?,
   element extLst { dchrt_CT_ExtensionList }?
+dchrt_ST_Thickness = dchrt_ST_ThicknessPercent
+dchrt_ST_ThicknessPercent = xsd:string { pattern = "([0-9]+)%" }
+dchrt_CT_Thickness = attribute val { dchrt_ST_Thickness }
 dchrt_CT_DTable =
   element showHorzBorder { dchrt_CT_Boolean }?,
   element showVertBorder { dchrt_CT_Boolean }?,
@@ -160,23 +169,30 @@ dchrt_CT_DTable =
   element spPr { a_CT_ShapeProperties }?,
   element txPr { a_CT_TextBody }?,
   element extLst { dchrt_CT_ExtensionList }?
-dchrt_ST_GapAmount =
-  xsd:unsignedShort { minInclusive = "0" maxInclusive = "500" }
+dchrt_ST_GapAmount = dchrt_ST_GapAmountPercent
+dchrt_ST_GapAmountPercent =
+  xsd:string {
+    pattern = "0*(([0-9])|([1-9][0-9])|([1-4][0-9][0-9])|500)%"
+  }
 dchrt_CT_GapAmount =
   
-  ## default value: 150
+  ## default value: 150%
   attribute val { dchrt_ST_GapAmount }?
-dchrt_ST_Overlap =
-  xsd:byte { minInclusive = "-100" maxInclusive = "100" }
+dchrt_ST_Overlap = dchrt_ST_OverlapPercent
+dchrt_ST_OverlapPercent =
+  xsd:string { pattern = "(-?0*(([0-9])|([1-9][0-9])|100))%" }
 dchrt_CT_Overlap =
   
-  ## default value: 0
+  ## default value: 0%
   attribute val { dchrt_ST_Overlap }?
-dchrt_ST_BubbleScale =
-  xsd:unsignedInt { minInclusive = "0" maxInclusive = "300" }
+dchrt_ST_BubbleScale = dchrt_ST_BubbleScalePercent
+dchrt_ST_BubbleScalePercent =
+  xsd:string {
+    pattern = "0*(([0-9])|([1-9][0-9])|([1-2][0-9][0-9])|300)%"
+  }
 dchrt_CT_BubbleScale =
   
-  ## default value: 100
+  ## default value: 100%
   attribute val { dchrt_ST_BubbleScale }?
 dchrt_ST_SizeRepresents = string "area" | string "w"
 dchrt_CT_SizeRepresents =
@@ -189,11 +205,12 @@ dchrt_CT_FirstSliceAng =
   
   ## default value: 0
   attribute val { dchrt_ST_FirstSliceAng }?
-dchrt_ST_HoleSize =
-  xsd:unsignedByte { minInclusive = "1" maxInclusive = "90" }
+dchrt_ST_HoleSize = dchrt_ST_HoleSizePercent
+dchrt_ST_HoleSizePercent =
+  xsd:string { pattern = "0*([1-9]|([1-8][0-9])|90)%" }
 dchrt_CT_HoleSize =
   
-  ## default value: 10
+  ## default value: 10%
   attribute val { dchrt_ST_HoleSize }?
 dchrt_ST_SplitType =
   string "auto"
@@ -206,11 +223,12 @@ dchrt_CT_SplitType =
   ## default value: auto
   attribute val { dchrt_ST_SplitType }?
 dchrt_CT_CustSplit = element secondPiePt { dchrt_CT_UnsignedInt }*
-dchrt_ST_SecondPieSize =
-  xsd:unsignedShort { minInclusive = "5" maxInclusive = "200" }
+dchrt_ST_SecondPieSize = dchrt_ST_SecondPieSizePercent
+dchrt_ST_SecondPieSizePercent =
+  xsd:string { pattern = "0*(([5-9])|([1-9][0-9])|(1[0-9][0-9])|200)%" }
 dchrt_CT_SecondPieSize =
   
-  ## default value: 75
+  ## default value: 75%
   attribute val { dchrt_ST_SecondPieSize }?
 dchrt_CT_NumFmt =
   attribute formatCode { s_ST_Xstring },
@@ -708,11 +726,14 @@ dchrt_CT_Scaling =
   element max { dchrt_CT_Double }?,
   element min { dchrt_CT_Double }?,
   element extLst { dchrt_CT_ExtensionList }?
-dchrt_ST_LblOffset =
-  xsd:unsignedShort { minInclusive = "0" maxInclusive = "1000" }
+dchrt_ST_LblOffset = dchrt_ST_LblOffsetPercent
+dchrt_ST_LblOffsetPercent =
+  xsd:string {
+    pattern = "0*(([0-9])|([1-9][0-9])|([1-9][0-9][0-9])|1000)%"
+  }
 dchrt_CT_LblOffset =
   
-  ## default value: 100
+  ## default value: 100%
   attribute val { dchrt_ST_LblOffset }?
 dchrt_EG_AxShared =
   element axId { dchrt_CT_UnsignedInt },

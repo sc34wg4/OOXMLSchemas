@@ -1,13 +1,12 @@
 default namespace =
-  "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
-namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+  "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
 namespace o = "urn:schemas-microsoft-com:office:office"
 namespace v = "urn:schemas-microsoft-com:vml"
-namespace w =
-  "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace wp =
-  "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+  "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
 namespace x = "urn:schemas-microsoft-com:office:excel"
 
 wp_CT_EffectExtent =
