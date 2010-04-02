@@ -1,0 +1,112 @@
+default namespace =
+  "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+namespace o = "urn:schemas-microsoft-com:office:office"
+namespace v = "urn:schemas-microsoft-com:vml"
+namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
+namespace w10 = "urn:schemas-microsoft-com:office:word"
+namespace wp =
+  "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+namespace x = "urn:schemas-microsoft-com:office:excel"
+
+wp_CT_EffectExtent =
+  attribute l { a_ST_Coordinate },
+  attribute t { a_ST_Coordinate },
+  attribute r { a_ST_Coordinate },
+  attribute b { a_ST_Coordinate }
+wp_ST_WrapDistance = xsd:unsignedInt
+wp_CT_Inline =
+  attribute distT { wp_ST_WrapDistance }?,
+  attribute distB { wp_ST_WrapDistance }?,
+  attribute distL { wp_ST_WrapDistance }?,
+  attribute distR { wp_ST_WrapDistance }?,
+  element extent { a_CT_PositiveSize2D },
+  element effectExtent { wp_CT_EffectExtent }?,
+  element docPr { a_CT_NonVisualDrawingProps },
+  element cNvGraphicFramePr { a_CT_NonVisualGraphicFrameProperties }?,
+  a_graphic
+wp_ST_WrapText = "bothSides" | "left" | "right" | "largest"
+wp_CT_WrapPath =
+  attribute edited { xsd:boolean }?,
+  element start { a_CT_Point2D },
+  element lineTo { a_CT_Point2D }+
+wp_CT_WrapNone = empty
+wp_CT_WrapSquare =
+  attribute wrapText { wp_ST_WrapText },
+  attribute distT { wp_ST_WrapDistance }?,
+  attribute distB { wp_ST_WrapDistance }?,
+  attribute distL { wp_ST_WrapDistance }?,
+  attribute distR { wp_ST_WrapDistance }?,
+  element effectExtent { wp_CT_EffectExtent }?
+wp_CT_WrapTight =
+  attribute wrapText { wp_ST_WrapText },
+  attribute distL { wp_ST_WrapDistance }?,
+  attribute distR { wp_ST_WrapDistance }?,
+  element wrapPolygon { wp_CT_WrapPath }
+wp_CT_WrapThrough =
+  attribute wrapText { wp_ST_WrapText },
+  attribute distL { wp_ST_WrapDistance }?,
+  attribute distR { wp_ST_WrapDistance }?,
+  element wrapPolygon { wp_CT_WrapPath }
+wp_CT_WrapTopBottom =
+  attribute distT { wp_ST_WrapDistance }?,
+  attribute distB { wp_ST_WrapDistance }?,
+  element effectExtent { wp_CT_EffectExtent }?
+wp_EG_WrapType =
+  element wrapNone { wp_CT_WrapNone }
+  | element wrapSquare { wp_CT_WrapSquare }
+  | element wrapTight { wp_CT_WrapTight }
+  | element wrapThrough { wp_CT_WrapThrough }
+  | element wrapTopAndBottom { wp_CT_WrapTopBottom }
+wp_ST_PositionOffset = xsd:int
+wp_ST_AlignH = "left" | "right" | "center" | "inside" | "outside"
+wp_ST_RelFromH =
+  "margin"
+  | "page"
+  | "column"
+  | "character"
+  | "leftMargin"
+  | "rightMargin"
+  | "insideMargin"
+  | "outsideMargin"
+wp_CT_PosH =
+  attribute relativeFrom { wp_ST_RelFromH },
+  (element align { wp_ST_AlignH }
+   | element posOffset { wp_ST_PositionOffset })
+wp_ST_AlignV = "top" | "bottom" | "center" | "inside" | "outside"
+wp_ST_RelFromV =
+  "margin"
+  | "page"
+  | "paragraph"
+  | "line"
+  | "topMargin"
+  | "bottomMargin"
+  | "insideMargin"
+  | "outsideMargin"
+wp_CT_PosV =
+  attribute relativeFrom { wp_ST_RelFromV },
+  (element align { wp_ST_AlignV }
+   | element posOffset { wp_ST_PositionOffset })
+wp_CT_Anchor =
+  attribute distT { wp_ST_WrapDistance }?,
+  attribute distB { wp_ST_WrapDistance }?,
+  attribute distL { wp_ST_WrapDistance }?,
+  attribute distR { wp_ST_WrapDistance }?,
+  attribute simplePos { xsd:boolean }?,
+  attribute relativeHeight { xsd:unsignedInt },
+  attribute behindDoc { xsd:boolean },
+  attribute locked { xsd:boolean },
+  attribute layoutInCell { xsd:boolean },
+  attribute hidden { xsd:boolean }?,
+  attribute allowOverlap { xsd:boolean },
+  element simplePos { a_CT_Point2D },
+  element positionH { wp_CT_PosH },
+  element positionV { wp_CT_PosV },
+  element extent { a_CT_PositiveSize2D },
+  element effectExtent { wp_CT_EffectExtent }?,
+  wp_EG_WrapType,
+  element docPr { a_CT_NonVisualDrawingProps },
+  element cNvGraphicFramePr { a_CT_NonVisualGraphicFrameProperties }?,
+  a_graphic
+wp_inline = element inline { wp_CT_Inline }
+wp_anchor = element anchor { wp_CT_Anchor }
