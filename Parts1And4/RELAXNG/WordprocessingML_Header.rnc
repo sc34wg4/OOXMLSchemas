@@ -1,0 +1,24 @@
+--- ../../Part1/OfficeOpenXML-RELAXNG-Strict/WordprocessingML_Header.rnc	Sun Mar 30 21:32:00 2008
++++ ../../Part4/OfficeOpenXML-RELAXNG-Transitional/WordprocessingML_Header.rnc	Sun Mar 30 21:28:00 2008
+@@ -1,15 +1,21 @@
+ include "wml.rnc"
+ include "shared-relationshipReference.rnc"
+ include "dml-wordprocessingDrawing.rnc"
+ include "dml-main.rnc"
+ include "dml-diagram.rnc"
+ include "shared-commonSimpleTypes.rnc"
+ include "dml-lockedCanvas.rnc"
+ include "any.rnc"
+ include "dml-chart.rnc"
+ include "dml-chartDrawing.rnc"
+ include "dml-picture.rnc"
++include "dml-compatibility.rnc"
++include "vml-presentationDrawing.rnc"
+ include "xml.rnc"
+ include "shared-customXmlSchemaProperties.rnc"
++include "vml-officeDrawing.rnc"
++include "vml-main.rnc"
++include "vml-spreadsheetDrawing.rnc"
++include "vml-wordprocessingDrawing.rnc"
+ include "shared-math.rnc"
+ start = w_hdr

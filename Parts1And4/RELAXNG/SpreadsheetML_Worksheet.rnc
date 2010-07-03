@@ -1,0 +1,16 @@
+--- ../../Part1/OfficeOpenXML-RELAXNG-Strict/SpreadsheetML_Worksheet.rnc	Sun Mar 30 21:32:00 2008
++++ ../../Part4/OfficeOpenXML-RELAXNG-Transitional/SpreadsheetML_Worksheet.rnc	Sun Mar 30 21:28:00 2008
+@@ -1,12 +1,13 @@
+ include "sml.rnc"
+ include "shared-relationshipReference.rnc"
+ include "any.rnc"
+ include "shared-commonSimpleTypes.rnc"
+ include "dml-spreadsheetDrawing.rnc"
+ include "dml-main.rnc"
+ include "dml-diagram.rnc"
+ include "dml-lockedCanvas.rnc"
+ include "dml-chart.rnc"
+ include "dml-chartDrawing.rnc"
+ include "dml-picture.rnc"
++include "dml-compatibility.rnc"
+ start = sml_worksheet
