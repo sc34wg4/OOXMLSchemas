@@ -135,7 +135,6 @@ dchrt_CT_DepthPercent =
   
   ## default value: 100%
   attribute val { dchrt_ST_DepthPercent }?
-dchrt_ST_Perspective = dchrt_ST_PerspectivePercent
 dchrt_ST_Perspective =
   xsd:unsignedByte { minInclusive = "0" maxInclusive = "240" }
 dchrt_CT_Perspective =
