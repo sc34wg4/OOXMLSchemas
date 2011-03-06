@@ -1198,7 +1198,7 @@ w_EG_RPr = element rPr { w_CT_RPr }?
 w_EG_RPrMath =
   w_EG_RPr
   | element ins { w_CT_MathCtrlIns }
-  | element del { w_CT_MathCtrlIns }
+  | element del { w_CT_MathCtrlDel }
 w_CT_MathCtrlIns =
   w_CT_TrackChange,
   (element del { w_CT_RPrChange }

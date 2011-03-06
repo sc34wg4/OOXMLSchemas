@@ -1879,7 +1879,7 @@
     <xsd:choice>
       <xsd:group ref="EG_RPr"/>
       <xsd:element name="ins" type="CT_MathCtrlIns"/>
-      <xsd:element name="del" type="CT_MathCtrlIns "/>
+      <xsd:element name="del" type="CT_MathCtrlDel"/>
     </xsd:choice>
   </xsd:group>
   <xsd:complexType name="CT_MathCtrlIns">
