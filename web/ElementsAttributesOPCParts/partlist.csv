@@ -1,0 +1,67 @@
+DrawingML Chart,dml-chart.xsd,chartSpace
+DrawingML Chart Drawing,dml-chart.xsd,userShapes
+DrawingML Diagram Colors,dml-diagram.xsd,colorsDef
+DrawingML Diagram Data,dml-diagram.xsd,dataModel
+DrawingML Diagram Layout Definition,dml-diagram.xsd,layoutDef
+DrawingML Diagram Style,dml-diagram.xsd,styleDef
+DrawingML Table Styles,dml-main.xsd,tblStyleLst
+DrawingML Theme,dml-main.xsd,theme
+DrawingML Theme Override,dml-main.xsd,themeOverride
+
+PresentationML Comment Authors,pml.xsd,cmAuthorLst
+PresentationML Comments,pml.xsd,cmLst
+PresentationML Handout Master,pml.xsd,handoutMaster
+PresentationML Notes Master,pml.xsd,notesMaster
+PresentationML Notes Slide,pml.xsd,notes
+PresentationML Presentation,pml.xsd,presentation
+PresentationML Presentation Properties,pml.xsd,presentationPr
+PresentationML Slide,pml.xsd,sld
+PresentationML Slide Layout,pml.xsd,sldLayout
+PresentationML Slide Master,pml.xsd,sldMaster
+PresentationML Slide Synchronization Data,pml.xsd,sldSyncPr
+PresentationML User-Defined Tags,pml.xsd,tagLst
+PresentationML View Properties,pml.xsd,viewPr
+
+Shared Additional Characteristics,shared-additionalCharacteristics.xsd,additionalCharacteristics
+Shared Extended File Properties,shared-documentPropertiesExtended.xsd,Properties
+Shared Bibliography,shared-bibliography.xsd,Sources
+Shared Custom File Properties,shared-documentPropertiesCustom.xsd,Properties
+Shared Custom XML Data Storage Properties,shared-customXmlDataProperties.xsd,datastoreItem
+
+SpreadsheetML Calculation Chain,sml.xsd,calcChain
+SpreadsheetML Chartsheet,sml.xsd,chartsheet
+SpreadsheetML Comments,sml.xsd,comments
+SpreadsheetML Connections,sml.xsd,connections
+SpreadsheetML Custom XML Mappings,sml.xsd,MapInfo
+SpreadsheetML Dialogsheet,sml.xsd,dialogsheet
+SpreadsheetML Drawing,dml-spreadsheetDrawing.xsd,wsDr
+SpreadsheetML External Workbook References,sml.xsd,externalLink
+SpreadsheetML Metadata,sml.xsd,metadata
+SpreadsheetML Pivot Table,sml.xsd,pivotTableDefinition
+SpreadsheetML Pivot Table Cache Definition,sml.xsd,pivotCacheDefinition
+SpreadsheetML Pivot Table Cache Records,sml.xsd,pivotCacheRecords
+SpreadsheetML Query Table,sml.xsd,queryTable
+SpreadsheetML Shared String Table,sml.xsd,sst
+SpreadsheetML Shared Workbook Revision Headers,sml.xsd,headers
+SpreadsheetML Shared Workbook Revision Log,sml.xsd,revisions
+SpreadsheetML Shared Workbook User Data,sml.xsd,users
+SpreadsheetML Single Cell Table Definitions,sml.xsd,singleXmlCells
+SpreadsheetML Styles,sml.xsd,styleSheet
+SpreadsheetML Table Definitions,sml.xsd,table
+SpreadsheetML Volatile Dependencies,sml.xsd,volTypes
+SpreadsheetML Workbook,sml.xsd,workbook
+SpreadsheetML Worksheet,sml.xsd,worksheet
+
+WordprocessingML Comments,wml.xsd,comments
+WordprocessingML Document Settings,wml.xsd,settings
+WordprocessingML Endnotes,wml.xsd,endnotes
+WordprocessingML Font Table,wml.xsd,fonts
+WordprocessingML Footer,wml.xsd,ftr
+WordprocessingML Footnotes,wml.xsd,footnotes
+WordprocessingML Glossary Document,wml.xsd,glossaryDocument
+WordprocessingML Header,wml.xsd,hdr
+WordprocessingML Mail Merge Recipient Data,wml.xsd,recipients
+WordprocessingML Main Document,wml.xsd,document
+WordprocessingML Numbering Definitions,wml.xsd,numbering
+WordprocessingML Style Definitions,wml.xsd,styles
+WordprocessingML Web Settings,wml.xsd,webSettings
