@@ -242,7 +242,6 @@
     </xsd:sequence>
     <xsd:attribute name="moveWithCells" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="sizeWithCells" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="z-order" type="xsd:unsignedInt" use="optional"/>
   </xsd:complexType>
   <xsd:group name="EG_ExtensionList">
     <xsd:sequence>
@@ -306,7 +305,6 @@
     <xsd:attribute name="defaultSize" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="print" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="disabled" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="uiObject" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoFill" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="autoLine" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="altText" type="s:ST_Xstring" use="optional"/>
@@ -315,8 +313,6 @@
     <xsd:attribute name="lockText" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="justLastX" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoScale" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="rowHidden" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="colHidden" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextHAlign">
     <xsd:restriction base="xsd:string">
@@ -2167,6 +2163,7 @@
       <xsd:element name="legacyDrawingHF" type="CT_LegacyDrawing" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="drawingHF" type="CT_DrawingHF" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="oleObjects" type="CT_OleObjects" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="controls" type="CT_Controls" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
     </xsd:sequence>
   </xsd:complexType>

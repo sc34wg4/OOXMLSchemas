@@ -120,7 +120,7 @@ p_CT_TLOleChartTargetElement =
   ## default value: 0
   attribute lvl { xsd:unsignedInt }?
 p_CT_TLShapeTargetElement =
-  attribute spid { a_ST_ShapeID },
+  attribute spid { a_ST_DrawingElementId },
   (element bg { p_CT_Empty }
    | element subSp { p_CT_TLSubShapeId }
    | element oleChartEl { p_CT_TLOleChartTargetElement }
@@ -368,7 +368,7 @@ p_CT_TLMediaNodeVideo =
   attribute fullScrn { xsd:boolean }?,
   element cMediaNode { p_CT_TLCommonMediaNodeData }
 p_AG_TLBuild =
-  attribute spid { a_ST_ShapeID },
+  attribute spid { a_ST_DrawingElementId },
   attribute grpId { xsd:unsignedInt },
   
   ## default value: false
@@ -501,7 +501,6 @@ p_CT_Comment =
 p_CT_CommentList = element cm { p_CT_Comment }*
 p_cmLst = element cmLst { p_CT_CommentList }
 p_AG_Ole =
-  attribute spid { a_ST_ShapeID },
   attribute name { xsd:string }?,
   
   ## default value: false
@@ -525,12 +524,12 @@ p_CT_OleObject =
   attribute progId { xsd:string }?,
   (element embed { p_CT_OleObjectEmbed }
    | element link { p_CT_OleObjectLink }),
-  element pic { p_CT_Picture }?
+  (attribute spid { a_ST_ShapeID } | element pic { p_CT_Picture })
 p_oleObj = element oleObj { p_CT_OleObject }
 p_CT_Control =
   p_AG_Ole,
   element extLst { p_CT_ExtensionList }?,
-  element pic { p_CT_Picture }?
+  (attribute spid { a_ST_ShapeID } | element pic { p_CT_Picture })
 p_CT_ControlList = element control { p_CT_Control }*
 p_ST_SlideId =
   xsd:unsignedInt { minInclusive = "256" maxExclusive = "2147483648" }

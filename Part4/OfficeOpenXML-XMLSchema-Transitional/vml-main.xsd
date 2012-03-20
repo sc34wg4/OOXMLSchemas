@@ -374,6 +374,7 @@
   <xsd:complexType name="CT_Textbox">
     <xsd:choice>
       <xsd:element ref="w:txbxContent" minOccurs="0"/>
+      <xsd:any namespace="##local" processContents="skip"/>
     </xsd:choice>
     <xsd:attributeGroup ref="AG_Id"/>
     <xsd:attributeGroup ref="AG_Style"/>

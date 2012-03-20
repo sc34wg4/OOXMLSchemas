@@ -73,6 +73,12 @@
   <xsd:simpleType name="ST_String">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
+  <xsd:simpleType name="ST_XmlName">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="255"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:simpleType name="ST_TrueFalse">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="t"/>

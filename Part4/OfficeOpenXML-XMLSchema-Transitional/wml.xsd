@@ -42,7 +42,7 @@
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_Charset">
-    <xsd:attribute name="val" type="ST_UcharHexNumber" use="required"/>
+    <xsd:attribute name="val" type="ST_UcharHexNumber" use="optional"/>
     <xsd:attribute name="characterSet" type="s:ST_String" use="optional"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_DecimalNumberOrPercent">
@@ -1817,51 +1817,51 @@
     <xsd:attribute name="cstheme" type="ST_Theme"/>
   </xsd:complexType>
   <xsd:group name="EG_RPrBase">
-    <xsd:sequence>
-      <xsd:element name="rStyle" type="CT_String" minOccurs="0"/>
-      <xsd:element name="rFonts" type="CT_Fonts" minOccurs="0"/>
-      <xsd:element name="b" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="bCs" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="i" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="iCs" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="caps" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="smallCaps" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="strike" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="dstrike" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="outline" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="shadow" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="emboss" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="imprint" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="noProof" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="snapToGrid" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="vanish" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="webHidden" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="color" type="CT_Color" minOccurs="0"/>
-      <xsd:element name="spacing" type="CT_SignedTwipsMeasure" minOccurs="0"/>
-      <xsd:element name="w" type="CT_TextScale" minOccurs="0"/>
-      <xsd:element name="kern" type="CT_HpsMeasure" minOccurs="0"/>
-      <xsd:element name="position" type="CT_SignedHpsMeasure" minOccurs="0"/>
-      <xsd:element name="sz" type="CT_HpsMeasure" minOccurs="0"/>
-      <xsd:element name="szCs" type="CT_HpsMeasure" minOccurs="0"/>
-      <xsd:element name="highlight" type="CT_Highlight" minOccurs="0"/>
-      <xsd:element name="u" type="CT_Underline" minOccurs="0"/>
-      <xsd:element name="effect" type="CT_TextEffect" minOccurs="0"/>
-      <xsd:element name="bdr" type="CT_Border" minOccurs="0"/>
-      <xsd:element name="shd" type="CT_Shd" minOccurs="0"/>
-      <xsd:element name="fitText" type="CT_FitText" minOccurs="0"/>
-      <xsd:element name="vertAlign" type="CT_VerticalAlignRun" minOccurs="0"/>
-      <xsd:element name="rtl" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="cs" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="em" type="CT_Em" minOccurs="0"/>
-      <xsd:element name="lang" type="CT_Language" minOccurs="0"/>
-      <xsd:element name="eastAsianLayout" type="CT_EastAsianLayout" minOccurs="0"/>
-      <xsd:element name="specVanish" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="oMath" type="CT_OnOff" minOccurs="0"/>
-    </xsd:sequence>
+    <xsd:choice>
+      <xsd:element name="rStyle" type="CT_String"/>
+      <xsd:element name="rFonts" type="CT_Fonts"/>
+      <xsd:element name="b" type="CT_OnOff"/>
+      <xsd:element name="bCs" type="CT_OnOff"/>
+      <xsd:element name="i" type="CT_OnOff"/>
+      <xsd:element name="iCs" type="CT_OnOff"/>
+      <xsd:element name="caps" type="CT_OnOff"/>
+      <xsd:element name="smallCaps" type="CT_OnOff"/>
+      <xsd:element name="strike" type="CT_OnOff"/>
+      <xsd:element name="dstrike" type="CT_OnOff"/>
+      <xsd:element name="outline" type="CT_OnOff"/>
+      <xsd:element name="shadow" type="CT_OnOff"/>
+      <xsd:element name="emboss" type="CT_OnOff"/>
+      <xsd:element name="imprint" type="CT_OnOff"/>
+      <xsd:element name="noProof" type="CT_OnOff"/>
+      <xsd:element name="snapToGrid" type="CT_OnOff"/>
+      <xsd:element name="vanish" type="CT_OnOff"/>
+      <xsd:element name="webHidden" type="CT_OnOff"/>
+      <xsd:element name="color" type="CT_Color"/>
+      <xsd:element name="spacing" type="CT_SignedTwipsMeasure"/>
+      <xsd:element name="w" type="CT_TextScale"/>
+      <xsd:element name="kern" type="CT_HpsMeasure"/>
+      <xsd:element name="position" type="CT_SignedHpsMeasure"/>
+      <xsd:element name="sz" type="CT_HpsMeasure"/>
+      <xsd:element name="szCs" type="CT_HpsMeasure"/>
+      <xsd:element name="highlight" type="CT_Highlight"/>
+      <xsd:element name="u" type="CT_Underline"/>
+      <xsd:element name="effect" type="CT_TextEffect"/>
+      <xsd:element name="bdr" type="CT_Border"/>
+      <xsd:element name="shd" type="CT_Shd"/>
+      <xsd:element name="fitText" type="CT_FitText"/>
+      <xsd:element name="vertAlign" type="CT_VerticalAlignRun"/>
+      <xsd:element name="rtl" type="CT_OnOff"/>
+      <xsd:element name="cs" type="CT_OnOff"/>
+      <xsd:element name="em" type="CT_Em"/>
+      <xsd:element name="lang" type="CT_Language"/>
+      <xsd:element name="eastAsianLayout" type="CT_EastAsianLayout"/>
+      <xsd:element name="specVanish" type="CT_OnOff"/>
+      <xsd:element name="oMath" type="CT_OnOff"/>
+    </xsd:choice>
   </xsd:group>
   <xsd:group name="EG_RPrContent">
     <xsd:sequence>
-      <xsd:group ref="EG_RPrBase" minOccurs="0"/>
+      <xsd:group ref="EG_RPrBase" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="rPrChange" type="CT_RPrChange" minOccurs="0"/>
     </xsd:sequence>
   </xsd:group>
@@ -1915,7 +1915,7 @@
   <xsd:complexType name="CT_ParaRPr">
     <xsd:sequence>
       <xsd:group ref="EG_ParaRPrTrackChanges" minOccurs="0"/>
-      <xsd:group ref="EG_RPrBase" minOccurs="0"/>
+      <xsd:group ref="EG_RPrBase" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="rPrChange" type="CT_ParaRPrChange" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -2047,18 +2047,18 @@
     <xsd:attribute name="storeItemID" type="s:ST_String" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SdtPr">
-    <xsd:choice maxOccurs="unbounded">
+    <xsd:sequence>
       <xsd:element name="rPr" type="CT_RPr" minOccurs="0"/>
       <xsd:element name="alias" type="CT_String" minOccurs="0"/>
-      <xsd:element name="label" type="CT_DecimalNumber" minOccurs="0"/>
-      <xsd:element name="tabIndex" type="CT_UnsignedDecimalNumber" minOccurs="0"/>
+      <xsd:element name="tag" type="CT_String" minOccurs="0"/>
+      <xsd:element name="id" type="CT_DecimalNumber" minOccurs="0"/>
       <xsd:element name="lock" type="CT_Lock" minOccurs="0"/>
       <xsd:element name="placeholder" type="CT_Placeholder" minOccurs="0"/>
+      <xsd:element name="temporary" type="CT_OnOff" minOccurs="0"/>
       <xsd:element name="showingPlcHdr" type="CT_OnOff" minOccurs="0"/>
       <xsd:element name="dataBinding" type="CT_DataBinding" minOccurs="0"/>
-      <xsd:element name="temporary" type="CT_OnOff" minOccurs="0"/>
-      <xsd:element name="id" type="CT_DecimalNumber" minOccurs="0"/>
-      <xsd:element name="tag" type="CT_String" minOccurs="0"/>
+      <xsd:element name="label" type="CT_DecimalNumber" minOccurs="0"/>
+      <xsd:element name="tabIndex" type="CT_UnsignedDecimalNumber" minOccurs="0"/>
       <xsd:choice minOccurs="0" maxOccurs="1">
         <xsd:element name="equation" type="CT_Empty"/>
         <xsd:element name="comboBox" type="CT_SdtComboBox"/>
@@ -2073,7 +2073,7 @@
         <xsd:element name="group" type="CT_Empty"/>
         <xsd:element name="bibliography" type="CT_Empty"/>
       </xsd:choice>
-    </xsd:choice>
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_SdtEndPr">
     <xsd:choice maxOccurs="unbounded">
@@ -2181,7 +2181,7 @@
       <xsd:group ref="EG_PContent" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String"/>
-    <xsd:attribute name="element" type="s:ST_String" use="required"/>
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SmartTagRun">
     <xsd:sequence>
@@ -2189,7 +2189,7 @@
       <xsd:group ref="EG_PContent" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String"/>
-    <xsd:attribute name="element" type="s:ST_String" use="required"/>
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CustomXmlBlock">
     <xsd:sequence>
@@ -2197,7 +2197,7 @@
       <xsd:group ref="EG_ContentBlockContent" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String"/>
-    <xsd:attribute name="element" type="s:ST_String" use="required"/>
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CustomXmlPr">
     <xsd:sequence>
@@ -2211,7 +2211,7 @@
       <xsd:group ref="EG_ContentRowContent" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String"/>
-    <xsd:attribute name="element" type="s:ST_String" use="required"/>
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CustomXmlCell">
     <xsd:sequence>
@@ -2219,7 +2219,7 @@
       <xsd:group ref="EG_ContentCellContent" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String"/>
-    <xsd:attribute name="element" type="s:ST_String" use="required"/>
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SmartTagPr">
     <xsd:sequence>
@@ -3557,15 +3557,15 @@
     <xsd:attribute name="decorated" type="s:ST_OnOff" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_DocPartPr">
-    <xsd:choice maxOccurs="unbounded">
+    <xsd:all>
       <xsd:element name="name" type="CT_DocPartName" minOccurs="1"/>
-      <xsd:element name="style" type="CT_String"/>
-      <xsd:element name="category" type="CT_DocPartCategory"/>
-      <xsd:element name="types" type="CT_DocPartTypes"/>
-      <xsd:element name="behaviors" type="CT_DocPartBehaviors"/>
-      <xsd:element name="description" type="CT_String"/>
-      <xsd:element name="guid" type="CT_Guid"/>
-    </xsd:choice>
+      <xsd:element name="style" type="CT_String" minOccurs="0"/>
+      <xsd:element name="category" type="CT_DocPartCategory" minOccurs="0"/>
+      <xsd:element name="types" type="CT_DocPartTypes" minOccurs="0"/>
+      <xsd:element name="behaviors" type="CT_DocPartBehaviors" minOccurs="0"/>
+      <xsd:element name="description" type="CT_String" minOccurs="0"/>
+      <xsd:element name="guid" type="CT_Guid" minOccurs="0"/>
+    </xsd:all>
   </xsd:complexType>
   <xsd:complexType name="CT_DocPart">
     <xsd:sequence>

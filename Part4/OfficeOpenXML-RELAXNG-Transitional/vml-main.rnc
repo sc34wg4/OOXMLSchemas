@@ -9,6 +9,7 @@ namespace w =
   "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
+namespace local = ""
 
 v_AG_Id = attribute id { xsd:string }?
 v_AG_Style = attribute style { xsd:string }?
@@ -300,7 +301,8 @@ v_CT_Textbox =
   attribute inset { xsd:string }?,
   o_singleclick?,
   o_insetmode?,
-  (w_txbxContent?)
+  (w_txbxContent? | anyHTMLElementAsLocalElement)
+anyHTMLElementAsLocalElement = element local:* { anyAttribute*, text?, anyHTMLElementAsLocalElement* }
 v_CT_TextPath =
   v_AG_Id,
   v_AG_Style,

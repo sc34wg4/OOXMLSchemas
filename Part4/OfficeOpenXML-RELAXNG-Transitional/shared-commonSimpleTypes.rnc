@@ -35,6 +35,7 @@ s_ST_Guid =
 s_ST_OnOff = xsd:boolean | s_ST_OnOff1
 s_ST_OnOff1 = string "on" | string "off"
 s_ST_String = xsd:string
+s_ST_XmlName = xsd:NCName { minLength = "1" maxLength = "255" }
 s_ST_TrueFalse =
   string "t" | string "f" | string "true" | string "false"
 s_ST_TrueFalseBlank =

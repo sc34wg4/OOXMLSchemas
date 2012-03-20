@@ -206,7 +206,6 @@ sml_CT_ObjectAnchor =
   
   ## default value: false
   attribute sizeWithCells { xsd:boolean }?,
-  attribute z-order { xsd:unsignedInt }?,
   xdr_from,
   xdr_to
 sml_EG_ExtensionList = element ext { sml_CT_Extension }*
@@ -260,9 +259,6 @@ sml_CT_CommentPr =
   ## default value: false
   attribute disabled { xsd:boolean }?,
   
-  ## default value: false
-  attribute uiObject { xsd:boolean }?,
-  
   ## default value: true
   attribute autoFill { xsd:boolean }?,
   
@@ -284,12 +280,7 @@ sml_CT_CommentPr =
   
   ## default value: false
   attribute autoScale { xsd:boolean }?,
-  
-  ## default value: false
-  attribute rowHidden { xsd:boolean }?,
-  
-  ## default value: false
-  attribute colHidden { xsd:boolean }?,
+
   element anchor { sml_CT_ObjectAnchor }
 sml_ST_TextHAlign =
   string "left"
@@ -2351,6 +2342,7 @@ sml_CT_Dialogsheet =
   element legacyDrawingHF { sml_CT_LegacyDrawing }?,
   element drawingHF { sml_CT_DrawingHF }?,
   element oleObjects { sml_CT_OleObjects }?,
+  element controls { sml_CT_Controls }?,
   element extLst { sml_CT_ExtensionList }?
 sml_CT_Worksheet =
   element sheetPr { sml_CT_SheetPr }?,
