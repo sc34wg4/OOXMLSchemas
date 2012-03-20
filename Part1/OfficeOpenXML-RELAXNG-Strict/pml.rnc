@@ -116,7 +116,7 @@ p_CT_TLOleChartTargetElement =
   ## default value: 0
   attribute lvl { xsd:unsignedInt }?
 p_CT_TLShapeTargetElement =
-  attribute spid { a_ST_ShapeID },
+  attribute spid { a_ST_DrawingElementId },
   (element bg { p_CT_Empty }
    | element subSp { p_CT_TLSubShapeId }
    | element oleChartEl { p_CT_TLOleChartTargetElement }
@@ -364,7 +364,7 @@ p_CT_TLMediaNodeVideo =
   attribute fullScrn { xsd:boolean }?,
   element cMediaNode { p_CT_TLCommonMediaNodeData }
 p_AG_TLBuild =
-  attribute spid { a_ST_ShapeID },
+  attribute spid { a_ST_DrawingElementId },
   attribute grpId { xsd:unsignedInt },
   
   ## default value: false

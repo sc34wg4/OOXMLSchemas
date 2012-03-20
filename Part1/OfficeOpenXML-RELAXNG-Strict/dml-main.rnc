@@ -632,6 +632,9 @@ a_CT_GraphicalObjectFrameLocking =
   ## default value: false
   attribute noResize { xsd:boolean }?,
   element extLst { a_CT_OfficeArtExtensionList }?
+a_CT_ContentPartLocking =
+  a_AG_Locking,
+  element extLst { a_CT_OfficeArtExtensionList }?
 a_CT_NonVisualDrawingProps =
   attribute id { a_ST_DrawingElementId },
   attribute name { xsd:string },
@@ -665,6 +668,12 @@ a_CT_NonVisualGroupDrawingShapeProps =
   element extLst { a_CT_OfficeArtExtensionList }?
 a_CT_NonVisualGraphicFrameProperties =
   element graphicFrameLocks { a_CT_GraphicalObjectFrameLocking }?,
+  element extLst { a_CT_OfficeArtExtensionList }?
+a_CT_NonVisualContentPartProperties =
+  
+  ## default value: true
+  attribute isComment { xsd:boolean }?,
+  element cpLocks { a_CT_ContentPartLocking }?,
   element extLst { a_CT_OfficeArtExtensionList }?
 a_CT_GraphicalObjectData =
   attribute uri { xsd:token },
@@ -2146,12 +2155,18 @@ a_ST_TextNonNegativePoint =
 a_ST_TextFontSize =
   xsd:int { minInclusive = "100" maxInclusive = "400000" }
 a_ST_TextTypeface = xsd:string
+a_ST_PitchFamily = 
+ xsd:byte "00" | xsd:byte "01" | xsd:byte "02" | xsd:byte "16" |
+ xsd:byte "17" | xsd:byte "18" | xsd:byte "32" | xsd:byte "33" |
+ xsd:byte "34" | xsd:byte "48" | xsd:byte "49" | xsd:byte "50" |
+ xsd:byte "64" | xsd:byte "65" | xsd:byte "66" | xsd:byte "80" |
+ xsd:byte "81" | xsd:byte "82"
 a_CT_TextFont =
   attribute typeface { a_ST_TextTypeface },
   attribute panose { s_ST_Panose }?,
   
   ## default value: 0
-  attribute pitchFamily { xsd:byte }?,
+  attribute pitchFamily { a_ST_PitchFamily }?,
   
   ## default value: 1
   attribute charset { xsd:byte }?

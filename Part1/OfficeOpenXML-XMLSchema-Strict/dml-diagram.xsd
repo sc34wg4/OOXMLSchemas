@@ -69,8 +69,7 @@
       <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="optional" default=""/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
+    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
   </xsd:complexType>
   <xsd:element name="colorsDef" type="CT_ColorTransform"/>
   <xsd:complexType name="CT_ColorTransformHeader">
@@ -81,8 +80,7 @@
       <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
+    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
     <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:element name="colorsDefHdr" type="CT_ColorTransformHeader"/>
@@ -362,8 +360,7 @@
       <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="optional" default=""/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
+    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
     <xsd:attribute name="defStyle" type="xsd:string" use="optional" default=""/>
   </xsd:complexType>
   <xsd:element name="layoutDef" type="CT_DiagramDefinition"/>
@@ -375,8 +372,7 @@
       <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
+    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
     <xsd:attribute name="defStyle" type="xsd:string" use="optional" default=""/>
     <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
   </xsd:complexType>
@@ -563,8 +559,7 @@
       <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="optional" default=""/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
+    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
   </xsd:complexType>
   <xsd:element name="styleDef" type="CT_StyleDefinition"/>
   <xsd:complexType name="CT_StyleDefinitionHeader">
@@ -575,8 +570,7 @@
       <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"
-      default="http://purl.oclc.org/ooxml/drawingml/diagram"/>
+    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
     <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:element name="styleDefHdr" type="CT_StyleDefinitionHeader"/>

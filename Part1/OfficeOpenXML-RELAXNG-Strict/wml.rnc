@@ -943,6 +943,7 @@ w_ST_DocGrid =
 w_CT_DocGrid =
   attribute w:type { w_ST_DocGrid }?,
   attribute w:linePitch { w_ST_DecimalNumber }?,
+  ## default value: 0
   attribute w:charSpace { w_ST_DecimalNumber }?
 w_ST_HdrFtr = string "even" | string "default" | string "first"
 w_ST_FtnEdn =
@@ -1093,44 +1094,44 @@ w_CT_Fonts =
   attribute w:eastAsiaTheme { w_ST_Theme }?,
   attribute w:cstheme { w_ST_Theme }?
 w_EG_RPrBase =
-  element rStyle { w_CT_String }?,
-  element rFonts { w_CT_Fonts }?,
-  element b { w_CT_OnOff }?,
-  element bCs { w_CT_OnOff }?,
-  element i { w_CT_OnOff }?,
-  element iCs { w_CT_OnOff }?,
-  element caps { w_CT_OnOff }?,
-  element smallCaps { w_CT_OnOff }?,
-  element strike { w_CT_OnOff }?,
-  element dstrike { w_CT_OnOff }?,
-  element outline { w_CT_OnOff }?,
-  element shadow { w_CT_OnOff }?,
-  element emboss { w_CT_OnOff }?,
-  element imprint { w_CT_OnOff }?,
-  element noProof { w_CT_OnOff }?,
-  element snapToGrid { w_CT_OnOff }?,
-  element vanish { w_CT_OnOff }?,
-  element webHidden { w_CT_OnOff }?,
-  element color { w_CT_Color }?,
-  element spacing { w_CT_SignedTwipsMeasure }?,
-  element w { w_CT_TextScale }?,
-  element kern { w_CT_HpsMeasure }?,
-  element position { w_CT_SignedHpsMeasure }?,
-  element sz { w_CT_HpsMeasure }?,
-  element szCs { w_CT_HpsMeasure }?,
-  element highlight { w_CT_Highlight }?,
-  element u { w_CT_Underline }?,
-  element effect { w_CT_TextEffect }?,
-  element bdr { w_CT_Border }?,
-  element shd { w_CT_Shd }?,
-  element fitText { w_CT_FitText }?,
-  element vertAlign { w_CT_VerticalAlignRun }?,
-  element rtl { w_CT_OnOff }?,
-  element cs { w_CT_OnOff }?,
-  element em { w_CT_Em }?,
-  element lang { w_CT_Language }?,
-  element eastAsianLayout { w_CT_EastAsianLayout }?,
-  element specVanish { w_CT_OnOff }?,
+  element rStyle { w_CT_String }?&
+  element rFonts { w_CT_Fonts }?&
+  element b { w_CT_OnOff }?&
+  element bCs { w_CT_OnOff }?&
+  element i { w_CT_OnOff }?&
+  element iCs { w_CT_OnOff }?&
+  element caps { w_CT_OnOff }?&
+  element smallCaps { w_CT_OnOff }?&
+  element strike { w_CT_OnOff }?&
+  element dstrike { w_CT_OnOff }?&
+  element outline { w_CT_OnOff }?&
+  element shadow { w_CT_OnOff }?&
+  element emboss { w_CT_OnOff }?&
+  element imprint { w_CT_OnOff }?&
+  element noProof { w_CT_OnOff }?&
+  element snapToGrid { w_CT_OnOff }?&
+  element vanish { w_CT_OnOff }?&
+  element webHidden { w_CT_OnOff }?&
+  element color { w_CT_Color }?&
+  element spacing { w_CT_SignedTwipsMeasure }?&
+  element w { w_CT_TextScale }?&
+  element kern { w_CT_HpsMeasure }?&
+  element position { w_CT_SignedHpsMeasure }?&
+  element sz { w_CT_HpsMeasure }?&
+  element szCs { w_CT_HpsMeasure }?&
+  element highlight { w_CT_Highlight }?&
+  element u { w_CT_Underline }?&
+  element effect { w_CT_TextEffect }?&
+  element bdr { w_CT_Border }?&
+  element shd { w_CT_Shd }?&
+  element fitText { w_CT_FitText }?&
+  element vertAlign { w_CT_VerticalAlignRun }?&
+  element rtl { w_CT_OnOff }?&
+  element cs { w_CT_OnOff }?&
+  element em { w_CT_Em }?&
+  element lang { w_CT_Language }?&
+  element eastAsianLayout { w_CT_EastAsianLayout }?&
+  element specVanish { w_CT_OnOff }?&
   element oMath { w_CT_OnOff }?
 w_EG_RPrContent =
   w_EG_RPrBase?,
@@ -1222,29 +1223,29 @@ w_CT_DataBinding =
   attribute w:xpath { s_ST_String },
   attribute w:storeItemID { s_ST_String }
 w_CT_SdtPr =
-  (element rPr { w_CT_RPr }?
-   | element alias { w_CT_String }?
-   | element label { w_CT_DecimalNumber }?
-   | element tabIndex { w_CT_UnsignedDecimalNumber }?
-   | element lock { w_CT_Lock }?
-   | element placeholder { w_CT_Placeholder }?
-   | element showingPlcHdr { w_CT_OnOff }?
-   | element dataBinding { w_CT_DataBinding }?
-   | element temporary { w_CT_OnOff }?
-   | element id { w_CT_DecimalNumber }?
-   | element tag { w_CT_String }?
-   | (element equation { w_CT_Empty }
-      | element comboBox { w_CT_SdtComboBox }
-      | element date { w_CT_SdtDate }
-      | element docPartObj { w_CT_SdtDocPart }
-      | element docPartList { w_CT_SdtDocPart }
-      | element dropDownList { w_CT_SdtDropDownList }
-      | element picture { w_CT_Empty }
-      | element richText { w_CT_Empty }
-      | element text { w_CT_SdtText }
-      | element citation { w_CT_Empty }
-      | element group { w_CT_Empty }
-      | element bibliography { w_CT_Empty })?)+
+  element rPr { w_CT_RPr }?,
+  element alias { w_CT_String }?,
+  element tag { w_CT_String }?,
+  element id { w_CT_DecimalNumber }?,
+  element lock { w_CT_Lock }?,
+  element placeholder { w_CT_Placeholder }?,
+  element temporary { w_CT_OnOff }?,
+  element showingPlcHdr { w_CT_OnOff }?,
+  element dataBinding { w_CT_DataBinding }?,
+  element label { w_CT_DecimalNumber }?,
+  element tabIndex { w_CT_UnsignedDecimalNumber }?,
+  (element equation { w_CT_Empty }
+    | element comboBox { w_CT_SdtComboBox }
+     | element date { w_CT_SdtDate }
+     | element docPartObj { w_CT_SdtDocPart }
+     | element docPartList { w_CT_SdtDocPart }
+     | element dropDownList { w_CT_SdtDropDownList }
+     | element picture { w_CT_Empty }
+     | element richText { w_CT_Empty }
+     | element text { w_CT_SdtText }
+     | element citation { w_CT_Empty }
+     | element group { w_CT_Empty }
+     | element bibliography { w_CT_Empty })?
 w_CT_SdtEndPr = (element rPr { w_CT_RPr }?)+
 w_EG_ContentRunContent =
   element customXml { w_CT_CustomXmlRun }
@@ -1303,17 +1304,17 @@ w_CT_Attr =
   attribute w:val { s_ST_String }
 w_CT_CustomXmlRun =
   attribute w:uri { s_ST_String }?,
-  attribute w:element { s_ST_String },
+  attribute w:element { s_ST_XmlName },
   element customXmlPr { w_CT_CustomXmlPr }?,
   w_EG_PContent*
 w_CT_SmartTagRun =
   attribute w:uri { s_ST_String }?,
-  attribute w:element { s_ST_String },
+  attribute w:element { s_ST_XmlName },
   element smartTagPr { w_CT_SmartTagPr }?,
   w_EG_PContent*
 w_CT_CustomXmlBlock =
   attribute w:uri { s_ST_String }?,
-  attribute w:element { s_ST_String },
+  attribute w:element { s_ST_XmlName },
   element customXmlPr { w_CT_CustomXmlPr }?,
   w_EG_ContentBlockContent*
 w_CT_CustomXmlPr =
@@ -1321,12 +1322,12 @@ w_CT_CustomXmlPr =
   element attr { w_CT_Attr }*
 w_CT_CustomXmlRow =
   attribute w:uri { s_ST_String }?,
-  attribute w:element { s_ST_String },
+  attribute w:element { s_ST_XmlName },
   element customXmlPr { w_CT_CustomXmlPr }?,
   w_EG_ContentRowContent*
 w_CT_CustomXmlCell =
   attribute w:uri { s_ST_String }?,
-  attribute w:element { s_ST_String },
+  attribute w:element { s_ST_XmlName },
   element customXmlPr { w_CT_CustomXmlPr }?,
   w_EG_ContentCellContent*
 w_CT_SmartTagPr = element attr { w_CT_Attr }*
@@ -1374,12 +1375,10 @@ w_CT_TcMar =
   element end { w_CT_TblWidth }?
 w_ST_Merge = string "continue" | string "restart"
 w_CT_VMerge = attribute w:val { w_ST_Merge }?
-w_CT_HMerge = attribute w:val { w_ST_Merge }?
 w_CT_TcPrBase =
   element cnfStyle { w_CT_Cnf }?,
   element tcW { w_CT_TblWidth }?,
   element gridSpan { w_CT_DecimalNumber }?,
-  element hMerge { w_CT_HMerge }?,
   element vMerge { w_CT_VMerge }?,
   element tcBorders { w_CT_TcBorders }?,
   element shd { w_CT_Shd }?,
@@ -1807,7 +1806,6 @@ w_CT_WebSettings =
   element divs { w_CT_Divs }?,
   element encoding { w_CT_String }?,
   element optimizeForBrowser { w_CT_OptimizeForBrowser }?,
-  element relyOnVML { w_CT_OnOff }?,
   element allowPNG { w_CT_OnOff }?,
   element doNotRelyOnCSS { w_CT_OnOff }?,
   element doNotSaveAsSingleFile { w_CT_OnOff }?,
@@ -1854,10 +1852,6 @@ w_CT_LevelSuffix = attribute w:val { w_ST_LevelSuffix }
 w_CT_LevelText =
   attribute w:val { s_ST_String }?,
   attribute w:null { s_ST_OnOff }?
-w_CT_LvlLegacy =
-  attribute w:legacy { s_ST_OnOff }?,
-  attribute w:legacySpace { s_ST_TwipsMeasure }?,
-  attribute w:legacyIndent { w_ST_SignedTwipsMeasure }?
 w_CT_Lvl =
   attribute w:ilvl { w_ST_DecimalNumber },
   attribute w:tplc { w_ST_LongHexNumber }?,
@@ -1870,7 +1864,6 @@ w_CT_Lvl =
   element suff { w_CT_LevelSuffix }?,
   element lvlText { w_CT_LevelText }?,
   element lvlPicBulletId { w_CT_DecimalNumber }?,
-  element legacy { w_CT_LvlLegacy }?,
   element lvlJc { w_CT_Jc }?,
   element pPr { w_CT_PPrGeneral }?,
   element rPr { w_CT_RPr }?
@@ -2133,13 +2126,13 @@ w_CT_DocPartName =
   attribute w:val { s_ST_String },
   attribute w:decorated { s_ST_OnOff }?
 w_CT_DocPartPr =
-  (element name { w_CT_DocPartName }
-   | element style { w_CT_String }
-   | element category { w_CT_DocPartCategory }
-   | element types { w_CT_DocPartTypes }
-   | element behaviors { w_CT_DocPartBehaviors }
-   | element description { w_CT_String }
-   | element guid { w_CT_Guid })+
+  element name { w_CT_DocPartName }&
+  element style { w_CT_String }?&
+  element category { w_CT_DocPartCategory }?&
+  element types { w_CT_DocPartTypes }?&
+  element behaviors { w_CT_DocPartBehaviors }?&
+  element description { w_CT_String }?&
+  element guid { w_CT_Guid }?
 w_CT_DocPart =
   element docPartPr { w_CT_DocPartPr }?,
   element docPartBody { w_CT_Body }?

@@ -39,8 +39,6 @@ ddgrm_CT_CTStyleLabel =
   element extLst { a_CT_OfficeArtExtensionList }?
 ddgrm_CT_ColorTransform =
   attribute uniqueId { xsd:string }?,
-  
-  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   element title { ddgrm_CT_CTName }*,
   element desc { ddgrm_CT_CTDescription }*,
@@ -50,8 +48,6 @@ ddgrm_CT_ColorTransform =
 ddgrm_colorsDef = element colorsDef { ddgrm_CT_ColorTransform }
 ddgrm_CT_ColorTransformHeader =
   attribute uniqueId { xsd:string },
-  
-  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   
   ## default value: 0
@@ -295,8 +291,6 @@ ddgrm_CT_Description =
   attribute val { xsd:string }
 ddgrm_CT_DiagramDefinition =
   attribute uniqueId { xsd:string }?,
-  
-  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   attribute defStyle { xsd:string }?,
   element title { ddgrm_CT_Name }*,
@@ -310,8 +304,6 @@ ddgrm_CT_DiagramDefinition =
 ddgrm_layoutDef = element layoutDef { ddgrm_CT_DiagramDefinition }
 ddgrm_CT_DiagramDefinitionHeader =
   attribute uniqueId { xsd:string },
-  
-  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   attribute defStyle { xsd:string }?,
   
@@ -471,8 +463,6 @@ ddgrm_CT_StyleLabel =
   element extLst { a_CT_OfficeArtExtensionList }?
 ddgrm_CT_StyleDefinition =
   attribute uniqueId { xsd:string }?,
-  
-  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   element title { ddgrm_CT_SDName }*,
   element desc { ddgrm_CT_SDDescription }*,
@@ -483,8 +473,6 @@ ddgrm_CT_StyleDefinition =
 ddgrm_styleDef = element styleDef { ddgrm_CT_StyleDefinition }
 ddgrm_CT_StyleDefinitionHeader =
   attribute uniqueId { xsd:string },
-  
-  ## default value: http://purl.oclc.org/ooxml/drawingml/diagram
   attribute minVer { xsd:string }?,
   
   ## default value: 0

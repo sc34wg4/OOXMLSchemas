@@ -2,6 +2,8 @@ default namespace =
   "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
 namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
 namespace o = "urn:schemas-microsoft-com:office:office"
+namespace dpct = "http://purl.oclc.org/ooxml/drawingml/picture"
+namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
 namespace v = "urn:schemas-microsoft-com:vml"
 namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
 namespace w10 = "urn:schemas-microsoft-com:office:word"
@@ -108,5 +110,66 @@ wp_CT_Anchor =
   element docPr { a_CT_NonVisualDrawingProps },
   element cNvGraphicFramePr { a_CT_NonVisualGraphicFrameProperties }?,
   a_graphic
+wp_CT_TxbxContent = w_EG_BlockLevelElts+
+wp_CT_TextboxInfo =
+  
+  ## default value: 0
+  attribute id { xsd:unsignedShort }?,
+  element txbxContent { wp_CT_TxbxContent },
+  element extLst { a_CT_OfficeArtExtensionList }?
+wp_CT_LinkedTextboxInformation =
+  attribute id { xsd:unsignedShort },
+  attribute seq { xsd:unsignedShort },
+  element extLst { a_CT_OfficeArtExtensionList }?
+wp_CT_WordprocessingShape =
+  
+  ## default value: false
+  attribute normalEastAsianFlow { xsd:boolean }?,
+  element cNvPr { a_CT_NonVisualDrawingProps }?,
+  (element cNvSpPr { a_CT_NonVisualDrawingShapeProps }
+   | element cNvCnPr { a_CT_NonVisualConnectorProperties }),
+  element spPr { a_CT_ShapeProperties },
+  element style { a_CT_ShapeStyle }?,
+  element extLst { a_CT_OfficeArtExtensionList }?,
+  (element txbx { wp_CT_TextboxInfo }
+   | element linkedTxbx { wp_CT_LinkedTextboxInformation })?,
+  element bodyPr { a_CT_TextBodyProperties }
+wp_CT_GraphicFrame =
+  element cNvPr { a_CT_NonVisualDrawingProps },
+  element cNvFrPr { a_CT_NonVisualGraphicFrameProperties },
+  element xfrm { a_CT_Transform2D },
+  a_graphic,
+  element extLst { a_CT_OfficeArtExtensionList }?
+wp_CT_WordprocessingContentPartNonVisual =
+  element cNvPr { a_CT_NonVisualDrawingProps }?,
+  element cNvContentPartPr { a_CT_NonVisualContentPartProperties }?
+wp_CT_WordprocessingContentPart =
+  attribute bwMode { a_ST_BlackWhiteMode }?,
+  r_id,
+  element nvContentPartPr { wp_CT_WordprocessingContentPartNonVisual }?,
+  element xfrm { a_CT_Transform2D }?,
+  element extLst { a_CT_OfficeArtExtensionList }?
+wp_CT_WordprocessingGroup =
+  element cNvPr { a_CT_NonVisualDrawingProps }?,
+  element cNvGrpSpPr { a_CT_NonVisualGroupDrawingShapeProps },
+  element grpSpPr { a_CT_GroupShapeProperties },
+  (wp_wsp
+   | element grpSp { wp_CT_WordprocessingGroup }
+   | element graphicFrame { wp_CT_GraphicFrame }
+   | dpct_pic
+   | element contentPart { wp_CT_WordprocessingContentPart })*,
+  element extLst { a_CT_OfficeArtExtensionList }?
+wp_CT_WordprocessingCanvas =
+  element bg { a_CT_BackgroundFormatting }?,
+  element whole { a_CT_WholeE2oFormatting }?,
+  (wp_wsp
+   | dpct_pic
+   | element contentPart { wp_CT_WordprocessingContentPart }
+   | wp_wgp
+   | element graphicFrame { wp_CT_GraphicFrame })*,
+  element extLst { a_CT_OfficeArtExtensionList }?
+wp_wpc = element wpc { wp_CT_WordprocessingCanvas }
+wp_wgp = element wgp { wp_CT_WordprocessingGroup }
+wp_wsp = element wsp { wp_CT_WordprocessingShape }
 wp_inline = element inline { wp_CT_Inline }
 wp_anchor = element anchor { wp_CT_Anchor }

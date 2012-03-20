@@ -174,7 +174,7 @@
       <xsd:element name="txEl" type="CT_TLTextTargetElement"/>
       <xsd:element name="graphicEl" type="a:CT_AnimationElementChoice"/>
     </xsd:choice>
-    <xsd:attribute name="spid" type="a:ST_ShapeID" use="required"/>
+    <xsd:attribute name="spid" type="a:ST_DrawingElementId" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLTimeTargetElement">
     <xsd:choice minOccurs="1" maxOccurs="1">
@@ -612,7 +612,7 @@
     <xsd:attribute name="fullScrn" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:attributeGroup name="AG_TLBuild">
-    <xsd:attribute name="spid" type="a:ST_ShapeID" use="required"/>
+    <xsd:attribute name="spid" type="a:ST_DrawingElementId" use="required"/>
     <xsd:attribute name="grpId" type="xsd:unsignedInt" use="required"/>
     <xsd:attribute name="uiExpand" type="xsd:boolean" use="optional" default="false"/>
   </xsd:attributeGroup>
