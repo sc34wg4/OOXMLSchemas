@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+        <namespace match="attributes" ns="http://schemas.openxmlformats.org/markup-
+            compatibility/2006">
+            <validate schemaType="application/relax-ng-compact-syntax">
+                <schema>
+                    namespace mc="http://schemas.openxmlformats.org/markup-
+                    compatibility/2006"
+                    nsList = list { xsd:NCName* }
+                    qnameList = list { (xsd:QName | xsd:string {pattern = "\i\c*:\*" })*}
+                    start = element * {
+                    attribute mc:Ignorable { nsList }?,
+                    attribute mc:ProcessContent { qnameList }?,
+                    attribute mc:PreserveElements { qnameList }?,
+                    attribute mc:PreserveAttributes { qnameList }?,
+                    attribute mc:MustUnderstand { nsList }?
+                    }
+                </schema>
+            </validate>
+        </namespace>
+        <namespace match="elements" ns="http://schemas.openxmlformats.org/markup-
+            compatibility/2006">
+            <validate schemaType="application/relax-ng-compact-syntax">
+                <schema>
+                    default namespace ="http://schemas.openxmlformats.org/markup-
+                    compatibility/2006"
+                    nsList = list { xsd:NCName* }
+                    qnameList = list { (xsd:QName | xsd:string {pattern = "\i\c*:\*" })*}
+                    start = element AlternateContent {choice+,fallback?}
+                    choice = element Choice {attribute Requires { nsList }, text}
+                    fallback = element Fallback {text}
+                </schema>
+            </validate>
+        </namespace>
+        <namespace ns="" match="attributes">
+            <attach/>
+        </namespace>
+        <anyNamespace match="elements attributes">
+            <allow/>
+        </anyNamespace>
+</rules>
