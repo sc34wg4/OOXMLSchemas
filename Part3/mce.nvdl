@@ -11,8 +11,6 @@
                     start = element * {
                     attribute mc:Ignorable { nsList }?,
                     attribute mc:ProcessContent { qnameList }?,
-                    attribute mc:PreserveElements { qnameList }?,
-                    attribute mc:PreserveAttributes { qnameList }?,
                     attribute mc:MustUnderstand { nsList }?
                     }
                 </schema>
