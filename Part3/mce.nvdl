@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules xmlns="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-        <namespace match="attributes" ns="http://schemas.openxmlformats.org/markup-
-            compatibility/2006">
+        <namespace match="attributes" ns="http://schemas.openxmlformats.org/markup-compatibility/2006">
             <validate schemaType="application/relax-ng-compact-syntax">
                 <schema>
                     namespace mc="http://schemas.openxmlformats.org/markup-
