@@ -2497,7 +2497,6 @@ sml_CT_Cell =
   element extLst { sml_CT_ExtensionList }?
 sml_ST_CellType =
   string "b"
-  | string "d"
   | string "n"
   | string "e"
   | string "s"
@@ -4430,9 +4429,6 @@ sml_CT_WorkbookPr =
   
   ## default value: false
   attribute date1904 { xsd:boolean }?,
-  
-  ## default value: true
-  attribute dateCompatibility { xsd:boolean }?,
   
   ## default value: all
   attribute showObjects { sml_ST_Objects }?,

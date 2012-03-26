@@ -2288,7 +2288,6 @@
   <xsd:simpleType name="ST_CellType">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="b"/>
-      <xsd:enumeration value="d"/>
       <xsd:enumeration value="n"/>
       <xsd:enumeration value="e"/>
       <xsd:enumeration value="s"/>
@@ -4215,7 +4214,6 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_WorkbookPr">
     <xsd:attribute name="date1904" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="dateCompatibility" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="showObjects" type="ST_Objects" use="optional" default="all"/>
     <xsd:attribute name="showBorderUnselectedTables" type="xsd:boolean" use="optional"
       default="true"/>
