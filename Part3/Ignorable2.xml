@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- $Id: Ignorable1.xml 225 2012-11-16 23:57:27Z wg4convenor $ -->
+<example xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <bar1 mce:Ignorable="i1"
+     xmlns:i1="http://www.example.com/i1"
+     xmlns:i2="http://www.example.com/i2">
+    <bar2 mce:Ignorable="i2">...</bar2>
+    <bar2 mce:Ignorable="i1 i2">...</bar2>
+    <bar2 mce:Ignorable="i1alias i2" xmlns:i1alias="http://www.example.com/i1">...</bar2>
+  </bar1>
+</example>
