@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<example xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <bar1 mce:Ignorable="i1">
+    <bar2 xmlns:i1="http://www.example.com/i1">
+      ...
+    </bar2>
+  </bar1>
+</example>
