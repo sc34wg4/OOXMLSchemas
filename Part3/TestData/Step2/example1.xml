@@ -10,7 +10,7 @@
     <mce:Choice Requires="n1 n2">
       <mce:eAlternateContent>
 	<!-- Choice #1-1 -->
-	<mce:Choice Requires="n3">
+	<mce:Choice Requires="n3">...
 	</mce:Choice>
 	<!-- Fallback #1-1 -->
 	<mce:Fallback>...</mce:Fallback>
@@ -20,7 +20,7 @@
     <mce:Choice Requires="n1">
       <mce:eAlternateContent>
 	<!-- Choice #2-1 -->
-	<mce:Choice Requires="n3">
+	<mce:Choice Requires="n3">...
 	</mce:Choice>
 	<!-- Fallback #2-1 -->
 	<mce:Fallback>...</mce:Fallback>

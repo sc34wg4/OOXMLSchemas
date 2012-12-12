@@ -6,7 +6,7 @@
      xmlns:i1="http://www.example.com/i1"
      xmlns:i2="http://www.example.com/i2">
     <bar2 mce:Ignorable="i2"
-	  mce:ProcessContent="i2:*"/>
-    <bar3 mce:ProcessContent="i1:foo2"/>
+	  mce:ProcessContent="i2:*">...</bar2>
+    <bar3 mce:ProcessContent="i1:foo2">...</bar3>
   </bar1>
 </example>

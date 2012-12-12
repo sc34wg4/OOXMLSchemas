@@ -4,6 +4,6 @@
   <bar1 mce:Ignorable="i1"
      xmlns:i1="http://www.example.com/i1"
      xmlns:i2="http://www.example.com/i2">
-    <bar2 mce:Ignorable="i2"/>
+    <bar2 mce:Ignorable="i2">...</bar2>
   </bar1>
 </example>

@@ -6,6 +6,6 @@
   mce:ExtensionElements="e1:bar"
   e1:foo="">
 
-  <e1:foo/>
-  <e1:bar/>
+  <e1:foo>...</e1:foo>
+  <e1:bar>...</e1:bar>
 </example>

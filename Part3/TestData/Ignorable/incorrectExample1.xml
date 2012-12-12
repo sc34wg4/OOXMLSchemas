@@ -6,4 +6,6 @@
       ...
     </bar2>
   </bar1>
+  <bar3 mce:Ignorable="i2">...</bar3>
+  <bar4 xmlns:i2="http://www.example.com/i4"/>
 </example>
