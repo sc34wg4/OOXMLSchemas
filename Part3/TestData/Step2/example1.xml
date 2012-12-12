@@ -8,27 +8,23 @@
   <mce:eAlternateContent>
     <!-- Choice #1 -->
     <mce:Choice Requires="n1 n2">
-      <foo>
-	<mce:eAlternateContent>
-	  <!-- Choice #1-1 -->
-	  <mce:Choice Requires="n3">
-	  </mce:Choice>
-	  <!-- Fallback #1-1 -->
-	  <mce:Fallback>...</mce:Fallback>
-	</mce:eAlternateContent>
-      </foo>
+      <mce:eAlternateContent>
+	<!-- Choice #1-1 -->
+	<mce:Choice Requires="n3">
+	</mce:Choice>
+	<!-- Fallback #1-1 -->
+	<mce:Fallback>...</mce:Fallback>
+      </mce:eAlternateContent>
     </mce:Choice>
     <!-- Choice #2 -->
     <mce:Choice Requires="n1">
-      <bar>
-	<mce:eAlternateContent>
-	  <!-- Choice #2-1 -->
-	  <mce:Choice Requires="n3">
-	  </mce:Choice>
-	  <!-- Fallback #2-1 -->
-	  <mce:Fallback>...</mce:Fallback>
-	</mce:eAlternateContent>
-      </bar>
+      <mce:eAlternateContent>
+	<!-- Choice #2-1 -->
+	<mce:Choice Requires="n3">
+	</mce:Choice>
+	<!-- Fallback #2-1 -->
+	<mce:Fallback>...</mce:Fallback>
+      </mce:eAlternateContent>
     </mce:Choice>
     <!-- Fallback #3 -->
     <mce:Fallback>...</mce:Fallback>
