@@ -26,7 +26,7 @@
 	<mce:Fallback>...</mce:Fallback>
       </mce:eAlternateContent>
     </mce:Choice>
-    <!-- Fallback #3 -->
+    <!-- Fallback #1 -->
     <mce:Fallback>...</mce:Fallback>
   </mce:eAlternateContent>
 </example>
