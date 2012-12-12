@@ -1,0 +1,37 @@
+<!-- $Id$ -->
+<example
+  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:n1="http://www.example.com/n1"
+  xmlns:n2="http://www.example.com/n2"
+  xmlns:n3="http://www.example.com/n3">
+
+  <mce:eAlternateContent>
+    <!-- Choice #1 -->
+    <mce:Choice Requires="n1 n2">
+      <foo>
+	<mce:eAlternateContent>
+	  <!-- Choice #1-1 -->
+	  <mce:Choice Requires="n3">
+	  </mce:Choice>
+	  <!-- Fallback #1-1 -->
+	  <mce:Fallback>...</mce:Fallback>
+	</mce:eAlternateContent>
+      </foo>
+    </mce:Choice>
+    <!-- Choice #2 -->
+    <mce:Choice Requires="n1">
+      <bar>
+	<mce:eAlternateContent>
+	  <!-- Choice #2-1 -->
+	  <mce:Choice Requires="n3">
+	  </mce:Choice>
+	  <!-- Fallback #2-1 -->
+	  <mce:Fallback>...</mce:Fallback>
+	</mce:eAlternateContent>
+      </bar>
+    </mce:Choice>
+    <!-- Fallback #3 -->
+    <mce:Fallback>...</mce:Fallback>
+  </mce:eAlternateContent>
+</example>
+
