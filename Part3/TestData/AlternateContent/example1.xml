@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<example
+  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:e1="http://www.example.com/e1"
+  xmlns:e2="http://www.example.com/e2">
+  <mce:AlternateContent  mce:MustUnderstand="e1">
+    <mce:Choice Requires="e2">...</mce:Choice>
+  </mce:AlternateContent>
+</example>
