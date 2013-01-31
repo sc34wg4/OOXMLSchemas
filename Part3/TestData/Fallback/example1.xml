@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<example
+  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:i1="http://www.example.com/i1"
+  xmlns:e1="http://www.example.com/e1">
+
+  <mce:AlternateContent mce:Ignorable="i1" >
+    <mce:Choice Requires="e1" >...</mce:Choice>
+    <mce:Fallback i1:foo="">...</mce:Fallback>
+  </mce:AlternateContent>
+</example> 
