@@ -1,11 +1,14 @@
+<?xml version="1.0"?>
 <!-- $Id$ -->
 <example
   xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:e1="http://www.example.com/e1"
   mce:Ignorable="e1"
-  mce:ExtensionElements="e1:bar"
+  mce:ProcessContent="e1:bar"
+  mce:ExtensionElements="e1:baz"
   e1:foo="">
 
-  <e1:foo>...</e1:foo>
-  <e1:bar>...</e1:bar>
+  <e1:foo><fooChild/></e1:foo>
+  <e1:bar><barChild/></e1:bar>
+  <e1:baz e1:baz=""><e1:bazChild/></e1:baz>
 </example>
