@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:foo="http://www.example.com/foo" xmlns:bar="http://www.example.com/bar"
+<example
+    xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:foo="http://www.example.com/foo"
+    xmlns:bar="http://www.example.com/bar"
+    mce:Ignorable="foo bar"
     mce:ProcessContent="foo:unwrapped">
     <mce:AlternateContent>
         <!-- Choice #1 -->
@@ -11,9 +14,9 @@
             <bar:bar>
                 <mce:AlternateContent>
                     <!-- Choice #1-1 -->
-                    <mce:Choice Requires="bar">Choice1-1-Content</mce:Choice>
+                    <mce:Choice Requires="bar"><Choice1-1/></mce:Choice>
                     <!-- Fallback #1-1 -->
-                    <mce:fallback>Fallback1-Content</mce:fallback>
+                    <mce:fallback><Fallback1-1/></mce:fallback>
                 </mce:AlternateContent>
             </bar:bar>
         </mce:Choice>
@@ -24,11 +27,11 @@
             <foo:unwrapped>
                 <mce:AlternateContent>
                     <!-- Choice #2-1 -->
-                    <mce:Choice Requires="foo">Choice2-1-Content</mce:Choice>
+                    <mce:Choice Requires="foo"><Choice2-1/></mce:Choice>
                     <!-- Fallback #2-1 -->
-                    <mce:fallback>Fallback2-Content</mce:fallback>
+                    <mce:fallback><Fallback2-1/></mce:fallback>
                 </mce:AlternateContent>
             </foo:unwrapped>
         </mce:Choice>
     </mce:AlternateContent>
-</root>
+</example>

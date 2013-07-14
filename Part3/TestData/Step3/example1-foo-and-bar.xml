@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<example
+    xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:foo="http://www.example.com/foo"
+    xmlns:bar="http://www.example.com/bar"
+    mce:Ignorable="foo bar"
+    mce:ProcessContent="foo:unwrapped">
+  <foo:foo/>
+  <bar:bar>
+    <Choice1-1/>
+  </bar:bar>
+</example>
