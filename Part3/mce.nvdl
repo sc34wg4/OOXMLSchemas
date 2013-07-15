@@ -4,15 +4,13 @@
         <namespace match="attributes" ns="http://schemas.openxmlformats.org/markup-compatibility/2006">
             <validate schemaType="application/relax-ng-compact-syntax">
                 <schema>
-                    namespace mc="http://schemas.openxmlformats.org/markup-
-                    compatibility/2006"
+                    namespace mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     nsList = list { xsd:NCName* }
                     qnameList = list { (xsd:QName | xsd:string {pattern = "\i\c*:\*" })*}
-                    start = element * {
-                    attribute mc:Ignorable { nsList }?,
-                    attribute mc:ProcessContent { qnameList }?,
-                    attribute mc:MustUnderstand { nsList }?
-                    }
+                    start =
+                      attribute mc:Ignorable { nsList }?,
+                      attribute mc:ProcessContent { qnameList }?,
+                      attribute mc:MustUnderstand { nsList }?
                 </schema>
             </validate>
         </namespace>
@@ -20,8 +18,7 @@
             compatibility/2006">
             <validate schemaType="application/relax-ng-compact-syntax">
                 <schema>
-                    default namespace ="http://schemas.openxmlformats.org/markup-
-                    compatibility/2006"
+                    default namespace ="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     nsList = list { xsd:NCName* }
                     qnameList = list { (xsd:QName | xsd:string {pattern = "\i\c*:\*" })*}
                     start = element AlternateContent {choice+,fallback?}
