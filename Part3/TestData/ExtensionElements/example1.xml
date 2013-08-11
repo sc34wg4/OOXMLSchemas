@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
 <example
-  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:e1="http://www.example.com/e1"
-  mce:ExtensionElements="e1:foo">
+  xmlns:unknown="http://www.example.com/unknown">
 
-  <e1:foo>...</e1:foo>
+  <e1:foo>
+    <unknown:foo/>
+  </e1:foo>
 </example>
