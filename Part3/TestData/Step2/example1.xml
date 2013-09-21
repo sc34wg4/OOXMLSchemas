@@ -1,34 +1,28 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
-<example
-  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  xmlns:n1="http://www.example.com/n1"
-  xmlns:n2="http://www.example.com/n2"
+<example xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:n1="http://www.example.com/n1" xmlns:n2="http://www.example.com/n2"
   xmlns:n3="http://www.example.com/n3">
-
-  <mce:eAlternateContent>
+  <mce:AlternateContent>
     <!-- Choice #1 -->
     <mce:Choice Requires="n1 n2">
-      <mce:eAlternateContent>
-	<!-- Choice #1-1 -->
-	<mce:Choice Requires="n3">...
-	</mce:Choice>
-	<!-- Fallback #1-1 -->
-	<mce:Fallback>...</mce:Fallback>
-      </mce:eAlternateContent>
+      <mce:AlternateContent>
+        <!-- Choice #1-1 -->
+        <mce:Choice Requires="n3">... </mce:Choice>
+        <!-- Fallback #1-1 -->
+        <mce:Fallback>...</mce:Fallback>
+      </mce:AlternateContent>
     </mce:Choice>
     <!-- Choice #2 -->
     <mce:Choice Requires="n1">
-      <mce:eAlternateContent>
-	<!-- Choice #2-1 -->
-	<mce:Choice Requires="n3">...
-	</mce:Choice>
-	<!-- Fallback #2-1 -->
-	<mce:Fallback>...</mce:Fallback>
-      </mce:eAlternateContent>
+      <mce:AlternateContent>
+        <!-- Choice #2-1 -->
+        <mce:Choice Requires="n3">... </mce:Choice>
+        <!-- Fallback #2-1 -->
+        <mce:Fallback>...</mce:Fallback>
+      </mce:AlternateContent>
     </mce:Choice>
     <!-- Fallback #1 -->
     <mce:Fallback>...</mce:Fallback>
-  </mce:eAlternateContent>
+  </mce:AlternateContent>
 </example>
-
