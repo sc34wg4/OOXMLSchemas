@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
-<example xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006">
-  <bar1 mce:Ignorable="i1"
+<example
+  xmlns="http://www.example.com/"
+  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <foo mce:Ignorable="i1"
      xmlns:i1="http://www.example.com/i1"
      xmlns:i2="http://www.example.com/i2">
-    <bar2 mce:Ignorable="i2">...</bar2>
-    <bar2 mce:Ignorable="i1 i2">...</bar2>
-    <bar2 mce:Ignorable="i1alias i2" xmlns:i1alias="http://www.example.com/i1">...</bar2>
-  </bar1>
+    <bar mce:Ignorable="i2">...</bar>
+    <bar mce:Ignorable="i1 i2">...</bar>
+    <bar mce:Ignorable="i1alias i2" xmlns:i1alias="http://www.example.com/i1">...</bar>
+  </foo>
 </example>

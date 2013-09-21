@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
-<example xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<example
+  xmlns="http://www.example.com/"
+  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:n1="http://www.example.com/n1" xmlns:n2="http://www.example.com/n2"
   xmlns:n3="http://www.example.com/n3">
   <mce:AlternateContent>

@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
-<example xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006">
-  <bar1 xmlns:i2="http://www.example.com/i2">
-    <bar2 mce:ProcessContent="i2:*">...</bar2>
-  </bar1>
+<example
+  xmlns="http://www.example.com/"
+  xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <foo1 xmlns:i2="http://www.example.com/i2">
+    <foo2 mce:ProcessContent="i2:*">...</foo2>
+  </foo1>
 </example>

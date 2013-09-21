@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <!-- $Id$ -->
 <example
+  xmlns="http://www.example.com/"
   xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:e1="http://www.example.com/e1"
   mce:MustUnderstand="e1">
