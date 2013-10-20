@@ -4,9 +4,7 @@
     xmlns="http://www.example.com/"
     xmlns:mce="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:foo="http://www.example.com/foo"
-    xmlns:bar="http://www.example.com/bar"
-    mce:Ignorable="foo bar"
-    mce:ProcessContent="foo:unwrapped">
+    xmlns:bar="http://www.example.com/bar">
   <bar:bar/>
   <Fallback2-1/>
 </example>

@@ -6,7 +6,6 @@
   xmlns:e1="http://www.example.com/e1"
   mce:Ignorable="e1"
   mce:ProcessContent="e1:bar"
-  mce:ExtensionElements="e1:baz"
   e1:foo="">
 
   <e1:foo><fooChild/></e1:foo>

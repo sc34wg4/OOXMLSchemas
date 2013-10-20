@@ -10,21 +10,21 @@
     <mce:Choice Requires="n1 n2">
       <mce:AlternateContent>
         <!-- Choice #1-1 -->
-        <mce:Choice Requires="n3">... </mce:Choice>
+        <mce:Choice Requires="n3"><Choice1-1/></mce:Choice>
         <!-- Fallback #1-1 -->
-        <mce:Fallback>...</mce:Fallback>
+        <mce:Fallback><Fallback1-1/></mce:Fallback>
       </mce:AlternateContent>
     </mce:Choice>
     <!-- Choice #2 -->
     <mce:Choice Requires="n1">
       <mce:AlternateContent>
         <!-- Choice #2-1 -->
-        <mce:Choice Requires="n3">... </mce:Choice>
+        <mce:Choice Requires="n3"><Choice2-1/></mce:Choice>
         <!-- Fallback #2-1 -->
-        <mce:Fallback>...</mce:Fallback>
+        <mce:Fallback><Fallback2-1/></mce:Fallback>
       </mce:AlternateContent>
     </mce:Choice>
     <!-- Fallback #1 -->
-    <mce:Fallback>...</mce:Fallback>
+    <mce:Fallback><Fallback1/></mce:Fallback>
   </mce:AlternateContent>
 </example>
