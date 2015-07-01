@@ -17,6 +17,7 @@ w_CT_LongHexNumber = attribute w:val { w_ST_LongHexNumber }
 w_ST_ShortHexNumber = xsd:hexBinary { length = "2" }
 w_ST_UcharHexNumber = xsd:hexBinary { length = "1" }
 w_CT_Charset = attribute w:characterSet { s_ST_String }?
+  ## default value: ISO-8859-1
 w_ST_DecimalNumberOrPercent = s_ST_Percentage
 w_ST_DecimalNumber = xsd:integer
 w_CT_DecimalNumber = attribute w:val { w_ST_DecimalNumber }
@@ -94,6 +95,7 @@ w_ST_Underline =
 w_CT_Underline =
   attribute w:val { w_ST_Underline }?,
   attribute w:color { w_ST_HexColor }?,
+  ## default value: auto
   attribute w:themeColor { w_ST_ThemeColor }?,
   attribute w:themeTint { w_ST_UcharHexNumber }?,
   attribute w:themeShade { w_ST_UcharHexNumber }?
@@ -303,11 +305,13 @@ w_ST_Border =
 w_CT_Border =
   attribute w:val { w_ST_Border },
   attribute w:color { w_ST_HexColor }?,
+  ## default value: auto
   attribute w:themeColor { w_ST_ThemeColor }?,
   attribute w:themeTint { w_ST_UcharHexNumber }?,
   attribute w:themeShade { w_ST_UcharHexNumber }?,
   attribute w:sz { w_ST_EighthPointMeasure }?,
   attribute w:space { w_ST_PointMeasure }?,
+  ## default value: 0
   attribute w:shadow { s_ST_OnOff }?,
   attribute w:frame { s_ST_OnOff }?
 w_ST_Shd =
@@ -435,13 +439,21 @@ w_CT_TabStop =
 w_ST_LineSpacingRule = string "auto" | string "exact" | string "atLeast"
 w_CT_Spacing =
   attribute w:before { s_ST_TwipsMeasure }?,
+  ## default value: 0
   attribute w:beforeLines { w_ST_DecimalNumber }?,
+  ## default value: 0
   attribute w:beforeAutospacing { s_ST_OnOff }?,
+  ## default value: off
   attribute w:after { s_ST_TwipsMeasure }?,
+  ## default value: 0
   attribute w:afterLines { w_ST_DecimalNumber }?,
+  ## default value: 0
   attribute w:afterAutospacing { s_ST_OnOff }?,
+  ## default value: off
   attribute w:line { w_ST_SignedTwipsMeasure }?,
+  ## default value: 0
   attribute w:lineRule { w_ST_LineSpacingRule }?
+  ## default value: auto
 w_CT_Ind =
   attribute w:start { w_ST_SignedTwipsMeasure }?,
   attribute w:startChars { w_ST_DecimalNumber }?,
@@ -486,6 +498,7 @@ w_CT_WritingStyle =
   attribute w:vendorID { s_ST_String },
   attribute w:dllVersion { s_ST_String },
   attribute w:nlCheck { s_ST_OnOff }?,
+  ## default value: off
   attribute w:checkStyle { s_ST_OnOff },
   attribute w:appName { s_ST_String }
 w_ST_Proof = string "clean" | string "dirty"
@@ -711,6 +724,7 @@ w_CT_Control =
   r_id?
 w_CT_Background =
   attribute w:color { w_ST_HexColor }?,
+  ## default value: auto
   attribute w:themeColor { w_ST_ThemeColor }?,
   attribute w:themeTint { w_ST_UcharHexNumber }?,
   attribute w:themeShade { w_ST_UcharHexNumber }?,
@@ -896,8 +910,10 @@ w_ST_PageBorderDisplay =
 w_ST_PageBorderOffset = string "page" | string "text"
 w_CT_PageBorders =
   attribute w:zOrder { w_ST_PageBorderZOrder }?,
+  ## default value: front
   attribute w:display { w_ST_PageBorderDisplay }?,
   attribute w:offsetFrom { w_ST_PageBorderOffset }?,
+  ## default value: text
   element top { w_CT_TopPageBorder }?,
   element left { w_CT_PageBorder }?,
   element bottom { w_CT_BottomPageBorder }?,
@@ -916,20 +932,27 @@ w_ST_LineNumberRestart =
 w_CT_LineNumber =
   attribute w:countBy { w_ST_DecimalNumber }?,
   attribute w:start { w_ST_DecimalNumber }?,
+  ## default value: 1
   attribute w:distance { s_ST_TwipsMeasure }?,
   attribute w:restart { w_ST_LineNumberRestart }?
+  ## default value: newPage
 w_CT_PageNumber =
   attribute w:fmt { w_ST_NumberFormat }?,
+  ## default value: decimal
   attribute w:start { w_ST_DecimalNumber }?,
   attribute w:chapStyle { w_ST_DecimalNumber }?,
   attribute w:chapSep { w_ST_ChapterSep }?
+  ## default value: hyphen
 w_CT_Column =
   attribute w:w { s_ST_TwipsMeasure }?,
   attribute w:space { s_ST_TwipsMeasure }?
+  ## default value: 0
 w_CT_Columns =
   attribute w:equalWidth { s_ST_OnOff }?,
   attribute w:space { s_ST_TwipsMeasure }?,
+  ## default value: 720
   attribute w:num { w_ST_DecimalNumber }?,
+  ## default value: 1
   attribute w:sep { s_ST_OnOff }?,
   element col { w_CT_Column }*
 w_ST_VerticalJc =
@@ -943,7 +966,6 @@ w_ST_DocGrid =
 w_CT_DocGrid =
   attribute w:type { w_ST_DocGrid }?,
   attribute w:linePitch { w_ST_DecimalNumber }?,
-  ## default value: 0
   attribute w:charSpace { w_ST_DecimalNumber }?
 w_ST_HdrFtr = string "even" | string "default" | string "first"
 w_ST_FtnEdn =
@@ -1208,6 +1230,7 @@ w_CT_SdtDate =
   element calendar { w_CT_CalendarType }?
 w_CT_SdtComboBox =
   attribute w:lastValue { s_ST_String }?,
+  ## default value: 
   element listItem { w_CT_SdtListItem }*
 w_CT_SdtDocPart =
   element docPartGallery { w_CT_String }?,
@@ -1215,6 +1238,7 @@ w_CT_SdtDocPart =
   element docPartUnique { w_CT_OnOff }?
 w_CT_SdtDropDownList =
   attribute w:lastValue { s_ST_String }?,
+  ## default value: 
   element listItem { w_CT_SdtListItem }*
 w_CT_Placeholder = element docPart { w_CT_String }
 w_CT_SdtText = attribute w:multiLine { s_ST_OnOff }?
