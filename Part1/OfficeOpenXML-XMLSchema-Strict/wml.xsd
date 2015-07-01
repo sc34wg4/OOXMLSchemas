@@ -1222,7 +1222,7 @@
     <xsd:attribute name="docLocation" type="s:ST_String" use="optional"/>
     <xsd:attribute name="history" type="s:ST_OnOff" use="optional"/>
     <xsd:attribute name="anchor" type="s:ST_String" use="optional"/>
-    <xsd:attribute ref="r:id" use="optional"/>
+    <xsd:attribute ref="r:id"/>
   </xsd:complexType>
   <xsd:complexType name="CT_FFData">
     <xsd:choice maxOccurs="unbounded">
