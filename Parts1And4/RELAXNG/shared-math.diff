@@ -1,0 +1,15 @@
+1c1,2
+< default namespace m = "http://purl.oclc.org/ooxml/officeDocument/math"
+---
+> default namespace m =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/math"
+3c4,5
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+5c7,8
+< namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
+---
+> namespace w =
+>   "http://schemas.openxmlformats.org/wordprocessingml/2006/main"

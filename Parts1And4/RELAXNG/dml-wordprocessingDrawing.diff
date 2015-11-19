@@ -1,0 +1,23 @@
+2,3c2,3
+<   "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+---
+>   "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+5,6c5,8
+< namespace dpct = "http://purl.oclc.org/ooxml/drawingml/picture"
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+---
+> namespace dpct =
+>   "http://schemas.openxmlformats.org/drawingml/2006/picture"
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+8c10,11
+< namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
+---
+> namespace w =
+>   "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+11c14
+<   "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+---
+>   "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"

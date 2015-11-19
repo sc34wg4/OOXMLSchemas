@@ -1,0 +1,15 @@
+2,3c2,3
+<   "http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+---
+>   "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+5c5,6
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+10c11
+<   "http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
+---
+>   "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"

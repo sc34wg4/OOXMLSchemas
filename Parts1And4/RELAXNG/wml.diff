@@ -1,0 +1,295 @@
+1c1,2
+< namespace m = "http://purl.oclc.org/ooxml/officeDocument/math"
+---
+> namespace m =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/math"
+3,5c4,9
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+< namespace sl = "http://purl.oclc.org/ooxml/schemaLibrary/main"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+> namespace sl =
+>   "http://schemas.openxmlformats.org/schemaLibrary/2006/main"
+7c11,12
+< default namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
+---
+> default namespace w =
+>   "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+10c15
+<   "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+---
+>   "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+19c24,26
+< w_CT_Charset = attribute w:characterSet { s_ST_String }?
+---
+> w_CT_Charset =
+>   attribute w:val { w_ST_UcharHexNumber }?,
+>   attribute w:characterSet { s_ST_String }?
+21c28,30
+< w_ST_DecimalNumberOrPercent = s_ST_Percentage
+---
+> w_ST_DecimalNumberOrPercent =
+>   w_ST_UnqualifiedPercentage | s_ST_Percentage
+> w_ST_UnqualifiedPercentage = xsd:integer
+44c53
+< w_ST_TextScale = w_ST_TextScalePercent
+---
+> w_ST_TextScale = w_ST_TextScalePercent | w_ST_TextScaleDecimal
+46a56,57
+> w_ST_TextScaleDecimal =
+>   xsd:integer { minInclusive = "0" maxInclusive = "600" }
+427a439,440
+>   | string "left"
+>   | string "right"
+461a475,478
+>   attribute w:left { w_ST_SignedTwipsMeasure }?,
+>   attribute w:leftChars { w_ST_DecimalNumber }?,
+>   attribute w:right { w_ST_SignedTwipsMeasure }?,
+>   attribute w:rightChars { w_ST_DecimalNumber }?,
+477c494,501
+< w_ST_JcTable = string "center" | string "end" | string "start"
+---
+>   | string "left"
+>   | string "right"
+> w_ST_JcTable =
+>   string "center"
+>   | string "end"
+>   | string "left"
+>   | string "right"
+>   | string "start"
+520a545,557
+> w_AG_TransitionalPassword =
+>   attribute w:cryptProviderType { s_ST_CryptProv }?,
+>   attribute w:cryptAlgorithmClass { s_ST_AlgClass }?,
+>   attribute w:cryptAlgorithmType { s_ST_AlgType }?,
+>   attribute w:cryptAlgorithmSid { w_ST_DecimalNumber }?,
+>   attribute w:cryptSpinCount { w_ST_DecimalNumber }?,
+>   attribute w:cryptProvider { s_ST_String }?,
+>   attribute w:algIdExt { w_ST_LongHexNumber }?,
+>   attribute w:algIdExtSource { s_ST_String }?,
+>   attribute w:cryptProviderTypeExt { w_ST_LongHexNumber }?,
+>   attribute w:cryptProviderTypeExtSource { s_ST_String }?,
+>   attribute w:hash { xsd:base64Binary }?,
+>   attribute w:salt { xsd:base64Binary }?
+525c562,563
+<   w_AG_Password
+---
+>   w_AG_Password,
+>   w_AG_TransitionalPassword
+560a599,604
+>   | string "btLr"
+>   | string "lrTb"
+>   | string "lrTbV"
+>   | string "tbLrV"
+>   | string "tbRl"
+>   | string "tbRlV"
+600a645,647
+> w_CT_TrackChangeNumbering =
+>   w_CT_TrackChange,
+>   attribute w:original { s_ST_String }?
+662a710
+>   element numberingChange { w_CT_TrackChangeNumbering }?,
+730a779
+>   (w_any_vml_vml*, w_any_vml_office*)+,
+735a785
+>   (w_any_vml_vml*, w_any_vml_office*)+,
+740a791,794
+> w_CT_Picture =
+>   (w_any_vml_vml*, w_any_vml_office*)+,
+>   element movie { w_CT_Rel }?,
+>   element control { w_CT_Control }?
+757a812
+>   element fldData { w_CT_Text }?,
+777c832,834
+<   (element ffData { w_CT_FFData }?)
+---
+>   (element fldData { w_CT_Text }?
+>    | element ffData { w_CT_FFData }?
+>    | element numberingChange { w_CT_TrackChangeNumbering }?)
+1083a1141
+>   | element pict { w_CT_Picture }
+1388a1447
+>   element left { w_CT_Border }?,
+1390a1450
+>   element right { w_CT_Border }?,
+1397a1458
+>   element left { w_CT_TblWidth }?,
+1399c1460,1461
+<   element end { w_CT_TblWidth }?
+---
+>   element end { w_CT_TblWidth }?,
+>   element right { w_CT_TblWidth }?
+1401a1464
+> w_CT_HMerge = attribute w:val { w_ST_Merge }?
+1405a1469
+>   element hMerge { w_CT_HMerge }?,
+1423a1488
+> w_ST_Cnf = xsd:string { length = "12" pattern = "[01]*" }
+1424a1490
+>   attribute w:val { w_ST_Cnf }?,
+1481a1548
+>   element left { w_CT_TblWidth }?,
+1483c1550,1551
+<   element end { w_CT_TblWidth }?
+---
+>   element end { w_CT_TblWidth }?,
+>   element right { w_CT_TblWidth }?
+1486a1555
+>   element left { w_CT_Border }?,
+1488a1558
+>   element right { w_CT_Border }?,
+1536c1606,1607
+<   attribute w:noVBand { s_ST_OnOff }?
+---
+>   attribute w:noVBand { s_ST_OnOff }?,
+>   attribute w:val { w_ST_ShortHexNumber }?
+1640a1712,1715
+>   element useSingleBorderforContiguousCells { w_CT_OnOff }?,
+>   element wpJustification { w_CT_OnOff }?,
+>   element noTabHangInd { w_CT_OnOff }?,
+>   element noLeading { w_CT_OnOff }?,
+1641a1717
+>   element noColumnBalance { w_CT_OnOff }?,
+1642a1719
+>   element noExtraLineSpacing { w_CT_OnOff }?,
+1645a1723,1745
+>   element spacingInWholePoints { w_CT_OnOff }?,
+>   element lineWrapLikeWord6 { w_CT_OnOff }?,
+>   element printBodyTextBeforeHeader { w_CT_OnOff }?,
+>   element printColBlack { w_CT_OnOff }?,
+>   element wpSpaceWidth { w_CT_OnOff }?,
+>   element showBreaksInFrames { w_CT_OnOff }?,
+>   element subFontBySize { w_CT_OnOff }?,
+>   element suppressBottomSpacing { w_CT_OnOff }?,
+>   element suppressTopSpacing { w_CT_OnOff }?,
+>   element suppressSpacingAtTopOfPage { w_CT_OnOff }?,
+>   element suppressTopSpacingWP { w_CT_OnOff }?,
+>   element suppressSpBfAfterPgBrk { w_CT_OnOff }?,
+>   element swapBordersFacingPages { w_CT_OnOff }?,
+>   element convMailMergeEsc { w_CT_OnOff }?,
+>   element truncateFontHeightsLikeWP6 { w_CT_OnOff }?,
+>   element mwSmallCaps { w_CT_OnOff }?,
+>   element usePrinterMetrics { w_CT_OnOff }?,
+>   element doNotSuppressParagraphBorders { w_CT_OnOff }?,
+>   element wrapTrailSpaces { w_CT_OnOff }?,
+>   element footnoteLayoutLikeWW8 { w_CT_OnOff }?,
+>   element shapeLayoutLikeWW8 { w_CT_OnOff }?,
+>   element alignTablesRowByRow { w_CT_OnOff }?,
+>   element forgetLastTabAlignment { w_CT_OnOff }?,
+1646a1747,1755
+>   element autoSpaceLikeWord95 { w_CT_OnOff }?,
+>   element noSpaceRaiseLower { w_CT_OnOff }?,
+>   element doNotUseHTMLParagraphAutoSpacing { w_CT_OnOff }?,
+>   element layoutRawTableWidth { w_CT_OnOff }?,
+>   element layoutTableRowsApart { w_CT_OnOff }?,
+>   element useWord97LineBreakRules { w_CT_OnOff }?,
+>   element doNotBreakWrappedTables { w_CT_OnOff }?,
+>   element doNotSnapToGridInCell { w_CT_OnOff }?,
+>   element selectFldWithFirstOrLastChar { w_CT_OnOff }?,
+1647a1757,1776
+>   element doNotWrapTextWithPunct { w_CT_OnOff }?,
+>   element doNotUseEastAsianBreakRules { w_CT_OnOff }?,
+>   element useWord2002TableStyleRules { w_CT_OnOff }?,
+>   element growAutofit { w_CT_OnOff }?,
+>   element useFELayout { w_CT_OnOff }?,
+>   element useNormalStyleForList { w_CT_OnOff }?,
+>   element doNotUseIndentAsNumberingTabStop { w_CT_OnOff }?,
+>   element useAltKinsokuLineBreakRules { w_CT_OnOff }?,
+>   element allowSpaceOfSameStyleInTable { w_CT_OnOff }?,
+>   element doNotSuppressIndentation { w_CT_OnOff }?,
+>   element doNotAutofitConstrainedTables { w_CT_OnOff }?,
+>   element autofitToFirstFixedWidthCell { w_CT_OnOff }?,
+>   element underlineTabInNumList { w_CT_OnOff }?,
+>   element displayHangulFixedWidth { w_CT_OnOff }?,
+>   element splitPgBreakAndParaMark { w_CT_OnOff }?,
+>   element doNotVertAlignCellWithSp { w_CT_OnOff }?,
+>   element doNotBreakConstrainedForcedTable { w_CT_OnOff }?,
+>   element doNotVertAlignInTxbx { w_CT_OnOff }?,
+>   element useAnsiKerningPairs { w_CT_OnOff }?,
+>   element cachedColBalance { w_CT_OnOff }?,
+1706c1835,1836
+<   w_AG_Password
+---
+>   w_AG_Password,
+>   w_AG_TransitionalPassword
+1784a1915
+>   element hdrShapeDefaults { w_CT_ShapeDefaults }?,
+1800a1932
+>   element shapeDefaults { w_CT_ShapeDefaults }?,
+1820c1952,1953
+<   attribute w:alternateStyleNames { s_ST_OnOff }?
+---
+>   attribute w:alternateStyleNames { s_ST_OnOff }?,
+>   attribute w:val { w_ST_ShortHexNumber }?
+1827a1961,1966
+>   | string "0000"
+>   | string "0001"
+>   | string "0002"
+>   | string "0003"
+>   | string "0004"
+>   | string "0005"
+1832a1972
+>   element relyOnVML { w_CT_OnOff }?,
+1873c2013,2014
+<   (element drawing { w_CT_Drawing })
+---
+>   (element pict { w_CT_Picture }
+>    | element drawing { w_CT_Drawing })
+1878a2020,2023
+> w_CT_LvlLegacy =
+>   attribute w:legacy { s_ST_OnOff }?,
+>   attribute w:legacySpace { s_ST_TwipsMeasure }?,
+>   attribute w:legacyIndent { w_ST_SignedTwipsMeasure }?
+1890a2036
+>   element legacy { w_CT_LvlLegacy }?,
+2042a2189,2190
+> w_CT_TxbxContent = w_EG_BlockLevelElts+
+> w_txbxContent = element txbxContent { w_CT_TxbxContent }
+2060a2209
+> w_CT_ShapeDefaults = (w_any_vml_office*)+
+2195a2345,2385
+> w_any_vml_office =
+>   o_shapedefaults
+>   | o_shapelayout
+>   | o_signatureline
+>   | o_ink
+>   | o_diagram
+>   | o_skew
+>   | o_extrusion
+>   | o_callout
+>   | o_lock
+>   | o_OLEObject
+>   | o_complex
+>   | o_left
+>   | o_top
+>   | o_right
+>   | o_bottom
+>   | o_column
+>   | o_clippath
+>   | o_fill
+> w_any_vml_vml =
+>   v_shape
+>   | v_shapetype
+>   | v_group
+>   | v_background
+>   | v_fill
+>   | v_formulas
+>   | v_handles
+>   | v_imagedata
+>   | v_path
+>   | v_textbox
+>   | v_shadow
+>   | v_stroke
+>   | v_textpath
+>   | v_arc
+>   | v_curve
+>   | v_image
+>   | v_line
+>   | v_oval
+>   | v_polyline
+>   | v_rect
+>   | v_roundrect

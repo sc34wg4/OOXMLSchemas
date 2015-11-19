@@ -1,0 +1,92 @@
+1,4c1,7
+< default namespace = "http://purl.oclc.org/ooxml/drawingml/chart"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+< namespace cdr = "http://purl.oclc.org/ooxml/drawingml/chartDrawing"
+< namespace dchrt = "http://purl.oclc.org/ooxml/drawingml/chart"
+---
+> default namespace =
+>   "http://schemas.openxmlformats.org/drawingml/2006/chart"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+> namespace cdr =
+>   "http://schemas.openxmlformats.org/drawingml/2006/chartDrawing"
+> namespace dchrt =
+>   "http://schemas.openxmlformats.org/drawingml/2006/chart"
+6,7c9,12
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+113c118,119
+< dchrt_ST_HPercent = dchrt_ST_HPercentWithSymbol
+---
+> dchrt_ST_HPercent =
+>   dchrt_ST_HPercentWithSymbol | dchrt_ST_HPercentUShort
+117a124,125
+> dchrt_ST_HPercentUShort =
+>   xsd:unsignedShort { minInclusive = "5" maxInclusive = "500" }
+128c136,137
+< dchrt_ST_DepthPercent = dchrt_ST_DepthPercentWithSymbol
+---
+> dchrt_ST_DepthPercent =
+>   dchrt_ST_DepthPercentWithSymbol | dchrt_ST_DepthPercentUShort
+133a143,144
+> dchrt_ST_DepthPercentUShort =
+>   xsd:unsignedShort { minInclusive = "20" maxInclusive = "2000" }
+157c168
+< dchrt_ST_Thickness = dchrt_ST_ThicknessPercent
+---
+> dchrt_ST_Thickness = dchrt_ST_ThicknessPercent | xsd:unsignedInt
+168c179,180
+< dchrt_ST_GapAmount = dchrt_ST_GapAmountPercent
+---
+> dchrt_ST_GapAmount =
+>   dchrt_ST_GapAmountPercent | dchrt_ST_GapAmountUShort
+172a185,186
+> dchrt_ST_GapAmountUShort =
+>   xsd:unsignedShort { minInclusive = "0" maxInclusive = "500" }
+177c191
+< dchrt_ST_Overlap = dchrt_ST_OverlapPercent
+---
+> dchrt_ST_Overlap = dchrt_ST_OverlapPercent | dchrt_ST_OverlapByte
+179a194,195
+> dchrt_ST_OverlapByte =
+>   xsd:byte { minInclusive = "-100" maxInclusive = "100" }
+184c200,201
+< dchrt_ST_BubbleScale = dchrt_ST_BubbleScalePercent
+---
+> dchrt_ST_BubbleScale =
+>   dchrt_ST_BubbleScalePercent | dchrt_ST_BubbleScaleUInt
+188a206,207
+> dchrt_ST_BubbleScaleUInt =
+>   xsd:unsignedInt { minInclusive = "0" maxInclusive = "300" }
+204c223
+< dchrt_ST_HoleSize = dchrt_ST_HoleSizePercent
+---
+> dchrt_ST_HoleSize = dchrt_ST_HoleSizePercent | dchrt_ST_HoleSizeUByte
+206a226,227
+> dchrt_ST_HoleSizeUByte =
+>   xsd:unsignedByte { minInclusive = "1" maxInclusive = "90" }
+222c243,244
+< dchrt_ST_SecondPieSize = dchrt_ST_SecondPieSizePercent
+---
+> dchrt_ST_SecondPieSize =
+>   dchrt_ST_SecondPieSizePercent | dchrt_ST_SecondPieSizeUShort
+224a247,248
+> dchrt_ST_SecondPieSizeUShort =
+>   xsd:unsignedShort { minInclusive = "5" maxInclusive = "200" }
+725c749,750
+< dchrt_ST_LblOffset = dchrt_ST_LblOffsetPercent
+---
+> dchrt_ST_LblOffset =
+>   dchrt_ST_LblOffsetPercent | dchrt_ST_LblOffsetUShort
+729a755,756
+> dchrt_ST_LblOffsetUShort =
+>   xsd:unsignedShort { minInclusive = "0" maxInclusive = "1000" }
+928c955,956
+<   element pageSetup { dchrt_CT_PageSetup }?
+---
+>   element pageSetup { dchrt_CT_PageSetup }?,
+>   element legacyDrawingHF { dchrt_CT_RelId }?

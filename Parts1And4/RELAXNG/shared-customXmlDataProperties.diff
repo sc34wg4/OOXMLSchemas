@@ -1,0 +1,9 @@
+2c2
+<   "http://purl.oclc.org/ooxml/officeDocument/customXml"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/customXml"
+4c4,5
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"

@@ -1,0 +1,22 @@
+1,3c1,5
+< default namespace = "http://purl.oclc.org/ooxml/drawingml/diagram"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+< namespace ddgrm = "http://purl.oclc.org/ooxml/drawingml/diagram"
+---
+> default namespace =
+>   "http://schemas.openxmlformats.org/drawingml/2006/diagram"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+> namespace ddgrm =
+>   "http://schemas.openxmlformats.org/drawingml/2006/diagram"
+5,6c7,10
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+362c366
+< ddgrm_ST_PrSetCustVal = s_ST_Percentage
+---
+> ddgrm_ST_PrSetCustVal = s_ST_Percentage | xsd:int

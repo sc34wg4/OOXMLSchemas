@@ -30,9 +30,9 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_Charset">
     <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
-      <xsd:attribute name="val" type="ST_UcharHexNumber" use="required" />
+      <xsd:attribute name="val" type="ST_UcharHexNumber" use="optional" />
     </transitionalOnly>
-    <xsd:attribute name="characterSet" type="s:ST_String" use="optional" />
+    <xsd:attribute name="characterSet" type="s:ST_String" use="optional" default="ISO-8859-1" />
   </xsd:complexType>
   <xsd:simpleType name="ST_DecimalNumberOrPercent">
     <strictOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
@@ -198,7 +198,7 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_Underline">
     <xsd:attribute name="val" type="ST_Underline" use="optional" />
-    <xsd:attribute name="color" type="ST_HexColor" use="optional" />
+    <xsd:attribute name="color" type="ST_HexColor" use="optional" default="auto" />
     <xsd:attribute name="themeColor" type="ST_ThemeColor" use="optional" />
     <xsd:attribute name="themeTint" type="ST_UcharHexNumber" use="optional" />
     <xsd:attribute name="themeShade" type="ST_UcharHexNumber" use="optional" />
@@ -416,12 +416,12 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_Border">
     <xsd:attribute name="val" type="ST_Border" use="required" />
-    <xsd:attribute name="color" type="ST_HexColor" use="optional" />
+    <xsd:attribute name="color" type="ST_HexColor" use="optional" default="auto" />
     <xsd:attribute name="themeColor" type="ST_ThemeColor" use="optional" />
     <xsd:attribute name="themeTint" type="ST_UcharHexNumber" use="optional" />
     <xsd:attribute name="themeShade" type="ST_UcharHexNumber" use="optional" />
     <xsd:attribute name="sz" type="ST_EighthPointMeasure" use="optional" />
-    <xsd:attribute name="space" type="ST_PointMeasure" use="optional" />
+    <xsd:attribute name="space" type="ST_PointMeasure" use="optional" default="0" />
     <xsd:attribute name="shadow" type="s:ST_OnOff" use="optional" />
     <xsd:attribute name="frame" type="s:ST_OnOff" use="optional" />
   </xsd:complexType>
@@ -611,14 +611,14 @@
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType name="CT_Spacing">
-    <xsd:attribute name="before" type="s:ST_TwipsMeasure" use="optional" />
-    <xsd:attribute name="beforeLines" type="ST_DecimalNumber" use="optional" />
-    <xsd:attribute name="beforeAutospacing" type="s:ST_OnOff" use="optional" />
-    <xsd:attribute name="after" type="s:ST_TwipsMeasure" use="optional" />
-    <xsd:attribute name="afterLines" type="ST_DecimalNumber" use="optional" />
-    <xsd:attribute name="afterAutospacing" type="s:ST_OnOff" use="optional" />
-    <xsd:attribute name="line" type="ST_SignedTwipsMeasure" use="optional" />
-    <xsd:attribute name="lineRule" type="ST_LineSpacingRule" use="optional" />
+    <xsd:attribute name="before" type="s:ST_TwipsMeasure" use="optional" default="0" />
+    <xsd:attribute name="beforeLines" type="ST_DecimalNumber" use="optional" default="0" />
+    <xsd:attribute name="beforeAutospacing" type="s:ST_OnOff" use="optional" default="off" />
+    <xsd:attribute name="after" type="s:ST_TwipsMeasure" use="optional" default="0" />
+    <xsd:attribute name="afterLines" type="ST_DecimalNumber" use="optional" default="0" />
+    <xsd:attribute name="afterAutospacing" type="s:ST_OnOff" use="optional" default="off" />
+    <xsd:attribute name="line" type="ST_SignedTwipsMeasure" use="optional" default="0" />
+    <xsd:attribute name="lineRule" type="ST_LineSpacingRule" use="optional" default="auto" />
   </xsd:complexType>
   <xsd:complexType name="CT_Ind">
     <xsd:attribute name="start" type="ST_SignedTwipsMeasure" use="optional" />
@@ -700,7 +700,7 @@
     <xsd:attribute name="lang" type="s:ST_Lang" use="required" />
     <xsd:attribute name="vendorID" type="s:ST_String" use="required" />
     <xsd:attribute name="dllVersion" type="s:ST_String" use="required" />
-    <xsd:attribute name="nlCheck" type="s:ST_OnOff" use="optional" />
+    <xsd:attribute name="nlCheck" type="s:ST_OnOff" use="optional" default="off" />
     <xsd:attribute name="checkStyle" type="s:ST_OnOff" use="required" />
     <xsd:attribute name="appName" type="s:ST_String" use="required" />
   </xsd:complexType>
@@ -1177,7 +1177,7 @@
       </transitionalOnly>
       <xsd:element name="drawing" type="CT_Drawing" minOccurs="0" />
     </xsd:sequence>
-    <xsd:attribute name="color" type="ST_HexColor" use="optional" />
+    <xsd:attribute name="color" type="ST_HexColor" use="optional" default="auto" />
     <xsd:attribute name="themeColor" type="ST_ThemeColor" use="optional" />
     <xsd:attribute name="themeTint" type="ST_UcharHexNumber" use="optional" />
     <xsd:attribute name="themeShade" type="ST_UcharHexNumber" use="optional" />
@@ -1508,9 +1508,9 @@
       <xsd:element name="bottom" type="CT_BottomPageBorder" minOccurs="0" />
       <xsd:element name="right" type="CT_PageBorder" minOccurs="0" />
     </xsd:sequence>
-    <xsd:attribute name="zOrder" type="ST_PageBorderZOrder" use="optional" />
+    <xsd:attribute name="zOrder" type="ST_PageBorderZOrder" use="optional" default="front" />
     <xsd:attribute name="display" type="ST_PageBorderDisplay" use="optional" />
-    <xsd:attribute name="offsetFrom" type="ST_PageBorderOffset" use="optional" />
+    <xsd:attribute name="offsetFrom" type="ST_PageBorderOffset" use="optional" default="text" />
   </xsd:complexType>
   <xsd:complexType name="CT_PageBorder">
     <xsd:complexContent>
@@ -1553,27 +1553,27 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_LineNumber">
     <xsd:attribute name="countBy" type="ST_DecimalNumber" use="optional" />
-    <xsd:attribute name="start" type="ST_DecimalNumber" use="optional" />
+    <xsd:attribute name="start" type="ST_DecimalNumber" use="optional" default="1" />
     <xsd:attribute name="distance" type="s:ST_TwipsMeasure" use="optional" />
-    <xsd:attribute name="restart" type="ST_LineNumberRestart" use="optional" />
+    <xsd:attribute name="restart" type="ST_LineNumberRestart" use="optional" default="newPage" />
   </xsd:complexType>
   <xsd:complexType name="CT_PageNumber">
-    <xsd:attribute name="fmt" type="ST_NumberFormat" use="optional" />
+    <xsd:attribute name="fmt" type="ST_NumberFormat" use="optional" default="decimal" />
     <xsd:attribute name="start" type="ST_DecimalNumber" use="optional" />
     <xsd:attribute name="chapStyle" type="ST_DecimalNumber" use="optional" />
-    <xsd:attribute name="chapSep" type="ST_ChapterSep" use="optional" />
+    <xsd:attribute name="chapSep" type="ST_ChapterSep" use="optional" default="hyphen" />
   </xsd:complexType>
   <xsd:complexType name="CT_Column">
     <xsd:attribute name="w" type="s:ST_TwipsMeasure" use="optional" />
-    <xsd:attribute name="space" type="s:ST_TwipsMeasure" use="optional" />
+    <xsd:attribute name="space" type="s:ST_TwipsMeasure" use="optional" default="0" />
   </xsd:complexType>
   <xsd:complexType name="CT_Columns">
     <xsd:sequence minOccurs="0">
       <xsd:element name="col" type="CT_Column" maxOccurs="45" />
     </xsd:sequence>
     <xsd:attribute name="equalWidth" type="s:ST_OnOff" use="optional" />
-    <xsd:attribute name="space" type="s:ST_TwipsMeasure" use="optional" />
-    <xsd:attribute name="num" type="ST_DecimalNumber" use="optional" />
+    <xsd:attribute name="space" type="s:ST_TwipsMeasure" use="optional" default="720" />
+    <xsd:attribute name="num" type="ST_DecimalNumber" use="optional" default="1" />
     <xsd:attribute name="sep" type="s:ST_OnOff" use="optional" />
   </xsd:complexType>
   <xsd:simpleType name="ST_VerticalJc">
@@ -1598,7 +1598,12 @@
   <xsd:complexType name="CT_DocGrid">
     <xsd:attribute name="type" type="ST_DocGrid" />
     <xsd:attribute name="linePitch" type="ST_DecimalNumber" />
-    <xsd:attribute name="charSpace" type="ST_DecimalNumber" />
+    <strictOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+      <xsd:attribute name="charSpace" type="ST_DecimalNumber" use="optional" default="0" />
+    </strictOnly>
+    <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+      <xsd:attribute name="charSpace" type="ST_DecimalNumber" />
+    </transitionalOnly>
   </xsd:complexType>
   <xsd:simpleType name="ST_HdrFtr">
     <xsd:restriction base="xsd:string">
@@ -1846,51 +1851,51 @@
     <xsd:attribute name="cstheme" type="ST_Theme" />
   </xsd:complexType>
   <xsd:group name="EG_RPrBase">
-    <xsd:sequence>
-      <xsd:element name="rStyle" type="CT_String" minOccurs="0" />
-      <xsd:element name="rFonts" type="CT_Fonts" minOccurs="0" />
-      <xsd:element name="b" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="bCs" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="i" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="iCs" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="caps" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="smallCaps" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="strike" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="dstrike" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="outline" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="shadow" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="emboss" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="imprint" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="noProof" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="snapToGrid" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="vanish" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="webHidden" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="color" type="CT_Color" minOccurs="0" />
-      <xsd:element name="spacing" type="CT_SignedTwipsMeasure" minOccurs="0" />
-      <xsd:element name="w" type="CT_TextScale" minOccurs="0" />
-      <xsd:element name="kern" type="CT_HpsMeasure" minOccurs="0" />
-      <xsd:element name="position" type="CT_SignedHpsMeasure" minOccurs="0" />
-      <xsd:element name="sz" type="CT_HpsMeasure" minOccurs="0" />
-      <xsd:element name="szCs" type="CT_HpsMeasure" minOccurs="0" />
-      <xsd:element name="highlight" type="CT_Highlight" minOccurs="0" />
-      <xsd:element name="u" type="CT_Underline" minOccurs="0" />
-      <xsd:element name="effect" type="CT_TextEffect" minOccurs="0" />
-      <xsd:element name="bdr" type="CT_Border" minOccurs="0" />
-      <xsd:element name="shd" type="CT_Shd" minOccurs="0" />
-      <xsd:element name="fitText" type="CT_FitText" minOccurs="0" />
-      <xsd:element name="vertAlign" type="CT_VerticalAlignRun" minOccurs="0" />
-      <xsd:element name="rtl" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="cs" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="em" type="CT_Em" minOccurs="0" />
-      <xsd:element name="lang" type="CT_Language" minOccurs="0" />
-      <xsd:element name="eastAsianLayout" type="CT_EastAsianLayout" minOccurs="0" />
-      <xsd:element name="specVanish" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="oMath" type="CT_OnOff" minOccurs="0" />
-    </xsd:sequence>
+    <xsd:choice>
+      <xsd:element name="rStyle" type="CT_String" />
+      <xsd:element name="rFonts" type="CT_Fonts" />
+      <xsd:element name="b" type="CT_OnOff" />
+      <xsd:element name="bCs" type="CT_OnOff" />
+      <xsd:element name="i" type="CT_OnOff" />
+      <xsd:element name="iCs" type="CT_OnOff" />
+      <xsd:element name="caps" type="CT_OnOff" />
+      <xsd:element name="smallCaps" type="CT_OnOff" />
+      <xsd:element name="strike" type="CT_OnOff" />
+      <xsd:element name="dstrike" type="CT_OnOff" />
+      <xsd:element name="outline" type="CT_OnOff" />
+      <xsd:element name="shadow" type="CT_OnOff" />
+      <xsd:element name="emboss" type="CT_OnOff" />
+      <xsd:element name="imprint" type="CT_OnOff" />
+      <xsd:element name="noProof" type="CT_OnOff" />
+      <xsd:element name="snapToGrid" type="CT_OnOff" />
+      <xsd:element name="vanish" type="CT_OnOff" />
+      <xsd:element name="webHidden" type="CT_OnOff" />
+      <xsd:element name="color" type="CT_Color" />
+      <xsd:element name="spacing" type="CT_SignedTwipsMeasure" />
+      <xsd:element name="w" type="CT_TextScale" />
+      <xsd:element name="kern" type="CT_HpsMeasure" />
+      <xsd:element name="position" type="CT_SignedHpsMeasure" />
+      <xsd:element name="sz" type="CT_HpsMeasure" />
+      <xsd:element name="szCs" type="CT_HpsMeasure" />
+      <xsd:element name="highlight" type="CT_Highlight" />
+      <xsd:element name="u" type="CT_Underline" />
+      <xsd:element name="effect" type="CT_TextEffect" />
+      <xsd:element name="bdr" type="CT_Border" />
+      <xsd:element name="shd" type="CT_Shd" />
+      <xsd:element name="fitText" type="CT_FitText" />
+      <xsd:element name="vertAlign" type="CT_VerticalAlignRun" />
+      <xsd:element name="rtl" type="CT_OnOff" />
+      <xsd:element name="cs" type="CT_OnOff" />
+      <xsd:element name="em" type="CT_Em" />
+      <xsd:element name="lang" type="CT_Language" />
+      <xsd:element name="eastAsianLayout" type="CT_EastAsianLayout" />
+      <xsd:element name="specVanish" type="CT_OnOff" />
+      <xsd:element name="oMath" type="CT_OnOff" />
+    </xsd:choice>
   </xsd:group>
   <xsd:group name="EG_RPrContent">
     <xsd:sequence>
-      <xsd:group ref="EG_RPrBase" minOccurs="0" />
+      <xsd:group ref="EG_RPrBase" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="rPrChange" type="CT_RPrChange" minOccurs="0" />
     </xsd:sequence>
   </xsd:group>
@@ -1908,12 +1913,7 @@
     <xsd:choice>
       <xsd:group ref="EG_RPr" />
       <xsd:element name="ins" type="CT_MathCtrlIns" />
-      <strictOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
-        <xsd:element name="del" type="CT_MathCtrlDel" />
-      </strictOnly>
-      <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
-        <xsd:element name="del" type="CT_MathCtrlIns " />
-      </transitionalOnly>
+      <xsd:element name="del" type="CT_MathCtrlDel" />
     </xsd:choice>
   </xsd:group>
   <xsd:complexType name="CT_MathCtrlIns">
@@ -1949,7 +1949,7 @@
   <xsd:complexType name="CT_ParaRPr">
     <xsd:sequence>
       <xsd:group ref="EG_ParaRPrTrackChanges" minOccurs="0" />
-      <xsd:group ref="EG_RPrBase" minOccurs="0" />
+      <xsd:group ref="EG_RPrBase" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="rPrChange" type="CT_ParaRPrChange" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
@@ -2052,7 +2052,7 @@
     <xsd:sequence>
       <xsd:element name="listItem" type="CT_SdtListItem" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
-    <xsd:attribute name="lastValue" type="s:ST_String" use="optional" />
+    <xsd:attribute name="lastValue" type="s:ST_String" use="optional" default="" />
   </xsd:complexType>
   <xsd:complexType name="CT_SdtDocPart">
     <xsd:sequence>
@@ -2065,7 +2065,7 @@
     <xsd:sequence>
       <xsd:element name="listItem" type="CT_SdtListItem" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
-    <xsd:attribute name="lastValue" type="s:ST_String" use="optional" />
+    <xsd:attribute name="lastValue" type="s:ST_String" use="optional" default="" />
   </xsd:complexType>
   <xsd:complexType name="CT_Placeholder">
     <xsd:sequence>
@@ -2081,18 +2081,18 @@
     <xsd:attribute name="storeItemID" type="s:ST_String" use="required" />
   </xsd:complexType>
   <xsd:complexType name="CT_SdtPr">
-    <xsd:choice maxOccurs="unbounded">
+    <xsd:sequence>
       <xsd:element name="rPr" type="CT_RPr" minOccurs="0" />
       <xsd:element name="alias" type="CT_String" minOccurs="0" />
-      <xsd:element name="label" type="CT_DecimalNumber" minOccurs="0" />
-      <xsd:element name="tabIndex" type="CT_UnsignedDecimalNumber" minOccurs="0" />
+      <xsd:element name="tag" type="CT_String" minOccurs="0" />
+      <xsd:element name="id" type="CT_DecimalNumber" minOccurs="0" />
       <xsd:element name="lock" type="CT_Lock" minOccurs="0" />
       <xsd:element name="placeholder" type="CT_Placeholder" minOccurs="0" />
+      <xsd:element name="temporary" type="CT_OnOff" minOccurs="0" />
       <xsd:element name="showingPlcHdr" type="CT_OnOff" minOccurs="0" />
       <xsd:element name="dataBinding" type="CT_DataBinding" minOccurs="0" />
-      <xsd:element name="temporary" type="CT_OnOff" minOccurs="0" />
-      <xsd:element name="id" type="CT_DecimalNumber" minOccurs="0" />
-      <xsd:element name="tag" type="CT_String" minOccurs="0" />
+      <xsd:element name="label" type="CT_DecimalNumber" minOccurs="0" />
+      <xsd:element name="tabIndex" type="CT_UnsignedDecimalNumber" minOccurs="0" />
       <xsd:choice minOccurs="0" maxOccurs="1">
         <xsd:element name="equation" type="CT_Empty" />
         <xsd:element name="comboBox" type="CT_SdtComboBox" />
@@ -2107,7 +2107,7 @@
         <xsd:element name="group" type="CT_Empty" />
         <xsd:element name="bibliography" type="CT_Empty" />
       </xsd:choice>
-    </xsd:choice>
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_SdtEndPr">
     <xsd:choice maxOccurs="unbounded">
@@ -2215,7 +2215,7 @@
       <xsd:group ref="EG_PContent" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String" />
-    <xsd:attribute name="element" type="s:ST_String" use="required" />
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required" />
   </xsd:complexType>
   <xsd:complexType name="CT_SmartTagRun">
     <xsd:sequence>
@@ -2223,7 +2223,7 @@
       <xsd:group ref="EG_PContent" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String" />
-    <xsd:attribute name="element" type="s:ST_String" use="required" />
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required" />
   </xsd:complexType>
   <xsd:complexType name="CT_CustomXmlBlock">
     <xsd:sequence>
@@ -2231,7 +2231,7 @@
       <xsd:group ref="EG_ContentBlockContent" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String" />
-    <xsd:attribute name="element" type="s:ST_String" use="required" />
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required" />
   </xsd:complexType>
   <xsd:complexType name="CT_CustomXmlPr">
     <xsd:sequence>
@@ -2245,7 +2245,7 @@
       <xsd:group ref="EG_ContentRowContent" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String" />
-    <xsd:attribute name="element" type="s:ST_String" use="required" />
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required" />
   </xsd:complexType>
   <xsd:complexType name="CT_CustomXmlCell">
     <xsd:sequence>
@@ -2253,7 +2253,7 @@
       <xsd:group ref="EG_ContentCellContent" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
     <xsd:attribute name="uri" type="s:ST_String" />
-    <xsd:attribute name="element" type="s:ST_String" use="required" />
+    <xsd:attribute name="element" type="s:ST_XmlName" use="required" />
   </xsd:complexType>
   <xsd:complexType name="CT_SmartTagPr">
     <xsd:sequence>
@@ -2356,15 +2356,19 @@
   <xsd:complexType name="CT_VMerge">
     <xsd:attribute name="val" type="ST_Merge" />
   </xsd:complexType>
-  <xsd:complexType name="CT_HMerge">
-    <xsd:attribute name="val" type="ST_Merge" />
-  </xsd:complexType>
+  <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+    <xsd:complexType name="CT_HMerge">
+      <xsd:attribute name="val" type="ST_Merge" />
+    </xsd:complexType>
+  </transitionalOnly>
   <xsd:complexType name="CT_TcPrBase">
     <xsd:sequence>
       <xsd:element name="cnfStyle" type="CT_Cnf" minOccurs="0" maxOccurs="1" />
       <xsd:element name="tcW" type="CT_TblWidth" minOccurs="0" maxOccurs="1" />
       <xsd:element name="gridSpan" type="CT_DecimalNumber" minOccurs="0" />
-      <xsd:element name="hMerge" type="CT_HMerge" minOccurs="0" />
+      <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+        <xsd:element name="hMerge" type="CT_HMerge" minOccurs="0" />
+      </transitionalOnly>
       <xsd:element name="vMerge" type="CT_VMerge" minOccurs="0" />
       <xsd:element name="tcBorders" type="CT_TcBorders" minOccurs="0" maxOccurs="1" />
       <xsd:element name="shd" type="CT_Shd" minOccurs="0" />
@@ -3107,7 +3111,9 @@
       <xsd:element name="divs" type="CT_Divs" minOccurs="0" />
       <xsd:element name="encoding" type="CT_String" minOccurs="0" />
       <xsd:element name="optimizeForBrowser" type="CT_OptimizeForBrowser" minOccurs="0" />
-      <xsd:element name="relyOnVML" type="CT_OnOff" minOccurs="0" />
+      <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+        <xsd:element name="relyOnVML" type="CT_OnOff" minOccurs="0" />
+      </transitionalOnly>
       <xsd:element name="allowPNG" type="CT_OnOff" minOccurs="0" />
       <xsd:element name="doNotRelyOnCSS" type="CT_OnOff" minOccurs="0" />
       <xsd:element name="doNotSaveAsSingleFile" type="CT_OnOff" minOccurs="0" />
@@ -3202,11 +3208,13 @@
     <xsd:attribute name="val" type="s:ST_String" use="optional" />
     <xsd:attribute name="null" type="s:ST_OnOff" use="optional" />
   </xsd:complexType>
-  <xsd:complexType name="CT_LvlLegacy">
-    <xsd:attribute name="legacy" type="s:ST_OnOff" use="optional" />
-    <xsd:attribute name="legacySpace" type="s:ST_TwipsMeasure" use="optional" />
-    <xsd:attribute name="legacyIndent" type="ST_SignedTwipsMeasure" use="optional" />
-  </xsd:complexType>
+  <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+    <xsd:complexType name="CT_LvlLegacy">
+      <xsd:attribute name="legacy" type="s:ST_OnOff" use="optional" />
+      <xsd:attribute name="legacySpace" type="s:ST_TwipsMeasure" use="optional" />
+      <xsd:attribute name="legacyIndent" type="ST_SignedTwipsMeasure" use="optional" />
+    </xsd:complexType>
+  </transitionalOnly>
   <xsd:complexType name="CT_Lvl">
     <xsd:sequence>
       <xsd:element name="start" type="CT_DecimalNumber" minOccurs="0" />
@@ -3217,7 +3225,9 @@
       <xsd:element name="suff" type="CT_LevelSuffix" minOccurs="0" />
       <xsd:element name="lvlText" type="CT_LevelText" minOccurs="0" />
       <xsd:element name="lvlPicBulletId" type="CT_DecimalNumber" minOccurs="0" />
-      <xsd:element name="legacy" type="CT_LvlLegacy" minOccurs="0" />
+      <transitionalOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+        <xsd:element name="legacy" type="CT_LvlLegacy" minOccurs="0" />
+      </transitionalOnly>
       <xsd:element name="lvlJc" type="CT_Jc" minOccurs="0" />
       <xsd:element name="pPr" type="CT_PPrGeneral" minOccurs="0" />
       <xsd:element name="rPr" type="CT_RPr" minOccurs="0" />
@@ -3636,15 +3646,15 @@
     <xsd:attribute name="decorated" type="s:ST_OnOff" use="optional" />
   </xsd:complexType>
   <xsd:complexType name="CT_DocPartPr">
-    <xsd:choice maxOccurs="unbounded">
+    <xsd:all>
       <xsd:element name="name" type="CT_DocPartName" minOccurs="1" />
-      <xsd:element name="style" type="CT_String" />
-      <xsd:element name="category" type="CT_DocPartCategory" />
-      <xsd:element name="types" type="CT_DocPartTypes" />
-      <xsd:element name="behaviors" type="CT_DocPartBehaviors" />
-      <xsd:element name="description" type="CT_String" />
-      <xsd:element name="guid" type="CT_Guid" />
-    </xsd:choice>
+      <xsd:element name="style" type="CT_String" minOccurs="0" />
+      <xsd:element name="category" type="CT_DocPartCategory" minOccurs="0" />
+      <xsd:element name="types" type="CT_DocPartTypes" minOccurs="0" />
+      <xsd:element name="behaviors" type="CT_DocPartBehaviors" minOccurs="0" />
+      <xsd:element name="description" type="CT_String" minOccurs="0" />
+      <xsd:element name="guid" type="CT_Guid" minOccurs="0" />
+    </xsd:all>
   </xsd:complexType>
   <xsd:complexType name="CT_DocPart">
     <xsd:sequence>

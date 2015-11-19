@@ -1,0 +1,12 @@
+2c2
+<   "http://purl.oclc.org/ooxml/officeDocument/extendedProperties"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
+5c5
+<   "http://purl.oclc.org/ooxml/officeDocument/extendedProperties"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/extended-properties"
+8c8
+<   "http://purl.oclc.org/ooxml/officeDocument/docPropsVTypes"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"

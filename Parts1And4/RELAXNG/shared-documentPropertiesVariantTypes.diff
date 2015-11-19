@@ -1,0 +1,13 @@
+2c2
+<   "http://purl.oclc.org/ooxml/officeDocument/docPropsVTypes"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"
+4c4,5
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+7c8
+<   "http://purl.oclc.org/ooxml/officeDocument/docPropsVTypes"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"

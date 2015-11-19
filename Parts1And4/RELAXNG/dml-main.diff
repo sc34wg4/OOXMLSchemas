@@ -1,0 +1,66 @@
+1,2c1,3
+< default namespace = "http://purl.oclc.org/ooxml/drawingml/main"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+---
+> default namespace =
+>   "http://schemas.openxmlformats.org/drawingml/2006/main"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+4,5c5,8
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+130c133,134
+< a_ST_Percentage = s_ST_Percentage
+---
+> a_ST_Percentage = a_ST_PercentageDecimal | s_ST_Percentage
+> a_ST_PercentageDecimal = xsd:int
+132c136,138
+< a_ST_PositivePercentage = s_ST_PositivePercentage
+---
+> a_ST_PositivePercentage =
+>   a_ST_PositivePercentageDecimal | s_ST_PositivePercentage
+> a_ST_PositivePercentageDecimal = xsd:int { minInclusive = "0" }
+134c140,143
+< a_ST_FixedPercentage = s_ST_FixedPercentage
+---
+> a_ST_FixedPercentage =
+>   a_ST_FixedPercentageDecimal | s_ST_FixedPercentage
+> a_ST_FixedPercentageDecimal =
+>   xsd:int { minInclusive = "-100000" maxInclusive = "100000" }
+136c145,148
+< a_ST_PositiveFixedPercentage = s_ST_PositiveFixedPercentage
+---
+> a_ST_PositiveFixedPercentage =
+>   a_ST_PositiveFixedPercentageDecimal | s_ST_PositiveFixedPercentage
+> a_ST_PositiveFixedPercentageDecimal =
+>   xsd:int { minInclusive = "0" maxInclusive = "100000" }
+1808c1820
+< a_CT_ColorMappingOverride =faf
+---
+> a_CT_ColorMappingOverride =
+2027c2039,2042
+< a_ST_TextFontScalePercentOrPercentString = s_ST_Percentage
+---
+> a_ST_TextFontScalePercentOrPercentString =
+>   a_ST_TextFontScalePercent | s_ST_Percentage
+> a_ST_TextFontScalePercent =
+>   xsd:int { minInclusive = "1000" maxInclusive = "100000" }
+2120c2135,2136
+< a_ST_TextBulletSize = a_ST_TextBulletSizePercent
+---
+> a_ST_TextBulletSize =
+>   a_ST_TextBulletSizePercent | a_ST_TextBulletSizeDecimal
+2124a2141,2142
+> a_ST_TextBulletSizeDecimal =
+>   xsd:int { minInclusive = "25000" maxInclusive = "400000" }
+2251c2269,2272
+< a_ST_TextSpacingPercentOrPercentString = s_ST_Percentage
+---
+> a_ST_TextSpacingPercentOrPercentString =
+>   a_ST_TextSpacingPercent | s_ST_Percentage
+> a_ST_TextSpacingPercent =
+>   xsd:int { minInclusive = "0" maxInclusive = "13200000" }

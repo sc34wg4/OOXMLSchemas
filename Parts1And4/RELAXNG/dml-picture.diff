@@ -1,0 +1,10 @@
+1,3c1,5
+< default namespace = "http://purl.oclc.org/ooxml/drawingml/picture"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+< namespace dpct = "http://purl.oclc.org/ooxml/drawingml/picture"
+---
+> default namespace =
+>   "http://schemas.openxmlformats.org/drawingml/2006/picture"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+> namespace dpct =
+>   "http://schemas.openxmlformats.org/drawingml/2006/picture"

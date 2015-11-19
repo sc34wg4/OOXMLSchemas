@@ -1,0 +1,13 @@
+2c2
+<   "http://purl.oclc.org/ooxml/officeDocument/bibliography"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/bibliography"
+4c4,5
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+6c7
+<   "http://purl.oclc.org/ooxml/officeDocument/bibliography"
+---
+>   "http://schemas.openxmlformats.org/officeDocument/2006/bibliography"

@@ -1,0 +1,15 @@
+1,3c1,5
+< default namespace = "http://purl.oclc.org/ooxml/drawingml/lockedCanvas"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+< namespace dlckcnv = "http://purl.oclc.org/ooxml/drawingml/lockedCanvas"
+---
+> default namespace =
+>   "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+> namespace dlckcnv =
+>   "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"
+5c7,8
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"

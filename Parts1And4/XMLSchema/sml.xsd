@@ -235,7 +235,6 @@
     </xsd:sequence>
     <xsd:attribute name="moveWithCells" type="xsd:boolean" use="optional" default="false" />
     <xsd:attribute name="sizeWithCells" type="xsd:boolean" use="optional" default="false" />
-    <xsd:attribute name="z-order" type="xsd:unsignedInt" use="optional" />
   </xsd:complexType>
   <xsd:group name="EG_ExtensionList">
     <xsd:sequence>
@@ -304,7 +303,6 @@
     <xsd:attribute name="defaultSize" type="xsd:boolean" use="optional" default="true" />
     <xsd:attribute name="print" type="xsd:boolean" use="optional" default="true" />
     <xsd:attribute name="disabled" type="xsd:boolean" use="optional" default="false" />
-    <xsd:attribute name="uiObject" type="xsd:boolean" use="optional" default="false" />
     <xsd:attribute name="autoFill" type="xsd:boolean" use="optional" default="true" />
     <xsd:attribute name="autoLine" type="xsd:boolean" use="optional" default="true" />
     <xsd:attribute name="altText" type="s:ST_Xstring" use="optional" />
@@ -313,8 +311,6 @@
     <xsd:attribute name="lockText" type="xsd:boolean" use="optional" default="true" />
     <xsd:attribute name="justLastX" type="xsd:boolean" use="optional" default="false" />
     <xsd:attribute name="autoScale" type="xsd:boolean" use="optional" default="false" />
-    <xsd:attribute name="rowHidden" type="xsd:boolean" use="optional" default="false" />
-    <xsd:attribute name="colHidden" type="xsd:boolean" use="optional" default="false" />
   </xsd:complexType>
   <xsd:simpleType name="ST_TextHAlign">
     <xsd:restriction base="xsd:string">
@@ -2165,6 +2161,7 @@
       </transitionalOnly>
       <xsd:element name="drawingHF" type="CT_DrawingHF" minOccurs="0" maxOccurs="1" />
       <xsd:element name="oleObjects" type="CT_OleObjects" minOccurs="0" maxOccurs="1" />
+      <xsd:element name="controls" type="CT_Controls" minOccurs="0" maxOccurs="1" />
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList" />
     </xsd:sequence>
   </xsd:complexType>
@@ -2290,7 +2287,9 @@
   <xsd:simpleType name="ST_CellType">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="b" />
-      <xsd:enumeration value="d" />
+      <strictOnly xmlns="http://www.itscj.ipsj.or.jp/sc34/wg4/schemaHacking">
+        <xsd:enumeration value="d" />
+      </strictOnly>
       <xsd:enumeration value="n" />
       <xsd:enumeration value="e" />
       <xsd:enumeration value="s" />
@@ -4235,7 +4234,6 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_WorkbookPr">
     <xsd:attribute name="date1904" type="xsd:boolean" use="optional" default="false" />
-    <xsd:attribute name="dateCompatibility" type="xsd:boolean" use="optional" default="true" />
     <xsd:attribute name="showObjects" type="ST_Objects" use="optional" default="all" />
     <xsd:attribute name="showBorderUnselectedTables" type="xsd:boolean" use="optional" default="true" />
     <xsd:attribute name="filterPrivacy" type="xsd:boolean" use="optional" default="false" />

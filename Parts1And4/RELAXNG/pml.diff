@@ -1,0 +1,93 @@
+1,2c1,3
+< default namespace = "http://purl.oclc.org/ooxml/presentationml/main"
+< namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
+---
+> default namespace =
+>   "http://schemas.openxmlformats.org/presentationml/2006/main"
+> namespace a = "http://schemas.openxmlformats.org/drawingml/2006/main"
+4,6c5,10
+< namespace p = "http://purl.oclc.org/ooxml/presentationml/main"
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace p =
+>   "http://schemas.openxmlformats.org/presentationml/2006/main"
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+523c527
+<   element pic { p_CT_Picture }
+---
+>   (attribute spid { a_ST_ShapeID } | element pic { p_CT_Picture })
+528c532
+<   element pic { p_CT_Picture }?
+---
+>   (attribute spid { a_ST_ShapeID } | element pic { p_CT_Picture })
+638c642,654
+<   attribute spinValue { xsd:unsignedInt }?
+---
+>   attribute spinValue { xsd:unsignedInt }?,
+>   attribute cryptProviderType { s_ST_CryptProv }?,
+>   attribute cryptAlgorithmClass { s_ST_AlgClass }?,
+>   attribute cryptAlgorithmType { s_ST_AlgType }?,
+>   attribute cryptAlgorithmSid { xsd:unsignedInt }?,
+>   attribute spinCount { xsd:unsignedInt }?,
+>   attribute saltData { xsd:base64Binary }?,
+>   attribute hashData { xsd:base64Binary }?,
+>   attribute cryptProvider { xsd:string }?,
+>   attribute algIdExt { xsd:unsignedInt }?,
+>   attribute algIdExtSource { xsd:string }?,
+>   attribute cryptProviderTypeExt { xsd:unsignedInt }?,
+>   attribute cryptProviderTypeExtSource { xsd:string }?
+698a715,761
+> p_ST_WebColorType =
+>   "none"
+>   | "browser"
+>   | "presentationText"
+>   | "presentationAccent"
+>   | "whiteTextOnBlack"
+>   | "blackTextOnWhite"
+> p_ST_WebScreenSize =
+>   "544x376"
+>   | "640x480"
+>   | "720x512"
+>   | "800x600"
+>   | "1024x768"
+>   | "1152x882"
+>   | "1152x900"
+>   | "1280x1024"
+>   | "1600x1200"
+>   | "1800x1400"
+>   | "1920x1200"
+> p_ST_WebEncoding = xsd:string
+> p_CT_WebProperties =
+>   
+>   ## default value: false
+>   attribute showAnimation { xsd:boolean }?,
+>   
+>   ## default value: true
+>   attribute resizeGraphics { xsd:boolean }?,
+>   
+>   ## default value: false
+>   attribute allowPng { xsd:boolean }?,
+>   
+>   ## default value: false
+>   attribute relyOnVml { xsd:boolean }?,
+>   
+>   ## default value: true
+>   attribute organizeInFolders { xsd:boolean }?,
+>   
+>   ## default value: true
+>   attribute useLongFilenames { xsd:boolean }?,
+>   
+>   ## default value: 800x600
+>   attribute imgSz { p_ST_WebScreenSize }?,
+>   attribute encoding { p_ST_WebEncoding }?,
+>   
+>   ## default value: whiteTextOnBlack
+>   attribute clr { p_ST_WebColorType }?,
+>   element extLst { p_CT_ExtensionList }?
+756a820,821
+>   element htmlPubPr { p_CT_HtmlPublishProperties }?,
+>   element webPr { p_CT_WebProperties }?,

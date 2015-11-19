@@ -1,0 +1,5 @@
+2c2,3
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"

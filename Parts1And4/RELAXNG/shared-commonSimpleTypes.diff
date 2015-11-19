@@ -1,0 +1,26 @@
+2c2,3
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+---
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+24a26,29
+> s_ST_AlgClass = string "hash" | string "custom"
+> s_ST_CryptProv = string "rsaAES" | string "rsaFull" | string "custom"
+> s_ST_AlgType = string "typeAny" | string "custom"
+> s_ST_ColorType = xsd:string
+30c35,36
+< s_ST_OnOff = xsd:boolean
+---
+> s_ST_OnOff = xsd:boolean | s_ST_OnOff1
+> s_ST_OnOff1 = string "on" | string "off"
+32a39,48
+> s_ST_TrueFalse =
+>   string "t" | string "f" | string "true" | string "false"
+> s_ST_TrueFalseBlank =
+>   string "t"
+>   | string "f"
+>   | string "true"
+>   | string "false"
+>   | string ""
+>   | string "True"
+>   | string "False"

@@ -1,0 +1,7 @@
+11a12
+> include "vml-presentationDrawing.rnc"
+13a15,18
+> include "vml-officeDrawing.rnc"
+> include "vml-main.rnc"
+> include "vml-spreadsheetDrawing.rnc"
+> include "vml-wordprocessingDrawing.rnc"

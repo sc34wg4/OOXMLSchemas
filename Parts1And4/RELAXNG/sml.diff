@@ -1,0 +1,83 @@
+2,4c2,7
+< namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
+< namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+< default namespace sml = "http://purl.oclc.org/ooxml/spreadsheetml/main"
+---
+> namespace r =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+> namespace s =
+>   "http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+> default namespace sml =
+>   "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+9c12
+<   "http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
+---
+>   "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
+78a82
+>   attribute maxVal { xsd:double }?,
+187a192
+> sml_ST_UnsignedShortHex = xsd:hexBinary { length = "2" }
+213c218
+<   attribute r { sml_ST_CellRef },
+---
+>   attribute (r | ref) { sml_ST_CellRef }, 
+491a497,499
+>   
+>   ## default value: 1252
+>   attribute codePage { xsd:unsignedInt }?,
+580a589
+>   attribute refreshedDate { xsd:double }?,
+1794a1804
+>   | string "topRight"
+2313a2324,2325
+>   element legacyDrawing { sml_CT_LegacyDrawing }?,
+>   element legacyDrawingHF { sml_CT_LegacyDrawing }?,
+2328a2341,2342
+>   element legacyDrawing { sml_CT_LegacyDrawing }?,
+>   element legacyDrawingHF { sml_CT_LegacyDrawing }?,
+2363a2378,2379
+>   element legacyDrawing { sml_CT_LegacyDrawing }?,
+>   element legacyDrawingHF { sml_CT_LegacyDrawing }?,
+2484d2499
+<   | string "d"
+2717a2733,2735
+>   attribute leftLabels { xsd:boolean }?,
+>   
+>   ## default value: false
+2763a2782
+> sml_CT_LegacyDrawing = r_id
+3190a3210
+>   attribute password { sml_ST_UnsignedShortHex }?,
+3245a3266
+>   attribute password { sml_ST_UnsignedShortHex }?,
+3247a3269
+>   attribute securityDescriptor { xsd:string }?,
+3285a3308,3309
+>   element legacyDrawing { sml_CT_LegacyDrawing }?,
+>   element legacyDrawingHF { sml_CT_LegacyDrawing }?,
+3311a3336
+>   attribute password { sml_ST_UnsignedShortHex }?,
+3789a3815,3816
+>   element left { sml_CT_BorderPr }?,
+>   element right { sml_CT_BorderPr }?,
+4021,4023d4047
+< sml_CT_FontFamily = attribute val { sml_ST_FontFamily }
+< sml_ST_FontFamily =
+<   xsd:integer { minInclusive = "0" maxInclusive = "14" }
+4039a4064,4066
+> sml_CT_FontFamily = attribute val { sml_ST_FontFamily }
+> sml_ST_FontFamily =
+>   xsd:integer { minInclusive = "0" maxInclusive = "14" }
+4406,4408d4432
+<   ## default value: true
+<   attribute dateCompatibility { xsd:boolean }?,
+<   
+4561a4586
+>   attribute reservationPassword { sml_ST_UnsignedShortHex }?,
+4567a4593,4596
+>   attribute workbookPassword { sml_ST_UnsignedShortHex }?,
+>   attribute workbookPasswordCharacterSet { xsd:string }?,
+>   attribute revisionsPassword { sml_ST_UnsignedShortHex }?,
+>   attribute revisionsPasswordCharacterSet { xsd:string }?,
+4606a4636
+>   attribute codePage { xsd:unsignedInt }?,

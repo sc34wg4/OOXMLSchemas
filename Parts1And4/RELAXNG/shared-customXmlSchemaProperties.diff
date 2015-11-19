@@ -1,0 +1,5 @@
+2c2,3
+< default namespace sl = "http://purl.oclc.org/ooxml/schemaLibrary/main"
+---
+> default namespace sl =
+>   "http://schemas.openxmlformats.org/schemaLibrary/2006/main"
