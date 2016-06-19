@@ -3778,14 +3778,18 @@ sml_CT_Stylesheet =
   element extLst { sml_CT_ExtensionList }?
 sml_CT_CellAlignment =
   attribute horizontal { sml_ST_HorizontalAlignment }?,
+  
+  ## default value: bottom
   attribute vertical { sml_ST_VerticalAlignment }?,
-  attribute textRotation { xsd:unsignedInt }?,
+  attribute textRotation { sml_ST_TextRotation }?,
   attribute wrapText { xsd:boolean }?,
   attribute indent { xsd:unsignedInt }?,
   attribute relativeIndent { xsd:int }?,
   attribute justifyLastLine { xsd:boolean }?,
   attribute shrinkToFit { xsd:boolean }?,
   attribute readingOrder { xsd:unsignedInt }?
+sml_ST_TextRotation = 
+  xsd:nonNegativeInteger { maxInclusive = "180"} | xsd:nonNegativeInteger "255"
 sml_ST_BorderStyle =
   string "none"
   | string "thin"

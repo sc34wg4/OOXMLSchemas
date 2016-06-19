@@ -1153,7 +1153,7 @@ w_CT_R =
   attribute w:rsidR { w_ST_LongHexNumber }?,
   w_EG_RPr?,
   w_EG_RunInnerContent*
-w_ST_Hint = string "default" | string "eastAsia" | string "cs"
+w_ST_Hint = string "default" | string "eastAsia"
 w_ST_Theme =
   string "majorEastAsia"
   | string "majorBidi"
