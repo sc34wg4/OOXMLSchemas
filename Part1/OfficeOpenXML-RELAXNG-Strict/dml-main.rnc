@@ -1190,6 +1190,8 @@ a_CT_GradientStop =
   a_EG_ColorChoice
 a_CT_GradientStopList = element gs { a_CT_GradientStop }+
 a_CT_GradientFillProperties =
+  
+  ## default value: none
   attribute flip { a_ST_TileFlipMode }?,
   attribute rotWithShape { xsd:boolean }?,
   element gsLst { a_CT_GradientStopList }?,
@@ -1200,6 +1202,8 @@ a_CT_TileInfoProperties =
   attribute ty { a_ST_Coordinate }?,
   attribute sx { a_ST_Percentage }?,
   attribute sy { a_ST_Percentage }?,
+  
+  ## default value: none
   attribute flip { a_ST_TileFlipMode }?,
   attribute algn { a_ST_RectAlignment }?
 a_CT_StretchInfoProperties = element fillRect { a_CT_RelativeRect }?
@@ -1697,6 +1701,8 @@ a_ST_LineEndType =
 a_ST_LineEndWidth = "sm" | "med" | "lg"
 a_ST_LineEndLength = "sm" | "med" | "lg"
 a_CT_LineEndProperties =
+  
+  ## default value: none
   attribute type { a_ST_LineEndType }?,
   attribute w { a_ST_LineEndWidth }?,
   attribute len { a_ST_LineEndLength }?

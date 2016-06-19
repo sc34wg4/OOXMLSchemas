@@ -298,6 +298,8 @@ p_CT_TLAnimateColorBehavior =
   element to { a_CT_Color }?
 p_ST_TLAnimateEffectTransition = "in" | "out" | "none"
 p_CT_TLAnimateEffectBehavior =
+  
+  ## default value: in
   attribute transition { p_ST_TLAnimateEffectTransition }?,
   attribute filter { xsd:string }?,
   attribute prLst { xsd:string }?,
