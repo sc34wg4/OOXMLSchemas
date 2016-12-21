@@ -689,15 +689,6 @@ p_CT_Presentation =
   element modifyVerifier { p_CT_ModifyVerifier }?,
   element extLst { p_CT_ExtensionList }?
 p_presentation = element presentation { p_CT_Presentation }
-p_CT_HtmlPublishProperties =
-  
-  ## default value: true
-  attribute showSpeakerNotes { xsd:boolean }?,
-  attribute target { xsd:string }?,
-  attribute title { xsd:string }?,
-  r_id,
-  p_EG_SlideListChoice,
-  element extLst { p_CT_ExtensionList }?
 p_ST_PrintWhat =
   "slides"
   | "handouts1"

@@ -1068,16 +1068,6 @@
     <xsd:attribute name="conformance" type="s:ST_ConformanceClass"/>
   </xsd:complexType>
   <xsd:element name="presentation" type="CT_Presentation"/>
-  <xsd:complexType name="CT_HtmlPublishProperties">
-    <xsd:sequence>
-      <xsd:group ref="EG_SlideListChoice" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="extLst" type="CT_ExtensionList" minOccurs="0" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute name="showSpeakerNotes" type="xsd:boolean" use="optional" default="true"/>
-    <xsd:attribute name="target" type="xsd:string" use="optional"/>
-    <xsd:attribute name="title" type="xsd:string" use="optional" default=""/>
-    <xsd:attribute ref="r:id" use="required"/>
-  </xsd:complexType>
   <xsd:simpleType name="ST_PrintWhat">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="slides"/>
