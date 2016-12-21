@@ -313,6 +313,8 @@
     <xsd:attribute name="lockText" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="justLastX" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoScale" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="uiObject" type="xsd:boolean" use="optional"
+        default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextHAlign">
     <xsd:restriction base="xsd:string">

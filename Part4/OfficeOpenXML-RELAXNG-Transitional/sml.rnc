@@ -281,6 +281,9 @@ sml_CT_CommentPr =
   ## default value: false
   attribute autoScale { xsd:boolean }?,
 
+  ## default value: false
+  attribute uiObject { xsd:boolean }?,
+
   element anchor { sml_CT_ObjectAnchor }
 sml_ST_TextHAlign =
   string "left"
