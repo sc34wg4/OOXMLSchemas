@@ -1024,6 +1024,7 @@ w_CT_DocGrid =
   attribute w:type { w_ST_DocGrid }?,
   attribute w:linePitch { w_ST_DecimalNumber }?,
   attribute w:charSpace { w_ST_DecimalNumber }?
+  ## default value: 0
 w_ST_HdrFtr = string "even" | string "default" | string "first"
 w_ST_FtnEdn =
   string "normal"

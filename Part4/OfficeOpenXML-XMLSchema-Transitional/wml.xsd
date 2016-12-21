@@ -1571,7 +1571,7 @@
   <xsd:complexType name="CT_DocGrid">
     <xsd:attribute name="type" type="ST_DocGrid"/>
     <xsd:attribute name="linePitch" type="ST_DecimalNumber"/>
-    <xsd:attribute name="charSpace" type="ST_DecimalNumber"/>
+    <xsd:attribute name="charSpace" type="ST_DecimalNumber" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_HdrFtr">
     <xsd:restriction base="xsd:string">
