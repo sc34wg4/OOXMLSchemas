@@ -846,7 +846,6 @@ w_ST_NumberFormat =
   | string "japaneseLegal"
   | string "japaneseDigitalTenThousand"
   | string "decimalEnclosedCircle"
-  | string "decimalFullWidth2"
   | string "aiueoFullWidth"
   | string "irohaFullWidth"
   | string "decimalZero"

@@ -1312,7 +1312,6 @@
       <xsd:enumeration value="japaneseLegal"/>
       <xsd:enumeration value="japaneseDigitalTenThousand"/>
       <xsd:enumeration value="decimalEnclosedCircle"/>
-      <xsd:enumeration value="decimalFullWidth2"/>
       <xsd:enumeration value="aiueoFullWidth"/>
       <xsd:enumeration value="irohaFullWidth"/>
       <xsd:enumeration value="decimalZero"/>
