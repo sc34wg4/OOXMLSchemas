@@ -683,6 +683,16 @@ a_CT_GraphicalObjectData_any =
     anyAttribute*,
     mixed { anyElement* }
   }
+  | a_tbl
+  | dchrt_chart
+  | ddgrm_relIds
+  | dlckcnv_lockedCanvas
+  | p_oleObj
+  | w_EG_ContentBlockContent
+  | wp_wpc  
+  | wp_wgp
+  | wp_wsp
+
 a_CT_GraphicalObject = element graphicData { a_CT_GraphicalObjectData }
 a_graphic = element graphic { a_CT_GraphicalObject }
 a_ST_ChartBuildStep =

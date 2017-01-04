@@ -112,6 +112,16 @@ a_CT_OfficeArtExtension_any =
     anyAttribute*,
     mixed { anyElement* }
   }
+  | a_tbl
+  | dchrt_chart
+  | ddgrm_relIds
+  | dlckcnv_lockedCanvas
+  | p_oleObj
+  | w_EG_ContentBlockContent
+  | wp_wpc  
+  | wp_wgp
+  | wp_wsp
+
 a_ST_Coordinate = a_ST_CoordinateUnqualified | s_ST_UniversalMeasure
 a_ST_CoordinateUnqualified =
   xsd:long {
