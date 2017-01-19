@@ -4,17 +4,15 @@ namespace ds = "http://www.w3.org/2000/09/xmldsig#"
 
 include "xmldsig-core-schema.rnc" {
 
-SignaturePropertyType =
-  SignatureTime,
-  attribute Id { xsd:ID }?,
-  attribute Target { xsd:anyURI }
+ds_SignaturePropertyChild |=
+  SignatureTime
 
 TransformType =
   element ds:XPath { xsd:string }?,
   (RelationshipReference | RelationshipsGroupReference)*,
   attribute Algorithm { xsd:anyURI }
 }
-
+start = ds_Signature
 SignatureTime = element SignatureTime { CT_SignatureTime }
 RelationshipReference =
   element RelationshipReference { CT_RelationshipReference }
