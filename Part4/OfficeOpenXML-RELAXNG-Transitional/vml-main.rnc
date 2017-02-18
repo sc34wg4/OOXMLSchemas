@@ -11,36 +11,36 @@ namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
 namespace local = ""
 
-v_AG_Id = attribute id { xsd:string }?
-v_AG_Style = attribute style { xsd:string }?
-v_AG_Type = attribute type { xsd:string }?
-v_AG_Adj = attribute adj { xsd:string }?
-v_AG_Path = attribute path { xsd:string }?
+v_AG_Id = attribute id_AG_Id { xsd:string }?
+v_AG_Style = attribute style_AG_Style { xsd:string }?
+v_AG_Type = attribute type_AG_Type { xsd:string }?
+v_AG_Adj = attribute adj_AG_Adj { xsd:string }?
+v_AG_Path = attribute path_AG_Path { xsd:string }?
 v_AG_Fill =
-  attribute filled { s_ST_TrueFalse }?,
-  attribute fillcolor { s_ST_ColorType }?
-v_AG_Chromakey = attribute chromakey { s_ST_ColorType }?
-v_AG_Ext = attribute v:ext { v_ST_Ext }?
+  attribute filled_AG_Fill { s_ST_TrueFalse }?,
+  attribute fillcolor_AG_Fill { s_ST_ColorType }?
+v_AG_Chromakey = attribute chromakey_AG_Chromakey { s_ST_ColorType }?
+v_AG_Ext = attribute v:ext_AG_Ext { v_ST_Ext }?
 v_AG_CoreAttributes =
   v_AG_Id,
   v_AG_Style,
-  attribute href { xsd:string }?,
-  attribute target { xsd:string }?,
-  attribute class { xsd:string }?,
-  attribute title { xsd:string }?,
-  attribute alt { xsd:string }?,
-  attribute coordsize { xsd:string }?,
-  attribute coordorigin { xsd:string }?,
-  attribute wrapcoords { xsd:string }?,
-  attribute print { s_ST_TrueFalse }?
+  attribute href_AG_CoreAttributes { xsd:string }?,
+  attribute target_AG_CoreAttributes { xsd:string }?,
+  attribute class_AG_CoreAttributes { xsd:string }?,
+  attribute title_AG_CoreAttributes { xsd:string }?,
+  attribute alt_AG_CoreAttributes { xsd:string }?,
+  attribute coordsize_AG_CoreAttributes { xsd:string }?,
+  attribute coordorigin_AG_CoreAttributes { xsd:string }?,
+  attribute wrapcoords_AG_CoreAttributes { xsd:string }?,
+  attribute print_AG_CoreAttributes { s_ST_TrueFalse }?
 v_AG_ShapeAttributes =
   v_AG_Chromakey,
   v_AG_Fill,
-  attribute opacity { xsd:string }?,
-  attribute stroked { s_ST_TrueFalse }?,
-  attribute strokecolor { s_ST_ColorType }?,
-  attribute strokeweight { xsd:string }?,
-  attribute insetpen { s_ST_TrueFalse }?
+  attribute opacity_AG_ShapeAttributes { xsd:string }?,
+  attribute stroked_AG_ShapeAttributes { s_ST_TrueFalse }?,
+  attribute strokecolor_AG_ShapeAttributes { s_ST_ColorType }?,
+  attribute strokeweight_AG_ShapeAttributes { xsd:string }?,
+  attribute insetpen_AG_ShapeAttributes { s_ST_TrueFalse }?
 v_AG_OfficeCoreAttributes =
   o_spid?,
   o_oned?,
@@ -81,44 +81,44 @@ v_AG_AllCoreAttributes = v_AG_CoreAttributes, v_AG_OfficeCoreAttributes
 v_AG_AllShapeAttributes =
   v_AG_ShapeAttributes, v_AG_OfficeShapeAttributes
 v_AG_ImageAttributes =
-  attribute src { xsd:string }?,
-  attribute cropleft { xsd:string }?,
-  attribute croptop { xsd:string }?,
-  attribute cropright { xsd:string }?,
-  attribute cropbottom { xsd:string }?,
-  attribute gain { xsd:string }?,
-  attribute blacklevel { xsd:string }?,
-  attribute gamma { xsd:string }?,
-  attribute grayscale { s_ST_TrueFalse }?,
-  attribute bilevel { s_ST_TrueFalse }?
+  attribute src_AG_ImageAttributes { xsd:string }?,
+  attribute cropleft_AG_ImageAttributes { xsd:string }?,
+  attribute croptop_AG_ImageAttributes { xsd:string }?,
+  attribute cropright_AG_ImageAttributes { xsd:string }?,
+  attribute cropbottom_AG_ImageAttributes { xsd:string }?,
+  attribute gain_AG_ImageAttributes { xsd:string }?,
+  attribute blacklevel_AG_ImageAttributes { xsd:string }?,
+  attribute gamma_AG_ImageAttributes { xsd:string }?,
+  attribute grayscale_AG_ImageAttributes { s_ST_TrueFalse }?,
+  attribute bilevel_AG_ImageAttributes { s_ST_TrueFalse }?
 v_AG_StrokeAttributes =
-  attribute on { s_ST_TrueFalse }?,
-  attribute weight { xsd:string }?,
-  attribute color { s_ST_ColorType }?,
-  attribute opacity { xsd:string }?,
-  attribute linestyle { v_ST_StrokeLineStyle }?,
-  attribute miterlimit { xsd:decimal }?,
-  attribute joinstyle { v_ST_StrokeJoinStyle }?,
-  attribute endcap { v_ST_StrokeEndCap }?,
-  attribute dashstyle { xsd:string }?,
-  attribute filltype { v_ST_FillType }?,
-  attribute src { xsd:string }?,
-  attribute imageaspect { v_ST_ImageAspect }?,
-  attribute imagesize { xsd:string }?,
-  attribute imagealignshape { s_ST_TrueFalse }?,
-  attribute color2 { s_ST_ColorType }?,
-  attribute startarrow { v_ST_StrokeArrowType }?,
-  attribute startarrowwidth { v_ST_StrokeArrowWidth }?,
-  attribute startarrowlength { v_ST_StrokeArrowLength }?,
-  attribute endarrow { v_ST_StrokeArrowType }?,
-  attribute endarrowwidth { v_ST_StrokeArrowWidth }?,
-  attribute endarrowlength { v_ST_StrokeArrowLength }?,
+  attribute on_AG_StrokeAttributes { s_ST_TrueFalse }?,
+  attribute weight_AG_StrokeAttributes { xsd:string }?,
+  attribute color_AG_StrokeAttributes { s_ST_ColorType }?,
+  attribute opacity_AG_StrokeAttributes { xsd:string }?,
+  attribute linestyle_AG_StrokeAttributes { v_ST_StrokeLineStyle }?,
+  attribute miterlimit_AG_StrokeAttributes { xsd:decimal }?,
+  attribute joinstyle_AG_StrokeAttributes { v_ST_StrokeJoinStyle }?,
+  attribute endcap_AG_StrokeAttributes { v_ST_StrokeEndCap }?,
+  attribute dashstyle_AG_StrokeAttributes { xsd:string }?,
+  attribute filltype_AG_StrokeAttributes { v_ST_FillType }?,
+  attribute src_AG_StrokeAttributes { xsd:string }?,
+  attribute imageaspect_AG_StrokeAttributes { v_ST_ImageAspect }?,
+  attribute imagesize_AG_StrokeAttributes { xsd:string }?,
+  attribute imagealignshape_AG_StrokeAttributes { s_ST_TrueFalse }?,
+  attribute color2_AG_StrokeAttributes { s_ST_ColorType }?,
+  attribute startarrow_AG_StrokeAttributes { v_ST_StrokeArrowType }?,
+  attribute startarrowwidth_AG_StrokeAttributes { v_ST_StrokeArrowWidth }?,
+  attribute startarrowlength_AG_StrokeAttributes { v_ST_StrokeArrowLength }?,
+  attribute endarrow_AG_StrokeAttributes { v_ST_StrokeArrowType }?,
+  attribute endarrowwidth_AG_StrokeAttributes { v_ST_StrokeArrowWidth }?,
+  attribute endarrowlength_AG_StrokeAttributes { v_ST_StrokeArrowLength }?,
   o_href?,
   o_althref?,
   o_title?,
   o_forcedash?,
   r_id?,
-  attribute insetpen { s_ST_TrueFalse }?,
+  attribute insetpen_AG_StrokeAttributes { s_ST_TrueFalse }?,
   o_relid?
 v_EG_ShapeElements =
   v_path

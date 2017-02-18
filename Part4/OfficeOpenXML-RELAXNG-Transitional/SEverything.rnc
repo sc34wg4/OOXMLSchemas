@@ -1,0 +1,86 @@
+include "any.rnc"
+include "dml-chart.rnc"
+include "dml-chartDrawing.rnc"
+include "dml-diagram.rnc"
+include "dml-lockedCanvas.rnc"
+include "dml-main.rnc"
+include "dml-picture.rnc"
+include "dml-spreadsheetDrawing.rnc"
+include "dml-wordprocessingDrawing.rnc"
+include "pml.rnc"
+include "shared-additionalCharacteristics.rnc"
+include "shared-bibliography.rnc"
+include "shared-commonSimpleTypes.rnc"
+include "shared-customXmlDataProperties.rnc"
+include "shared-customXmlSchemaProperties.rnc"
+include "shared-documentPropertiesCustom.rnc"
+include "shared-documentPropertiesExtended.rnc"
+include "shared-documentPropertiesVariantTypes.rnc"
+include "shared-math.rnc"
+include "shared-relationshipReference.rnc"
+include "sml.rnc"
+include "wml.rnc"
+include "xml.rnc"
+start |= a_tblStyleLst
+start |= a_theme
+start |= a_themeOverride
+start |= dchrt_chartSpace
+start |= dchrt_userShapes
+start |= ddgrm_colorsDef
+start |= ddgrm_dataModel
+start |= ddgrm_layoutDef
+start |= ddgrm_styleDef
+start |= ds_datastoreItem
+start |= p_cmAuthorLst
+start |= p_cmLst
+start |= p_handoutMaster
+start |= p_notes
+start |= p_notesMaster
+start |= p_presentation
+start |= p_presentationPr
+start |= p_sld
+start |= p_sldLayout
+start |= p_sldMaster
+start |= p_sldSyncPr
+start |= p_tagLst
+start |= p_viewPr
+start |= shdCstm_Properties
+start |= shdDcEP_Properties
+start |= shrdBib_Sources
+start |= shrdChr_additionalCharacteristics
+start |= sml_calcChain
+start |= sml_chartsheet
+start |= sml_comments
+start |= sml_connections
+start |= sml_dialogsheet
+start |= sml_externalLink
+start |= sml_headers
+start |= sml_MapInfo
+start |= sml_metadata
+start |= sml_pivotCacheDefinition
+start |= sml_pivotCacheRecords
+start |= sml_pivotTableDefinition
+start |= sml_queryTable
+start |= sml_revisions
+start |= sml_singleXmlCells
+start |= sml_sst
+start |= sml_styleSheet
+start |= sml_table
+start |= sml_users
+start |= sml_volTypes
+start |= sml_workbook
+start |= sml_worksheet
+start |= w_comments
+start |= w_document
+start |= w_endnotes
+start |= w_fonts
+start |= w_footnotes
+start |= w_ftr
+start |= w_glossaryDocument
+start |= w_hdr
+start |= w_numbering
+start |= w_recipients
+start |= w_settings
+start |= w_styles
+start |= w_webSettings
+start |= xdr_wsDr
