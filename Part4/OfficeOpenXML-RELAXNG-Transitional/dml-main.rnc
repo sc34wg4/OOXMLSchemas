@@ -2234,6 +2234,8 @@ a_CT_TextCharacterProperties =
   attribute u { a_ST_TextUnderlineType }?,
   attribute strike { a_ST_TextStrikeType }?,
   attribute kern { a_ST_TextNonNegativePoint }?,
+  
+  ## default value: none
   attribute cap { a_ST_TextCapsType }?,
   attribute spc { a_ST_TextPoint }?,
   attribute normalizeH { xsd:boolean }?,
