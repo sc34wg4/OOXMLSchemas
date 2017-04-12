@@ -277,6 +277,12 @@ sml_CT_CommentPr =
   attribute autoScale { xsd:boolean }?,
 
   ## default value: false
+  attribute colHidden { xsd:boolean }?,
+  
+  ## default value: false
+  attribute rowHidden { xsd:boolean }?,
+
+  ## default value: false
   attribute uiObject { xsd:boolean }?,
   
   element anchor { sml_CT_ObjectAnchor }
