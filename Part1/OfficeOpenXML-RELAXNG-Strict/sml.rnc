@@ -4559,6 +4559,8 @@ sml_CT_DefinedName =
   
   ## default value: false
   attribute workbookParameter { xsd:boolean }?
+
+  xml_space?
 sml_CT_ExternalReferences =
   element externalReference { sml_CT_ExternalReference }+
 sml_CT_ExternalReference = r_id

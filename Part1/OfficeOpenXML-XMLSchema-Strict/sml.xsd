@@ -4306,6 +4306,7 @@
         <xsd:attribute name="shortcutKey" type="s:ST_Xstring" use="optional"/>
         <xsd:attribute name="publishToServer" type="xsd:boolean" use="optional" default="false"/>
         <xsd:attribute name="workbookParameter" type="xsd:boolean" use="optional" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
