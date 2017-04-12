@@ -3076,7 +3076,9 @@ sml_CT_CellFormula =
   attribute si { xsd:unsignedInt }?,
   
   ## default value: false
-  attribute bx { xsd:boolean }?
+  attribute bx { xsd:boolean }?,
+
+  xml_space?
 sml_CT_ColorScale =
   element cfvo { sml_CT_Cfvo }+,
   element color { sml_CT_Color }+

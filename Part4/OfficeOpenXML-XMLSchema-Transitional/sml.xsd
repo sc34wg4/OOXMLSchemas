@@ -2768,6 +2768,7 @@
         <xsd:attribute name="ca" type="xsd:boolean" use="optional" default="false"/>
         <xsd:attribute name="si" type="xsd:unsignedInt" use="optional"/>
         <xsd:attribute name="bx" type="xsd:boolean" use="optional" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
