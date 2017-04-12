@@ -3996,6 +3996,7 @@
     <xsd:simpleContent>
       <xsd:extension base="ST_Formula">
         <xsd:attribute name="array" type="xsd:boolean" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>

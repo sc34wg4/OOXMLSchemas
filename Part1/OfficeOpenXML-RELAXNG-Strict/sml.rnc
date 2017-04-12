@@ -4231,7 +4231,9 @@ sml_CT_TableFormula =
   sml_ST_Formula,
   
   ## default value: false
-  attribute array { xsd:boolean }?
+  attribute array { xsd:boolean }?,
+
+  xml_space?
 sml_ST_TotalsRowFunction =
   string "none"
   | string "sum"
@@ -4564,7 +4566,7 @@ sml_CT_DefinedName =
   attribute publishToServer { xsd:boolean }?,
   
   ## default value: false
-  attribute workbookParameter { xsd:boolean }?
+  attribute workbookParameter { xsd:boolean }?,
 
   xml_space?
 sml_CT_ExternalReferences =
