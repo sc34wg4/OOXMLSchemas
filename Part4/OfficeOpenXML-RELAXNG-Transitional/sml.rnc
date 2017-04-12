@@ -206,6 +206,9 @@ sml_CT_ObjectAnchor =
   
   ## default value: false
   attribute sizeWithCells { xsd:boolean }?,
+  
+  ## default value: 0
+  attribute z-order { xsd:unsignedInt }?,
   xdr_from,
   xdr_to
 sml_EG_ExtensionList = element ext { sml_CT_Extension }*
