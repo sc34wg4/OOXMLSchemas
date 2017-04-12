@@ -2425,6 +2425,7 @@
     <xsd:attribute name="startLabels" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="topLabels" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="link" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute ref="xml:space" use="optional"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_DataConsolidateFunction">
     <xsd:restriction base="xsd:string">

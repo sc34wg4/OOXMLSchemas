@@ -2749,6 +2749,7 @@ sml_CT_DataConsolidate =
   
   ## default value: false
   attribute link { xsd:boolean }?,
+  xml_space?,
   element dataRefs { sml_CT_DataRefs }?
 sml_ST_DataConsolidateFunction =
   string "average"
