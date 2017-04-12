@@ -3189,12 +3189,15 @@ sml_CT_HeaderFooter =
   
   ## default value: true
   attribute alignWithMargins { xsd:boolean }?,
-  element oddHeader { s_ST_Xstring }?,
-  element oddFooter { s_ST_Xstring }?,
-  element evenHeader { s_ST_Xstring }?,
-  element evenFooter { s_ST_Xstring }?,
-  element firstHeader { s_ST_Xstring }?,
-  element firstFooter { s_ST_Xstring }?
+  element oddHeader { sml_CT_HeaderOrFooter }?,
+  element oddFooter { sml_CT_HeaderOrFooter }?,
+  element evenHeader { sml_CT_HeaderOrFooter }?,
+  element evenFooter { sml_CT_HeaderOrFooter }?,
+  element firstHeader { sml_CT_HeaderOrFooter }?,
+  element firstFooter { sml_CT_HeaderOrFooter }?
+sml_CT_HeaderOrFooter =
+  s_ST_Xstring,
+  xml_space?
 sml_ST_PrintError =
   string "displayed" | string "blank" | string "dash" | string "NA"
 sml_CT_Scenarios =

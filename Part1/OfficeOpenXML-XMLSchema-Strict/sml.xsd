@@ -2841,17 +2841,24 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_HeaderFooter">
     <xsd:sequence>
-      <xsd:element name="oddHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="oddFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="evenHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="evenFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="firstHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="firstFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="oddHeader" type="CT_HeaderOrFooter" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="oddFooter" type="CT_HeaderOrFooter" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="evenHeader" type="CT_HeaderOrFooter" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="evenFooter" type="CT_HeaderOrFooter" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="firstHeader" type="CT_HeaderOrFooter" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="firstFooter" type="CT_HeaderOrFooter" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="differentOddEven" type="xsd:boolean" default="false"/>
     <xsd:attribute name="differentFirst" type="xsd:boolean" default="false"/>
     <xsd:attribute name="scaleWithDoc" type="xsd:boolean" default="true"/>
     <xsd:attribute name="alignWithMargins" type="xsd:boolean" default="true"/>
+  </xsd:complexType>
+  <xsd:complexType name="CT_HeaderOrFooter">
+    <xsd:simpleContent>
+      <xsd:extension base="s:ST_String">
+        <xsd:attribute ref="xml:space" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:simpleType name="ST_PrintError">
     <xsd:restriction base="xsd:string">
