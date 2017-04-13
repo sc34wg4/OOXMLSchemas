@@ -3208,13 +3208,13 @@ sml_CT_HeaderFooter =
   
   ## default value: true
   attribute alignWithMargins { xsd:boolean }?,
-  element oddHeader { sml_CT_HeaderOrFooter }?,
-  element oddFooter { sml_CT_HeaderOrFooter }?,
-  element evenHeader { sml_CT_HeaderOrFooter }?,
-  element evenFooter { sml_CT_HeaderOrFooter }?,
-  element firstHeader { sml_CT_HeaderOrFooter }?,
-  element firstFooter { sml_CT_HeaderOrFooter }?
-sml_CT_HeaderOrFooter =
+  element oddHeader { sml_CT_HFText }?,
+  element oddFooter { sml_CT_HFText }?,
+  element evenHeader { sml_CT_HFText }?,
+  element evenFooter { sml_CT_HFText }?,
+  element firstHeader { sml_CT_HFText }?,
+  element firstFooter { sml_CT_HFText }?
+sml_CT_HFText =
   s_ST_Xstring,
   xml_space?
 sml_ST_PrintError =
