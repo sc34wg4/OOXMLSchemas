@@ -3215,7 +3215,7 @@ sml_CT_HeaderFooter =
   element firstHeader { sml_CT_HFText }?,
   element firstFooter { sml_CT_HFText }?
 sml_CT_HFText =
-  s_ST_Xstring,
+  s_ST_String,
   xml_space?
 sml_ST_PrintError =
   string "displayed" | string "blank" | string "dash" | string "NA"
