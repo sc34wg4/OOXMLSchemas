@@ -206,6 +206,9 @@ sml_CT_ObjectAnchor =
   
   ## default value: false
   attribute sizeWithCells { xsd:boolean }?,
+  
+  ## default value: 0
+  attribute z-order { xsd:unsignedInt }?,
   xdr_from,
   xdr_to
 sml_EG_ExtensionList = element ext { sml_CT_Extension }*
@@ -280,6 +283,15 @@ sml_CT_CommentPr =
   
   ## default value: false
   attribute autoScale { xsd:boolean }?,
+
+  ## default value: false
+  attribute colHidden { xsd:boolean }?,
+  
+  ## default value: false
+  attribute rowHidden { xsd:boolean }?,
+
+  ## default value: false
+  attribute uiObject { xsd:boolean }?,
 
   element anchor { sml_CT_ObjectAnchor }
 sml_ST_TextHAlign =
@@ -2737,6 +2749,7 @@ sml_CT_DataConsolidate =
   
   ## default value: false
   attribute link { xsd:boolean }?,
+  xml_space?,
   element dataRefs { sml_CT_DataRefs }?
 sml_ST_DataConsolidateFunction =
   string "average"
@@ -3063,7 +3076,9 @@ sml_CT_CellFormula =
   attribute si { xsd:unsignedInt }?,
   
   ## default value: false
-  attribute bx { xsd:boolean }?
+  attribute bx { xsd:boolean }?,
+
+  xml_space?
 sml_CT_ColorScale =
   element cfvo { sml_CT_Cfvo }+,
   element color { sml_CT_Color }+
@@ -3193,12 +3208,15 @@ sml_CT_HeaderFooter =
   
   ## default value: true
   attribute alignWithMargins { xsd:boolean }?,
-  element oddHeader { s_ST_Xstring }?,
-  element oddFooter { s_ST_Xstring }?,
-  element evenHeader { s_ST_Xstring }?,
-  element evenFooter { s_ST_Xstring }?,
-  element firstHeader { s_ST_Xstring }?,
-  element firstFooter { s_ST_Xstring }?
+  element oddHeader { sml_CT_HFText }?,
+  element oddFooter { sml_CT_HFText }?,
+  element evenHeader { sml_CT_HFText }?,
+  element evenFooter { sml_CT_HFText }?,
+  element firstHeader { sml_CT_HFText }?,
+  element firstFooter { sml_CT_HFText }?
+sml_CT_HFText =
+  s_ST_String,
+  xml_space?
 sml_ST_PrintError =
   string "displayed" | string "blank" | string "dash" | string "NA"
 sml_CT_Scenarios =
@@ -4243,7 +4261,9 @@ sml_CT_TableFormula =
   sml_ST_Formula,
   
   ## default value: false
-  attribute array { xsd:boolean }?
+  attribute array { xsd:boolean }?,
+
+  xml_space?
 sml_ST_TotalsRowFunction =
   string "none"
   | string "sum"
@@ -4573,7 +4593,9 @@ sml_CT_DefinedName =
   attribute publishToServer { xsd:boolean }?,
   
   ## default value: false
-  attribute workbookParameter { xsd:boolean }?
+  attribute workbookParameter { xsd:boolean }?,
+
+  xml_space?
 sml_CT_ExternalReferences =
   element externalReference { sml_CT_ExternalReference }+
 sml_CT_ExternalReference = r_id

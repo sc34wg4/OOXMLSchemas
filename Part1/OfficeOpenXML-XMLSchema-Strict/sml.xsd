@@ -234,6 +234,7 @@
     </xsd:sequence>
     <xsd:attribute name="moveWithCells" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="sizeWithCells" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="z-order" type="xsd:unsignedInt" use="optional" default="0"/> 
   </xsd:complexType>
   <xsd:group name="EG_ExtensionList">
     <xsd:sequence>
@@ -304,6 +305,9 @@
     <xsd:attribute name="lockText" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="justLastX" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoScale" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="colHidden" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="rowHidden" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="uiObject" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextHAlign">
     <xsd:restriction base="xsd:string">
@@ -2421,6 +2425,7 @@
     <xsd:attribute name="startLabels" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="topLabels" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="link" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute ref="xml:space" use="optional"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_DataConsolidateFunction">
     <xsd:restriction base="xsd:string">
@@ -2742,6 +2747,7 @@
         <xsd:attribute name="ca" type="xsd:boolean" use="optional" default="false"/>
         <xsd:attribute name="si" type="xsd:unsignedInt" use="optional"/>
         <xsd:attribute name="bx" type="xsd:boolean" use="optional" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -2835,17 +2841,24 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_HeaderFooter">
     <xsd:sequence>
-      <xsd:element name="oddHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="oddFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="evenHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="evenFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="firstHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="firstFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="oddHeader" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="oddFooter" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="evenHeader" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="evenFooter" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="firstHeader" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="firstFooter" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="differentOddEven" type="xsd:boolean" default="false"/>
     <xsd:attribute name="differentFirst" type="xsd:boolean" default="false"/>
     <xsd:attribute name="scaleWithDoc" type="xsd:boolean" default="true"/>
     <xsd:attribute name="alignWithMargins" type="xsd:boolean" default="true"/>
+  </xsd:complexType>
+  <xsd:complexType name="CT_HFText">
+    <xsd:simpleContent>
+      <xsd:extension base="s:ST_String">
+        <xsd:attribute ref="xml:space" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:simpleType name="ST_PrintError">
     <xsd:restriction base="xsd:string">
@@ -3990,6 +4003,7 @@
     <xsd:simpleContent>
       <xsd:extension base="ST_Formula">
         <xsd:attribute name="array" type="xsd:boolean" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -4303,6 +4317,7 @@
         <xsd:attribute name="shortcutKey" type="s:ST_Xstring" use="optional"/>
         <xsd:attribute name="publishToServer" type="xsd:boolean" use="optional" default="false"/>
         <xsd:attribute name="workbookParameter" type="xsd:boolean" use="optional" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
