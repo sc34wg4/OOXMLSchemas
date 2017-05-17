@@ -456,13 +456,13 @@ w_CT_Spacing =
   attribute w:beforeLines { w_ST_DecimalNumber }?,
   ## default value: 0
   attribute w:beforeAutospacing { s_ST_OnOff }?,
-  ## default value: off
+  ## default value: 0
   attribute w:after { s_ST_TwipsMeasure }?,
   ## default value: 0
   attribute w:afterLines { w_ST_DecimalNumber }?,
   ## default value: 0
   attribute w:afterAutospacing { s_ST_OnOff }?,
-  ## default value: off
+  ## default value: 0
   attribute w:line { w_ST_SignedTwipsMeasure }?,
   ## default value: 0
   attribute w:lineRule { w_ST_LineSpacingRule }?
@@ -522,7 +522,7 @@ w_CT_WritingStyle =
   attribute w:vendorID { s_ST_String },
   attribute w:dllVersion { s_ST_String },
   attribute w:nlCheck { s_ST_OnOff }?,
-  ## default value: off
+  ## default value: 0
   attribute w:checkStyle { s_ST_OnOff },
   attribute w:appName { s_ST_String }
 w_ST_Proof = string "clean" | string "dirty"
