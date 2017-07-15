@@ -2107,36 +2107,6 @@
   <xsd:element name="worksheet" type="CT_Worksheet"/>
   <xsd:element name="chartsheet" type="CT_Chartsheet"/>
   <xsd:element name="dialogsheet" type="CT_Dialogsheet"/>
-  <xsd:complexType name="CT_Macrosheet">
-    <xsd:sequence>
-      <xsd:element name="sheetPr" type="CT_SheetPr" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="dimension" type="CT_SheetDimension" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sheetViews" type="CT_SheetViews" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sheetFormatPr" type="CT_SheetFormatPr" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="cols" type="CT_Cols" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="sheetData" type="CT_SheetData" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="sheetProtection" type="CT_SheetProtection" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="autoFilter" type="CT_AutoFilter" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sortState" type="CT_SortState" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="dataConsolidate" type="CT_DataConsolidate" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="customSheetViews" type="CT_CustomSheetViews" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="phoneticPr" type="CT_PhoneticPr" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="conditionalFormatting" type="CT_ConditionalFormatting" minOccurs="0"
-        maxOccurs="unbounded"/>
-      <xsd:element name="printOptions" type="CT_PrintOptions" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="pageMargins" type="CT_PageMargins" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="pageSetup" type="CT_PageSetup" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="headerFooter" type="CT_HeaderFooter" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="rowBreaks" type="CT_PageBreak" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="colBreaks" type="CT_PageBreak" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="customProperties" type="CT_CustomProperties" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="drawing" type="CT_Drawing" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="drawingHF" type="CT_DrawingHF" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="picture" type="CT_SheetBackgroundPicture" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="oleObjects" type="CT_OleObjects" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
-    </xsd:sequence>
-  </xsd:complexType>
   <xsd:complexType name="CT_Dialogsheet">
     <xsd:sequence>
       <xsd:element name="sheetPr" minOccurs="0" type="CT_SheetPr"/>

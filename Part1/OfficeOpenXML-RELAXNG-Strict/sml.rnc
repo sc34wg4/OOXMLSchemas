@@ -2301,32 +2301,6 @@ sml_CT_SharedUser =
 sml_worksheet = element worksheet { sml_CT_Worksheet }
 sml_chartsheet = element chartsheet { sml_CT_Chartsheet }
 sml_dialogsheet = element dialogsheet { sml_CT_Dialogsheet }
-sml_CT_Macrosheet =
-  element sheetPr { sml_CT_SheetPr }?,
-  element dimension { sml_CT_SheetDimension }?,
-  element sheetViews { sml_CT_SheetViews }?,
-  element sheetFormatPr { sml_CT_SheetFormatPr }?,
-  element cols { sml_CT_Cols }*,
-  element sheetData { sml_CT_SheetData },
-  element sheetProtection { sml_CT_SheetProtection }?,
-  element autoFilter { sml_CT_AutoFilter }?,
-  element sortState { sml_CT_SortState }?,
-  element dataConsolidate { sml_CT_DataConsolidate }?,
-  element customSheetViews { sml_CT_CustomSheetViews }?,
-  element phoneticPr { sml_CT_PhoneticPr }?,
-  element conditionalFormatting { sml_CT_ConditionalFormatting }*,
-  element printOptions { sml_CT_PrintOptions }?,
-  element pageMargins { sml_CT_PageMargins }?,
-  element pageSetup { sml_CT_PageSetup }?,
-  element headerFooter { sml_CT_HeaderFooter }?,
-  element rowBreaks { sml_CT_PageBreak }?,
-  element colBreaks { sml_CT_PageBreak }?,
-  element customProperties { sml_CT_CustomProperties }?,
-  element drawing { sml_CT_Drawing }?,
-  element drawingHF { sml_CT_DrawingHF }?,
-  element picture { sml_CT_SheetBackgroundPicture }?,
-  element oleObjects { sml_CT_OleObjects }?,
-  element extLst { sml_CT_ExtensionList }?
 sml_CT_Dialogsheet =
   element sheetPr { sml_CT_SheetPr }?,
   element sheetViews { sml_CT_SheetViews }?,
