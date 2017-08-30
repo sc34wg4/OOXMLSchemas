@@ -3871,21 +3871,23 @@ sml_CT_GradientFill =
   attribute degree { xsd:double }?,
   
   ## default value: 0
-  attribute left { xsd:double }?,
+  attribute left { sml_ST_GradientFillLeftRightTopBottom }?,
   
   ## default value: 0
-  attribute right { xsd:double }?,
+  attribute right { sml_ST_GradientFillLeftRightTopBottom }?,
   
   ## default value: 0
-  attribute top { xsd:double }?,
+  attribute top { sml_ST_GradientFillLeftRightTopBottom }?,
   
   ## default value: 0
-  attribute bottom { xsd:double }?,
+  attribute bottom { sml_ST_GradientFillLeftRightTopBottom }?,
   element stop { sml_CT_GradientStop }*
 sml_CT_GradientStop =
   attribute position { xsd:double },
   element color { sml_CT_Color }
 sml_ST_GradientType = string "linear" | string "path"
+sml_ST_GradientFillLeftRightTopBottom = 
+  xsd:double { minInclusive = "0" maxExclusive = "1" }
 sml_ST_HorizontalAlignment =
   string "general"
   | string "left"

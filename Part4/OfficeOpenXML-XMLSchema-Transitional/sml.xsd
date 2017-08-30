@@ -3516,10 +3516,10 @@
     </xsd:sequence>
     <xsd:attribute name="type" type="ST_GradientType" use="optional" default="linear"/>
     <xsd:attribute name="degree" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="left" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="right" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="top" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="bottom" type="xsd:double" use="optional" default="0"/>
+    <xsd:attribute name="left" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
+    <xsd:attribute name="right" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
+    <xsd:attribute name="top" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
+    <xsd:attribute name="bottom" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_GradientStop">
     <xsd:sequence>
@@ -3531,6 +3531,12 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="linear"/>
       <xsd:enumeration value="path"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_GradientFillLeftRightTopBottom">
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="1"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="ST_HorizontalAlignment">
