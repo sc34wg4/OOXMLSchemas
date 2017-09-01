@@ -3671,7 +3671,7 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_RgbColor">
-    <xsd:attribute name="rgb" type="ST_UnsignedIntHex" use="optional"/>
+    <xsd:attribute name="rgb" type="ST_UnsignedIntHex" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TableStyles">
     <xsd:sequence>

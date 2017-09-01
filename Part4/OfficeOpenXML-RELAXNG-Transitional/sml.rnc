@@ -3969,7 +3969,7 @@ sml_CT_Colors =
   element mruColors { sml_CT_MRUColors }?
 sml_CT_IndexedColors = element rgbColor { sml_CT_RgbColor }+
 sml_CT_MRUColors = element color { sml_CT_Color }+
-sml_CT_RgbColor = attribute rgb { sml_ST_UnsignedIntHex }?
+sml_CT_RgbColor = attribute rgb { sml_ST_UnsignedIntHex }
 sml_CT_TableStyles =
   attribute count { xsd:unsignedInt }?,
   attribute defaultTableStyle { xsd:string }?,
