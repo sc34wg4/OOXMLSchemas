@@ -225,7 +225,7 @@
     <xsd:sequence>
       <xsd:any processContents="lax"/>
     </xsd:sequence>
-    <xsd:attribute name="uri" type="xsd:token"/>
+    <xsd:attribute name="uri" type="xsd:token" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_ObjectAnchor">
     <xsd:sequence>
