@@ -4513,6 +4513,8 @@ sml_CT_CalcPr =
   ## default value: true
   attribute concurrentCalc { xsd:boolean }?,
   attribute concurrentManualCount { xsd:unsignedInt }?,
+
+  ## default value: false
   attribute forceFullCalc { xsd:boolean }?
 sml_ST_CalcMode = string "manual" | string "auto" | string "autoNoTable"
 sml_ST_RefMode = string "A1" | string "R1C1"

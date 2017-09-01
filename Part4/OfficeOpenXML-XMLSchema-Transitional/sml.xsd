@@ -4282,7 +4282,7 @@
     <xsd:attribute name="calcOnSave" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="concurrentCalc" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="concurrentManualCount" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="forceFullCalc" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="forceFullCalc" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_CalcMode">
     <xsd:restriction base="xsd:string">
