@@ -9,7 +9,7 @@ namespace xdr =
   "http://purl.oclc.org/ooxml/drawingml/spreadsheetDrawing"
 
 sml_CT_AutoFilter =
-  attribute ref { sml_ST_Ref }?,
+  attribute ref { sml_ST_Ref },
   element filterColumn { sml_CT_FilterColumn }*,
   element sortState { sml_CT_SortState }?,
   element extLst { sml_CT_ExtensionList }?

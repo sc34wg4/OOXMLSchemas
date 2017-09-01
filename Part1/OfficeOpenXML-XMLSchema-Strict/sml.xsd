@@ -17,7 +17,7 @@
       <xsd:element name="sortState" minOccurs="0" maxOccurs="1" type="CT_SortState"/>
       <xsd:element name="extLst" type="CT_ExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="ref" type="ST_Ref"/>
+    <xsd:attribute name="ref" type="ST_Ref" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_FilterColumn">
     <xsd:choice minOccurs="0" maxOccurs="1">
