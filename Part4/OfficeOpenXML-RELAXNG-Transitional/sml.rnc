@@ -2984,7 +2984,7 @@ sml_CT_ConditionalFormatting =
   element cfRule { sml_CT_CfRule }+,
   element extLst { sml_CT_ExtensionList }?
 sml_CT_CfRule =
-  attribute type { sml_ST_CfType }?,
+  attribute type { sml_ST_CfType },
   attribute dxfId { sml_ST_DxfId }?,
   attribute priority { xsd:int },
   

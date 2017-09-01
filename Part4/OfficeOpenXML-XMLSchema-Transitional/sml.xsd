@@ -2695,7 +2695,7 @@
       <xsd:element name="iconSet" type="CT_IconSet" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
     </xsd:sequence>
-    <xsd:attribute name="type" type="ST_CfType"/>
+    <xsd:attribute name="type" type="ST_CfType" use="required"/>
     <xsd:attribute name="dxfId" type="ST_DxfId" use="optional"/>
     <xsd:attribute name="priority" type="xsd:int" use="required"/>
     <xsd:attribute name="stopIfTrue" type="xsd:boolean" use="optional" default="false"/>
