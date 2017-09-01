@@ -4180,9 +4180,17 @@ sml_ST_TableType =
   string "worksheet" | string "xml" | string "queryTable"
 sml_CT_TableStyleInfo =
   attribute name { s_ST_Xstring }?,
+
+  ## default value: false
   attribute showFirstColumn { xsd:boolean }?,
+
+  ## default value: false
   attribute showLastColumn { xsd:boolean }?,
+
+  ## default value: false
   attribute showRowStripes { xsd:boolean }?,
+
+  ## default value: false
   attribute showColumnStripes { xsd:boolean }?
 sml_CT_TableColumns =
   attribute count { xsd:unsignedInt }?,

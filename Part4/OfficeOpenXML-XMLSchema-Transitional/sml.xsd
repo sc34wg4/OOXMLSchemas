@@ -3970,10 +3970,10 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_TableStyleInfo">
     <xsd:attribute name="name" type="s:ST_Xstring" use="optional"/>
-    <xsd:attribute name="showFirstColumn" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="showColumnStripes" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="showFirstColumn" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showColumnStripes" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TableColumns">
     <xsd:sequence>
