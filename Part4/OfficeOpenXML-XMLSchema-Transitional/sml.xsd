@@ -55,7 +55,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_CustomFilter">
     <xsd:attribute name="operator" type="ST_FilterOperator" default="equal" use="optional"/>
-    <xsd:attribute name="val" type="s:ST_Xstring"/>
+    <xsd:attribute name="val" type="s:ST_Xstring" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Top10">
     <xsd:attribute name="top" type="xsd:boolean" use="optional" default="true"/>

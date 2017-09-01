@@ -50,7 +50,7 @@ sml_CT_CustomFilter =
   
   ## default value: equal
   attribute operator { sml_ST_FilterOperator }?,
-  attribute val { s_ST_Xstring }?
+  attribute val { s_ST_Xstring }
 sml_CT_Top10 =
   
   ## default value: true
