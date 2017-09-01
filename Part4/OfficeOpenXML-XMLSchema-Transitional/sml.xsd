@@ -4260,7 +4260,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_SmartTagType">
     <xsd:attribute name="namespaceUri" type="s:ST_Xstring" use="optional"/>
-    <xsd:attribute name="name" type="s:ST_Xstring" use="optional"/>
+    <xsd:attribute name="name" type="s:ST_Xstring" use="required"/>
     <xsd:attribute name="url" type="s:ST_Xstring" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_FileRecoveryPr">

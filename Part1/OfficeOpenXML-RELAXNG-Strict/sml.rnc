@@ -4465,7 +4465,7 @@ sml_ST_SmartTagShow =
 sml_CT_SmartTagTypes = element smartTagType { sml_CT_SmartTagType }*
 sml_CT_SmartTagType =
   attribute namespaceUri { s_ST_Xstring }?,
-  attribute name { s_ST_Xstring }?,
+  attribute name { s_ST_Xstring },
   attribute url { s_ST_Xstring }?
 sml_CT_FileRecoveryPr =
   
