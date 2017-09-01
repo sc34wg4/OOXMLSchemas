@@ -45,7 +45,7 @@
     <xsd:attribute name="calendarType" type="s:ST_CalendarType" use="optional" default="none"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Filter">
-    <xsd:attribute name="val" type="s:ST_Xstring"/>
+    <xsd:attribute name="val" type="s:ST_Xstring" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CustomFilters">
     <xsd:sequence>

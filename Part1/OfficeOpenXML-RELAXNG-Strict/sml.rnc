@@ -37,7 +37,7 @@ sml_CT_Filters =
   attribute calendarType { s_ST_CalendarType }?,
   element filter { sml_CT_Filter }*,
   element dateGroupItem { sml_CT_DateGroupItem }*
-sml_CT_Filter = attribute val { s_ST_Xstring }?
+sml_CT_Filter = attribute val { s_ST_Xstring }
 sml_CT_CustomFilters =
   
   ## default value: false
