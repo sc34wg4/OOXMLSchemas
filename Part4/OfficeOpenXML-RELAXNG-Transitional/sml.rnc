@@ -858,7 +858,11 @@ sml_CT_String =
   element x { sml_CT_X }*
 sml_CT_DateTime =
   attribute v { xsd:dateTime },
+  
+  ## default value: false
   attribute u { xsd:boolean }?,
+  
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
