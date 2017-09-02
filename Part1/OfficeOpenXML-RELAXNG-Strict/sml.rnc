@@ -1651,8 +1651,8 @@ sml_CT_MeasureGroup =
   attribute name { s_ST_Xstring },
   attribute caption { s_ST_Xstring }
 sml_CT_MeasureDimensionMap =
-  attribute measureGroup { xsd:unsignedInt }?,
-  attribute dimension { xsd:unsignedInt }?
+  attribute measureGroup { xsd:unsignedInt },
+  attribute dimension { xsd:unsignedInt }
 sml_CT_PivotTableStyle =
   attribute name { xsd:string }?,
   attribute showRowHeaders { xsd:boolean }?,

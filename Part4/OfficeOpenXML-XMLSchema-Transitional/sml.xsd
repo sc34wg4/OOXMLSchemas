@@ -1493,8 +1493,8 @@
     <xsd:attribute name="caption" use="required" type="s:ST_Xstring"/>
   </xsd:complexType>
   <xsd:complexType name="CT_MeasureDimensionMap">
-    <xsd:attribute name="measureGroup" use="optional" type="xsd:unsignedInt"/>
-    <xsd:attribute name="dimension" use="optional" type="xsd:unsignedInt"/>
+    <xsd:attribute name="measureGroup" use="required" type="xsd:unsignedInt"/>
+    <xsd:attribute name="dimension" use="required" type="xsd:unsignedInt"/>
   </xsd:complexType>
   <xsd:complexType name="CT_PivotTableStyle">
     <xsd:attribute name="name" type="xsd:string"/>
