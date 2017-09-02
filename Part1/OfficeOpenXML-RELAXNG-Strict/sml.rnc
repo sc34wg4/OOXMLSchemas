@@ -746,7 +746,11 @@ sml_CT_SharedItems =
    | element s { sml_CT_String }
    | element d { sml_CT_DateTime })*
 sml_CT_Missing =
+
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
