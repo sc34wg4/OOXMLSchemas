@@ -803,7 +803,11 @@ sml_CT_Boolean =
   element x { sml_CT_X }*
 sml_CT_Error =
   attribute v { s_ST_Xstring },
+
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,

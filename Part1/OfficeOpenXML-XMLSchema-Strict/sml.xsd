@@ -747,8 +747,8 @@
       <xsd:element name="x" minOccurs="0" maxOccurs="unbounded" type="CT_X"/>
     </xsd:sequence>
     <xsd:attribute name="v" use="required" type="s:ST_Xstring"/>
-    <xsd:attribute name="u" type="xsd:boolean"/>
-    <xsd:attribute name="f" type="xsd:boolean"/>
+    <xsd:attribute name="u" type="xsd:boolean" default="false"/>
+    <xsd:attribute name="f" type="xsd:boolean" default="false"/>
     <xsd:attribute name="c" type="s:ST_Xstring"/>
     <xsd:attribute name="cp" type="xsd:unsignedInt"/>
     <xsd:attribute name="in" type="xsd:unsignedInt" use="optional"/>
