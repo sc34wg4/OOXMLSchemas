@@ -773,7 +773,11 @@ sml_CT_Missing =
   element x { sml_CT_X }*
 sml_CT_Number =
   attribute v { xsd:double },
+
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
