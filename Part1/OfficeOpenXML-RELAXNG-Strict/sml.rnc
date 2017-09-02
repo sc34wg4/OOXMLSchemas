@@ -1659,10 +1659,20 @@ sml_CT_MeasureDimensionMap =
   attribute dimension { xsd:unsignedInt }
 sml_CT_PivotTableStyle =
   attribute name { xsd:string }?,
+  
+  ## default value: false
   attribute showRowHeaders { xsd:boolean }?,
+  
+  ## default value: false
   attribute showColHeaders { xsd:boolean }?,
+  
+  ## default value: false
   attribute showRowStripes { xsd:boolean }?,
+  
+  ## default value: false
   attribute showColStripes { xsd:boolean }?,
+  
+  ## default value: false
   attribute showLastColumn { xsd:boolean }?
 sml_CT_PivotFilters =
   

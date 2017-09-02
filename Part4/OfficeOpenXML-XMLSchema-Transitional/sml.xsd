@@ -1498,11 +1498,11 @@
   </xsd:complexType>
   <xsd:complexType name="CT_PivotTableStyle">
     <xsd:attribute name="name" type="xsd:string"/>
-    <xsd:attribute name="showRowHeaders" type="xsd:boolean"/>
-    <xsd:attribute name="showColHeaders" type="xsd:boolean"/>
-    <xsd:attribute name="showRowStripes" type="xsd:boolean"/>
-    <xsd:attribute name="showColStripes" type="xsd:boolean"/>
-    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="showRowHeaders" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showColHeaders" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optinoal" default="false"/>
+    <xsd:attribute name="showColStripes" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_PivotFilters">
     <xsd:sequence>
