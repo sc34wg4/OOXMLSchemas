@@ -4134,7 +4134,7 @@ sml_CT_ExternalRow =
   attribute r { xsd:unsignedInt },
   element cell { sml_CT_ExternalCell }*
 sml_CT_ExternalCell =
-  attribute r { sml_ST_CellRef }?,
+  attribute r { sml_ST_CellRef },
   
   ## default value: n
   attribute t { sml_ST_CellType }?,

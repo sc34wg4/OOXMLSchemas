@@ -3837,7 +3837,7 @@
     <xsd:sequence>
       <xsd:element name="v" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="r" type="ST_CellRef" use="optional"/>
+    <xsd:attribute name="r" type="ST_CellRef" use="required"/>
     <xsd:attribute name="t" type="ST_CellType" use="optional" default="n"/>
     <xsd:attribute name="vm" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
