@@ -388,7 +388,7 @@
     <xsd:attribute name="odcFile" use="optional" type="s:ST_Xstring"/>
     <xsd:attribute name="keepAlive" use="optional" type="xsd:boolean" default="false"/>
     <xsd:attribute name="interval" use="optional" type="xsd:unsignedInt" default="0"/>
-    <xsd:attribute name="name" use="optional" type="s:ST_Xstring"/>
+    <xsd:attribute name="name" use="required" type="s:ST_Xstring"/>
     <xsd:attribute name="description" use="optional" type="s:ST_Xstring"/>
     <xsd:attribute name="type" use="optional" type="xsd:unsignedInt"/>
     <xsd:attribute name="reconnectionMethod" use="optional" type="xsd:unsignedInt" default="1"/>

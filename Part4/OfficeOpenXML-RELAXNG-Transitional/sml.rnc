@@ -359,7 +359,7 @@ sml_CT_Connection =
   
   ## default value: 0
   attribute interval { xsd:unsignedInt }?,
-  attribute name { s_ST_Xstring }?,
+  attribute name { s_ST_Xstring },
   attribute description { s_ST_Xstring }?,
   attribute type { xsd:unsignedInt }?,
   
