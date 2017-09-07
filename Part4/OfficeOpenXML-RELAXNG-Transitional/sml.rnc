@@ -2649,6 +2649,8 @@ sml_CT_Selection =
   
   ## default value: topLeft
   attribute pane { sml_ST_Pane }?,
+  
+  ## default value: A1
   attribute activeCell { sml_ST_CellRef }?,
   
   ## default value: 0

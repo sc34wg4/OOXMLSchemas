@@ -2344,7 +2344,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_Selection">
     <xsd:attribute name="pane" type="ST_Pane" use="optional" default="topLeft"/>
-    <xsd:attribute name="activeCell" type="ST_CellRef" use="optional"/>
+    <xsd:attribute name="activeCell" type="ST_CellRef" use="optional" default="A1"/>
     <xsd:attribute name="activeCellId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="sqref" type="ST_Sqref" use="optional" default="A1"/>
   </xsd:complexType>
