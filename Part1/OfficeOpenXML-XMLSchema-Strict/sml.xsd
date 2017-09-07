@@ -4206,7 +4206,7 @@
     <xsd:attribute name="checkCompatibility" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoCompressPictures" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="refreshAllConnections" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="defaultThemeVersion" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="defaultThemeVersion" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_UpdateLinks">
     <xsd:restriction base="xsd:string">

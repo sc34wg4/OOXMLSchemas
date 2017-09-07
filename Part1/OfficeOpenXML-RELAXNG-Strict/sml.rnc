@@ -4451,6 +4451,8 @@ sml_CT_WorkbookPr =
   
   ## default value: false
   attribute refreshAllConnections { xsd:boolean }?,
+  
+  ## default value: 0
   attribute defaultThemeVersion { xsd:unsignedInt }?
 sml_ST_UpdateLinks = string "userSet" | string "never" | string "always"
 sml_CT_SmartTagPr =
