@@ -3959,7 +3959,7 @@
     <xsd:attribute name="headerRowCellStyle" type="s:ST_Xstring" use="optional"/>
     <xsd:attribute name="dataCellStyle" type="s:ST_Xstring" use="optional"/>
     <xsd:attribute name="totalsRowCellStyle" type="s:ST_Xstring" use="optional"/>
-    <xsd:attribute name="connectionId" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="connectionId" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TableType">
     <xsd:restriction base="xsd:string">

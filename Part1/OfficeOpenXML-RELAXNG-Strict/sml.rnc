@@ -4194,6 +4194,8 @@ sml_CT_Table =
   attribute headerRowCellStyle { s_ST_Xstring }?,
   attribute dataCellStyle { s_ST_Xstring }?,
   attribute totalsRowCellStyle { s_ST_Xstring }?,
+  
+  ## default value: 0
   attribute connectionId { xsd:unsignedInt }?,
   element autoFilter { sml_CT_AutoFilter }?,
   element sortState { sml_CT_SortState }?,
