@@ -3356,8 +3356,8 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_CellAlignment">
-    <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional"/>
-    <xsd:attribute name="vertical" type="ST_VerticalAlignment" default="bottom" use="optional"/>
+    <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional" default="general"/>
+    <xsd:attribute name="vertical" type="ST_VerticalAlignment" use="optional" default="bottom"/>
     <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional"/>
     <xsd:attribute name="wrapText" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional"/>

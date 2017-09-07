@@ -3791,6 +3791,8 @@ sml_CT_Stylesheet =
   element colors { sml_CT_Colors }?,
   element extLst { sml_CT_ExtensionList }?
 sml_CT_CellAlignment =
+
+  ## default value: general
   attribute horizontal { sml_ST_HorizontalAlignment }?,
   
   ## default value: bottom
