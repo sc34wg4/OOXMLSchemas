@@ -2547,9 +2547,9 @@
         maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="disablePrompts" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="xWindow" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="yWindow" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="xWindow" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="yWindow" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_DataValidation">
     <xsd:sequence>

@@ -2841,8 +2841,14 @@ sml_CT_DataValidations =
   
   ## default value: false
   attribute disablePrompts { xsd:boolean }?,
+  
+  ## default value: 0
   attribute xWindow { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute yWindow { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute count { xsd:unsignedInt }?,
   element dataValidation { sml_CT_DataValidation }+
 sml_CT_DataValidation =
