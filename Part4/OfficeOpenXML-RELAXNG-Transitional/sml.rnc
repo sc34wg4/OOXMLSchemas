@@ -3002,6 +3002,8 @@ sml_CT_CfRule =
   attribute operator { sml_ST_ConditionalFormattingOperator }?,
   attribute text { xsd:string }?,
   attribute timePeriod { sml_ST_TimePeriod }?,
+  
+  ## default value: 0
   attribute rank { xsd:unsignedInt }?,
   attribute stdDev { xsd:int }?,
   

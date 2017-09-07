@@ -2686,7 +2686,7 @@
     <xsd:attribute name="operator" type="ST_ConditionalFormattingOperator" use="optional"/>
     <xsd:attribute name="text" type="xsd:string" use="optional"/>
     <xsd:attribute name="timePeriod" type="ST_TimePeriod" use="optional"/>
-    <xsd:attribute name="rank" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="rank" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="stdDev" type="xsd:int" use="optional"/>
     <xsd:attribute name="equalAverage" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
