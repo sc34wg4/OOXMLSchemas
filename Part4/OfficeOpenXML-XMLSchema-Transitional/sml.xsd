@@ -184,8 +184,8 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_DateGroupItem">
     <xsd:attribute name="year" type="xsd:unsignedShort" use="required"/>
-    <xsd:attribute name="month" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="day" type="xsd:unsignedShort" use="optional"/>
+    <xsd:attribute name="month" type="xsd:unsignedShort" use="optional" default="1"/>
+    <xsd:attribute name="day" type="xsd:unsignedShort" use="optional" default="1"/>
     <xsd:attribute name="hour" type="xsd:unsignedShort" use="optional"/>
     <xsd:attribute name="minute" type="xsd:unsignedShort" use="optional"/>
     <xsd:attribute name="second" type="xsd:unsignedShort" use="optional"/>

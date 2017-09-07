@@ -170,7 +170,11 @@ sml_ST_SortBy =
 sml_ST_SortMethod = string "stroke" | string "pinYin" | string "none"
 sml_CT_DateGroupItem =
   attribute year { xsd:unsignedShort },
+  
+  ## default value: 1
   attribute month { xsd:unsignedShort }?,
+  
+  ## default value: 1
   attribute day { xsd:unsignedShort }?,
   attribute hour { xsd:unsignedShort }?,
   attribute minute { xsd:unsignedShort }?,
