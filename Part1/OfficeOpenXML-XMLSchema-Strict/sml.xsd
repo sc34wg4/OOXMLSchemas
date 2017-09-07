@@ -3454,7 +3454,7 @@
     <xsd:attribute name="patternType" type="ST_PatternType" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Color">
-    <xsd:attribute name="auto" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="auto" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="indexed" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="rgb" type="ST_UnsignedIntHex" use="optional"/>
     <xsd:attribute name="theme" type="xsd:unsignedInt" use="optional"/>

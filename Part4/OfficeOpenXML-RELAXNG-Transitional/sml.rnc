@@ -3861,6 +3861,8 @@ sml_CT_PatternFill =
   element fgColor { sml_CT_Color }?,
   element bgColor { sml_CT_Color }?
 sml_CT_Color =
+  
+  ## default value: false
   attribute auto { xsd:boolean }?,
   attribute indexed { xsd:unsignedInt }?,
   attribute rgb { sml_ST_UnsignedIntHex }?,
