@@ -3441,8 +3441,8 @@
       <xsd:element name="vertical" type="CT_BorderPr" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="horizontal" type="CT_BorderPr" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="diagonalUp" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="diagonalDown" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="diagonalUp" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="diagonalDown" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="outline" type="xsd:boolean" use="optional" default="true"/>
   </xsd:complexType>
   <xsd:complexType name="CT_BorderPr">

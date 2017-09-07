@@ -3816,7 +3816,11 @@ sml_CT_Borders =
   attribute count { xsd:unsignedInt }?,
   element border { sml_CT_Border }*
 sml_CT_Border =
+  
+  ## default value: false
   attribute diagonalUp { xsd:boolean }?,
+  
+  ## default value: false
   attribute diagonalDown { xsd:boolean }?,
   
   ## default value: true
