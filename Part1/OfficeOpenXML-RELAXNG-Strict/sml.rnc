@@ -3774,9 +3774,15 @@ sml_CT_CellAlignment =
   
   ## default value: bottom
   attribute vertical { sml_ST_VerticalAlignment }?,
+  
+  ## default value: 0
   attribute textRotation { sml_ST_TextRotation }?,
   attribute wrapText { xsd:boolean }?,
+  
+  ## default value: 0
   attribute indent { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute relativeIndent { xsd:int }?,
   attribute justifyLastLine { xsd:boolean }?,
   attribute shrinkToFit { xsd:boolean }?,

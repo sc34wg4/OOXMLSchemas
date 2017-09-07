@@ -3383,10 +3383,10 @@
   <xsd:complexType name="CT_CellAlignment">
     <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional" default="general"/>
     <xsd:attribute name="vertical" type="ST_VerticalAlignment" use="optional" default="bottom"/>
-    <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional"/>
+    <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional" default="0"/>
     <xsd:attribute name="wrapText" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="relativeIndent" type="xsd:int" use="optional"/>
+    <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="relativeIndent" type="xsd:int" use="optional" default="0"/>
     <xsd:attribute name="justifyLastLine" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="shrinkToFit" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="readingOrder" type="xsd:unsignedInt" use="optional"/>
