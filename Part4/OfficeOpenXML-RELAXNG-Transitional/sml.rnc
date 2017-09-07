@@ -1775,6 +1775,8 @@ sml_ST_PivotFilterType =
   | string "M11"
   | string "M12"
 sml_CT_PivotArea =
+  
+  ## default value: -1
   attribute field { xsd:int }?,
   
   ## default value: normal

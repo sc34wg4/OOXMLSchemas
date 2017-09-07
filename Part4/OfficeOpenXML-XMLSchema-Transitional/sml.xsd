@@ -1649,7 +1649,7 @@
       <xsd:element name="references" minOccurs="0" type="CT_PivotAreaReferences"/>
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
     </xsd:sequence>
-    <xsd:attribute name="field" use="optional" type="xsd:int"/>
+    <xsd:attribute name="field" type="xsd:int" use="optional" default="-1"/>
     <xsd:attribute name="type" type="ST_PivotAreaType" default="normal"/>
     <xsd:attribute name="dataOnly" type="xsd:boolean" default="true"/>
     <xsd:attribute name="labelOnly" type="xsd:boolean" default="false"/>
