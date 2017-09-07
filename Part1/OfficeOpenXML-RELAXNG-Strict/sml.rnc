@@ -4481,6 +4481,7 @@ sml_CT_FileRecoveryPr =
   ## default value: false
   attribute repairLoad { xsd:boolean }?
 sml_CT_CalcPr =
+  ## default value: 0
   attribute calcId { xsd:unsignedInt }?,
   
   ## default value: auto

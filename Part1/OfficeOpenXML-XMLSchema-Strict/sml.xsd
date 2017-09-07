@@ -4243,7 +4243,7 @@
     <xsd:attribute name="repairLoad" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CalcPr">
-    <xsd:attribute name="calcId" type="xsd:unsignedInt"/>
+    <xsd:attribute name="calcId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="calcMode" type="ST_CalcMode" use="optional" default="auto"/>
     <xsd:attribute name="fullCalcOnLoad" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="refMode" type="ST_RefMode" use="optional" default="A1"/>
