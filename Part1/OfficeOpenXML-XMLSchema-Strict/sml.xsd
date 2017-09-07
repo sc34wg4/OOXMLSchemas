@@ -3359,12 +3359,12 @@
     <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional" default="general"/>
     <xsd:attribute name="vertical" type="ST_VerticalAlignment" use="optional" default="bottom"/>
     <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional" default="0"/>
-    <xsd:attribute name="wrapText" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="wrapText" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="relativeIndent" type="xsd:int" use="optional" default="0"/>
-    <xsd:attribute name="justifyLastLine" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="shrinkToFit" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="readingOrder" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="justifyLastLine" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="shrinkToFit" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="readingOrder" type="xsd:unsignedInt" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextRotation">
     <xsd:union>

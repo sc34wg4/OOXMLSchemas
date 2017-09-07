@@ -3800,6 +3800,8 @@ sml_CT_CellAlignment =
   
   ## default value: 0
   attribute textRotation { sml_ST_TextRotation }?,
+  
+  ## default value: false
   attribute wrapText { xsd:boolean }?,
   
   ## default value: 0
@@ -3807,8 +3809,14 @@ sml_CT_CellAlignment =
   
   ## default value: 0
   attribute relativeIndent { xsd:int }?,
+  
+  ## default value: false
   attribute justifyLastLine { xsd:boolean }?,
+  
+  ## default value: false
   attribute shrinkToFit { xsd:boolean }?,
+  
+  ## default value: false
   attribute readingOrder { xsd:unsignedInt }?
 sml_ST_TextRotation = 
   xsd:nonNegativeInteger { maxInclusive = "180"} | xsd:nonNegativeInteger "255"
