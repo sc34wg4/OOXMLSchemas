@@ -3291,6 +3291,8 @@ sml_CT_InputCells =
   ## default value: false
   attribute undone { xsd:boolean }?,
   attribute val { s_ST_Xstring },
+  
+  ## default value: 0
   attribute numFmtId { sml_ST_NumFmtId }?
 sml_CT_CellWatches = element cellWatch { sml_CT_CellWatch }+
 sml_CT_CellWatch = attribute r { sml_ST_CellRef }

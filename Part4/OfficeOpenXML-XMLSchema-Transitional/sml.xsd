@@ -2923,7 +2923,7 @@
     <xsd:attribute name="deleted" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="undone" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="val" type="s:ST_Xstring" use="required"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CellWatches">
     <xsd:sequence>
