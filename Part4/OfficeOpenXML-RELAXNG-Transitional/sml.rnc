@@ -176,8 +176,14 @@ sml_CT_DateGroupItem =
   
   ## default value: 1
   attribute day { xsd:unsignedShort }?,
+  
+  ## default value: 0
   attribute hour { xsd:unsignedShort }?,
+  
+  ## default value: 0
   attribute minute { xsd:unsignedShort }?,
+  
+  ## default value: 0
   attribute second { xsd:unsignedShort }?,
   attribute dateTimeGrouping { sml_ST_DateTimeGrouping }
 sml_ST_DateTimeGrouping =
