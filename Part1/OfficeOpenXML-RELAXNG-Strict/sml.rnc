@@ -3838,7 +3838,11 @@ sml_CT_BorderPr =
   attribute style { sml_ST_BorderStyle }?,
   element color { sml_CT_Color }?
 sml_CT_CellProtection =
+  
+  ## default value: true
   attribute locked { xsd:boolean }?,
+  
+  ## default value: false
   attribute hidden { xsd:boolean }?
 sml_CT_Fonts =
   attribute count { xsd:unsignedInt }?,

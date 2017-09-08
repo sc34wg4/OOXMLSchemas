@@ -3425,8 +3425,8 @@
     <xsd:attribute name="style" type="ST_BorderStyle" use="optional" default="none"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CellProtection">
-    <xsd:attribute name="locked" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="hidden" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="locked" type="xsd:boolean" use="optional" default="true"/>
+    <xsd:attribute name="hidden" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Fonts">
     <xsd:sequence>
