@@ -1624,8 +1624,14 @@ sml_CT_MemberProperty =
   
   ## default value: false
   attribute showAsCaption { xsd:boolean }?,
+  
+  ## default value: 0
   attribute nameLen { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute pPos { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute pLen { xsd:unsignedInt }?,
   attribute level { xsd:unsignedInt }?,
   attribute field { xsd:unsignedInt }

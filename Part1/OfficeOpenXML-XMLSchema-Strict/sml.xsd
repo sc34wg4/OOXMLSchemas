@@ -1437,9 +1437,9 @@
     <xsd:attribute name="showCell" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showTip" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showAsCaption" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="nameLen" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="pPos" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="pLen" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="nameLen" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="pPos" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="pLen" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="level" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="field" use="required" type="xsd:unsignedInt"/>
   </xsd:complexType>
