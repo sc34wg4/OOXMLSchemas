@@ -1898,7 +1898,7 @@
     <xsd:attribute name="maxSheetId" type="xsd:unsignedInt" use="required"/>
     <xsd:attribute name="userName" type="s:ST_Xstring" use="required"/>
     <xsd:attribute ref="r:id" use="required"/>
-    <xsd:attribute name="minRId" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="minRId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="maxRId" type="xsd:unsignedInt" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SheetIdMap">

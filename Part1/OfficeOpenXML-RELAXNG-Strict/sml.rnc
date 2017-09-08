@@ -2112,6 +2112,8 @@ sml_CT_RevisionHeader =
   attribute maxSheetId { xsd:unsignedInt },
   attribute userName { s_ST_Xstring },
   r_id,
+
+  ## default value: 0
   attribute minRId { xsd:unsignedInt }?,
   attribute maxRId { xsd:unsignedInt }?,
   element sheetIdMap { sml_CT_SheetIdMap },
