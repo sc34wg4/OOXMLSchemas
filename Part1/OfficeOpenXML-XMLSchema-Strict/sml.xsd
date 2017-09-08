@@ -1510,7 +1510,7 @@
     <xsd:attribute name="evalOrder" use="optional" type="xsd:int" default="0"/>
     <xsd:attribute name="id" use="required" type="xsd:unsignedInt"/>
     <xsd:attribute name="iMeasureHier" use="optional" type="xsd:unsignedInt"/>
-    <xsd:attribute name="iMeasureFld" use="optional" type="xsd:unsignedInt"/>
+    <xsd:attribute name="iMeasureFld" use="optional" type="xsd:unsignedInt" default="0"/>
     <xsd:attribute name="name" type="s:ST_Xstring"/>
     <xsd:attribute name="description" type="s:ST_Xstring"/>
     <xsd:attribute name="stringValue1" type="s:ST_Xstring"/>

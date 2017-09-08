@@ -1677,6 +1677,8 @@ sml_CT_PivotFilter =
   attribute evalOrder { xsd:int }?,
   attribute id { xsd:unsignedInt },
   attribute iMeasureHier { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute iMeasureFld { xsd:unsignedInt }?,
   attribute name { s_ST_Xstring }?,
   attribute description { s_ST_Xstring }?,
