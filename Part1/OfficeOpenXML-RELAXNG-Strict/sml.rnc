@@ -2203,6 +2203,8 @@ sml_CT_RevisionCellChange =
   
   ## default value: false
   attribute dxf { xsd:boolean }?,
+  
+  ## default value: 0
   attribute numFmtId { sml_ST_NumFmtId }?,
   
   ## default value: false

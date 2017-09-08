@@ -1990,7 +1990,7 @@
     <xsd:attribute name="xfDxf" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="s" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="dxf" type="xsd:boolean" default="false"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="0"/>
     <xsd:attribute name="quotePrefix" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="oldQuotePrefix" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="ph" type="xsd:boolean" default="false"/>
