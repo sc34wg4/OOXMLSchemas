@@ -1009,7 +1009,7 @@
       <xsd:element name="tpls" minOccurs="0" maxOccurs="unbounded" type="CT_Tuples"/>
       <xsd:element name="sortByTuple" minOccurs="0" type="CT_Tuples"/>
     </xsd:sequence>
-    <xsd:attribute name="count" type="xsd:unsignedInt"/>
+    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional" default="4294967295"/>
     <xsd:attribute name="maxRank" use="required" type="xsd:int"/>
     <xsd:attribute name="setDefinition" use="required" type="s:ST_Xstring"/>
     <xsd:attribute name="sortType" type="ST_SortType" default="none"/>

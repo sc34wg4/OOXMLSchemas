@@ -1042,6 +1042,8 @@ sml_CT_Sets =
   attribute count { xsd:unsignedInt }?,
   element set { sml_CT_Set }+
 sml_CT_Set =
+  
+  ## default value: 4294967295
   attribute count { xsd:unsignedInt }?,
   attribute maxRank { xsd:int },
   attribute setDefinition { s_ST_Xstring },
