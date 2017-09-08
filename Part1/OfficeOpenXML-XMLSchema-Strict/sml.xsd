@@ -363,7 +363,7 @@
       <xsd:any/>
     </xsd:sequence>
     <xsd:attribute name="DataBindingName" type="xsd:string" use="optional"/>
-    <xsd:attribute name="FileBinding" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="FileBinding" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="ConnectionID" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="FileBindingName" type="xsd:string" use="optional"/>
     <xsd:attribute name="DataBindingLoadMode" type="xsd:unsignedInt" use="required"/>

@@ -347,6 +347,8 @@ sml_CT_Map =
   element DataBinding { sml_CT_DataBinding }?
 sml_CT_DataBinding =
   attribute DataBindingName { xsd:string }?,
+
+  ## default value: false
   attribute FileBinding { xsd:boolean }?,
   attribute ConnectionID { xsd:unsignedInt }?,
   attribute FileBindingName { xsd:string }?,
