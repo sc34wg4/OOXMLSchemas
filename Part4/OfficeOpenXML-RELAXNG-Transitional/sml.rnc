@@ -1368,6 +1368,8 @@ sml_CT_PivotField =
   
   ## default value: manual
   attribute sortType { sml_ST_FieldSortType }?,
+  
+  ## default value: false
   attribute dataSourceSort { xsd:boolean }?,
   
   ## default value: false

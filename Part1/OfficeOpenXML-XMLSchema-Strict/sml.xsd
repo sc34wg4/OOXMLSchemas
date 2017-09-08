@@ -1204,7 +1204,7 @@
     <xsd:attribute name="includeNewItemsInFilter" type="xsd:boolean" default="false"/>
     <xsd:attribute name="itemPageCount" type="xsd:unsignedInt" default="10"/>
     <xsd:attribute name="sortType" type="ST_FieldSortType" default="manual"/>
-    <xsd:attribute name="dataSourceSort" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="dataSourceSort" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="nonAutoSortDefault" type="xsd:boolean" default="false"/>
     <xsd:attribute name="rankBy" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="defaultSubtotal" type="xsd:boolean" default="true"/>
