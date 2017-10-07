@@ -1184,7 +1184,7 @@
     <xsd:attribute name="uniqueMemberProperty" type="s:ST_Xstring"/>
     <xsd:attribute name="compact" type="xsd:boolean" default="true"/>
     <xsd:attribute name="allDrilled" type="xsd:boolean" default="false"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="true"/>
     <xsd:attribute name="outline" type="xsd:boolean" default="true"/>
     <xsd:attribute name="subtotalTop" type="xsd:boolean" default="true"/>
     <xsd:attribute name="dragToRow" type="xsd:boolean" default="true"/>

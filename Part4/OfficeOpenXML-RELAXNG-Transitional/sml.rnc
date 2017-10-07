@@ -1314,6 +1314,8 @@ sml_CT_PivotField =
   
   ## default value: false
   attribute allDrilled { xsd:boolean }?,
+  
+  ## default value: true
   attribute numFmtId { sml_ST_NumFmtId }?,
   
   ## default value: true
