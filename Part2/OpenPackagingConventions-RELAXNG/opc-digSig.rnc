@@ -1,6 +1,5 @@
 default namespace =
   "http://schemas.openxmlformats.org/package/2006/digital-signature"
-namespace ds = "http://www.w3.org/2000/09/xmldsig#"
 
 include "security_any.rnc" 
 include "xmldsig-core-schema.rnc" {
