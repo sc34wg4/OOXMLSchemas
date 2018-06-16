@@ -1,20 +1,39 @@
 default namespace =
   "http://schemas.openxmlformats.org/package/2006/digital-signature"
-namespace ds = "http://www.w3.org/2000/09/xmldsig#"
 
+include "security_any.rnc" 
 include "xmldsig-core-schema.rnc" {
-
-SignaturePropertyType =
+ds_CanonicalizationMethodType =
+    attribute Algorithm { 
+        xsd:anyURI "http://www.w3.org/TR/2001/REC-xml-c14n-20010315" 
+      | xsd:anyURI "http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"
+    }
+ds_SignatureMethodType =
+  attribute Algorithm { 
+    xsd:anyURI "http://www.w3.org/2000/09/xmldsig#dsa-sha1"
+  | xsd:anyURI "http://www.w3.org/2000/09/xmldsig#rsa-sha1" } 
+ds_SignaturePropertyType =
   SignatureTime,
   attribute Id { xsd:ID }?,
   attribute Target { xsd:anyURI }
-
-TransformType =
-  element ds:XPath { xsd:string }?,
-  (RelationshipReference | RelationshipsGroupReference)*,
-  attribute Algorithm { xsd:anyURI }
+ds_TransformType =
+  ds_CanonicalizationMethodType
+  | (attribute Algorithm { 
+      xsd:anyURI "http://schemas.openxmlformats.org/package/2006/RelationshipTransform" },
+    (RelationshipReference | RelationshipsGroupReference)*)
+ds_ObjectType = application_defined_ObjectType | package_specific_ObjectType
 }
 
+start = ds_Signature
+application_defined_ObjectType =
+  attribute Id { xsd:NCName - xsd:NCName "idPackageObject" }?,
+  attribute MimeType { xsd:string }?,
+  attribute Encoding { xsd:anyURI }?,
+  security_anyElement*
+package_specific_ObjectType =
+  attribute Id { xsd:NCName "idPackageObject" },
+  ds_Manifest,
+  ds_SignatureProperties
 SignatureTime = element SignatureTime { CT_SignatureTime }
 RelationshipReference =
   element RelationshipReference { CT_RelationshipReference }
