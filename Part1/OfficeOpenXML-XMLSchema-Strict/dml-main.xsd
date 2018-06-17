@@ -2899,7 +2899,7 @@
     <xsd:attribute name="spc" type="ST_TextPoint" use="optional"/>
     <xsd:attribute name="normalizeH" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="baseline" type="ST_Percentage" use="optional"/>
-    <xsd:attribute name="noProof" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="noProof" type="xsd:boolean" use="optional" default="0"/>
     <xsd:attribute name="dirty" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="err" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="smtClean" type="xsd:boolean" use="optional" default="true"/>

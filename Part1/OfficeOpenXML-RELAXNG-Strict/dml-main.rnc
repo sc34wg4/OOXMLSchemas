@@ -2221,6 +2221,8 @@ a_CT_TextCharacterProperties =
   attribute spc { a_ST_TextPoint }?,
   attribute normalizeH { xsd:boolean }?,
   attribute baseline { a_ST_Percentage }?,
+  
+  ## default value: 0
   attribute noProof { xsd:boolean }?,
   
   ## default value: true
