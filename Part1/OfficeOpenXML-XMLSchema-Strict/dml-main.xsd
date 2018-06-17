@@ -2343,7 +2343,6 @@
   </xsd:complexType>
   <xsd:element name="theme" type="CT_OfficeStyleSheet"/>
   <xsd:element name="themeOverride" type="CT_BaseStylesOverride"/>
-  <xsd:element name="themeManager" type="CT_EmptyElement"/>
   <xsd:complexType name="CT_TableCellProperties">
     <xsd:sequence>
       <xsd:element name="lnL" type="CT_LineProperties" minOccurs="0" maxOccurs="1"/>

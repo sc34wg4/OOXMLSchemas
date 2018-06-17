@@ -1847,7 +1847,6 @@ a_CT_ClipboardStyleSheet =
   element clrMap { a_CT_ColorMapping }
 a_theme = element theme { a_CT_OfficeStyleSheet }
 a_themeOverride = element themeOverride { a_CT_BaseStylesOverride }
-a_themeManager = element themeManager { a_CT_EmptyElement }
 a_CT_TableCellProperties =
   
   ## default value: 91440
