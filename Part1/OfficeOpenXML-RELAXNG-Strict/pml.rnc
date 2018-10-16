@@ -338,6 +338,10 @@ p_ST_TLAnimateMotionPathEditMode = "relative" | "fixed"
 p_CT_TLPoint =
   attribute x { a_ST_Percentage },
   attribute y { a_ST_Percentage }
+p_ST_AnimMotionPtsTypes =
+  xsd:string {
+    pattern = "[AFTSafts]*"
+  }
 p_CT_TLAnimateMotionBehavior =
 
   ## default value: parent
@@ -353,7 +357,7 @@ p_CT_TLAnimateMotionBehavior =
   attribute rAng { a_ST_Angle }?,
 
   ## default value: A
-  attribute ptsTypes { xsd:string }?,
+  attribute ptsTypes { p_ST_AnimMotionPtsTypes }?,
   element cBhvr { p_CT_TLCommonBehaviorData },
   element by { p_CT_TLPoint }?,
   element from { p_CT_TLPoint }?,

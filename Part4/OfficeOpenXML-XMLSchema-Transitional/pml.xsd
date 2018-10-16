@@ -553,6 +553,11 @@
     <xsd:attribute name="x" type="a:ST_Percentage" use="required"/>
     <xsd:attribute name="y" type="a:ST_Percentage" use="required"/>
   </xsd:complexType>
+  <xsd:simpleType name="ST_AnimMotionPtsTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[AFTSafts]*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType name="CT_TLAnimateMotionBehavior">
     <xsd:sequence>
       <xsd:element name="cBhvr" type="CT_TLCommonBehaviorData" minOccurs="1" maxOccurs="1"/>
@@ -567,7 +572,7 @@
     <xsd:attribute name="pathEditMode" type="ST_TLAnimateMotionPathEditMode" use="optional"
         default="relative"/>
     <xsd:attribute name="rAng" type="a:ST_Angle" use="optional" default="0"/>
-    <xsd:attribute name="ptsTypes" type="xsd:string" use="optional"
+    <xsd:attribute name="ptsTypes" type="ST_AnimMotionPtsTypes" use="optional"
       default="A"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLAnimateRotationBehavior">
