@@ -572,8 +572,7 @@
     <xsd:attribute name="pathEditMode" type="ST_TLAnimateMotionPathEditMode" use="optional"
         default="relative"/>
     <xsd:attribute name="rAng" type="a:ST_Angle" use="optional" default="0"/>
-    <xsd:attribute name="ptsTypes" type="ST_AnimMotionPtsTypes" use="optional"
-      default="A"/>
+    <xsd:attribute name="ptsTypes" type="ST_AnimMotionPtsTypes" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLAnimateRotationBehavior">
     <xsd:sequence>

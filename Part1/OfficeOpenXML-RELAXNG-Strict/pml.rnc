@@ -355,8 +355,6 @@ p_CT_TLAnimateMotionBehavior =
 
   ## default value: 0
   attribute rAng { a_ST_Angle }?,
-
-  ## default value: A
   attribute ptsTypes { p_ST_AnimMotionPtsTypes }?,
   element cBhvr { p_CT_TLCommonBehaviorData },
   element by { p_CT_TLPoint }?,
