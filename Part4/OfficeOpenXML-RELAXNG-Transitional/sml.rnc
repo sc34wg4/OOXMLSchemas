@@ -12,7 +12,7 @@ namespace xdr =
   "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing"
 
 sml_CT_AutoFilter =
-  attribute ref { sml_ST_Ref }?,
+  attribute ref { sml_ST_Ref },
   element filterColumn { sml_CT_FilterColumn }*,
   element sortState { sml_CT_SortState }?,
   element extLst { sml_CT_ExtensionList }?
@@ -40,7 +40,7 @@ sml_CT_Filters =
   attribute calendarType { s_ST_CalendarType }?,
   element filter { sml_CT_Filter }*,
   element dateGroupItem { sml_CT_DateGroupItem }*
-sml_CT_Filter = attribute val { s_ST_Xstring }?
+sml_CT_Filter = attribute val { s_ST_Xstring }
 sml_CT_CustomFilters =
   
   ## default value: false
@@ -50,7 +50,7 @@ sml_CT_CustomFilter =
   
   ## default value: equal
   attribute operator { sml_ST_FilterOperator }?,
-  attribute val { s_ST_Xstring }?
+  attribute val { s_ST_Xstring }
 sml_CT_Top10 =
   
   ## default value: true
@@ -359,7 +359,7 @@ sml_CT_Connection =
   
   ## default value: 0
   attribute interval { xsd:unsignedInt }?,
-  attribute name { s_ST_Xstring }?,
+  attribute name { s_ST_Xstring },
   attribute description { s_ST_Xstring }?,
   attribute type { xsd:unsignedInt }?,
   
@@ -755,7 +755,11 @@ sml_CT_SharedItems =
    | element s { sml_CT_String }
    | element d { sml_CT_DateTime })*
 sml_CT_Missing =
+
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
@@ -778,7 +782,11 @@ sml_CT_Missing =
   element x { sml_CT_X }*
 sml_CT_Number =
   attribute v { xsd:double },
+
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
@@ -801,14 +809,22 @@ sml_CT_Number =
   element x { sml_CT_X }*
 sml_CT_Boolean =
   attribute v { xsd:boolean },
+  
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
   element x { sml_CT_X }*
 sml_CT_Error =
   attribute v { s_ST_Xstring },
+
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
@@ -831,7 +847,11 @@ sml_CT_Error =
   element x { sml_CT_X }*
 sml_CT_String =
   attribute v { s_ST_Xstring },
+
+  ## default value: false
   attribute u { xsd:boolean }?,
+
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
@@ -854,7 +874,11 @@ sml_CT_String =
   element x { sml_CT_X }*
 sml_CT_DateTime =
   attribute v { xsd:dateTime },
+  
+  ## default value: false
   attribute u { xsd:boolean }?,
+  
+  ## default value: false
   attribute f { xsd:boolean }?,
   attribute c { s_ST_Xstring }?,
   attribute cp { xsd:unsignedInt }?,
@@ -1644,14 +1668,24 @@ sml_CT_MeasureGroup =
   attribute name { s_ST_Xstring },
   attribute caption { s_ST_Xstring }
 sml_CT_MeasureDimensionMap =
-  attribute measureGroup { xsd:unsignedInt }?,
-  attribute dimension { xsd:unsignedInt }?
+  attribute measureGroup { xsd:unsignedInt },
+  attribute dimension { xsd:unsignedInt }
 sml_CT_PivotTableStyle =
   attribute name { xsd:string }?,
+
+  ## default value: false
   attribute showRowHeaders { xsd:boolean }?,
+
+  ## default value: false
   attribute showColHeaders { xsd:boolean }?,
+
+  ## default value: false
   attribute showRowStripes { xsd:boolean }?,
+
+  ## default value: false
   attribute showColStripes { xsd:boolean }?,
+
+  ## default value: false
   attribute showLastColumn { xsd:boolean }?
 sml_CT_PivotFilters =
   
@@ -2984,7 +3018,7 @@ sml_CT_ConditionalFormatting =
   element cfRule { sml_CT_CfRule }+,
   element extLst { sml_CT_ExtensionList }?
 sml_CT_CfRule =
-  attribute type { sml_ST_CfType }?,
+  attribute type { sml_ST_CfType },
   attribute dxfId { sml_ST_DxfId }?,
   attribute priority { xsd:int },
   
@@ -3969,7 +4003,7 @@ sml_CT_Colors =
   element mruColors { sml_CT_MRUColors }?
 sml_CT_IndexedColors = element rgbColor { sml_CT_RgbColor }+
 sml_CT_MRUColors = element color { sml_CT_Color }+
-sml_CT_RgbColor = attribute rgb { sml_ST_UnsignedIntHex }?
+sml_CT_RgbColor = attribute rgb { sml_ST_UnsignedIntHex }
 sml_CT_TableStyles =
   attribute count { xsd:unsignedInt }?,
   attribute defaultTableStyle { xsd:string }?,
@@ -4100,7 +4134,7 @@ sml_CT_ExternalRow =
   attribute r { xsd:unsignedInt },
   element cell { sml_CT_ExternalCell }*
 sml_CT_ExternalCell =
-  attribute r { sml_ST_CellRef }?,
+  attribute r { sml_ST_CellRef },
   
   ## default value: n
   attribute t { sml_ST_CellType }?,
@@ -4205,9 +4239,17 @@ sml_ST_TableType =
   string "worksheet" | string "xml" | string "queryTable"
 sml_CT_TableStyleInfo =
   attribute name { s_ST_Xstring }?,
+
+  ## default value: false
   attribute showFirstColumn { xsd:boolean }?,
+
+  ## default value: false
   attribute showLastColumn { xsd:boolean }?,
+
+  ## default value: false
   attribute showRowStripes { xsd:boolean }?,
+
+  ## default value: false
   attribute showColumnStripes { xsd:boolean }?
 sml_CT_TableColumns =
   attribute count { xsd:unsignedInt }?,
@@ -4487,7 +4529,7 @@ sml_ST_SmartTagShow =
 sml_CT_SmartTagTypes = element smartTagType { sml_CT_SmartTagType }*
 sml_CT_SmartTagType =
   attribute namespaceUri { s_ST_Xstring }?,
-  attribute name { s_ST_Xstring }?,
+  attribute name { s_ST_Xstring },
   attribute url { s_ST_Xstring }?
 sml_CT_FileRecoveryPr =
   
@@ -4535,6 +4577,8 @@ sml_CT_CalcPr =
   ## default value: true
   attribute concurrentCalc { xsd:boolean }?,
   attribute concurrentManualCount { xsd:unsignedInt }?,
+
+  ## default value: false
   attribute forceFullCalc { xsd:boolean }?
 sml_ST_CalcMode = string "manual" | string "auto" | string "autoNoTable"
 sml_ST_RefMode = string "A1" | string "R1C1"
