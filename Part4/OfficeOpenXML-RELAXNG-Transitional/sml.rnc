@@ -170,10 +170,20 @@ sml_ST_SortBy =
 sml_ST_SortMethod = string "stroke" | string "pinYin" | string "none"
 sml_CT_DateGroupItem =
   attribute year { xsd:unsignedShort },
+  
+  ## default value: 1
   attribute month { xsd:unsignedShort }?,
+  
+  ## default value: 1
   attribute day { xsd:unsignedShort }?,
+  
+  ## default value: 0
   attribute hour { xsd:unsignedShort }?,
+  
+  ## default value: 0
   attribute minute { xsd:unsignedShort }?,
+  
+  ## default value: 0
   attribute second { xsd:unsignedShort }?,
   attribute dateTimeGrouping { sml_ST_DateTimeGrouping }
 sml_ST_DateTimeGrouping =
@@ -337,6 +347,8 @@ sml_CT_Map =
   element DataBinding { sml_CT_DataBinding }?
 sml_CT_DataBinding =
   attribute DataBindingName { xsd:string }?,
+
+  ## default value: false
   attribute FileBinding { xsd:boolean }?,
   attribute ConnectionID { xsd:unsignedInt }?,
   attribute FileBindingName { xsd:string }?,
@@ -1065,6 +1077,8 @@ sml_CT_Sets =
   attribute count { xsd:unsignedInt }?,
   element set { sml_CT_Set }+
 sml_CT_Set =
+  
+  ## default value: 4294967295
   attribute count { xsd:unsignedInt }?,
   attribute maxRank { xsd:int },
   attribute setDefinition { s_ST_Xstring },
@@ -1324,6 +1338,8 @@ sml_CT_PivotField =
   
   ## default value: false
   attribute allDrilled { xsd:boolean }?,
+  
+  ## default value: true
   attribute numFmtId { sml_ST_NumFmtId }?,
   
   ## default value: true
@@ -1382,6 +1398,8 @@ sml_CT_PivotField =
   
   ## default value: manual
   attribute sortType { sml_ST_FieldSortType }?,
+  
+  ## default value: false
   attribute dataSourceSort { xsd:boolean }?,
   
   ## default value: false
@@ -1638,8 +1656,14 @@ sml_CT_MemberProperty =
   
   ## default value: false
   attribute showAsCaption { xsd:boolean }?,
+  
+  ## default value: 0
   attribute nameLen { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute pPos { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute pLen { xsd:unsignedInt }?,
   attribute level { xsd:unsignedInt }?,
   attribute field { xsd:unsignedInt }
@@ -1701,6 +1725,8 @@ sml_CT_PivotFilter =
   attribute evalOrder { xsd:int }?,
   attribute id { xsd:unsignedInt },
   attribute iMeasureHier { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute iMeasureFld { xsd:unsignedInt }?,
   attribute name { s_ST_Xstring }?,
   attribute description { s_ST_Xstring }?,
@@ -1809,6 +1835,8 @@ sml_ST_PivotFilterType =
   | string "M11"
   | string "M12"
 sml_CT_PivotArea =
+  
+  ## default value: -1
   attribute field { xsd:int }?,
   
   ## default value: normal
@@ -2124,6 +2152,8 @@ sml_CT_RevisionHeader =
   attribute maxSheetId { xsd:unsignedInt },
   attribute userName { s_ST_Xstring },
   r_id,
+
+  ## default value: 0
   attribute minRId { xsd:unsignedInt }?,
   attribute maxRId { xsd:unsignedInt }?,
   element sheetIdMap { sml_CT_SheetIdMap },
@@ -2213,6 +2243,8 @@ sml_CT_RevisionCellChange =
   
   ## default value: false
   attribute dxf { xsd:boolean }?,
+  
+  ## default value: 0
   attribute numFmtId { sml_ST_NumFmtId }?,
   
   ## default value: false
@@ -2681,6 +2713,8 @@ sml_CT_Selection =
   
   ## default value: topLeft
   attribute pane { sml_ST_Pane }?,
+  
+  ## default value: A1
   attribute activeCell { sml_ST_CellRef }?,
   
   ## default value: 0
@@ -2892,8 +2926,14 @@ sml_CT_DataValidations =
   
   ## default value: false
   attribute disablePrompts { xsd:boolean }?,
+  
+  ## default value: 0
   attribute xWindow { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute yWindow { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute count { xsd:unsignedInt }?,
   element dataValidation { sml_CT_DataValidation }+
 sml_CT_DataValidation =
@@ -3036,6 +3076,8 @@ sml_CT_CfRule =
   attribute operator { sml_ST_ConditionalFormattingOperator }?,
   attribute text { xsd:string }?,
   attribute timePeriod { sml_ST_TimePeriod }?,
+  
+  ## default value: 0
   attribute rank { xsd:unsignedInt }?,
   attribute stdDev { xsd:int }?,
   
@@ -3317,6 +3359,8 @@ sml_CT_InputCells =
   ## default value: false
   attribute undone { xsd:boolean }?,
   attribute val { s_ST_Xstring },
+  
+  ## default value: 0
   attribute numFmtId { sml_ST_NumFmtId }?
 sml_CT_CellWatches = element cellWatch { sml_CT_CellWatch }+
 sml_CT_CellWatch = attribute r { sml_ST_CellRef }
@@ -3801,16 +3845,32 @@ sml_CT_Stylesheet =
   element colors { sml_CT_Colors }?,
   element extLst { sml_CT_ExtensionList }?
 sml_CT_CellAlignment =
+
+  ## default value: general
   attribute horizontal { sml_ST_HorizontalAlignment }?,
   
   ## default value: bottom
   attribute vertical { sml_ST_VerticalAlignment }?,
+  
+  ## default value: 0
   attribute textRotation { sml_ST_TextRotation }?,
+  
+  ## default value: false
   attribute wrapText { xsd:boolean }?,
+  
+  ## default value: 0
   attribute indent { xsd:unsignedInt }?,
+  
+  ## default value: 0
   attribute relativeIndent { xsd:int }?,
+  
+  ## default value: false
   attribute justifyLastLine { xsd:boolean }?,
+  
+  ## default value: false
   attribute shrinkToFit { xsd:boolean }?,
+  
+  ## default value: false
   attribute readingOrder { xsd:unsignedInt }?
 sml_ST_TextRotation = 
   xsd:nonNegativeInteger { maxInclusive = "180"} | xsd:nonNegativeInteger "255"
@@ -3833,7 +3893,11 @@ sml_CT_Borders =
   attribute count { xsd:unsignedInt }?,
   element border { sml_CT_Border }*
 sml_CT_Border =
+  
+  ## default value: false
   attribute diagonalUp { xsd:boolean }?,
+  
+  ## default value: false
   attribute diagonalDown { xsd:boolean }?,
   
   ## default value: true
@@ -3853,7 +3917,11 @@ sml_CT_BorderPr =
   attribute style { sml_ST_BorderStyle }?,
   element color { sml_CT_Color }?
 sml_CT_CellProtection =
+  
+  ## default value: true
   attribute locked { xsd:boolean }?,
+  
+  ## default value: false
   attribute hidden { xsd:boolean }?
 sml_CT_Fonts =
   attribute count { xsd:unsignedInt }?,
@@ -3869,6 +3937,8 @@ sml_CT_PatternFill =
   element fgColor { sml_CT_Color }?,
   element bgColor { sml_CT_Color }?
 sml_CT_Color =
+  
+  ## default value: false
   attribute auto { xsd:boolean }?,
   attribute indexed { xsd:unsignedInt }?,
   attribute rgb { sml_ST_UnsignedIntHex }?,
@@ -4229,6 +4299,8 @@ sml_CT_Table =
   attribute headerRowCellStyle { s_ST_Xstring }?,
   attribute dataCellStyle { s_ST_Xstring }?,
   attribute totalsRowCellStyle { s_ST_Xstring }?,
+  
+  ## default value: 0
   attribute connectionId { xsd:unsignedInt }?,
   element autoFilter { sml_CT_AutoFilter }?,
   element sortState { sml_CT_SortState }?,
@@ -4515,6 +4587,8 @@ sml_CT_WorkbookPr =
   
   ## default value: false
   attribute refreshAllConnections { xsd:boolean }?,
+  
+  ## default value: 0
   attribute defaultThemeVersion { xsd:unsignedInt }?
 sml_ST_UpdateLinks = string "userSet" | string "never" | string "always"
 sml_CT_SmartTagPr =
@@ -4545,6 +4619,7 @@ sml_CT_FileRecoveryPr =
   ## default value: false
   attribute repairLoad { xsd:boolean }?
 sml_CT_CalcPr =
+  ## default value: 0
   attribute calcId { xsd:unsignedInt }?,
   
   ## default value: auto

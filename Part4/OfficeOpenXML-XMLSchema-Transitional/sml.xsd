@@ -184,11 +184,11 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_DateGroupItem">
     <xsd:attribute name="year" type="xsd:unsignedShort" use="required"/>
-    <xsd:attribute name="month" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="day" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="hour" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="minute" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="second" type="xsd:unsignedShort" use="optional"/>
+    <xsd:attribute name="month" type="xsd:unsignedShort" use="optional" default="1"/>
+    <xsd:attribute name="day" type="xsd:unsignedShort" use="optional" default="1"/>
+    <xsd:attribute name="hour" type="xsd:unsignedShort" use="optional" default="0"/>
+    <xsd:attribute name="minute" type="xsd:unsignedShort" use="optional" default="0"/>
+    <xsd:attribute name="second" type="xsd:unsignedShort" use="optional" default="0"/>
     <xsd:attribute name="dateTimeGrouping" type="ST_DateTimeGrouping" use="required"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_DateTimeGrouping">
@@ -372,7 +372,7 @@
       <xsd:any/>
     </xsd:sequence>
     <xsd:attribute name="DataBindingName" type="xsd:string" use="optional"/>
-    <xsd:attribute name="FileBinding" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="FileBinding" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="ConnectionID" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="FileBindingName" type="xsd:string" use="optional"/>
     <xsd:attribute name="DataBindingLoadMode" type="xsd:unsignedInt" use="required"/>
@@ -1020,7 +1020,7 @@
       <xsd:element name="tpls" minOccurs="0" maxOccurs="unbounded" type="CT_Tuples"/>
       <xsd:element name="sortByTuple" minOccurs="0" type="CT_Tuples"/>
     </xsd:sequence>
-    <xsd:attribute name="count" type="xsd:unsignedInt"/>
+    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional" default="4294967295"/>
     <xsd:attribute name="maxRank" use="required" type="xsd:int"/>
     <xsd:attribute name="setDefinition" use="required" type="s:ST_Xstring"/>
     <xsd:attribute name="sortType" type="ST_SortType" default="none"/>
@@ -1195,7 +1195,7 @@
     <xsd:attribute name="uniqueMemberProperty" type="s:ST_Xstring"/>
     <xsd:attribute name="compact" type="xsd:boolean" default="true"/>
     <xsd:attribute name="allDrilled" type="xsd:boolean" default="false"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="true"/>
     <xsd:attribute name="outline" type="xsd:boolean" default="true"/>
     <xsd:attribute name="subtotalTop" type="xsd:boolean" default="true"/>
     <xsd:attribute name="dragToRow" type="xsd:boolean" default="true"/>
@@ -1215,7 +1215,7 @@
     <xsd:attribute name="includeNewItemsInFilter" type="xsd:boolean" default="false"/>
     <xsd:attribute name="itemPageCount" type="xsd:unsignedInt" default="10"/>
     <xsd:attribute name="sortType" type="ST_FieldSortType" default="manual"/>
-    <xsd:attribute name="dataSourceSort" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="dataSourceSort" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="nonAutoSortDefault" type="xsd:boolean" default="false"/>
     <xsd:attribute name="rankBy" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="defaultSubtotal" type="xsd:boolean" default="true"/>
@@ -1448,9 +1448,9 @@
     <xsd:attribute name="showCell" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showTip" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showAsCaption" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="nameLen" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="pPos" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="pLen" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="nameLen" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="pPos" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="pLen" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="level" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="field" use="required" type="xsd:unsignedInt"/>
   </xsd:complexType>
@@ -1500,7 +1500,7 @@
     <xsd:attribute name="name" type="xsd:string"/>
     <xsd:attribute name="showRowHeaders" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showColHeaders" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optinoal" default="false"/>
+    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showColStripes" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
@@ -1521,7 +1521,7 @@
     <xsd:attribute name="evalOrder" use="optional" type="xsd:int" default="0"/>
     <xsd:attribute name="id" use="required" type="xsd:unsignedInt"/>
     <xsd:attribute name="iMeasureHier" use="optional" type="xsd:unsignedInt"/>
-    <xsd:attribute name="iMeasureFld" use="optional" type="xsd:unsignedInt"/>
+    <xsd:attribute name="iMeasureFld" use="optional" type="xsd:unsignedInt" default="0"/>
     <xsd:attribute name="name" type="s:ST_Xstring"/>
     <xsd:attribute name="description" type="s:ST_Xstring"/>
     <xsd:attribute name="stringValue1" type="s:ST_Xstring"/>
@@ -1649,7 +1649,7 @@
       <xsd:element name="references" minOccurs="0" type="CT_PivotAreaReferences"/>
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
     </xsd:sequence>
-    <xsd:attribute name="field" use="optional" type="xsd:int"/>
+    <xsd:attribute name="field" type="xsd:int" use="optional" default="-1"/>
     <xsd:attribute name="type" type="ST_PivotAreaType" default="normal"/>
     <xsd:attribute name="dataOnly" type="xsd:boolean" default="true"/>
     <xsd:attribute name="labelOnly" type="xsd:boolean" default="false"/>
@@ -1910,7 +1910,7 @@
     <xsd:attribute name="maxSheetId" type="xsd:unsignedInt" use="required"/>
     <xsd:attribute name="userName" type="s:ST_Xstring" use="required"/>
     <xsd:attribute ref="r:id" use="required"/>
-    <xsd:attribute name="minRId" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="minRId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="maxRId" type="xsd:unsignedInt" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SheetIdMap">
@@ -2002,7 +2002,7 @@
     <xsd:attribute name="xfDxf" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="s" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="dxf" type="xsd:boolean" default="false"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="0"/>
     <xsd:attribute name="quotePrefix" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="oldQuotePrefix" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="ph" type="xsd:boolean" default="false"/>
@@ -2359,7 +2359,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_Selection">
     <xsd:attribute name="pane" type="ST_Pane" use="optional" default="topLeft"/>
-    <xsd:attribute name="activeCell" type="ST_CellRef" use="optional"/>
+    <xsd:attribute name="activeCell" type="ST_CellRef" use="optional" default="A1"/>
     <xsd:attribute name="activeCellId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="sqref" type="ST_Sqref" use="optional" default="A1"/>
   </xsd:complexType>
@@ -2547,9 +2547,9 @@
         maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="disablePrompts" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="xWindow" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="yWindow" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="xWindow" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="yWindow" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_DataValidation">
     <xsd:sequence>
@@ -2705,7 +2705,7 @@
     <xsd:attribute name="operator" type="ST_ConditionalFormattingOperator" use="optional"/>
     <xsd:attribute name="text" type="xsd:string" use="optional"/>
     <xsd:attribute name="timePeriod" type="ST_TimePeriod" use="optional"/>
-    <xsd:attribute name="rank" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="rank" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="stdDev" type="xsd:int" use="optional"/>
     <xsd:attribute name="equalAverage" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
@@ -2923,7 +2923,7 @@
     <xsd:attribute name="deleted" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="undone" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="val" type="s:ST_Xstring" use="required"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CellWatches">
     <xsd:sequence>
@@ -3381,15 +3381,15 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_CellAlignment">
-    <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional"/>
-    <xsd:attribute name="vertical" type="ST_VerticalAlignment" default="bottom" use="optional"/>
-    <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional"/>
-    <xsd:attribute name="wrapText" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="relativeIndent" type="xsd:int" use="optional"/>
-    <xsd:attribute name="justifyLastLine" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="shrinkToFit" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="readingOrder" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional" default="general"/>
+    <xsd:attribute name="vertical" type="ST_VerticalAlignment" use="optional" default="bottom"/>
+    <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional" default="0"/>
+    <xsd:attribute name="wrapText" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="relativeIndent" type="xsd:int" use="optional" default="0"/>
+    <xsd:attribute name="justifyLastLine" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="shrinkToFit" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="readingOrder" type="xsd:unsignedInt" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextRotation">
     <xsd:union>
@@ -3441,8 +3441,8 @@
       <xsd:element name="vertical" type="CT_BorderPr" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="horizontal" type="CT_BorderPr" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="diagonalUp" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="diagonalDown" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="diagonalUp" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="diagonalDown" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="outline" type="xsd:boolean" use="optional" default="true"/>
   </xsd:complexType>
   <xsd:complexType name="CT_BorderPr">
@@ -3452,8 +3452,8 @@
     <xsd:attribute name="style" type="ST_BorderStyle" use="optional" default="none"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CellProtection">
-    <xsd:attribute name="locked" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="hidden" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="locked" type="xsd:boolean" use="optional" default="true"/>
+    <xsd:attribute name="hidden" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Fonts">
     <xsd:sequence>
@@ -3481,7 +3481,7 @@
     <xsd:attribute name="patternType" type="ST_PatternType" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Color">
-    <xsd:attribute name="auto" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="auto" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="indexed" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="rgb" type="ST_UnsignedIntHex" use="optional"/>
     <xsd:attribute name="theme" type="xsd:unsignedInt" use="optional"/>
@@ -3959,7 +3959,7 @@
     <xsd:attribute name="headerRowCellStyle" type="s:ST_Xstring" use="optional"/>
     <xsd:attribute name="dataCellStyle" type="s:ST_Xstring" use="optional"/>
     <xsd:attribute name="totalsRowCellStyle" type="s:ST_Xstring" use="optional"/>
-    <xsd:attribute name="connectionId" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="connectionId" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TableType">
     <xsd:restriction base="xsd:string">
@@ -4233,7 +4233,7 @@
     <xsd:attribute name="checkCompatibility" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoCompressPictures" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="refreshAllConnections" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="defaultThemeVersion" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="defaultThemeVersion" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_UpdateLinks">
     <xsd:restriction base="xsd:string">
@@ -4270,7 +4270,7 @@
     <xsd:attribute name="repairLoad" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CalcPr">
-    <xsd:attribute name="calcId" type="xsd:unsignedInt"/>
+    <xsd:attribute name="calcId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="calcMode" type="ST_CalcMode" use="optional" default="auto"/>
     <xsd:attribute name="fullCalcOnLoad" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="refMode" type="ST_RefMode" use="optional" default="A1"/>
