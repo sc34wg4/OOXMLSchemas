@@ -1,12 +1,8 @@
 default namespace = "http://purl.oclc.org/ooxml/drawingml/diagram"
 namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
 namespace ddgrm = "http://purl.oclc.org/ooxml/drawingml/diagram"
-namespace o = "urn:schemas-microsoft-com:office:office"
 namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
 namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
-namespace v = "urn:schemas-microsoft-com:vml"
-namespace w10 = "urn:schemas-microsoft-com:office:word"
-namespace x = "urn:schemas-microsoft-com:office:excel"
 
 ddgrm_CT_CTName =
   attribute lang { xsd:string }?,

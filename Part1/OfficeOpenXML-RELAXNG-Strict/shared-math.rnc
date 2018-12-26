@@ -1,10 +1,6 @@
 default namespace m = "http://purl.oclc.org/ooxml/officeDocument/math"
-namespace o = "urn:schemas-microsoft-com:office:office"
 namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
-namespace v = "urn:schemas-microsoft-com:vml"
 namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
-namespace w10 = "urn:schemas-microsoft-com:office:word"
-namespace x = "urn:schemas-microsoft-com:office:excel"
 
 m_ST_Integer255 =
   xsd:integer { minInclusive = "1" maxInclusive = "255" }

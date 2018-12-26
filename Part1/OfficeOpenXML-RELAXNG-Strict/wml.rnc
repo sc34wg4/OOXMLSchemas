@@ -1,14 +1,10 @@
 namespace m = "http://purl.oclc.org/ooxml/officeDocument/math"
-namespace o = "urn:schemas-microsoft-com:office:office"
 namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
 namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
 namespace sl = "http://purl.oclc.org/ooxml/schemaLibrary/main"
-namespace v = "urn:schemas-microsoft-com:vml"
 default namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
-namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace wp =
   "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
-namespace x = "urn:schemas-microsoft-com:office:excel"
 
 w_CT_Empty = empty
 w_CT_OnOff = attribute w:val { s_ST_OnOff }?
