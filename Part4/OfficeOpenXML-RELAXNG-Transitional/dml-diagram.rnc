@@ -343,8 +343,12 @@ ddgrm_CT_ElemPropSet =
   attribute qsCatId { xsd:string }?,
   attribute csTypeId { xsd:string }?,
   attribute csCatId { xsd:string }?,
+
+  ## default value: false
   attribute coherent3DOff { xsd:boolean }?,
   attribute phldrT { xsd:string }?,
+
+  ## default value: false
   attribute phldr { xsd:boolean }?,
   attribute custAng { xsd:int }?,
   attribute custFlipVert { xsd:boolean }?,
