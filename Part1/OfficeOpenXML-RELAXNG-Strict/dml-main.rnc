@@ -2044,26 +2044,62 @@ a_EG_TextAutofit =
   | element normAutofit { a_CT_TextNormalAutofit }
   | element spAutoFit { a_CT_TextShapeAutofit }
 a_CT_TextBodyProperties =
+
+  ## default value: 0
   attribute rot { a_ST_Angle }?,
+
+  ## default value: false
   attribute spcFirstLastPara { xsd:boolean }?,
+
+  ## default value: overflow
   attribute vertOverflow { a_ST_TextVertOverflowType }?,
+
+  ## default value: overflow
   attribute horzOverflow { a_ST_TextHorzOverflowType }?,
+
+  ## default value: horz
   attribute vert { a_ST_TextVerticalType }?,
+
+  ## default value: square
   attribute wrap { a_ST_TextWrappingType }?,
+
+  ## default value: 91440
   attribute lIns { a_ST_Coordinate32 }?,
+
+  ## default value: 45720
   attribute tIns { a_ST_Coordinate32 }?,
+
+  ## default value: 91440
   attribute rIns { a_ST_Coordinate32 }?,
+
+  ## default value: 45720
   attribute bIns { a_ST_Coordinate32 }?,
+
+  ## default value: 1
   attribute numCol { a_ST_TextColumnCount }?,
+
+  ## default value: 0
   attribute spcCol { a_ST_PositiveCoordinate32 }?,
+
+  ## default value: false
   attribute rtlCol { xsd:boolean }?,
+
+  ## default value: false
   attribute fromWordArt { xsd:boolean }?,
+
+  ## default value: t
   attribute anchor { a_ST_TextAnchoringType }?,
+  
+  ## default value: false
   attribute anchorCtr { xsd:boolean }?,
+  
+  ## default value: false
   attribute forceAA { xsd:boolean }?,
   
   ## default value: false
   attribute upright { xsd:boolean }?,
+  
+  ## default value: false
   attribute compatLnSpc { xsd:boolean }?,
   element prstTxWarp { a_CT_PresetTextShape }?,
   a_EG_TextAutofit?,
@@ -2206,19 +2242,33 @@ a_EG_TextUnderlineFill =
 a_ST_TextStrikeType = "noStrike" | "sngStrike" | "dblStrike"
 a_ST_TextCapsType = "none" | "small" | "all"
 a_CT_TextCharacterProperties =
+  
+  ## default value: false
   attribute kumimoji { xsd:boolean }?,
   attribute lang { s_ST_Lang }?,
   attribute altLang { s_ST_Lang }?,
   attribute sz { a_ST_TextFontSize }?,
+  
+  ## default value: false
   attribute b { xsd:boolean }?,
+
+  ## default value: false
   attribute i { xsd:boolean }?,
+  
+  ## default value: false
   attribute u { a_ST_TextUnderlineType }?,
+  
+  ## default value: false
   attribute strike { a_ST_TextStrikeType }?,
   attribute kern { a_ST_TextNonNegativePoint }?,
   
   ## default value: none
   attribute cap { a_ST_TextCapsType }?,
+  
+  ## default value: 0
   attribute spc { a_ST_TextPoint }?,
+  
+  ## default value: false
   attribute normalizeH { xsd:boolean }?,
   attribute baseline { a_ST_Percentage }?,
   
