@@ -1188,8 +1188,6 @@
       <xsd:sequence maxOccurs="unbounded">
         <xsd:any processContents="lax" namespace="urn:schemas-microsoft-com:vml" minOccurs="0"
           maxOccurs="unbounded"/>
-        <xsd:any processContents="lax" namespace="urn:schemas-microsoft-com:office:office"
-          minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
       <xsd:element name="movie" type="CT_Rel" minOccurs="0"/>
       <xsd:element name="control" type="CT_Control" minOccurs="0"/>
