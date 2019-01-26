@@ -25,7 +25,7 @@
     <xsd:attribute name="pri" type="xsd:unsignedInt" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CTCategories">
-    <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+    <xsd:sequence>
       <xsd:element name="cat" type="CT_CTCategory" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -492,7 +492,7 @@
     <xsd:attribute name="pri" type="xsd:unsignedInt" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SDCategories">
-    <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+    <xsd:sequence>
       <xsd:element name="cat" type="CT_SDCategory" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
