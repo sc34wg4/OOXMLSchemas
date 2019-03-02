@@ -2215,7 +2215,7 @@
     <xsd:attribute name="w" type="ST_LineWidth" use="optional"/>
     <xsd:attribute name="cap" type="ST_LineCap" use="optional"/>
     <xsd:attribute name="cmpd" type="ST_CompoundLine" use="optional"/>
-    <xsd:attribute name="algn" type="ST_PenAlignment" use="optional"/>
+    <xsd:attribute name="algn" type="ST_PenAlignment" use="optional" default="ctr"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_ShapeID">
     <xsd:restriction base="xsd:token"/>

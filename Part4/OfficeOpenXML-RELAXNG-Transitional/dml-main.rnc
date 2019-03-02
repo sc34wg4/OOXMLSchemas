@@ -1761,6 +1761,8 @@ a_CT_LineProperties =
   attribute w { a_ST_LineWidth }?,
   attribute cap { a_ST_LineCap }?,
   attribute cmpd { a_ST_CompoundLine }?,
+
+  ## default value: ctr
   attribute algn { a_ST_PenAlignment }?,
   a_EG_LineFillProperties?,
   a_EG_LineDashProperties?,
