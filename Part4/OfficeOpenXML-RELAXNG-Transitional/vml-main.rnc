@@ -11,36 +11,36 @@ namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace x = "urn:schemas-microsoft-com:office:excel"
 namespace local = ""
 
-v_AG_Id = attribute id_AG_Id { xsd:string }?
-v_AG_Style = attribute style_AG_Style { xsd:string }?
-v_AG_Type = attribute type_AG_Type { xsd:string }?
-v_AG_Adj = attribute adj_AG_Adj { xsd:string }?
-v_AG_Path = attribute path_AG_Path { xsd:string }?
+v_AG_Id = attribute id { xsd:string }?
+v_AG_Style = attribute style { xsd:string }?
+v_AG_Type = attribute type { xsd:string }?
+v_AG_Adj = attribute adj { xsd:string }?
+v_AG_Path = attribute path { xsd:string }?
 v_AG_Fill =
-  attribute filled_AG_Fill { s_ST_TrueFalse }?,
-  attribute fillcolor_AG_Fill { s_ST_ColorType }?
-v_AG_Chromakey = attribute chromakey_AG_Chromakey { s_ST_ColorType }?
-v_AG_Ext = attribute v:ext_AG_Ext { v_ST_Ext }?
+  attribute filled { s_ST_TrueFalse }?,
+  attribute fillcolor { s_ST_ColorType }?
+v_AG_Chromakey = attribute chromakey { s_ST_ColorType }?
+v_AG_Ext = attribute v:ext { v_ST_Ext }?
 v_AG_CoreAttributes =
   v_AG_Id,
   v_AG_Style,
-  attribute href_AG_CoreAttributes { xsd:string }?,
-  attribute target_AG_CoreAttributes { xsd:string }?,
-  attribute class_AG_CoreAttributes { xsd:string }?,
-  attribute title_AG_CoreAttributes { xsd:string }?,
-  attribute alt_AG_CoreAttributes { xsd:string }?,
-  attribute coordsize_AG_CoreAttributes { xsd:string }?,
-  attribute coordorigin_AG_CoreAttributes { xsd:string }?,
-  attribute wrapcoords_AG_CoreAttributes { xsd:string }?,
-  attribute print_AG_CoreAttributes { s_ST_TrueFalse }?
+  attribute href { xsd:string }?,
+  attribute target { xsd:string }?,
+  attribute class { xsd:string }?,
+  attribute title { xsd:string }?,
+  attribute alt { xsd:string }?,
+  attribute coordsize { xsd:string }?,
+  attribute coordorigin { xsd:string }?,
+  attribute wrapcoords { xsd:string }?,
+  attribute print { s_ST_TrueFalse }?
 v_AG_ShapeAttributes =
   v_AG_Chromakey,
   v_AG_Fill,
-  attribute opacity_AG_ShapeAttributes { xsd:string }?,
-  attribute stroked_AG_ShapeAttributes { s_ST_TrueFalse }?,
-  attribute strokecolor_AG_ShapeAttributes { s_ST_ColorType }?,
-  attribute strokeweight_AG_ShapeAttributes { xsd:string }?,
-  attribute insetpen_AG_ShapeAttributes { s_ST_TrueFalse }?
+  attribute opacity { xsd:string }?,
+  attribute stroked { s_ST_TrueFalse }?,
+  attribute strokecolor { s_ST_ColorType }?,
+  attribute strokeweight { xsd:string }?,
+  attribute insetpen { s_ST_TrueFalse }?
 v_AG_OfficeCoreAttributes =
   o_spid?,
   o_oned?,
