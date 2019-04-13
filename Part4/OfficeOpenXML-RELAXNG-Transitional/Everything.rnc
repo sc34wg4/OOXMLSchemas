@@ -19,6 +19,11 @@ include "shared-documentPropertiesVariantTypes.rnc"
 include "shared-math.rnc"
 include "shared-relationshipReference.rnc"
 include "sml.rnc"
+include "vml-main.rnc"
+include "vml-officeDrawing.rnc"
+include "vml-presentationDrawing.rnc"
+include "vml-spreadsheetDrawing.rnc"
+include "vml-wordprocessingDrawing.rnc"
 include "wml.rnc"
 include "xml.rnc"
 start |= a_tblStyleLst
@@ -84,3 +89,62 @@ start |= w_settings
 start |= w_styles
 start |= w_webSettings
 start |= xdr_wsDr
+
+
+start |= element xml {(vml-main | vml-officeDrawing | vml-spreadsheetDrawing | vml-presentationDrawing | vml-wordprocessingDrawing)* }
+vml-main =
+ v_shape
+ | v_shapetype
+ | v_group
+ | v_background
+ | v_fill
+ | v_formulas
+ | v_handles
+ | v_imagedata
+ | v_path
+ | v_textbox
+ | v_shadow
+ | v_stroke
+ | v_textpath
+ | v_arc
+ | v_curve
+ | v_image
+ | v_line
+ | v_oval
+ | v_polyline
+ | v_rect
+ | v_roundrect
+
+vml-officeDrawing = 
+  o_shapedefaults
+  | o_shapelayout
+  | o_signatureline
+  | o_ink
+  | o_diagram
+  | o_equationxml
+  | o_skew
+  | o_extrusion
+  | o_callout
+  | o_lock
+  | o_OLEObject
+  | o_complex
+  | o_left
+  | o_top
+  | o_right
+  | o_bottom
+  | o_column
+  | o_clippath
+  | o_fill
+
+vml-wordprocessingDrawing =
+  w10_bordertop
+  | w10_borderleft
+  | w10_borderright
+  | w10_borderbottom
+  | w10_wrap
+  | w10_anchorlock
+
+vml-spreadsheetDrawing = x_ClientData
+
+vml-presentationDrawing = pvml_iscomment | pvml_textdata
+
