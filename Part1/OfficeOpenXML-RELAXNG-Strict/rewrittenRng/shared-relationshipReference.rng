@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns:r="http://purl.oclc.org/ooxml/officeDocument/relationships" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <define name="r_ST_RelationshipId">
+    <data type="string" />
+  </define>
+  <define name="r_id">
+    <attribute name="r:id__r_id">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_embed">
+    <attribute name="r:embed__r_embed">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_link">
+    <attribute name="r:link__r_link">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_dm">
+    <attribute name="r:dm__r_dm">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_lo">
+    <attribute name="r:lo__r_lo">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_qs">
+    <attribute name="r:qs__r_qs">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_cs">
+    <attribute name="r:cs__r_cs">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_blip">
+    <attribute name="r:blip__r_blip">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_pict">
+    <attribute name="r:pict__r_pict">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_href">
+    <attribute name="r:href__r_href">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_topLeft">
+    <attribute name="r:topLeft__r_topLeft">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_topRight">
+    <attribute name="r:topRight__r_topRight">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_bottomLeft">
+    <attribute name="r:bottomLeft__r_bottomLeft">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="r_bottomRight">
+    <attribute name="r:bottomRight__r_bottomRight">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+</grammar>

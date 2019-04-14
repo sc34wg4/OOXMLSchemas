@@ -1,0 +1,1471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<grammar ns="urn:schemas-microsoft-com:office:office" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <define name="o_bwmode">
+    <attribute name="o:bwmode__o_bwmode">
+      <ref name="o_ST_BWMode" />
+    </attribute>
+  </define>
+  <define name="o_bwpure">
+    <attribute name="o:bwpure__o_bwpure">
+      <ref name="o_ST_BWMode" />
+    </attribute>
+  </define>
+  <define name="o_bwnormal">
+    <attribute name="o:bwnormal__o_bwnormal">
+      <ref name="o_ST_BWMode" />
+    </attribute>
+  </define>
+  <define name="o_targetscreensize">
+    <attribute name="o:targetscreensize__o_targetscreensize">
+      <ref name="o_ST_ScreenSize" />
+    </attribute>
+  </define>
+  <define name="o_insetmode">
+    <attribute name="o:insetmode__o_insetmode">
+      <a:documentation>default value: custom</a:documentation>
+      <ref name="o_ST_InsetMode" />
+    </attribute>
+  </define>
+  <define name="o_spt">
+    <attribute name="o:spt__o_spt">
+      <data type="float" />
+    </attribute>
+  </define>
+  <define name="o_wrapcoords">
+    <attribute name="o:wrapcoords__o_wrapcoords">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_oned">
+    <attribute name="o:oned__o_oned">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_regroupid">
+    <attribute name="o:regroupid__o_regroupid">
+      <data type="integer" />
+    </attribute>
+  </define>
+  <define name="o_doubleclicknotify">
+    <attribute name="o:doubleclicknotify__o_doubleclicknotify">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_connectortype">
+    <attribute name="o:connectortype__o_connectortype">
+      <a:documentation>default value: straight</a:documentation>
+      <ref name="o_ST_ConnectorType" />
+    </attribute>
+  </define>
+  <define name="o_button">
+    <attribute name="o:button__o_button">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_userhidden">
+    <attribute name="o:userhidden__o_userhidden">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_forcedash">
+    <attribute name="o:forcedash__o_forcedash">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_oleicon">
+    <attribute name="o:oleicon__o_oleicon">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_ole">
+    <attribute name="o:ole__o_ole">
+      <ref name="s_ST_TrueFalseBlank" />
+    </attribute>
+  </define>
+  <define name="o_preferrelative">
+    <attribute name="o:preferrelative__o_preferrelative">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_cliptowrap">
+    <attribute name="o:cliptowrap__o_cliptowrap">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_clip">
+    <attribute name="o:clip__o_clip">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_bullet">
+    <attribute name="o:bullet__o_bullet">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_hr">
+    <attribute name="o:hr__o_hr">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_hrstd">
+    <attribute name="o:hrstd__o_hrstd">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_hrnoshade">
+    <attribute name="o:hrnoshade__o_hrnoshade">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_hrpct">
+    <attribute name="o:hrpct__o_hrpct">
+      <data type="float" />
+    </attribute>
+  </define>
+  <define name="o_hralign">
+    <attribute name="o:hralign__o_hralign">
+      <a:documentation>default value: left</a:documentation>
+      <ref name="o_ST_HrAlign" />
+    </attribute>
+  </define>
+  <define name="o_allowincell">
+    <attribute name="o:allowincell__o_allowincell">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_allowoverlap">
+    <attribute name="o:allowoverlap__o_allowoverlap">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_userdrawn">
+    <attribute name="o:userdrawn__o_userdrawn">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_bordertopcolor">
+    <attribute name="o:bordertopcolor__o_bordertopcolor">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_borderleftcolor">
+    <attribute name="o:borderleftcolor__o_borderleftcolor">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_borderbottomcolor">
+    <attribute name="o:borderbottomcolor__o_borderbottomcolor">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_borderrightcolor">
+    <attribute name="o:borderrightcolor__o_borderrightcolor">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_connecttype">
+    <attribute name="o:connecttype__o_connecttype">
+      <ref name="o_ST_ConnectType" />
+    </attribute>
+  </define>
+  <define name="o_connectlocs">
+    <attribute name="o:connectlocs__o_connectlocs">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_connectangles">
+    <attribute name="o:connectangles__o_connectangles">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_master">
+    <attribute name="o:master__o_master">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_extrusionok">
+    <attribute name="o:extrusionok__o_extrusionok">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_href">
+    <attribute name="o:href__o_href">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_althref">
+    <attribute name="o:althref__o_althref">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_title">
+    <attribute name="o:title__o_title">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_singleclick">
+    <attribute name="o:singleclick__o_singleclick">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_oleid">
+    <attribute name="o:oleid__o_oleid">
+      <data type="float" />
+    </attribute>
+  </define>
+  <define name="o_detectmouseclick">
+    <attribute name="o:detectmouseclick__o_detectmouseclick">
+      <ref name="s_ST_TrueFalse" />
+    </attribute>
+  </define>
+  <define name="o_movie">
+    <attribute name="o:movie__o_movie">
+      <data type="float" />
+    </attribute>
+  </define>
+  <define name="o_spid">
+    <attribute name="o:spid__o_spid">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_opacity2">
+    <attribute name="o:opacity2__o_opacity2">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_relid">
+    <attribute name="o:relid__o_relid">
+      <ref name="r_ST_RelationshipId" />
+    </attribute>
+  </define>
+  <define name="o_dgmlayout">
+    <attribute name="o:dgmlayout__o_dgmlayout">
+      <ref name="o_ST_DiagramLayout" />
+    </attribute>
+  </define>
+  <define name="o_dgmnodekind">
+    <attribute name="o:dgmnodekind__o_dgmnodekind">
+      <data type="integer" />
+    </attribute>
+  </define>
+  <define name="o_dgmlayoutmru">
+    <attribute name="o:dgmlayoutmru__o_dgmlayoutmru">
+      <ref name="o_ST_DiagramLayout" />
+    </attribute>
+  </define>
+  <define name="o_gfxdata">
+    <attribute name="o:gfxdata__o_gfxdata">
+      <data type="base64Binary" />
+    </attribute>
+  </define>
+  <define name="o_tableproperties">
+    <attribute name="o:tableproperties__o_tableproperties">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_tablelimits">
+    <attribute name="o:tablelimits__o_tablelimits">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_shapedefaults">
+    <element name="shapedefaults">
+      <ref name="o_CT_ShapeDefaults" />
+    </element>
+  </define>
+  <define name="o_shapelayout">
+    <element name="shapelayout">
+      <ref name="o_CT_ShapeLayout" />
+    </element>
+  </define>
+  <define name="o_signatureline">
+    <element name="signatureline">
+      <ref name="o_CT_SignatureLine" />
+    </element>
+  </define>
+  <define name="o_ink">
+    <element name="ink">
+      <ref name="o_CT_Ink" />
+    </element>
+  </define>
+  <define name="o_diagram">
+    <element name="diagram">
+      <ref name="o_CT_Diagram" />
+    </element>
+  </define>
+  <define name="o_equationxml">
+    <element name="equationxml">
+      <ref name="o_CT_EquationXml" />
+    </element>
+  </define>
+  <define name="o_CT_ShapeDefaults">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="spidmax__o_CT_ShapeDefaults">
+        <data type="integer" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="style__o_CT_ShapeDefaults">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="fill__o_CT_ShapeDefaults">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="fillcolor__o_CT_ShapeDefaults">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="stroke__o_CT_ShapeDefaults">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="strokecolor__o_CT_ShapeDefaults">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="o:allowincell__o_CT_ShapeDefaults">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <interleave>
+        <optional>
+          <ref name="v_fill" />
+        </optional>
+        <optional>
+          <ref name="v_stroke" />
+        </optional>
+        <optional>
+          <ref name="v_textbox" />
+        </optional>
+        <optional>
+          <ref name="v_shadow" />
+        </optional>
+        <optional>
+          <ref name="o_skew" />
+        </optional>
+        <optional>
+          <ref name="o_extrusion" />
+        </optional>
+        <optional>
+          <ref name="o_callout" />
+        </optional>
+        <optional>
+          <ref name="o_lock" />
+        </optional>
+        <optional>
+          <element name="colormru">
+            <ref name="o_CT_ColorMru" />
+          </element>
+        </optional>
+        <optional>
+          <element name="colormenu">
+            <ref name="o_CT_ColorMenu" />
+          </element>
+        </optional>
+      </interleave>
+    </optional>
+  </define>
+  <define name="o_CT_Ink">
+    <optional>
+      <attribute name="i__o_CT_Ink">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="annotation__o_CT_Ink">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="contentType__o_CT_Ink">
+        <ref name="o_ST_ContentType" />
+      </attribute>
+    </optional>
+    <empty />
+  </define>
+  <define name="o_CT_SignatureLine">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="issignatureline__o_CT_SignatureLine">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="id__o_CT_SignatureLine">
+        <ref name="s_ST_Guid" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="provid__o_CT_SignatureLine">
+        <ref name="s_ST_Guid" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="signinginstructionsset__o_CT_SignatureLine">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="allowcomments__o_CT_SignatureLine">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="showsigndate__o_CT_SignatureLine">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="o:suggestedsigner__o_CT_SignatureLine">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="o:suggestedsigner2__o_CT_SignatureLine">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="o:suggestedsigneremail__o_CT_SignatureLine">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="signinginstructions__o_CT_SignatureLine">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="addlxml__o_CT_SignatureLine">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="sigprovurl__o_CT_SignatureLine">
+        <data type="string" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_ShapeLayout">
+    <ref name="v_AG_Ext" />
+    <interleave>
+      <optional>
+        <element name="idmap">
+          <ref name="o_CT_IdMap" />
+        </element>
+      </optional>
+      <optional>
+        <element name="regrouptable">
+          <ref name="o_CT_RegroupTable" />
+        </element>
+      </optional>
+      <optional>
+        <element name="rules">
+          <ref name="o_CT_Rules" />
+        </element>
+      </optional>
+    </interleave>
+  </define>
+  <define name="o_CT_IdMap">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="data__o_CT_IdMap">
+        <data type="string" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_RegroupTable">
+    <ref name="v_AG_Ext" />
+    <zeroOrMore>
+      <element name="entry">
+        <ref name="o_CT_Entry" />
+      </element>
+    </zeroOrMore>
+  </define>
+  <define name="o_CT_Entry">
+    <optional>
+      <attribute name="new__o_CT_Entry">
+        <data type="int" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="old__o_CT_Entry">
+        <data type="int" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_Rules">
+    <ref name="v_AG_Ext" />
+    <zeroOrMore>
+      <element name="r">
+        <ref name="o_CT_R" />
+      </element>
+    </zeroOrMore>
+  </define>
+  <define name="o_CT_R">
+    <attribute name="id__o_CT_R">
+      <data type="string" />
+    </attribute>
+    <optional>
+      <attribute name="type__o_CT_R">
+        <ref name="o_ST_RType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="how__o_CT_R">
+        <ref name="o_ST_How" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="idref__o_CT_R">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <zeroOrMore>
+      <element name="proxy">
+        <ref name="o_CT_Proxy" />
+      </element>
+    </zeroOrMore>
+  </define>
+  <define name="o_CT_Proxy">
+    <optional>
+      <attribute name="start__o_CT_Proxy">
+        <a:documentation>default value: false</a:documentation>
+        <ref name="s_ST_TrueFalseBlank" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="end__o_CT_Proxy">
+        <a:documentation>default value: false</a:documentation>
+        <ref name="s_ST_TrueFalseBlank" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="idref__o_CT_Proxy">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="connectloc__o_CT_Proxy">
+        <data type="int" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_Diagram">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="dgmstyle__o_CT_Diagram">
+        <data type="integer" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="autoformat__o_CT_Diagram">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="reverse__o_CT_Diagram">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="autolayout__o_CT_Diagram">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="dgmscalex__o_CT_Diagram">
+        <data type="integer" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="dgmscaley__o_CT_Diagram">
+        <data type="integer" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="dgmfontsize__o_CT_Diagram">
+        <data type="integer" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="constrainbounds__o_CT_Diagram">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="dgmbasetextscale__o_CT_Diagram">
+        <data type="integer" />
+      </attribute>
+    </optional>
+    <optional>
+      <element name="relationtable">
+        <ref name="o_CT_RelationTable" />
+      </element>
+    </optional>
+  </define>
+  <define name="o_CT_EquationXml">
+    <optional>
+      <attribute name="contentType__o_CT_EquationXml">
+        <ref name="o_ST_AlternateMathContentType" />
+      </attribute>
+    </optional>
+    <ref name="o_CT_EquationXml_any" />
+  </define>
+  <define name="o_CT_EquationXml_any">
+    <element>
+      <anyName>
+        <except>
+          <nsName />
+          <nsName ns="urn:schemas-microsoft-com:vml" />
+          <nsName ns="urn:schemas-microsoft-com:office:word" />
+          <nsName ns="urn:schemas-microsoft-com:office:excel" />
+        </except>
+      </anyName>
+      <zeroOrMore>
+        <ref name="anyAttribute" />
+      </zeroOrMore>
+      <mixed>
+        <zeroOrMore>
+          <ref name="anyElement" />
+        </zeroOrMore>
+      </mixed>
+    </element>
+  </define>
+  <define name="o_ST_AlternateMathContentType">
+    <data type="string" />
+  </define>
+  <define name="o_CT_RelationTable">
+    <ref name="v_AG_Ext" />
+    <zeroOrMore>
+      <element name="rel">
+        <ref name="o_CT_Relation" />
+      </element>
+    </zeroOrMore>
+  </define>
+  <define name="o_CT_Relation">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="idsrc__o_CT_Relation">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="iddest__o_CT_Relation">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="idcntr__o_CT_Relation">
+        <data type="string" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_ColorMru">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="colors__o_CT_ColorMru">
+        <data type="string" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_ColorMenu">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="strokecolor__o_CT_ColorMenu">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="fillcolor__o_CT_ColorMenu">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="shadowcolor__o_CT_ColorMenu">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="extrusioncolor__o_CT_ColorMenu">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_skew">
+    <element name="skew">
+      <ref name="o_CT_Skew" />
+    </element>
+  </define>
+  <define name="o_extrusion">
+    <element name="extrusion">
+      <ref name="o_CT_Extrusion" />
+    </element>
+  </define>
+  <define name="o_callout">
+    <element name="callout">
+      <ref name="o_CT_Callout" />
+    </element>
+  </define>
+  <define name="o_lock">
+    <element name="lock">
+      <ref name="o_CT_Lock" />
+    </element>
+  </define>
+  <define name="o_OLEObject">
+    <element name="OLEObject">
+      <ref name="o_CT_OLEObject" />
+    </element>
+  </define>
+  <define name="o_complex">
+    <element name="complex">
+      <ref name="o_CT_Complex" />
+    </element>
+  </define>
+  <define name="o_left">
+    <element name="left">
+      <ref name="o_CT_StrokeChild" />
+    </element>
+  </define>
+  <define name="o_top">
+    <element name="top">
+      <ref name="o_CT_StrokeChild" />
+    </element>
+  </define>
+  <define name="o_right">
+    <element name="right">
+      <ref name="o_CT_StrokeChild" />
+    </element>
+  </define>
+  <define name="o_bottom">
+    <element name="bottom">
+      <ref name="o_CT_StrokeChild" />
+    </element>
+  </define>
+  <define name="o_column">
+    <element name="column">
+      <ref name="o_CT_StrokeChild" />
+    </element>
+  </define>
+  <define name="o_clippath">
+    <element name="clippath">
+      <ref name="o_CT_ClipPath" />
+    </element>
+  </define>
+  <define name="o_fill">
+    <element name="fill">
+      <ref name="o_CT_Fill" />
+    </element>
+  </define>
+  <define name="o_CT_Skew">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="id__o_CT_Skew">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="on__o_CT_Skew">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="offset__o_CT_Skew">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="origin__o_CT_Skew">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="matrix__o_CT_Skew">
+        <data type="string" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_Extrusion">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="on__o_CT_Extrusion">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="type__o_CT_Extrusion">
+        <a:documentation>default value: parallel</a:documentation>
+        <ref name="o_ST_ExtrusionType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="render__o_CT_Extrusion">
+        <a:documentation>default value: solid</a:documentation>
+        <ref name="o_ST_ExtrusionRender" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="viewpointorigin__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="viewpoint__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="plane__o_CT_Extrusion">
+        <a:documentation>default value: XY</a:documentation>
+        <ref name="o_ST_ExtrusionPlane" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="skewangle__o_CT_Extrusion">
+        <data type="float" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="skewamt__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="foredepth__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="backdepth__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="orientation__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="orientationangle__o_CT_Extrusion">
+        <data type="float" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lockrotationcenter__o_CT_Extrusion">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="autorotationcenter__o_CT_Extrusion">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="rotationcenter__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="rotationangle__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="colormode__o_CT_Extrusion">
+        <ref name="o_ST_ColorMode" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="color__o_CT_Extrusion">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="shininess__o_CT_Extrusion">
+        <data type="float" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="specularity__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="diffusity__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="metal__o_CT_Extrusion">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="edge__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="facet__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lightface__o_CT_Extrusion">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="brightness__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lightposition__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lightlevel__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lightharsh__o_CT_Extrusion">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lightposition2__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lightlevel2__o_CT_Extrusion">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lightharsh2__o_CT_Extrusion">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_Callout">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="on__o_CT_Callout">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="type__o_CT_Callout">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="gap__o_CT_Callout">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="angle__o_CT_Callout">
+        <ref name="o_ST_Angle" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="dropauto__o_CT_Callout">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="drop__o_CT_Callout">
+        <ref name="o_ST_CalloutDrop" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="distance__o_CT_Callout">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="lengthspecified__o_CT_Callout">
+        <a:documentation>default value: f</a:documentation>
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="length__o_CT_Callout">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="accentbar__o_CT_Callout">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="textborder__o_CT_Callout">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="minusx__o_CT_Callout">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="minusy__o_CT_Callout">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_Lock">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="position__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="selection__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="grouping__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="ungrouping__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="rotation__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="cropping__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="verticies__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="adjusthandles__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="text__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="aspectratio__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="shapetype__o_CT_Lock">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_CT_OLEObject">
+    <optional>
+      <attribute name="Type__o_CT_OLEObject">
+        <ref name="o_ST_OLEType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="ProgID__o_CT_OLEObject">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="ShapeID__o_CT_OLEObject">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="DrawAspect__o_CT_OLEObject">
+        <ref name="o_ST_OLEDrawAspect" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="ObjectID__o_CT_OLEObject">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <ref name="r_id" />
+    </optional>
+    <optional>
+      <attribute name="UpdateMode__o_CT_OLEObject">
+        <ref name="o_ST_OLEUpdateMode" />
+      </attribute>
+    </optional>
+    <optional>
+      <element name="LinkType">
+        <ref name="o_ST_OLELinkType" />
+      </element>
+    </optional>
+    <optional>
+      <element name="LockedField">
+        <ref name="s_ST_TrueFalseBlank" />
+      </element>
+    </optional>
+    <optional>
+      <element name="FieldCodes">
+        <data type="string" />
+      </element>
+    </optional>
+  </define>
+  <define name="o_CT_Complex">
+    <ref name="v_AG_Ext" />
+  </define>
+  <define name="o_CT_StrokeChild">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="on__o_CT_StrokeChild">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="weight__o_CT_StrokeChild">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="color__o_CT_StrokeChild">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="color2__o_CT_StrokeChild">
+        <ref name="s_ST_ColorType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="opacity__o_CT_StrokeChild">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="linestyle__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeLineStyle" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="miterlimit__o_CT_StrokeChild">
+        <data type="decimal" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="joinstyle__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeJoinStyle" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="endcap__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeEndCap" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="dashstyle__o_CT_StrokeChild">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="insetpen__o_CT_StrokeChild">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="filltype__o_CT_StrokeChild">
+        <ref name="v_ST_FillType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="src__o_CT_StrokeChild">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="imageaspect__o_CT_StrokeChild">
+        <ref name="v_ST_ImageAspect" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="imagesize__o_CT_StrokeChild">
+        <data type="string" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="imagealignshape__o_CT_StrokeChild">
+        <ref name="s_ST_TrueFalse" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="startarrow__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeArrowType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="startarrowwidth__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeArrowWidth" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="startarrowlength__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeArrowLength" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="endarrow__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeArrowType" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="endarrowwidth__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeArrowWidth" />
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="endarrowlength__o_CT_StrokeChild">
+        <ref name="v_ST_StrokeArrowLength" />
+      </attribute>
+    </optional>
+    <optional>
+      <ref name="o_href" />
+    </optional>
+    <optional>
+      <ref name="o_althref" />
+    </optional>
+    <optional>
+      <ref name="o_title" />
+    </optional>
+    <optional>
+      <ref name="o_forcedash" />
+    </optional>
+  </define>
+  <define name="o_CT_ClipPath">
+    <attribute name="o:v__o_CT_ClipPath">
+      <data type="string" />
+    </attribute>
+  </define>
+  <define name="o_CT_Fill">
+    <ref name="v_AG_Ext" />
+    <optional>
+      <attribute name="type__o_CT_Fill">
+        <ref name="o_ST_FillType" />
+      </attribute>
+    </optional>
+  </define>
+  <define name="o_ST_RType">
+    <choice>
+      <value type="string" datatypeLibrary="">arc</value>
+      <value type="string" datatypeLibrary="">callout</value>
+      <value type="string" datatypeLibrary="">connector</value>
+      <value type="string" datatypeLibrary="">align</value>
+    </choice>
+  </define>
+  <define name="o_ST_How">
+    <choice>
+      <value type="string" datatypeLibrary="">top</value>
+      <value type="string" datatypeLibrary="">middle</value>
+      <value type="string" datatypeLibrary="">bottom</value>
+      <value type="string" datatypeLibrary="">left</value>
+      <value type="string" datatypeLibrary="">center</value>
+      <value type="string" datatypeLibrary="">right</value>
+    </choice>
+  </define>
+  <define name="o_ST_BWMode">
+    <choice>
+      <value type="string" datatypeLibrary="">color</value>
+      <value type="string" datatypeLibrary="">auto</value>
+      <value type="string" datatypeLibrary="">grayScale</value>
+      <value type="string" datatypeLibrary="">lightGrayscale</value>
+      <value type="string" datatypeLibrary="">inverseGray</value>
+      <value type="string" datatypeLibrary="">grayOutline</value>
+      <value type="string" datatypeLibrary="">highContrast</value>
+      <value type="string" datatypeLibrary="">black</value>
+      <value type="string" datatypeLibrary="">white</value>
+      <value type="string" datatypeLibrary="">hide</value>
+      <value type="string" datatypeLibrary="">undrawn</value>
+      <value type="string" datatypeLibrary="">blackTextAndLines</value>
+    </choice>
+  </define>
+  <define name="o_ST_ScreenSize">
+    <choice>
+      <value type="string" datatypeLibrary="">544,376</value>
+      <value type="string" datatypeLibrary="">640,480</value>
+      <value type="string" datatypeLibrary="">720,512</value>
+      <value type="string" datatypeLibrary="">800,600</value>
+      <value type="string" datatypeLibrary="">1024,768</value>
+      <value type="string" datatypeLibrary="">1152,862</value>
+    </choice>
+  </define>
+  <define name="o_ST_InsetMode">
+    <choice>
+      <value type="string" datatypeLibrary="">auto</value>
+      <value type="string" datatypeLibrary="">custom</value>
+    </choice>
+  </define>
+  <define name="o_ST_ColorMode">
+    <choice>
+      <value type="string" datatypeLibrary="">auto</value>
+      <value type="string" datatypeLibrary="">custom</value>
+    </choice>
+  </define>
+  <define name="o_ST_ContentType">
+    <data type="string" />
+  </define>
+  <define name="o_ST_DiagramLayout">
+    <choice>
+      <value>0</value>
+      <value>1</value>
+      <value>2</value>
+      <value>3</value>
+    </choice>
+  </define>
+  <define name="o_ST_ExtrusionType">
+    <choice>
+      <value type="string" datatypeLibrary="">perspective</value>
+      <value type="string" datatypeLibrary="">parallel</value>
+    </choice>
+  </define>
+  <define name="o_ST_ExtrusionRender">
+    <choice>
+      <value type="string" datatypeLibrary="">solid</value>
+      <value type="string" datatypeLibrary="">wireFrame</value>
+      <value type="string" datatypeLibrary="">boundingCube</value>
+    </choice>
+  </define>
+  <define name="o_ST_ExtrusionPlane">
+    <choice>
+      <value type="string" datatypeLibrary="">XY</value>
+      <value type="string" datatypeLibrary="">ZX</value>
+      <value type="string" datatypeLibrary="">YZ</value>
+    </choice>
+  </define>
+  <define name="o_ST_Angle">
+    <choice>
+      <value type="string" datatypeLibrary="">any</value>
+      <value type="string" datatypeLibrary="">30</value>
+      <value type="string" datatypeLibrary="">45</value>
+      <value type="string" datatypeLibrary="">60</value>
+      <value type="string" datatypeLibrary="">90</value>
+      <value type="string" datatypeLibrary="">auto</value>
+    </choice>
+  </define>
+  <define name="o_ST_CalloutDrop">
+    <data type="string" />
+  </define>
+  <define name="o_ST_CalloutPlacement">
+    <choice>
+      <value type="string" datatypeLibrary="">top</value>
+      <value type="string" datatypeLibrary="">center</value>
+      <value type="string" datatypeLibrary="">bottom</value>
+      <value type="string" datatypeLibrary="">user</value>
+    </choice>
+  </define>
+  <define name="o_ST_ConnectorType">
+    <choice>
+      <value type="string" datatypeLibrary="">none</value>
+      <value type="string" datatypeLibrary="">straight</value>
+      <value type="string" datatypeLibrary="">elbow</value>
+      <value type="string" datatypeLibrary="">curved</value>
+    </choice>
+  </define>
+  <define name="o_ST_HrAlign">
+    <choice>
+      <value type="string" datatypeLibrary="">left</value>
+      <value type="string" datatypeLibrary="">right</value>
+      <value type="string" datatypeLibrary="">center</value>
+    </choice>
+  </define>
+  <define name="o_ST_ConnectType">
+    <choice>
+      <value type="string" datatypeLibrary="">none</value>
+      <value type="string" datatypeLibrary="">rect</value>
+      <value type="string" datatypeLibrary="">segments</value>
+      <value type="string" datatypeLibrary="">custom</value>
+    </choice>
+  </define>
+  <define name="o_ST_OLELinkType">
+    <data type="string" />
+  </define>
+  <define name="o_ST_OLEType">
+    <choice>
+      <value type="string" datatypeLibrary="">Embed</value>
+      <value type="string" datatypeLibrary="">Link</value>
+    </choice>
+  </define>
+  <define name="o_ST_OLEDrawAspect">
+    <choice>
+      <value type="string" datatypeLibrary="">Content</value>
+      <value type="string" datatypeLibrary="">Icon</value>
+    </choice>
+  </define>
+  <define name="o_ST_OLEUpdateMode">
+    <choice>
+      <value type="string" datatypeLibrary="">Always</value>
+      <value type="string" datatypeLibrary="">OnCall</value>
+    </choice>
+  </define>
+  <define name="o_ST_FillType">
+    <choice>
+      <value type="string" datatypeLibrary="">gradientCenter</value>
+      <value type="string" datatypeLibrary="">solid</value>
+      <value type="string" datatypeLibrary="">pattern</value>
+      <value type="string" datatypeLibrary="">tile</value>
+      <value type="string" datatypeLibrary="">frame</value>
+      <value type="string" datatypeLibrary="">gradientUnscaled</value>
+      <value type="string" datatypeLibrary="">gradientRadial</value>
+      <value type="string" datatypeLibrary="">gradient</value>
+      <value type="string" datatypeLibrary="">background</value>
+    </choice>
+  </define>
+  <define name="o_any_vml_vml">
+    <choice>
+      <ref name="v_shape" />
+      <ref name="v_shapetype" />
+      <ref name="v_group" />
+      <ref name="v_background" />
+      <ref name="v_fill" />
+      <ref name="v_formulas" />
+      <ref name="v_handles" />
+      <ref name="v_imagedata" />
+      <ref name="v_path" />
+      <ref name="v_textbox" />
+      <ref name="v_shadow" />
+      <ref name="v_stroke" />
+      <ref name="v_textpath" />
+      <ref name="v_arc" />
+      <ref name="v_curve" />
+      <ref name="v_image" />
+      <ref name="v_line" />
+      <ref name="v_oval" />
+      <ref name="v_polyline" />
+      <ref name="v_rect" />
+      <ref name="v_roundrect" />
+    </choice>
+  </define>
+</grammar>

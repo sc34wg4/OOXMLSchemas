@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <include href="any.rng" />
+  <include href="dml-chart.rng" />
+  <include href="dml-chartDrawing.rng" />
+  <include href="dml-diagram.rng" />
+  <include href="dml-lockedCanvas.rng" />
+  <include href="dml-main.rng" />
+  <include href="dml-picture.rng" />
+  <include href="dml-spreadsheetDrawing.rng" />
+  <include href="dml-wordprocessingDrawing.rng" />
+  <include href="pml.rng" />
+  <include href="shared-additionalCharacteristics.rng" />
+  <include href="shared-bibliography.rng" />
+  <include href="shared-commonSimpleTypes.rng" />
+  <include href="shared-customXmlDataProperties.rng" />
+  <include href="shared-customXmlSchemaProperties.rng" />
+  <include href="shared-documentPropertiesCustom.rng" />
+  <include href="shared-documentPropertiesExtended.rng" />
+  <include href="shared-documentPropertiesVariantTypes.rng" />
+  <include href="shared-math.rng" />
+  <include href="shared-relationshipReference.rng" />
+  <include href="sml.rng" />
+  <include href="wml.rng" />
+  <include href="xml.rng" />
+  <start combine="choice">
+    <ref name="a_tblStyleLst" />
+  </start>
+  <start combine="choice">
+    <ref name="a_theme" />
+  </start>
+  <start combine="choice">
+    <ref name="a_themeOverride" />
+  </start>
+  <start combine="choice">
+    <ref name="dchrt_chartSpace" />
+  </start>
+  <start combine="choice">
+    <ref name="dchrt_userShapes" />
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_colorsDef" />
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_dataModel" />
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_layoutDef" />
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_styleDef" />
+  </start>
+  <start combine="choice">
+    <ref name="ds_datastoreItem" />
+  </start>
+  <start combine="choice">
+    <ref name="p_cmAuthorLst" />
+  </start>
+  <start combine="choice">
+    <ref name="p_cmLst" />
+  </start>
+  <start combine="choice">
+    <ref name="p_handoutMaster" />
+  </start>
+  <start combine="choice">
+    <ref name="p_notes" />
+  </start>
+  <start combine="choice">
+    <ref name="p_notesMaster" />
+  </start>
+  <start combine="choice">
+    <ref name="p_presentation" />
+  </start>
+  <start combine="choice">
+    <ref name="p_presentationPr" />
+  </start>
+  <start combine="choice">
+    <ref name="p_sld" />
+  </start>
+  <start combine="choice">
+    <ref name="p_sldLayout" />
+  </start>
+  <start combine="choice">
+    <ref name="p_sldMaster" />
+  </start>
+  <start combine="choice">
+    <ref name="p_sldSyncPr" />
+  </start>
+  <start combine="choice">
+    <ref name="p_tagLst" />
+  </start>
+  <start combine="choice">
+    <ref name="p_viewPr" />
+  </start>
+  <start combine="choice">
+    <ref name="shdCstm_Properties" />
+  </start>
+  <start combine="choice">
+    <ref name="shdDcEP_Properties" />
+  </start>
+  <start combine="choice">
+    <ref name="shrdBib_Sources" />
+  </start>
+  <start combine="choice">
+    <ref name="shrdChr_additionalCharacteristics" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_calcChain" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_chartsheet" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_comments" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_connections" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_dialogsheet" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_externalLink" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_headers" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_MapInfo" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_metadata" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_pivotCacheDefinition" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_pivotCacheRecords" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_pivotTableDefinition" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_queryTable" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_revisions" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_singleXmlCells" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_sst" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_styleSheet" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_table" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_users" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_volTypes" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_workbook" />
+  </start>
+  <start combine="choice">
+    <ref name="sml_worksheet" />
+  </start>
+  <start combine="choice">
+    <ref name="w_comments" />
+  </start>
+  <start combine="choice">
+    <ref name="w_document" />
+  </start>
+  <start combine="choice">
+    <ref name="w_endnotes" />
+  </start>
+  <start combine="choice">
+    <ref name="w_fonts" />
+  </start>
+  <start combine="choice">
+    <ref name="w_footnotes" />
+  </start>
+  <start combine="choice">
+    <ref name="w_ftr" />
+  </start>
+  <start combine="choice">
+    <ref name="w_glossaryDocument" />
+  </start>
+  <start combine="choice">
+    <ref name="w_hdr" />
+  </start>
+  <start combine="choice">
+    <ref name="w_numbering" />
+  </start>
+  <start combine="choice">
+    <ref name="w_recipients" />
+  </start>
+  <start combine="choice">
+    <ref name="w_settings" />
+  </start>
+  <start combine="choice">
+    <ref name="w_styles" />
+  </start>
+  <start combine="choice">
+    <ref name="w_webSettings" />
+  </start>
+  <start combine="choice">
+    <ref name="xdr_wsDr" />
+  </start>
+</grammar>

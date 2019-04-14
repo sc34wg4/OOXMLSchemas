@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <include href="any.rng"/>
+  <include href="dml-chart.rng"/>
+  <include href="dml-chartDrawing.rng"/>
+  <include href="dml-diagram.rng"/>
+  <include href="dml-lockedCanvas.rng"/>
+  <include href="dml-main.rng"/>
+  <include href="dml-picture.rng"/>
+  <include href="dml-spreadsheetDrawing.rng"/>
+  <include href="dml-wordprocessingDrawing.rng"/>
+  <include href="pml.rng"/>
+  <include href="shared-additionalCharacteristics.rng"/>
+  <include href="shared-bibliography.rng"/>
+  <include href="shared-commonSimpleTypes.rng"/>
+  <include href="shared-customXmlDataProperties.rng"/>
+  <include href="shared-customXmlSchemaProperties.rng"/>
+  <include href="shared-documentPropertiesCustom.rng"/>
+  <include href="shared-documentPropertiesExtended.rng"/>
+  <include href="shared-documentPropertiesVariantTypes.rng"/>
+  <include href="shared-math.rng"/>
+  <include href="shared-relationshipReference.rng"/>
+  <include href="sml.rng"/>
+  <include href="vml-main.rng"/>
+  <include href="vml-officeDrawing.rng"/>
+  <include href="vml-presentationDrawing.rng"/>
+  <include href="vml-spreadsheetDrawing.rng"/>
+  <include href="vml-wordprocessingDrawing.rng"/>
+  <include href="wml.rng"/>
+  <include href="xml.rng"/>
+  <start combine="choice">
+    <ref name="a_tblStyleLst"/>
+  </start>
+  <start combine="choice">
+    <ref name="a_theme"/>
+  </start>
+  <start combine="choice">
+    <ref name="a_themeOverride"/>
+  </start>
+  <start combine="choice">
+    <ref name="dchrt_chartSpace"/>
+  </start>
+  <start combine="choice">
+    <ref name="dchrt_userShapes"/>
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_colorsDef"/>
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_dataModel"/>
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_layoutDef"/>
+  </start>
+  <start combine="choice">
+    <ref name="ddgrm_styleDef"/>
+  </start>
+  <start combine="choice">
+    <ref name="ds_datastoreItem"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_cmAuthorLst"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_cmLst"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_handoutMaster"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_notes"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_notesMaster"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_presentation"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_presentationPr"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_sld"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_sldLayout"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_sldMaster"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_sldSyncPr"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_tagLst"/>
+  </start>
+  <start combine="choice">
+    <ref name="p_viewPr"/>
+  </start>
+  <start combine="choice">
+    <ref name="shdCstm_Properties"/>
+  </start>
+  <start combine="choice">
+    <ref name="shdDcEP_Properties"/>
+  </start>
+  <start combine="choice">
+    <ref name="shrdBib_Sources"/>
+  </start>
+  <start combine="choice">
+    <ref name="shrdChr_additionalCharacteristics"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_calcChain"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_chartsheet"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_comments"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_connections"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_dialogsheet"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_externalLink"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_headers"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_MapInfo"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_metadata"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_pivotCacheDefinition"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_pivotCacheRecords"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_pivotTableDefinition"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_queryTable"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_revisions"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_singleXmlCells"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_sst"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_styleSheet"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_table"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_users"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_volTypes"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_workbook"/>
+  </start>
+  <start combine="choice">
+    <ref name="sml_worksheet"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_comments"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_document"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_endnotes"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_fonts"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_footnotes"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_ftr"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_glossaryDocument"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_hdr"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_numbering"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_recipients"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_settings"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_styles"/>
+  </start>
+  <start combine="choice">
+    <ref name="w_webSettings"/>
+  </start>
+  <start combine="choice">
+    <ref name="xdr_wsDr"/>
+  </start>
+  <start combine="choice">
+    <element name="xml">
+      <zeroOrMore>
+        <choice>
+          <ref name="vml-main"/>
+          <ref name="vml-officeDrawing"/>
+          <ref name="vml-spreadsheetDrawing"/>
+          <ref name="vml-presentationDrawing"/>
+          <ref name="vml-wordprocessingDrawing"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </start>
+  <define name="vml-main">
+    <choice>
+      <ref name="v_shape"/>
+      <ref name="v_shapetype"/>
+      <ref name="v_group"/>
+      <ref name="v_background"/>
+      <ref name="v_fill"/>
+      <ref name="v_formulas"/>
+      <ref name="v_handles"/>
+      <ref name="v_imagedata"/>
+      <ref name="v_path"/>
+      <ref name="v_textbox"/>
+      <ref name="v_shadow"/>
+      <ref name="v_stroke"/>
+      <ref name="v_textpath"/>
+      <ref name="v_arc"/>
+      <ref name="v_curve"/>
+      <ref name="v_image"/>
+      <ref name="v_line"/>
+      <ref name="v_oval"/>
+      <ref name="v_polyline"/>
+      <ref name="v_rect"/>
+      <ref name="v_roundrect"/>
+    </choice>
+  </define>
+  <define name="vml-officeDrawing">
+    <choice>
+      <ref name="o_shapedefaults"/>
+      <ref name="o_shapelayout"/>
+      <ref name="o_signatureline"/>
+      <ref name="o_ink"/>
+      <ref name="o_diagram"/>
+      <ref name="o_equationxml"/>
+      <ref name="o_skew"/>
+      <ref name="o_extrusion"/>
+      <ref name="o_callout"/>
+      <ref name="o_lock"/>
+      <ref name="o_OLEObject"/>
+      <ref name="o_complex"/>
+      <ref name="o_left"/>
+      <ref name="o_top"/>
+      <ref name="o_right"/>
+      <ref name="o_bottom"/>
+      <ref name="o_column"/>
+      <ref name="o_clippath"/>
+      <ref name="o_fill"/>
+    </choice>
+  </define>
+  <define name="vml-wordprocessingDrawing">
+    <choice>
+      <ref name="w10_bordertop"/>
+      <ref name="w10_borderleft"/>
+      <ref name="w10_borderright"/>
+      <ref name="w10_borderbottom"/>
+      <ref name="w10_wrap"/>
+      <ref name="w10_anchorlock"/>
+    </choice>
+  </define>
+  <define name="vml-spreadsheetDrawing">
+    <ref name="x_ClientData"/>
+  </define>
+  <define name="vml-presentationDrawing">
+    <choice>
+      <ref name="pvml_iscomment"/>
+      <ref name="pvml_textdata"/>
+    </choice>
+  </define>
+</grammar>
