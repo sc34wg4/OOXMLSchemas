@@ -72,7 +72,7 @@ let group (pairs: seq<(string * string * string) * (string * string)>) =
 let writeDescriptors (tw: TextWriter) (desc : seq<(string * string * string) * seq<string * string>>) =
     tw.WriteLine("attribute ns name, attribute local name, defind by, element ns name, element local name")
     for ((attNsName, attLocalName, ruleName), elems) in desc do
-        fprintfn tw "%s,%s,%s" attNsName attLocalName ruleName
+        fprintfn tw "%s,%s,%s,," attNsName attLocalName ruleName
         for (elemNs, elemLn) in elems do
             fprintfn tw ",,,%s,%s" elemNs elemLn
 
@@ -131,7 +131,7 @@ Target.create "FlattenAndNormalize" (fun _ ->
         sw.Write(result.Result.Output)
         sw.Close()
     )
-
+        
 Target.create "EnumeratePairs" (fun _ -> 
     let fanSchemaFile = analysisDir + "flattenedAndNormalizedSchema.rng"
     let pairsFile = analysisDir + "attElemPairs.csv"
