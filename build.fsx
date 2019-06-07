@@ -48,7 +48,7 @@ let extractElemAttPairs (fanSchema: string) (pairsFileName: string) =
         let attNsName = att.Attribute(XNamespace.None + "ns").Value
         let elemLocalName = defineElement.Attribute(XNamespace.None + "name").Value
         let elemNsName = defineElement.Attribute(XNamespace.None + "ns").Value
-        fprintfn sw "%s, %s, %s, %s, %s" attNsName attLocalName ruleName elemNsName elemLocalName)
+        fprintfn sw "%s,%s,%s,%s,%s" attNsName attLocalName ruleName elemNsName elemLocalName)
     sw.Close()
 
 let parseLine (line:string) = 
@@ -70,11 +70,10 @@ let group (pairs: seq<(string * string * string) * (string * string)>) =
                         else compare atts1 att2)
 
 let writeDescriptors (tw: TextWriter) (desc : seq<(string * string * string) * seq<string * string>>) =
-    tw.WriteLine("attribute ns name, attribute local name, defind by, element ns name, element local name")
+    tw.WriteLine("attribute description, element ns name, element local name")
     for ((attNsName, attLocalName, ruleName), elems) in desc do
-        fprintfn tw "%s,%s,%s,," attNsName attLocalName ruleName
         for (elemNs, elemLn) in elems do
-            fprintfn tw ",,,%s,%s" elemNs elemLn
+            fprintfn tw "{%s}%s defined by %s,%s,%s" attNsName attLocalName ruleName elemNs elemLn
 
 let analyze (pairsFileName: string)  (analysisFileName: string) = 
     let sr = new StreamReader(pairsFileName)
