@@ -14614,47 +14614,47 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="src_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="src__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="cropleft_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="cropleft__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="croptop_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="croptop__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="cropright_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="cropright__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="cropbottom_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="cropbottom__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="gain_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="gain__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="blacklevel_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="blacklevel__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="gamma_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="gamma__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="grayscale_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="grayscale__v_AG_ImageAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">t</value>
               <value type="string" datatypeLibrary="" ns="">f</value>
@@ -14664,7 +14664,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="bilevel_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="bilevel__v_AG_ImageAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">t</value>
               <value type="string" datatypeLibrary="" ns="">f</value>
@@ -15002,7 +15002,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="on_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="on__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">t</value>
               <value type="string" datatypeLibrary="" ns="">f</value>
@@ -15012,22 +15012,22 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="weight_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="weight__v_AG_StrokeAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="color_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="color__v_AG_StrokeAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="opacity_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="opacity__v_AG_StrokeAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="linestyle_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="linestyle__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">single</value>
               <value type="string" datatypeLibrary="" ns="">thinThin</value>
@@ -15038,12 +15038,12 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="miterlimit_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="miterlimit__v_AG_StrokeAttributes" ns="">
             <data type="decimal" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="joinstyle_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="joinstyle__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">round</value>
               <value type="string" datatypeLibrary="" ns="">bevel</value>
@@ -15052,7 +15052,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="endcap_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="endcap__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">flat</value>
               <value type="string" datatypeLibrary="" ns="">square</value>
@@ -15061,12 +15061,12 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="dashstyle_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="dashstyle__v_AG_StrokeAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="filltype_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="filltype__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">solid</value>
               <value type="string" datatypeLibrary="" ns="">gradient</value>
@@ -15078,12 +15078,12 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="src_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="src__v_AG_StrokeAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="imageaspect_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="imageaspect__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">ignore</value>
               <value type="string" datatypeLibrary="" ns="">atMost</value>
@@ -15092,12 +15092,12 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="imagesize_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="imagesize__v_AG_StrokeAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="imagealignshape_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="imagealignshape__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">t</value>
               <value type="string" datatypeLibrary="" ns="">f</value>
@@ -15107,12 +15107,12 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="color2_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="color2__v_AG_StrokeAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="startarrow_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="startarrow__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">none</value>
               <value type="string" datatypeLibrary="" ns="">block</value>
@@ -15124,7 +15124,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="startarrowwidth_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="startarrowwidth__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">narrow</value>
               <value type="string" datatypeLibrary="" ns="">medium</value>
@@ -15133,7 +15133,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="startarrowlength_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="startarrowlength__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">short</value>
               <value type="string" datatypeLibrary="" ns="">medium</value>
@@ -15142,7 +15142,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="endarrow_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="endarrow__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">none</value>
               <value type="string" datatypeLibrary="" ns="">block</value>
@@ -15154,7 +15154,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="endarrowwidth_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="endarrowwidth__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">narrow</value>
               <value type="string" datatypeLibrary="" ns="">medium</value>
@@ -15163,7 +15163,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="endarrowlength_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="endarrowlength__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">short</value>
               <value type="string" datatypeLibrary="" ns="">medium</value>
@@ -15202,7 +15202,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="insetpen_AG_StrokeAttributes__v_AG_StrokeAttributes" ns="">
+          <attribute name="insetpen__v_AG_StrokeAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">t</value>
               <value type="string" datatypeLibrary="" ns="">f</value>
@@ -16715,47 +16715,47 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="src_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="src__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="cropleft_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="cropleft__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="croptop_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="croptop__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="cropright_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="cropright__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="cropbottom_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="cropbottom__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="gain_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="gain__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="blacklevel_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="blacklevel__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="gamma_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="gamma__v_AG_ImageAttributes" ns="">
             <data type="string" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"/>
           </attribute>
         </optional>
         <optional>
-          <attribute name="grayscale_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="grayscale__v_AG_ImageAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">t</value>
               <value type="string" datatypeLibrary="" ns="">f</value>
@@ -16765,7 +16765,7 @@
           </attribute>
         </optional>
         <optional>
-          <attribute name="bilevel_AG_ImageAttributes__v_AG_ImageAttributes" ns="">
+          <attribute name="bilevel__v_AG_ImageAttributes" ns="">
             <choice>
               <value type="string" datatypeLibrary="" ns="">t</value>
               <value type="string" datatypeLibrary="" ns="">f</value>

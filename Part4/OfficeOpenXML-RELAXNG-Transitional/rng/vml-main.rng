@@ -255,159 +255,159 @@
   </define>
   <define name="v_AG_ImageAttributes">
     <optional>
-      <attribute name="src_AG_ImageAttributes">
+      <attribute name="src">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="cropleft_AG_ImageAttributes">
+      <attribute name="cropleft">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="croptop_AG_ImageAttributes">
+      <attribute name="croptop">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="cropright_AG_ImageAttributes">
+      <attribute name="cropright">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="cropbottom_AG_ImageAttributes">
+      <attribute name="cropbottom">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="gain_AG_ImageAttributes">
+      <attribute name="gain">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="blacklevel_AG_ImageAttributes">
+      <attribute name="blacklevel">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="gamma_AG_ImageAttributes">
+      <attribute name="gamma">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="grayscale_AG_ImageAttributes">
+      <attribute name="grayscale">
         <ref name="s_ST_TrueFalse"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="bilevel_AG_ImageAttributes">
+      <attribute name="bilevel">
         <ref name="s_ST_TrueFalse"/>
       </attribute>
     </optional>
   </define>
   <define name="v_AG_StrokeAttributes">
     <optional>
-      <attribute name="on_AG_StrokeAttributes">
+      <attribute name="on">
         <ref name="s_ST_TrueFalse"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="weight_AG_StrokeAttributes">
+      <attribute name="weight">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="color_AG_StrokeAttributes">
+      <attribute name="color">
         <ref name="s_ST_ColorType"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="opacity_AG_StrokeAttributes">
+      <attribute name="opacity">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="linestyle_AG_StrokeAttributes">
+      <attribute name="linestyle">
         <ref name="v_ST_StrokeLineStyle"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="miterlimit_AG_StrokeAttributes">
+      <attribute name="miterlimit">
         <data type="decimal"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="joinstyle_AG_StrokeAttributes">
+      <attribute name="joinstyle">
         <ref name="v_ST_StrokeJoinStyle"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="endcap_AG_StrokeAttributes">
+      <attribute name="endcap">
         <ref name="v_ST_StrokeEndCap"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="dashstyle_AG_StrokeAttributes">
+      <attribute name="dashstyle">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="filltype_AG_StrokeAttributes">
+      <attribute name="filltype">
         <ref name="v_ST_FillType"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="src_AG_StrokeAttributes">
+      <attribute name="src">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="imageaspect_AG_StrokeAttributes">
+      <attribute name="imageaspect">
         <ref name="v_ST_ImageAspect"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="imagesize_AG_StrokeAttributes">
+      <attribute name="imagesize">
         <data type="string"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="imagealignshape_AG_StrokeAttributes">
+      <attribute name="imagealignshape">
         <ref name="s_ST_TrueFalse"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="color2_AG_StrokeAttributes">
+      <attribute name="color2">
         <ref name="s_ST_ColorType"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="startarrow_AG_StrokeAttributes">
+      <attribute name="startarrow">
         <ref name="v_ST_StrokeArrowType"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="startarrowwidth_AG_StrokeAttributes">
+      <attribute name="startarrowwidth">
         <ref name="v_ST_StrokeArrowWidth"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="startarrowlength_AG_StrokeAttributes">
+      <attribute name="startarrowlength">
         <ref name="v_ST_StrokeArrowLength"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="endarrow_AG_StrokeAttributes">
+      <attribute name="endarrow">
         <ref name="v_ST_StrokeArrowType"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="endarrowwidth_AG_StrokeAttributes">
+      <attribute name="endarrowwidth">
         <ref name="v_ST_StrokeArrowWidth"/>
       </attribute>
     </optional>
     <optional>
-      <attribute name="endarrowlength_AG_StrokeAttributes">
+      <attribute name="endarrowlength">
         <ref name="v_ST_StrokeArrowLength"/>
       </attribute>
     </optional>
@@ -427,7 +427,7 @@
       <ref name="r_id"/>
     </optional>
     <optional>
-      <attribute name="insetpen_AG_StrokeAttributes">
+      <attribute name="insetpen">
         <ref name="s_ST_TrueFalse"/>
       </attribute>
     </optional>
