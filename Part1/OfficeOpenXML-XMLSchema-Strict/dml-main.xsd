@@ -2,6 +2,12 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:r="http://purl.oclc.org/ooxml/officeDocument/relationships"
   xmlns:s="http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
+  xmlns:ddgrm="http://purl.oclc.org/ooxml/drawingml/diagram"
+  xmlns:dchrt="http://purl.oclc.org/ooxml/drawingml/chart"
+  xmlns:dpct="http://purl.oclc.org/ooxml/drawingml/picture"
+  xmlns:dlckcnv="http://purl.oclc.org/ooxml/drawingml/lockedCanvas"
+  xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"
+  xmlns:wp="http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
   xmlns="http://purl.oclc.org/ooxml/drawingml/main"
   targetNamespace="http://purl.oclc.org/ooxml/drawingml/main" elementFormDefault="qualified">
   <xsd:import namespace="http://purl.oclc.org/ooxml/officeDocument/relationships"
@@ -15,6 +21,10 @@
     schemaLocation="dml-picture.xsd"/>
   <xsd:import namespace="http://purl.oclc.org/ooxml/drawingml/lockedCanvas"
     schemaLocation="dml-lockedCanvas.xsd"/>
+  <xsd:import namespace="http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
+    schemaLocation="dml-wordprocessingDrawing.xsd"/>
+  <xsd:import namespace="http://purl.oclc.org/ooxml/presentationml/main"
+    schemaLocation="pml.xsd"/>
   <xsd:complexType name="CT_AudioFile">
     <xsd:sequence>
       <xsd:element name="extLst" type="CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
@@ -841,7 +851,18 @@
   </xsd:complexType>
   <xsd:complexType name="CT_GraphicalObjectData">
     <xsd:sequence>
-      <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="strict"/>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="tbl"/>
+        <xsd:element ref="ddgrm:relIds"/>
+        <xsd:element ref="dchrt:chart"/>
+        <xsd:element ref="dpct:pic"/>
+        <xsd:element ref="dlckcnv:lockedCanvas"/>
+        <xsd:element ref="p:oleObj"/>
+        <xsd:element ref="wp:wpc"/>
+        <xsd:element ref="wp:wgp"/>
+        <xsd:element ref="wp:wsp"/>
+        <xsd:any namespace="##other" processContents="lax"/>
+      </xsd:choice>
     </xsd:sequence>
     <xsd:attribute name="uri" type="xsd:token" use="required"/>
   </xsd:complexType>

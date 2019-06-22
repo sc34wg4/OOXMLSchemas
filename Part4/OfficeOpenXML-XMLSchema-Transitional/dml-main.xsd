@@ -2,6 +2,13 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
   xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes"
+  xmlns:ddgrm="http://schemas.openxmlformats.org/drawingml/2006/diagram"
+  xmlns:dchrt="http://schemas.openxmlformats.org/drawingml/2006/chart"
+  xmlns:dpct="http://schemas.openxmlformats.org/drawingml/2006/picture"
+  xmlns:dcmpt="http://schemas.openxmlformats.org/drawingml/2006/compatibility"
+  xmlns:dlckcnv="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"
+  xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
   xmlns="http://schemas.openxmlformats.org/drawingml/2006/main"
   targetNamespace="http://schemas.openxmlformats.org/drawingml/2006/main"
   elementFormDefault="qualified">
@@ -15,8 +22,14 @@
     schemaLocation="dml-chart.xsd"/>
   <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/picture"
     schemaLocation="dml-picture.xsd"/>
+  <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/compatibility"
+    schemaLocation="dml-compatibility.xsd"/>
   <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"
     schemaLocation="dml-lockedCanvas.xsd"/>
+  <xsd:import namespace="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+    schemaLocation="dml-wordprocessingDrawing.xsd"/>
+  <xsd:import namespace="http://schemas.openxmlformats.org/presentationml/2006/main"
+    schemaLocation="pml.xsd"/>
   <xsd:complexType name="CT_AudioFile">
     <xsd:sequence>
       <xsd:element name="extLst" type="CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
@@ -863,7 +876,19 @@
   </xsd:complexType>
   <xsd:complexType name="CT_GraphicalObjectData">
     <xsd:sequence>
-      <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="strict"/>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="tbl"/>
+        <xsd:element ref="ddgrm:relIds"/>
+        <xsd:element ref="dchrt:chart"/>
+        <xsd:element ref="dpct:pic"/>
+        <xsd:element ref="dcmpt:legacyDrawing"/>
+        <xsd:element ref="dlckcnv:lockedCanvas"/>
+        <xsd:element ref="p:oleObj"/>
+        <xsd:element ref="wp:wpc"/>
+        <xsd:element ref="wp:wgp"/>
+        <xsd:element ref="wp:wsp"/>
+        <xsd:any namespace="##other" processContents="lax"/>
+      </xsd:choice>
     </xsd:sequence>
     <xsd:attribute name="uri" type="xsd:token" use="required"/>
   </xsd:complexType>
