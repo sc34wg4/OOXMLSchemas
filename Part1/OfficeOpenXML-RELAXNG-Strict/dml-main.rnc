@@ -688,10 +688,17 @@ graphicDataLockedCanvasUri=
   xsd:token "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"
 graphicDataOleObjUri=
   xsd:token "http://schemas.openxmlformats.org/presentationml/2006/ole"
+graphicDataWpcUri=
+  xsd:token "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"
+graphicDataWgpUri=
+  xsd:token "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup"
+graphicDataWspUri=
+  xsd:token "http://schemas.microsoft.com/office/word/2010/wordprocessingShape"
 graphicDataKnownUris=
   graphicDataTblUri | graphicDataRelIdsUri | graphicDataChartUri
   | graphicDataPicUri
   | graphicDataLockedCanvasUri | graphicDataOleObjUri
+  | graphicDataWpcUri | graphicDataWgpUri | graphicDataWspUri
 
 a_CT_GraphicalObjectData =
   (attribute uri {graphicDataTblUri}, a_tbl)
@@ -700,6 +707,9 @@ a_CT_GraphicalObjectData =
 | (attribute uri {graphicDataPicUri}, dpct_pic)
 | (attribute uri {graphicDataLockedCanvasUri}, dlckcnv_lockedCanvas)
 | (attribute uri {graphicDataOleObjUri}, p_oleObj)
+| (attribute uri {graphicDataWpcUri}, wp_wpc)
+| (attribute uri {graphicDataWgpUri}, wp_wgp)
+| (attribute uri {graphicDataWspUri}, wp_wsp)
 | (attribute uri {xsd:token - graphicDataKnownUris }, anyElement)
 
 a_CT_GraphicalObject = element graphicData { a_CT_GraphicalObjectData }
