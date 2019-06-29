@@ -675,14 +675,33 @@ a_CT_NonVisualContentPartProperties =
   attribute isComment { xsd:boolean }?,
   element cpLocks { a_CT_ContentPartLocking }?,
   element extLst { a_CT_OfficeArtExtensionList }?
+
+graphicDataTblUri=
+  xsd:token "http://schemas.openxmlformats.org/drawingml/2006/table"
+graphicDataRelIdsUri=
+  xsd:token "http://schemas.openxmlformats.org/drawingml/2006/diagram"
+graphicDataChartUri=
+  xsd:token "http://schemas.openxmlformats.org/drawingml/2006/chart"
+graphicDataPicUri=
+  xsd:token "http://schemas.openxmlformats.org/drawingml/2006/picture"
+graphicDataLockedCanvasUri=
+  xsd:token "http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas"
+graphicDataOleObjUri=
+  xsd:token "http://schemas.openxmlformats.org/presentationml/2006/ole"
+graphicDataKnownUris=
+  graphicDataTblUri | graphicDataRelIdsUri | graphicDataChartUri
+  | graphicDataPicUri
+  | graphicDataLockedCanvasUri | graphicDataOleObjUri
+
 a_CT_GraphicalObjectData =
-  attribute uri { xsd:token },
-  a_CT_GraphicalObjectData_any*
-a_CT_GraphicalObjectData_any =
-  element * - (o:* | v:* | w10:* | x:*) {
-    anyAttribute*,
-    mixed { anyElement* }
-  }
+  (attribute uri {graphicDataTblUri}, a_tbl)
+| (attribute uri {graphicDataRelIdsUri}, ddgrm_relIds)
+| (attribute uri {graphicDataChartUri}, dchrt_chart)
+| (attribute uri {graphicDataPicUri}, dpct_pic)
+| (attribute uri {graphicDataLockedCanvasUri}, dlckcnv_lockedCanvas)
+| (attribute uri {graphicDataOleObjUri}, p_oleObj)
+| (attribute uri {xsd:token - graphicDataKnownUris}, anyElement)
+
 a_CT_GraphicalObject = element graphicData { a_CT_GraphicalObjectData }
 a_graphic = element graphic { a_CT_GraphicalObject }
 a_ST_ChartBuildStep =
