@@ -2262,33 +2262,19 @@ a_EG_TextUnderlineFill =
 a_ST_TextStrikeType = "noStrike" | "sngStrike" | "dblStrike"
 a_ST_TextCapsType = "none" | "small" | "all"
 a_CT_TextCharacterProperties =
-  
-  ## default value: false
   attribute kumimoji { xsd:boolean }?,
   attribute lang { s_ST_Lang }?,
   attribute altLang { s_ST_Lang }?,
   attribute sz { a_ST_TextFontSize }?,
-  
-  ## default value: false
   attribute b { xsd:boolean }?,
-
-  ## default value: false
   attribute i { xsd:boolean }?,
-  
-  ## default value: false
   attribute u { a_ST_TextUnderlineType }?,
-  
-  ## default value: false
   attribute strike { a_ST_TextStrikeType }?,
   attribute kern { a_ST_TextNonNegativePoint }?,
   
   ## default value: none
   attribute cap { a_ST_TextCapsType }?,
-  
-  ## default value: 0
   attribute spc { a_ST_TextPoint }?,
-  
-  ## default value: false
   attribute normalizeH { xsd:boolean }?,
   attribute baseline { a_ST_Percentage }?,
   

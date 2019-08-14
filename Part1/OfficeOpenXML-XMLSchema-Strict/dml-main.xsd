@@ -2886,18 +2886,18 @@
       <xsd:element name="rtl" type="CT_Boolean" minOccurs="0"/>
       <xsd:element name="extLst" type="CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="kumimoji" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="kumimoji" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="lang" type="s:ST_Lang" use="optional"/>
     <xsd:attribute name="altLang" type="s:ST_Lang" use="optional"/>
     <xsd:attribute name="sz" type="ST_TextFontSize" use="optional"/>
-    <xsd:attribute name="b" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="i" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="u" type="ST_TextUnderlineType" use="optional" default="false"/>
-    <xsd:attribute name="strike" type="ST_TextStrikeType" use="optional" default="false"/>
+    <xsd:attribute name="b" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="i" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="u" type="ST_TextUnderlineType" use="optional"/>
+    <xsd:attribute name="strike" type="ST_TextStrikeType" use="optional"/>
     <xsd:attribute name="kern" type="ST_TextNonNegativePoint" use="optional"/>
     <xsd:attribute name="cap" type="ST_TextCapsType" use="optional" default="none"/>
-    <xsd:attribute name="spc" type="ST_TextPoint" use="optional" default="0"/>
-    <xsd:attribute name="normalizeH" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="spc" type="ST_TextPoint" use="optional"/>
+    <xsd:attribute name="normalizeH" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="baseline" type="ST_Percentage" use="optional"/>
     <xsd:attribute name="noProof" type="xsd:boolean" use="optional" default="0"/>
     <xsd:attribute name="dirty" type="xsd:boolean" use="optional" default="true"/>
