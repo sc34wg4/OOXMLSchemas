@@ -89,16 +89,22 @@ dchrt_CT_LayoutMode =
   
   ## default value: factor
   attribute val { dchrt_ST_LayoutMode }?
+dchrt_ST_LayoutPosition =  xsd:double { minInclusive="-1" maxInclusive="1" }
+dchrt_CT_LayoutPosition = 
+  attribute val { dchrt_ST_LayoutPosition }
+dchrt_ST_LayoutDimension =  xsd:double { minInclusive="0" maxInclusive="1" }
+dchrt_CT_LayoutDimension = 
+  attribute val { dchrt_ST_LayoutDimension}
 dchrt_CT_ManualLayout =
   element layoutTarget { dchrt_CT_LayoutTarget }?,
   element xMode { dchrt_CT_LayoutMode }?,
   element yMode { dchrt_CT_LayoutMode }?,
   element wMode { dchrt_CT_LayoutMode }?,
   element hMode { dchrt_CT_LayoutMode }?,
-  element x { dchrt_CT_Double }?,
-  element y { dchrt_CT_Double }?,
-  element w { dchrt_CT_Double }?,
-  element h { dchrt_CT_Double }?,
+  element x { dchrt_CT_LayoutPosition }?,
+  element y { dchrt_CT_LayoutPosition }?,
+  element w { dchrt_CT_LayoutDimension }?,
+  element h { dchrt_CT_LayoutDimension }?,
   element extLst { dchrt_CT_ExtensionList }?
 dchrt_CT_Layout =
   element manualLayout { dchrt_CT_ManualLayout }?,
