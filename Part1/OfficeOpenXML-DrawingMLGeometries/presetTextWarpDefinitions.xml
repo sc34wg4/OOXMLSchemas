@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <presetTextWarpDefinitions>
     <textArchDown>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 0"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj 21599999"/>
             <gd name="v1" fmla="+- 10800000 0 adval"/>
             <gd name="v2" fmla="+- 32400000 0 adval"/>
@@ -32,12 +32,12 @@
             <gd name="x2" fmla="+- hc dx2 0"/>
             <gd name="y2" fmla="+- vc dy2 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefAng="adj" minAng="0" maxAng="21599999">
                 <pos x="x1" y="y1"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x2" y="y2"/>
@@ -47,11 +47,11 @@
         </pathLst>
     </textArchDown>
     <textArchDownPour>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val 0"/>
             <gd name="adj2" fmla="val 25000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj1 21599999"/>
             <gd name="v1" fmla="+- 10800000 0 adval"/>
             <gd name="v2" fmla="+- 32400000 0 adval"/>
@@ -89,13 +89,13 @@
             <gd name="x3" fmla="+- hc dx3 0"/>
             <gd name="y3" fmla="+- vc dy3 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefR="adj2" minR="0" maxR="100000" gdRefAng="adj1" minAng="0"
                 maxAng="21599999">
                 <pos x="x2" y="y2"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x3" y="y3"/>
@@ -111,10 +111,10 @@
         </pathLst>
     </textArchDownPour>
     <textArchUp>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val cd2"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj 21599999"/>
             <gd name="v1" fmla="+- 10800000 0 adval"/>
             <gd name="v2" fmla="+- 32400000 0 adval"/>
@@ -133,12 +133,12 @@
             <gd name="x1" fmla="+- hc dx1 0"/>
             <gd name="y1" fmla="+- vc dy1 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefAng="adj" minAng="0" maxAng="21599999">
                 <pos x="x1" y="y1"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x1" y="y1"/>
@@ -148,11 +148,11 @@
         </pathLst>
     </textArchUp>
     <textArchUpPour>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val cd2"/>
             <gd name="adj2" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj1 21599999"/>
             <gd name="v1" fmla="+- 10800000 0 adval"/>
             <gd name="v2" fmla="+- 32400000 0 adval"/>
@@ -181,13 +181,13 @@
             <gd name="x2" fmla="+- hc dx2 0"/>
             <gd name="y2" fmla="+- vc dy2 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefR="adj2" minR="0" maxR="100000" gdRefAng="adj1" minAng="0"
                 maxAng="21599999">
                 <pos x="x2" y="y2"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x1" y="y1"/>
@@ -203,10 +203,10 @@
         </pathLst>
     </textArchUpPour>
     <textButton>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 10800000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj 21599999"/>
             <gd name="bot" fmla="+- 5400000 0 adval"/>
             <gd name="lef" fmla="+- 10800000 0 adval"/>
@@ -250,12 +250,12 @@
             <gd name="x3" fmla="+- hc dx3 0"/>
             <gd name="y3" fmla="+- vc dy3 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefAng="adj" minAng="0" maxAng="21599999">
                 <pos x="x3" y="y3"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x1" y="y1"/>
@@ -279,11 +279,11 @@
         </pathLst>
     </textButton>
     <textButtonPour>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val cd2"/>
             <gd name="adj2" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj1 21599999"/>
             <gd name="bot" fmla="+- 5400000 0 adval"/>
             <gd name="lef" fmla="+- 10800000 0 adval"/>
@@ -356,13 +356,13 @@
             <gd name="xadj" fmla="+- hc dxadj 0"/>
             <gd name="yadj" fmla="+- vc dyadj 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefR="adj2" minR="0" maxR="100000" gdRefAng="adj1" minAng="0"
                 maxAng="21599999">
                 <pos x="xadj" y="yadj"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x1" y="y1"/>
@@ -406,22 +406,22 @@
         </pathLst>
     </textButtonPour>
     <textCanDown>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 14286"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 33333"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y0" fmla="+- t dy 0"/>
             <gd name="y1" fmla="+- b 0 dy"/>
             <gd name="ncd2" fmla="*/ cd2 -1 1"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="33333">
                 <pos x="hc" y="y0"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -437,22 +437,22 @@
         </pathLst>
     </textCanDown>
     <textCanUp>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 85714"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 66667 adj 100000"/>
             <gd name="dy1" fmla="*/ a h 100000"/>
             <gd name="dy" fmla="+- h 0 dy1"/>
             <gd name="y0" fmla="+- t dy1 0"/>
             <gd name="y1" fmla="+- t dy 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="66667" maxY="100000">
                 <pos x="hc" y="y0"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y1"/>
@@ -468,10 +468,10 @@
         </pathLst>
     </textCanUp>
     <textCascadeDown>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 44444"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 28570 adj 100000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t dy 0"/>
@@ -479,12 +479,12 @@
             <gd name="dy3" fmla="*/ dy2 1 4"/>
             <gd name="y2" fmla="+- t dy3 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="28570" maxY="100000">
                 <pos x="l" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -504,10 +504,10 @@
         </pathLst>
     </textCascadeDown>
     <textCascadeUp>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 44444"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 28570 adj 100000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t dy 0"/>
@@ -515,12 +515,12 @@
             <gd name="dy3" fmla="*/ dy2 1 4"/>
             <gd name="y2" fmla="+- t dy3 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="28570" maxY="100000">
                 <pos x="r" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y2"/>
@@ -540,20 +540,20 @@
         </pathLst>
     </textCascadeUp>
     <textChevron>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 25000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 50000"/>
             <gd name="y" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t b y"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="50000">
                 <pos x="l" y="y"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y"/>
@@ -579,20 +579,20 @@
         </pathLst>
     </textChevron>
     <textChevronInverted>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 75000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 50000 adj 100000"/>
             <gd name="y" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- b 0 y"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="50000" maxY="100000">
                 <pos x="l" y="y"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -618,10 +618,10 @@
         </pathLst>
     </textChevronInverted>
     <textCircle>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 10800000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj 21599999"/>
             <gd name="d0" fmla="+- adval 0 10800000"/>
             <gd name="d1" fmla="+- 10800000 0 adval"/>
@@ -636,12 +636,12 @@
             <gd name="x1" fmla="+- hc dx1 0"/>
             <gd name="y1" fmla="+- vc dy1 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefAng="adj" minAng="0" maxAng="21599999">
                 <pos x="x1" y="y1"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x1" y="y1"/>
@@ -651,11 +651,11 @@
         </pathLst>
     </textCircle>
     <textCirclePour>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val cd2"/>
             <gd name="adj2" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adval" fmla="pin 0 adj1 21599999"/>
             <gd name="d0" fmla="+- adval 0 10800000"/>
             <gd name="d1" fmla="+- 10800000 0 adval"/>
@@ -680,13 +680,13 @@
             <gd name="x2" fmla="+- hc dx2 0"/>
             <gd name="y2" fmla="+- vc dy2 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahPolar gdRefR="adj2" minR="0" maxR="100000" gdRefAng="adj1" minAng="0"
                 maxAng="21599999">
                 <pos x="x2" y="y2"/>
             </ahPolar>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x1" y="y1"/>
@@ -702,10 +702,10 @@
         </pathLst>
     </textCirclePour>
     <textCurveDown>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 45977"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 56338"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="gd1" fmla="*/ dy 3 4"/>
@@ -724,12 +724,12 @@
             <gd name="x1" fmla="+- l wd3 0"/>
             <gd name="x2" fmla="+- r 0 wd3"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="56338">
                 <pos x="r" y="y0"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -753,10 +753,10 @@
         </pathLst>
     </textCurveDown>
     <textCurveUp>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 45977"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 56338"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="gd1" fmla="*/ dy 3 4"/>
@@ -775,12 +775,12 @@
             <gd name="x1" fmla="+- l wd3 0"/>
             <gd name="x2" fmla="+- r 0 wd3"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="56338">
                 <pos x="l" y="y0"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y0"/>
@@ -804,10 +804,10 @@
         </pathLst>
     </textCurveUp>
     <textDeflate>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 18750"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 37500"/>
             <gd name="dy" fmla="*/ a ss 100000"/>
             <gd name="gd0" fmla="*/ dy 4 3"/>
@@ -818,12 +818,12 @@
             <gd name="x0" fmla="+- l wd3 0"/>
             <gd name="x1" fmla="+- r 0 wd3"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="37500">
                 <pos x="hc" y="adjY"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -847,22 +847,22 @@
         </pathLst>
     </textDeflate>
     <textDeflateBottom>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 6250 adj 100000"/>
             <gd name="dy" fmla="*/ a ss 100000"/>
             <gd name="dy2" fmla="+- h 0 dy"/>
             <gd name="y1" fmla="+- t dy 0"/>
             <gd name="cp" fmla="+- y1 0 dy2"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="6250" maxY="100000">
                 <pos x="hc" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -883,10 +883,10 @@
         </pathLst>
     </textDeflateBottom>
     <textDeflateInflate>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 35000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 5000 adj 95000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="del" fmla="*/ h 5 100"/>
@@ -897,12 +897,12 @@
             <gd name="y3" fmla="+- yh yh dh1"/>
             <gd name="y4" fmla="+- yl yl dh2"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="5000" maxY="95000">
                 <pos x="hc" y="dy"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -940,10 +940,10 @@
         </pathLst>
     </textDeflateInflate>
     <textDeflateInflateDeflate>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 25000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 3000 adj 47000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="del" fmla="*/ h 3 100"/>
@@ -961,12 +961,12 @@
             <gd name="y3" fmla="+- yh2 yh2 ey3"/>
             <gd name="y4" fmla="+- yl2 yl2 ey4"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="3000" maxY="47000">
                 <pos x="hc" y="dy"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -1022,21 +1022,21 @@
         </pathLst>
     </textDeflateInflateDeflate>
     <textDeflateTop>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 93750"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t dy 0"/>
             <gd name="cp" fmla="+- y1 dy 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="93750">
                 <pos x="hc" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -1057,11 +1057,11 @@
         </pathLst>
     </textDeflateTop>
     <textDoubleWave1>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val 6250"/>
             <gd name="adj2" fmla="val 0"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a1" fmla="pin 0 adj1 12500"/>
             <gd name="a2" fmla="pin -10000 adj2 10000"/>
             <gd name="y1" fmla="*/ h a1 100000"/>
@@ -1095,7 +1095,7 @@
             <gd name="x16" fmla="+- r 0 x1"/>
             <gd name="xAdj" fmla="+- hc of 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj1" minY="0" maxY="12500">
                 <pos x="l" y="y1"/>
             </ahXY>
@@ -1103,7 +1103,7 @@
                 <pos x="xAdj" y="b"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x2" y="y1"/>
@@ -1137,21 +1137,21 @@
         </pathLst>
     </textDoubleWave1>
     <textFadeDown>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 33333"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 49999"/>
             <gd name="dx" fmla="*/ a w 100000"/>
             <gd name="x1" fmla="+- l dx 0"/>
             <gd name="x2" fmla="+- r 0 dx"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefX="adj" minX="0" maxX="49999">
                 <pos x="x1" y="b"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -1171,21 +1171,21 @@
         </pathLst>
     </textFadeDown>
     <textFadeLeft>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 33333"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 49999"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t dy 0"/>
             <gd name="y2" fmla="+- b 0 dy"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="49999">
                 <pos x="l" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y1"/>
@@ -1205,21 +1205,21 @@
         </pathLst>
     </textFadeLeft>
     <textFadeRight>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 33333"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 49999"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t dy 0"/>
             <gd name="y2" fmla="+- b 0 dy"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="49999">
                 <pos x="r" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -1239,21 +1239,21 @@
         </pathLst>
     </textFadeRight>
     <textFadeUp>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 33333"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 49999"/>
             <gd name="dx" fmla="*/ a w 100000"/>
             <gd name="x1" fmla="+- l dx 0"/>
             <gd name="x2" fmla="+- r 0 dx"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefX="adj" minX="0" maxX="49999">
                 <pos x="x1" y="t"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x1" y="t"/>
@@ -1273,10 +1273,10 @@
         </pathLst>
     </textFadeUp>
     <textInflate>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 18750"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 20000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="gd" fmla="*/ dy 1 3"/>
@@ -1289,12 +1289,12 @@
             <gd name="x0" fmla="+- l wd3 0"/>
             <gd name="x1" fmla="+- r 0 wd3"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="20000">
                 <pos x="l" y="ty"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="ty"/>
@@ -1318,20 +1318,20 @@
         </pathLst>
     </textInflate>
     <textInflateBottom>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 60000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 60000 adj 100000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="ty" fmla="+- t dy 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="60000" maxY="100000">
                 <pos x="l" y="ty"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -1352,20 +1352,20 @@
         </pathLst>
     </textInflateBottom>
     <textInflateTop>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 40000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 50000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="ty" fmla="+- t dy 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="50000">
                 <pos x="l" y="ty"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="ty"/>
@@ -1386,10 +1386,10 @@
         </pathLst>
     </textInflateTop>
     <textPlain>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 30000 adj 70000"/>
             <gd name="mid" fmla="*/ a w 100000"/>
             <gd name="midDir" fmla="+- mid 0 hc"/>
@@ -1405,12 +1405,12 @@
             <gd name="blx" fmla="?: midDir xl l"/>
             <gd name="brx" fmla="?: midDir r xr"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefX="adj" minX="30000" maxX="70000">
                 <pos x="mid" y="b"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="tlx" y="t"/>
@@ -1430,10 +1430,10 @@
         </pathLst>
     </textPlain>
     <textRingInside>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 60000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 50000 adj 99000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y" fmla="+- t dy 0"/>
@@ -1441,12 +1441,12 @@
             <gd name="y1" fmla="+- t r 0"/>
             <gd name="y2" fmla="+- b 0 r"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="50000" maxY="99000">
                 <pos x="hc" y="y"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y1"/>
@@ -1462,10 +1462,10 @@
         </pathLst>
     </textRingInside>
     <textRingOutside>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 60000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 50000 adj 99000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y" fmla="+- t dy 0"/>
@@ -1473,12 +1473,12 @@
             <gd name="y1" fmla="+- t r 0"/>
             <gd name="y2" fmla="+- b 0 r"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="50000" maxY="99000">
                 <pos x="hc" y="y"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y1"/>
@@ -1494,21 +1494,21 @@
         </pathLst>
     </textRingOutside>
     <textSlantDown>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 44445"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 28569 adj 100000"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t dy 0"/>
             <gd name="y2" fmla="+- b 0 dy"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="28569" maxY="100000">
                 <pos x="l" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -1528,21 +1528,21 @@
         </pathLst>
     </textSlantDown>
     <textSlantUp>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 55555"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 71431"/>
             <gd name="dy" fmla="*/ a h 100000"/>
             <gd name="y1" fmla="+- t dy 0"/>
             <gd name="y2" fmla="+- b 0 dy"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="71431">
                 <pos x="l" y="y1"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y1"/>
@@ -1562,10 +1562,10 @@
         </pathLst>
     </textSlantUp>
     <textStop>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 25000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 14286 adj 50000"/>
             <gd name="dx" fmla="*/ w 1 3"/>
             <gd name="dy" fmla="*/ a h 100000"/>
@@ -1574,12 +1574,12 @@
             <gd name="y1" fmla="+- t dy 0"/>
             <gd name="y2" fmla="+- b 0 dy"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="14286" maxY="50000">
                 <pos x="l" y="dy"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y1"/>
@@ -1611,19 +1611,19 @@
         </pathLst>
     </textStop>
     <textTriangle>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 100000"/>
             <gd name="y" fmla="*/ a h 100000"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="100000">
                 <pos x="l" y="y"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="y"/>
@@ -1646,19 +1646,19 @@
         </pathLst>
     </textTriangle>
     <textTriangleInverted>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj" fmla="val 50000"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a" fmla="pin 0 adj 100000"/>
             <gd name="y" fmla="*/ a h 100000"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj" minY="0" maxY="100000">
                 <pos x="l" y="y"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="l" y="t"/>
@@ -1681,11 +1681,11 @@
         </pathLst>
     </textTriangleInverted>
     <textWave1>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val 12500"/>
             <gd name="adj2" fmla="val 0"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a1" fmla="pin 0 adj1 20000"/>
             <gd name="a2" fmla="pin -10000 adj2 10000"/>
             <gd name="y1" fmla="*/ h a1 100000"/>
@@ -1712,7 +1712,7 @@
             <gd name="x9" fmla="+- r 0 x1"/>
             <gd name="xAdj" fmla="+- hc of 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj1" minY="0" maxY="20000">
                 <pos x="l" y="y1"/>
             </ahXY>
@@ -1720,7 +1720,7 @@
                 <pos x="xAdj" y="b"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x2" y="y1"/>
@@ -1744,11 +1744,11 @@
         </pathLst>
     </textWave1>
     <textWave2>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val 12500"/>
             <gd name="adj2" fmla="val 0"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a1" fmla="pin 0 adj1 20000"/>
             <gd name="a2" fmla="pin -10000 adj2 10000"/>
             <gd name="y1" fmla="*/ h a1 100000"/>
@@ -1775,7 +1775,7 @@
             <gd name="x9" fmla="+- r 0 x1"/>
             <gd name="xAdj" fmla="+- hc of 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj1" minY="0" maxY="20000">
                 <pos x="l" y="y1"/>
             </ahXY>
@@ -1783,7 +1783,7 @@
                 <pos x="xAdj" y="b"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x2" y="y1"/>
@@ -1807,11 +1807,11 @@
         </pathLst>
     </textWave2>
     <textWave4>
-        <avLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <avLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="adj1" fmla="val 6250"/>
             <gd name="adj2" fmla="val 0"/>
         </avLst>
-        <gdLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <gdLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <gd name="a1" fmla="pin 0 adj1 12500"/>
             <gd name="a2" fmla="pin -10000 adj2 10000"/>
             <gd name="y1" fmla="*/ h a1 100000"/>
@@ -1845,7 +1845,7 @@
             <gd name="x16" fmla="+- r 0 x1"/>
             <gd name="xAdj" fmla="+- hc of 0"/>
         </gdLst>
-        <ahLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <ahXY gdRefY="adj1" minY="0" maxY="12500">
                 <pos x="l" y="y1"/>
             </ahXY>
@@ -1853,7 +1853,7 @@
                 <pos x="xAdj" y="b"/>
             </ahXY>
         </ahLst>
-        <pathLst xmlns="http://schemas.openxmlformats.org/drawingml/2006/main">
+        <pathLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
             <path>
                 <moveTo>
                     <pt x="x2" y="y1"/>
