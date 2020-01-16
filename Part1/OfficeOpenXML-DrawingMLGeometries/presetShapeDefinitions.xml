@@ -62,7 +62,6 @@
         <moveTo>
           <pt x="x1" y="t" />
         </moveTo>
-        <close />
         <lnTo>
           <pt x="x1" y="b" />
         </lnTo>
@@ -149,7 +148,6 @@
         <moveTo>
           <pt x="x1" y="t" />
         </moveTo>
-        <close />
         <lnTo>
           <pt x="x1" y="b" />
         </lnTo>
@@ -248,7 +246,6 @@
         <moveTo>
           <pt x="x1" y="t" />
         </moveTo>
-        <close />
         <lnTo>
           <pt x="x1" y="b" />
         </lnTo>
@@ -332,10 +329,10 @@
         <moveTo>
           <pt x="x1" y="t" />
         </moveTo>
-        <close />
         <lnTo>
           <pt x="x1" y="b" />
         </lnTo>
+        <close />
       </path>
       <path fill="none" extrusionOk="false">
         <moveTo>
@@ -419,7 +416,6 @@
         <moveTo>
           <pt x="x1" y="t" />
         </moveTo>
-        <close />
         <lnTo>
           <pt x="x1" y="b" />
         </lnTo>
@@ -17101,7 +17097,7 @@
     </gdLst>
 
     <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
-      <ahXY gdRefY="adj" minY="0" maxY="ssd2">
+      <ahXY gdRefY="adj" minY="0" maxY="50000">
         <pos x="hc" y="yAdj" />
       </ahXY>
     </ahLst>
@@ -17384,7 +17380,7 @@
     </gdLst>
 
     <ahLst xmlns="http://purl.oclc.org/ooxml/drawingml/main">
-      <ahXY gdRefY="adj" minY="0" maxY="ssd2">
+      <ahXY gdRefY="adj" minY="0" maxY="50000">
         <pos x="hc" y="yAdj" />
       </ahXY>
     </ahLst>
