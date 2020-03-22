@@ -928,7 +928,7 @@ dchrt_CT_ExternalData =
 dchrt_CT_PageSetup =
   
   ## default value: 1
-  attribute paperSize { xsd:unsignedInt }?,
+  attribute paperSize { s_ST_PaperSize }?,
   attribute paperHeight { s_ST_PositiveUniversalMeasure }?,
   attribute paperWidth { s_ST_PositiveUniversalMeasure }?,
   
