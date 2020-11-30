@@ -332,8 +332,7 @@
         <lnTo>
           <pt x="x1" y="b" />
         </lnTo>
-        <close />
-      </path>
+        </path>
       <path fill="none" extrusionOk="false">
         <moveTo>
           <pt x="x1" y="y1" />
@@ -514,7 +513,6 @@
         <moveTo>
           <pt x="x1" y="t" />
         </moveTo>
-        <close />
         <lnTo>
           <pt x="x1" y="b" />
         </lnTo>
