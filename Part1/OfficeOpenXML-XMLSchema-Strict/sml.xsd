@@ -2769,7 +2769,7 @@
     <xsd:attribute name="gridLinesSet" type="xsd:boolean" use="optional" default="true"/>
   </xsd:complexType>
   <xsd:complexType name="CT_PageSetup">
-    <xsd:attribute name="paperSize" type="xsd:unsignedInt" use="optional" default="1"/>
+    <xsd:attribute name="paperSize" type="s:ST_PaperSize" use="optional" default="1"/>
     <xsd:attribute name="paperHeight" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="paperWidth" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="scale" type="xsd:unsignedInt" use="optional" default="100"/>
@@ -2959,7 +2959,7 @@
     <xsd:attribute name="objects" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CsPageSetup">
-    <xsd:attribute name="paperSize" type="xsd:unsignedInt" use="optional" default="1"/>
+    <xsd:attribute name="paperSize" type="s:ST_PaperSize" use="optional" default="1"/>
     <xsd:attribute name="paperHeight" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="paperWidth" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="firstPageNumber" type="xsd:unsignedInt" use="optional" default="1"/>

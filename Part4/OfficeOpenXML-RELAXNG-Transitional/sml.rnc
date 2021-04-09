@@ -3189,7 +3189,7 @@ sml_CT_PrintOptions =
 sml_CT_PageSetup =
   
   ## default value: 1
-  attribute paperSize { xsd:unsignedInt }?,
+  attribute paperSize { s_ST_PaperSize }?,
   attribute paperHeight { s_ST_PositiveUniversalMeasure }?,
   attribute paperWidth { s_ST_PositiveUniversalMeasure }?,
   
@@ -3415,7 +3415,7 @@ sml_CT_ChartsheetProtection =
 sml_CT_CsPageSetup =
   
   ## default value: 1
-  attribute paperSize { xsd:unsignedInt }?,
+  attribute paperSize { s_ST_PaperSize }?,
   attribute paperHeight { s_ST_PositiveUniversalMeasure }?,
   attribute paperWidth { s_ST_PositiveUniversalMeasure }?,
   
