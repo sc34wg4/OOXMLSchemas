@@ -1187,10 +1187,16 @@ a_CT_TransformEffect =
 a_CT_NoFillProperties = empty
 a_CT_SolidColorFillProperties = a_EG_ColorChoice?
 a_CT_LinearShadeProperties =
+  
+  ## default value: 0
   attribute ang { a_ST_PositiveFixedAngle }?,
+  
+  ## default value: 1
   attribute scaled { xsd:boolean }?
 a_ST_PathShadeType = "shape" | "circle" | "rect"
 a_CT_PathShadeProperties =
+  
+  ## default value: shape
   attribute path { a_ST_PathShadeType }?,
   element fillToRect { a_CT_RelativeRect }?
 a_EG_ShadeProperties =
@@ -1716,7 +1722,11 @@ a_CT_LineEndProperties =
   
   ## default value: none
   attribute type { a_ST_LineEndType }?,
+  
+  ## default value: med
   attribute w { a_ST_LineEndWidth }?,
+  
+  ## default value: med
   attribute len { a_ST_LineEndLength }?
 a_EG_LineFillProperties =
   element noFill { a_CT_NoFillProperties }

@@ -1416,8 +1416,8 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_LinearShadeProperties">
-    <xsd:attribute name="ang" type="ST_PositiveFixedAngle" use="optional"/>
-    <xsd:attribute name="scaled" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="ang" type="ST_PositiveFixedAngle" use="optional" default="0"/>
+    <xsd:attribute name="scaled" type="xsd:boolean" use="optional" default="1"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_PathShadeType">
     <xsd:restriction base="xsd:token">
@@ -1430,7 +1430,7 @@
     <xsd:sequence>
       <xsd:element name="fillToRect" type="CT_RelativeRect" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="path" type="ST_PathShadeType" use="optional"/>
+    <xsd:attribute name="path" type="ST_PathShadeType" use="optional" default="shape"/>
   </xsd:complexType>
   <xsd:group name="EG_ShadeProperties">
     <xsd:choice>
@@ -2141,8 +2141,8 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_LineEndProperties">
     <xsd:attribute name="type" type="ST_LineEndType" use="optional" default="none"/>
-    <xsd:attribute name="w" type="ST_LineEndWidth" use="optional"/>
-    <xsd:attribute name="len" type="ST_LineEndLength" use="optional"/>
+    <xsd:attribute name="w" type="ST_LineEndWidth" use="optional" default="med"/>
+    <xsd:attribute name="len" type="ST_LineEndLength" use="optional" default="med"/>
   </xsd:complexType>
   <xsd:group name="EG_LineFillProperties">
     <xsd:choice>
