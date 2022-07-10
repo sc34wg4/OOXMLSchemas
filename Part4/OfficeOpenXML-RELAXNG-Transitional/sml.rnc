@@ -219,8 +219,8 @@ sml_CT_ObjectAnchor =
   
   ## default value: 0
   attribute z-order { xsd:unsignedInt }?,
-  xdr_from,
-  xdr_to
+  element from { xdr_CT_Marker },
+  element to { xdr_CT_Marker }
 sml_EG_ExtensionList = element ext { sml_CT_Extension }*
 sml_CT_ExtensionList = sml_EG_ExtensionList?
 sml_calcChain = element calcChain { sml_CT_CalcChain }

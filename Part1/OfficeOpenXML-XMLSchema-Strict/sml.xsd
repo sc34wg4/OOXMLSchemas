@@ -229,8 +229,8 @@
   </xsd:complexType>
   <xsd:complexType name="CT_ObjectAnchor">
     <xsd:sequence>
-      <xsd:element ref="xdr:from" minOccurs="1" maxOccurs="1"/>
-      <xsd:element ref="xdr:to" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="from" type="xdr:CT_Marker"/>
+      <xsd:element name="to" type="xdr:CT_Marker"/>
     </xsd:sequence>
     <xsd:attribute name="moveWithCells" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="sizeWithCells" type="xsd:boolean" use="optional" default="false"/>
