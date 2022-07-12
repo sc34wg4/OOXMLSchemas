@@ -8,8 +8,6 @@
   <xsd:import namespace="http://purl.oclc.org/ooxml/drawingml/main" schemaLocation="dml-main.xsd"/>
   <xsd:import schemaLocation="shared-relationshipReference.xsd"
     namespace="http://purl.oclc.org/ooxml/officeDocument/relationships"/>
-  <xsd:element name="from" type="CT_Marker"/>
-  <xsd:element name="to" type="CT_Marker"/>
   <xsd:complexType name="CT_AnchorClientData">
     <xsd:attribute name="fLocksWithSheet" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="fPrintsWithSheet" type="xsd:boolean" use="optional" default="true"/>
