@@ -9,4 +9,4 @@ Members of ISO/IEC JTC1/SC34/WG4 (OOXML) can contribute.
 
 # Maintainer
 
-MURATA Makoto (WG4 convenor)
+MURATA Makoto [FAMILY Given] (WG4 convenor)
