@@ -789,7 +789,7 @@ w_CT_Object =
    | element objectEmbed { w_CT_ObjectEmbed }
    | element movie { w_CT_Rel })?
 w_CT_Picture =
-  (w_any_vml_vml*, w_any_vml_office*)+,
+  w_any_vml_vml*,
   element movie { w_CT_Rel }?,
   element control { w_CT_Control }?
 w_CT_ObjectEmbed =
