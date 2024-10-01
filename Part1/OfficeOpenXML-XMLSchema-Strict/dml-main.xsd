@@ -852,12 +852,16 @@
   <xsd:complexType name="CT_GraphicalObjectData">
     <xsd:sequence>
       <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <!--
+        The following has to be removed due to the UPA constraint (https://en.wikipedia.org/wiki/Unique_Particle_Attribution).
+
         <xsd:element ref="tbl"/>
         <xsd:element ref="ddgrm:relIds"/>
         <xsd:element ref="dchrt:chart"/>
         <xsd:element ref="dpct:pic"/>
         <xsd:element ref="dlckcnv:lockedCanvas"/>
         <xsd:element ref="p:oleObj"/>
+	-->
         <xsd:any namespace="##other" processContents="lax"/>
       </xsd:choice>
     </xsd:sequence>
