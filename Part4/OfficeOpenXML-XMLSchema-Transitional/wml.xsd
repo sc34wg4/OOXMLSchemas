@@ -1788,6 +1788,7 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="default"/>
       <xsd:enumeration value="eastAsia"/>
+      <xsd:enumeration value="cs"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="ST_Theme">
