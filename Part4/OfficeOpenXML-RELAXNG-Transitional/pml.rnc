@@ -148,6 +148,8 @@ p_ST_TLTriggerEvent =
   | "onStopAudio"
 p_CT_TLTimeCondition =
   attribute evt { p_ST_TLTriggerEvent }?,
+
+  ## default value: 0
   attribute delay { p_ST_TLTime }?,
   (element tgtEl { p_CT_TLTimeTargetElement }
    | element tn { p_CT_TLTriggerTimeNodeID }
@@ -187,7 +189,11 @@ p_CT_TLCommonTimeNodeData =
   attribute id { p_ST_TLTimeNodeID }?,
   attribute presetID { xsd:int }?,
   attribute presetClass { p_ST_TLTimeNodePresetClassType }?,
+
+  ## default value: 0
   attribute presetSubtype { xsd:int }?,
+
+  ## default value: 0
   attribute dur { p_ST_TLTime }?,
   
   ## default value: 1000
@@ -205,17 +211,25 @@ p_CT_TLCommonTimeNodeData =
   
   ## default value: false
   attribute autoRev { xsd:boolean }?,
+
+  ## default value: always
   attribute restart { p_ST_TLTimeNodeRestartType }?,
   attribute fill { p_ST_TLTimeNodeFillType }?,
   attribute syncBehavior { p_ST_TLTimeNodeSyncType }?,
   attribute tmFilter { xsd:string }?,
   attribute evtFilter { xsd:string }?,
+
+  ## default value: true
   attribute display { xsd:boolean }?,
   attribute masterRel { p_ST_TLTimeNodeMasterRelation }?,
   attribute bldLvl { xsd:int }?,
   attribute grpId { xsd:unsignedInt }?,
+
+  ## default value: false
   attribute afterEffect { xsd:boolean }?,
   attribute nodeType { p_ST_TLTimeNodeType }?,
+
+  ## default value: false  
   attribute nodePh { xsd:boolean }?,
   element stCondLst { p_CT_TLTimeConditionList }?,
   element endCondLst { p_CT_TLTimeConditionList }?,
@@ -240,13 +254,21 @@ p_ST_TLBehaviorAccumulateType = "none" | "always"
 p_ST_TLBehaviorTransformType = "pt" | "img"
 p_ST_TLBehaviorOverrideType = "normal" | "childStyle"
 p_CT_TLCommonBehaviorData =
+
+  ## default value: base
   attribute additive { p_ST_TLBehaviorAdditiveType }?,
+
+  ## default value: none
   attribute accumulate { p_ST_TLBehaviorAccumulateType }?,
+
+  ## default value: pt
   attribute xfrmType { p_ST_TLBehaviorTransformType }?,
   attribute from { xsd:string }?,
   attribute to { xsd:string }?,
   attribute by { xsd:string }?,
   attribute rctx { xsd:string }?,
+
+  ## default value: normal
   attribute override { p_ST_TLBehaviorOverrideType }?,
   element cTn { p_CT_TLCommonTimeNodeData },
   element tgtEl { p_CT_TLTimeTargetElement },
@@ -276,7 +298,11 @@ p_CT_TLAnimateBehavior =
   attribute by { xsd:string }?,
   attribute from { xsd:string }?,
   attribute to { xsd:string }?,
+
+  ## default value: lin
   attribute calcmode { p_ST_TLAnimateBehaviorCalcMode }?,
+
+  ## default value: num
   attribute valueType { p_ST_TLAnimateBehaviorValueType }?,
   element cBhvr { p_CT_TLCommonBehaviorData },
   element tavLst { p_CT_TLTimeAnimateValueList }?
@@ -294,6 +320,8 @@ p_CT_TLByAnimateColorTransform =
 p_ST_TLAnimateColorSpace = "rgb" | "hsl"
 p_ST_TLAnimateColorDirection = "cw" | "ccw"
 p_CT_TLAnimateColorBehavior =
+
+  ## default value: rgb
   attribute clrSpc { p_ST_TLAnimateColorSpace }?,
   attribute dir { p_ST_TLAnimateColorDirection }?,
   element cBhvr { p_CT_TLCommonBehaviorData },
@@ -314,12 +342,24 @@ p_ST_TLAnimateMotionPathEditMode = "relative" | "fixed"
 p_CT_TLPoint =
   attribute x { a_ST_Percentage },
   attribute y { a_ST_Percentage }
+p_ST_AnimMotionPtsTypes =
+  xsd:string {
+    pattern = "[AFTSafts]*"
+  }
 p_CT_TLAnimateMotionBehavior =
+
+  ## default value: parent
   attribute origin { p_ST_TLAnimateMotionBehaviorOrigin }?,
+
+  ## default value: 
   attribute path { xsd:string }?,
+
+  ## default value: relative
   attribute pathEditMode { p_ST_TLAnimateMotionPathEditMode }?,
+
+  ## default value: 0
   attribute rAng { a_ST_Angle }?,
-  attribute ptsTypes { xsd:string }?,
+  attribute ptsTypes { p_ST_AnimMotionPtsTypes }?,
   element cBhvr { p_CT_TLCommonBehaviorData },
   element by { p_CT_TLPoint }?,
   element from { p_CT_TLPoint }?,
@@ -331,6 +371,8 @@ p_CT_TLAnimateRotationBehavior =
   attribute to { a_ST_Angle }?,
   element cBhvr { p_CT_TLCommonBehaviorData }
 p_CT_TLAnimateScaleBehavior =
+
+  ## default value: false
   attribute zoomContents { xsd:boolean }?,
   element cBhvr { p_CT_TLCommonBehaviorData },
   element by { p_CT_TLPoint }?,
@@ -338,6 +380,8 @@ p_CT_TLAnimateScaleBehavior =
   element to { p_CT_TLPoint }?
 p_ST_TLCommandType = "evt" | "call" | "verb"
 p_CT_TLCommandBehavior =
+
+  ## default value: call
   attribute type { p_ST_TLCommandType }?,
   attribute cmd { xsd:string }?,
   element cBhvr { p_CT_TLCommonBehaviorData }
@@ -632,7 +676,7 @@ p_CT_SlideSize =
   ## default value: custom
   attribute type { p_ST_SlideSizeType }?
 p_CT_Kinsoku =
-  attribute lang { xsd:string }?,
+  attribute lang { xsd:string },
   attribute invalStChars { xsd:string },
   attribute invalEndChars { xsd:string }
 p_ST_BookmarkIdSeed =
@@ -924,6 +968,8 @@ p_CT_GraphicalObjectFrameNonVisual =
   element cNvGraphicFramePr { a_CT_NonVisualGraphicFrameProperties },
   element nvPr { p_CT_ApplicationNonVisualDrawingProps }
 p_CT_GraphicalObjectFrame =
+
+  ## default value: auto
   attribute bwMode { a_ST_BlackWhiteMode }?,
   element nvGraphicFramePr { p_CT_GraphicalObjectFrameNonVisual },
   element xfrm { a_CT_Transform2D },

@@ -456,13 +456,13 @@ w_CT_Spacing =
   attribute w:beforeLines { w_ST_DecimalNumber }?,
   ## default value: 0
   attribute w:beforeAutospacing { s_ST_OnOff }?,
-  ## default value: off
+  ## default value: 0
   attribute w:after { s_ST_TwipsMeasure }?,
   ## default value: 0
   attribute w:afterLines { w_ST_DecimalNumber }?,
   ## default value: 0
   attribute w:afterAutospacing { s_ST_OnOff }?,
-  ## default value: off
+  ## default value: 0
   attribute w:line { w_ST_SignedTwipsMeasure }?,
   ## default value: 0
   attribute w:lineRule { w_ST_LineSpacingRule }?
@@ -522,7 +522,7 @@ w_CT_WritingStyle =
   attribute w:vendorID { s_ST_String },
   attribute w:dllVersion { s_ST_String },
   attribute w:nlCheck { s_ST_OnOff }?,
-  ## default value: off
+  ## default value: 0
   attribute w:checkStyle { s_ST_OnOff },
   attribute w:appName { s_ST_String }
 w_ST_Proof = string "clean" | string "dirty"
@@ -789,7 +789,7 @@ w_CT_Object =
    | element objectEmbed { w_CT_ObjectEmbed }
    | element movie { w_CT_Rel })?
 w_CT_Picture =
-  (w_any_vml_vml*, w_any_vml_office*)+,
+  w_any_vml_vml*,
   element movie { w_CT_Rel }?,
   element control { w_CT_Control }?
 w_CT_ObjectEmbed =
@@ -1024,6 +1024,7 @@ w_CT_DocGrid =
   attribute w:type { w_ST_DocGrid }?,
   attribute w:linePitch { w_ST_DecimalNumber }?,
   attribute w:charSpace { w_ST_DecimalNumber }?
+  ## default value: 0
 w_ST_HdrFtr = string "even" | string "default" | string "first"
 w_ST_FtnEdn =
   string "normal"
@@ -1153,7 +1154,7 @@ w_CT_R =
   attribute w:rsidR { w_ST_LongHexNumber }?,
   w_EG_RPr?,
   w_EG_RunInnerContent*
-w_ST_Hint = string "default" | string "eastAsia"
+w_ST_Hint = string "default" | string "eastAsia" | string "cs"
 w_ST_Theme =
   string "majorEastAsia"
   | string "majorBidi"
@@ -1224,7 +1225,7 @@ w_EG_RPrMath =
   | element del { w_CT_MathCtrlDel }
 w_CT_MathCtrlIns =
   w_CT_TrackChange,
-  (element del { w_CT_RPrChange }
+  (element del { w_CT_MathCtrlDel }
    | element rPr { w_CT_RPr })?
 w_CT_MathCtrlDel =
   w_CT_TrackChange,

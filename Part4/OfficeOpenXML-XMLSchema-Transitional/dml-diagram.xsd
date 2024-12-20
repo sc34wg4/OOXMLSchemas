@@ -25,7 +25,7 @@
     <xsd:attribute name="pri" type="xsd:unsignedInt" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CTCategories">
-    <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+    <xsd:sequence>
       <xsd:element name="cat" type="CT_CTCategory" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -73,25 +73,6 @@
     <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
   </xsd:complexType>
   <xsd:element name="colorsDef" type="CT_ColorTransform"/>
-  <xsd:complexType name="CT_ColorTransformHeader">
-    <xsd:sequence>
-      <xsd:element name="title" type="CT_CTName" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="desc" type="CT_CTDescription" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="catLst" type="CT_CTCategories" minOccurs="0"/>
-      <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
-    <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
-  </xsd:complexType>
-  <xsd:element name="colorsDefHdr" type="CT_ColorTransformHeader"/>
-  <xsd:complexType name="CT_ColorTransformHeaderLst">
-    <xsd:sequence>
-      <xsd:element name="colorsDefHdr" type="CT_ColorTransformHeader" minOccurs="0"
-        maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:element name="colorsDefHdrLst" type="CT_ColorTransformHeaderLst"/>
   <xsd:simpleType name="ST_PtType">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="node"/>
@@ -365,26 +346,6 @@
     <xsd:attribute name="defStyle" type="xsd:string" use="optional" default=""/>
   </xsd:complexType>
   <xsd:element name="layoutDef" type="CT_DiagramDefinition"/>
-  <xsd:complexType name="CT_DiagramDefinitionHeader">
-    <xsd:sequence>
-      <xsd:element name="title" type="CT_Name" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="desc" type="CT_Description" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="catLst" type="CT_Categories" minOccurs="0"/>
-      <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
-    <xsd:attribute name="defStyle" type="xsd:string" use="optional" default=""/>
-    <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
-  </xsd:complexType>
-  <xsd:element name="layoutDefHdr" type="CT_DiagramDefinitionHeader"/>
-  <xsd:complexType name="CT_DiagramDefinitionHeaderLst">
-    <xsd:sequence>
-      <xsd:element name="layoutDefHdr" type="CT_DiagramDefinitionHeader" minOccurs="0"
-        maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:element name="layoutDefHdrLst" type="CT_DiagramDefinitionHeaderLst"/>
   <xsd:complexType name="CT_RelIds">
     <xsd:attribute ref="r:dm" use="required"/>
     <xsd:attribute ref="r:lo" use="required"/>
@@ -420,9 +381,9 @@
     <xsd:attribute name="qsCatId" type="xsd:string" use="optional"/>
     <xsd:attribute name="csTypeId" type="xsd:string" use="optional"/>
     <xsd:attribute name="csCatId" type="xsd:string" use="optional"/>
-    <xsd:attribute name="coherent3DOff" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="coherent3DOff" type="xsd:boolean" default="false" use="optional"/>
     <xsd:attribute name="phldrT" type="xsd:string" use="optional"/>
-    <xsd:attribute name="phldr" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="phldr" type="xsd:boolean" default="false" use="optional"/>
     <xsd:attribute name="custAng" type="xsd:int" use="optional"/>
     <xsd:attribute name="custFlipVert" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="custFlipHor" type="xsd:boolean" use="optional"/>
@@ -531,7 +492,7 @@
     <xsd:attribute name="pri" type="xsd:unsignedInt" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SDCategories">
-    <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+    <xsd:sequence>
       <xsd:element name="cat" type="CT_SDCategory" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -563,25 +524,6 @@
     <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
   </xsd:complexType>
   <xsd:element name="styleDef" type="CT_StyleDefinition"/>
-  <xsd:complexType name="CT_StyleDefinitionHeader">
-    <xsd:sequence>
-      <xsd:element name="title" type="CT_SDName" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="desc" type="CT_SDDescription" minOccurs="1" maxOccurs="unbounded"/>
-      <xsd:element name="catLst" type="CT_SDCategories" minOccurs="0"/>
-      <xsd:element name="extLst" type="a:CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute name="uniqueId" type="xsd:string" use="required"/>
-    <xsd:attribute name="minVer" type="xsd:string" use="optional"/>
-    <xsd:attribute name="resId" type="xsd:int" use="optional" default="0"/>
-  </xsd:complexType>
-  <xsd:element name="styleDefHdr" type="CT_StyleDefinitionHeader"/>
-  <xsd:complexType name="CT_StyleDefinitionHeaderLst">
-    <xsd:sequence>
-      <xsd:element name="styleDefHdr" type="CT_StyleDefinitionHeader" minOccurs="0"
-        maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:element name="styleDefHdrLst" type="CT_StyleDefinitionHeaderLst"/>
   <xsd:simpleType name="ST_AlgorithmType" final="restriction">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="composite"/>

@@ -1,12 +1,8 @@
 default namespace =
   "http://purl.oclc.org/ooxml/officeDocument/docPropsVTypes"
-namespace o = "urn:schemas-microsoft-com:office:office"
 namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
-namespace v = "urn:schemas-microsoft-com:vml"
 namespace vt =
   "http://purl.oclc.org/ooxml/officeDocument/docPropsVTypes"
-namespace w10 = "urn:schemas-microsoft-com:office:word"
-namespace x = "urn:schemas-microsoft-com:office:excel"
 
 vt_ST_VectorBaseType =
   string "variant"
