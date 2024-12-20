@@ -17,7 +17,7 @@
       <xsd:element name="sortState" minOccurs="0" maxOccurs="1" type="CT_SortState"/>
       <xsd:element name="extLst" type="CT_ExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="ref" type="ST_Ref"/>
+    <xsd:attribute name="ref" type="ST_Ref" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_FilterColumn">
     <xsd:choice minOccurs="0" maxOccurs="1">
@@ -43,7 +43,7 @@
     <xsd:attribute name="calendarType" type="s:ST_CalendarType" use="optional" default="none"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Filter">
-    <xsd:attribute name="val" type="s:ST_Xstring"/>
+    <xsd:attribute name="val" type="s:ST_Xstring" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CustomFilters">
     <xsd:sequence>
@@ -53,7 +53,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_CustomFilter">
     <xsd:attribute name="operator" type="ST_FilterOperator" default="equal" use="optional"/>
-    <xsd:attribute name="val" type="s:ST_Xstring"/>
+    <xsd:attribute name="val" type="s:ST_Xstring" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Top10">
     <xsd:attribute name="top" type="xsd:boolean" use="optional" default="true"/>
@@ -181,11 +181,11 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_DateGroupItem">
     <xsd:attribute name="year" type="xsd:unsignedShort" use="required"/>
-    <xsd:attribute name="month" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="day" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="hour" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="minute" type="xsd:unsignedShort" use="optional"/>
-    <xsd:attribute name="second" type="xsd:unsignedShort" use="optional"/>
+    <xsd:attribute name="month" type="xsd:unsignedShort" use="optional" default="1"/>
+    <xsd:attribute name="day" type="xsd:unsignedShort" use="optional" default="1"/>
+    <xsd:attribute name="hour" type="xsd:unsignedShort" use="optional" default="0"/>
+    <xsd:attribute name="minute" type="xsd:unsignedShort" use="optional" default="0"/>
+    <xsd:attribute name="second" type="xsd:unsignedShort" use="optional" default="0"/>
     <xsd:attribute name="dateTimeGrouping" type="ST_DateTimeGrouping" use="required"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_DateTimeGrouping">
@@ -225,7 +225,7 @@
     <xsd:sequence>
       <xsd:any processContents="lax"/>
     </xsd:sequence>
-    <xsd:attribute name="uri" type="xsd:token"/>
+    <xsd:attribute name="uri" type="xsd:token" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_ObjectAnchor">
     <xsd:sequence>
@@ -234,6 +234,7 @@
     </xsd:sequence>
     <xsd:attribute name="moveWithCells" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="sizeWithCells" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="z-order" type="xsd:unsignedInt" use="optional" default="0"/> 
   </xsd:complexType>
   <xsd:group name="EG_ExtensionList">
     <xsd:sequence>
@@ -304,6 +305,9 @@
     <xsd:attribute name="lockText" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="justLastX" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoScale" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="colHidden" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="rowHidden" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="uiObject" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextHAlign">
     <xsd:restriction base="xsd:string">
@@ -359,7 +363,7 @@
       <xsd:any/>
     </xsd:sequence>
     <xsd:attribute name="DataBindingName" type="xsd:string" use="optional"/>
-    <xsd:attribute name="FileBinding" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="FileBinding" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="ConnectionID" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="FileBindingName" type="xsd:string" use="optional"/>
     <xsd:attribute name="DataBindingLoadMode" type="xsd:unsignedInt" use="required"/>
@@ -384,7 +388,7 @@
     <xsd:attribute name="odcFile" use="optional" type="s:ST_Xstring"/>
     <xsd:attribute name="keepAlive" use="optional" type="xsd:boolean" default="false"/>
     <xsd:attribute name="interval" use="optional" type="xsd:unsignedInt" default="0"/>
-    <xsd:attribute name="name" use="optional" type="s:ST_Xstring"/>
+    <xsd:attribute name="name" use="required" type="s:ST_Xstring"/>
     <xsd:attribute name="description" use="optional" type="s:ST_Xstring"/>
     <xsd:attribute name="type" use="optional" type="xsd:unsignedInt"/>
     <xsd:attribute name="reconnectionMethod" use="optional" type="xsd:unsignedInt" default="1"/>
@@ -697,8 +701,8 @@
       <xsd:element name="tpls" minOccurs="0" maxOccurs="unbounded" type="CT_Tuples"/>
       <xsd:element name="x" minOccurs="0" maxOccurs="unbounded" type="CT_X"/>
     </xsd:sequence>
-    <xsd:attribute name="u" type="xsd:boolean"/>
-    <xsd:attribute name="f" type="xsd:boolean"/>
+    <xsd:attribute name="u" type="xsd:boolean" default="false"/>
+    <xsd:attribute name="f" type="xsd:boolean" default="false"/>
     <xsd:attribute name="c" type="s:ST_Xstring"/>
     <xsd:attribute name="cp" type="xsd:unsignedInt"/>
     <xsd:attribute name="in" type="xsd:unsignedInt" use="optional"/>
@@ -715,8 +719,8 @@
       <xsd:element name="x" minOccurs="0" maxOccurs="unbounded" type="CT_X"/>
     </xsd:sequence>
     <xsd:attribute name="v" use="required" type="xsd:double"/>
-    <xsd:attribute name="u" type="xsd:boolean"/>
-    <xsd:attribute name="f" type="xsd:boolean"/>
+    <xsd:attribute name="u" type="xsd:boolean" default="false"/>
+    <xsd:attribute name="f" type="xsd:boolean" default="false"/>
     <xsd:attribute name="c" type="s:ST_Xstring"/>
     <xsd:attribute name="cp" type="xsd:unsignedInt"/>
     <xsd:attribute name="in" type="xsd:unsignedInt" use="optional"/>
@@ -732,8 +736,8 @@
       <xsd:element name="x" minOccurs="0" maxOccurs="unbounded" type="CT_X"/>
     </xsd:sequence>
     <xsd:attribute name="v" use="required" type="xsd:boolean"/>
-    <xsd:attribute name="u" type="xsd:boolean"/>
-    <xsd:attribute name="f" type="xsd:boolean"/>
+    <xsd:attribute name="u" type="xsd:boolean" default="false"/>
+    <xsd:attribute name="f" type="xsd:boolean" default="false"/>
     <xsd:attribute name="c" type="s:ST_Xstring"/>
     <xsd:attribute name="cp" type="xsd:unsignedInt"/>
   </xsd:complexType>
@@ -743,8 +747,8 @@
       <xsd:element name="x" minOccurs="0" maxOccurs="unbounded" type="CT_X"/>
     </xsd:sequence>
     <xsd:attribute name="v" use="required" type="s:ST_Xstring"/>
-    <xsd:attribute name="u" type="xsd:boolean"/>
-    <xsd:attribute name="f" type="xsd:boolean"/>
+    <xsd:attribute name="u" type="xsd:boolean" default="false"/>
+    <xsd:attribute name="f" type="xsd:boolean" default="false"/>
     <xsd:attribute name="c" type="s:ST_Xstring"/>
     <xsd:attribute name="cp" type="xsd:unsignedInt"/>
     <xsd:attribute name="in" type="xsd:unsignedInt" use="optional"/>
@@ -761,8 +765,8 @@
       <xsd:element name="x" minOccurs="0" maxOccurs="unbounded" type="CT_X"/>
     </xsd:sequence>
     <xsd:attribute name="v" use="required" type="s:ST_Xstring"/>
-    <xsd:attribute name="u" type="xsd:boolean"/>
-    <xsd:attribute name="f" type="xsd:boolean"/>
+    <xsd:attribute name="u" type="xsd:boolean" default="false"/>
+    <xsd:attribute name="f" type="xsd:boolean" default="false"/>
     <xsd:attribute name="c" type="s:ST_Xstring"/>
     <xsd:attribute name="cp" type="xsd:unsignedInt"/>
     <xsd:attribute name="in" type="xsd:unsignedInt" use="optional"/>
@@ -778,8 +782,8 @@
       <xsd:element name="x" minOccurs="0" maxOccurs="unbounded" type="CT_X"/>
     </xsd:sequence>
     <xsd:attribute name="v" use="required" type="xsd:dateTime"/>
-    <xsd:attribute name="u" type="xsd:boolean"/>
-    <xsd:attribute name="f" type="xsd:boolean"/>
+    <xsd:attribute name="u" type="xsd:boolean" default="false"/>
+    <xsd:attribute name="f" type="xsd:boolean" default="false"/>
     <xsd:attribute name="c" type="s:ST_Xstring"/>
     <xsd:attribute name="cp" type="xsd:unsignedInt"/>
   </xsd:complexType>
@@ -1005,7 +1009,7 @@
       <xsd:element name="tpls" minOccurs="0" maxOccurs="unbounded" type="CT_Tuples"/>
       <xsd:element name="sortByTuple" minOccurs="0" type="CT_Tuples"/>
     </xsd:sequence>
-    <xsd:attribute name="count" type="xsd:unsignedInt"/>
+    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional" default="4294967295"/>
     <xsd:attribute name="maxRank" use="required" type="xsd:int"/>
     <xsd:attribute name="setDefinition" use="required" type="s:ST_Xstring"/>
     <xsd:attribute name="sortType" type="ST_SortType" default="none"/>
@@ -1180,7 +1184,7 @@
     <xsd:attribute name="uniqueMemberProperty" type="s:ST_Xstring"/>
     <xsd:attribute name="compact" type="xsd:boolean" default="true"/>
     <xsd:attribute name="allDrilled" type="xsd:boolean" default="false"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="true"/>
     <xsd:attribute name="outline" type="xsd:boolean" default="true"/>
     <xsd:attribute name="subtotalTop" type="xsd:boolean" default="true"/>
     <xsd:attribute name="dragToRow" type="xsd:boolean" default="true"/>
@@ -1200,7 +1204,7 @@
     <xsd:attribute name="includeNewItemsInFilter" type="xsd:boolean" default="false"/>
     <xsd:attribute name="itemPageCount" type="xsd:unsignedInt" default="10"/>
     <xsd:attribute name="sortType" type="ST_FieldSortType" default="manual"/>
-    <xsd:attribute name="dataSourceSort" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="dataSourceSort" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="nonAutoSortDefault" type="xsd:boolean" default="false"/>
     <xsd:attribute name="rankBy" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="defaultSubtotal" type="xsd:boolean" default="true"/>
@@ -1433,9 +1437,9 @@
     <xsd:attribute name="showCell" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showTip" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="showAsCaption" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="nameLen" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="pPos" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="pLen" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="nameLen" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="pPos" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="pLen" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="level" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="field" use="required" type="xsd:unsignedInt"/>
   </xsd:complexType>
@@ -1478,16 +1482,16 @@
     <xsd:attribute name="caption" use="required" type="s:ST_Xstring"/>
   </xsd:complexType>
   <xsd:complexType name="CT_MeasureDimensionMap">
-    <xsd:attribute name="measureGroup" use="optional" type="xsd:unsignedInt"/>
-    <xsd:attribute name="dimension" use="optional" type="xsd:unsignedInt"/>
+    <xsd:attribute name="measureGroup" use="required" type="xsd:unsignedInt"/>
+    <xsd:attribute name="dimension" use="required" type="xsd:unsignedInt"/>
   </xsd:complexType>
   <xsd:complexType name="CT_PivotTableStyle">
     <xsd:attribute name="name" type="xsd:string"/>
-    <xsd:attribute name="showRowHeaders" type="xsd:boolean"/>
-    <xsd:attribute name="showColHeaders" type="xsd:boolean"/>
-    <xsd:attribute name="showRowStripes" type="xsd:boolean"/>
-    <xsd:attribute name="showColStripes" type="xsd:boolean"/>
-    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="showRowHeaders" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showColHeaders" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showColStripes" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_PivotFilters">
     <xsd:sequence>
@@ -1506,7 +1510,7 @@
     <xsd:attribute name="evalOrder" use="optional" type="xsd:int" default="0"/>
     <xsd:attribute name="id" use="required" type="xsd:unsignedInt"/>
     <xsd:attribute name="iMeasureHier" use="optional" type="xsd:unsignedInt"/>
-    <xsd:attribute name="iMeasureFld" use="optional" type="xsd:unsignedInt"/>
+    <xsd:attribute name="iMeasureFld" use="optional" type="xsd:unsignedInt" default="0"/>
     <xsd:attribute name="name" type="s:ST_Xstring"/>
     <xsd:attribute name="description" type="s:ST_Xstring"/>
     <xsd:attribute name="stringValue1" type="s:ST_Xstring"/>
@@ -1634,7 +1638,7 @@
       <xsd:element name="references" minOccurs="0" type="CT_PivotAreaReferences"/>
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
     </xsd:sequence>
-    <xsd:attribute name="field" use="optional" type="xsd:int"/>
+    <xsd:attribute name="field" type="xsd:int" use="optional" default="-1"/>
     <xsd:attribute name="type" type="ST_PivotAreaType" default="normal"/>
     <xsd:attribute name="dataOnly" type="xsd:boolean" default="true"/>
     <xsd:attribute name="labelOnly" type="xsd:boolean" default="false"/>
@@ -1894,7 +1898,7 @@
     <xsd:attribute name="maxSheetId" type="xsd:unsignedInt" use="required"/>
     <xsd:attribute name="userName" type="s:ST_Xstring" use="required"/>
     <xsd:attribute ref="r:id" use="required"/>
-    <xsd:attribute name="minRId" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="minRId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="maxRId" type="xsd:unsignedInt" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_SheetIdMap">
@@ -1986,7 +1990,7 @@
     <xsd:attribute name="xfDxf" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="s" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="dxf" type="xsd:boolean" default="false"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="0"/>
     <xsd:attribute name="quotePrefix" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="oldQuotePrefix" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="ph" type="xsd:boolean" default="false"/>
@@ -2103,36 +2107,6 @@
   <xsd:element name="worksheet" type="CT_Worksheet"/>
   <xsd:element name="chartsheet" type="CT_Chartsheet"/>
   <xsd:element name="dialogsheet" type="CT_Dialogsheet"/>
-  <xsd:complexType name="CT_Macrosheet">
-    <xsd:sequence>
-      <xsd:element name="sheetPr" type="CT_SheetPr" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="dimension" type="CT_SheetDimension" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sheetViews" type="CT_SheetViews" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sheetFormatPr" type="CT_SheetFormatPr" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="cols" type="CT_Cols" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name="sheetData" type="CT_SheetData" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="sheetProtection" type="CT_SheetProtection" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="autoFilter" type="CT_AutoFilter" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="sortState" type="CT_SortState" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="dataConsolidate" type="CT_DataConsolidate" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="customSheetViews" type="CT_CustomSheetViews" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="phoneticPr" type="CT_PhoneticPr" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="conditionalFormatting" type="CT_ConditionalFormatting" minOccurs="0"
-        maxOccurs="unbounded"/>
-      <xsd:element name="printOptions" type="CT_PrintOptions" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="pageMargins" type="CT_PageMargins" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="pageSetup" type="CT_PageSetup" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="headerFooter" type="CT_HeaderFooter" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="rowBreaks" type="CT_PageBreak" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="colBreaks" type="CT_PageBreak" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="customProperties" type="CT_CustomProperties" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="drawing" type="CT_Drawing" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="drawingHF" type="CT_DrawingHF" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="picture" type="CT_SheetBackgroundPicture" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="oleObjects" type="CT_OleObjects" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
-    </xsd:sequence>
-  </xsd:complexType>
   <xsd:complexType name="CT_Dialogsheet">
     <xsd:sequence>
       <xsd:element name="sheetPr" minOccurs="0" type="CT_SheetPr"/>
@@ -2370,7 +2344,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_Selection">
     <xsd:attribute name="pane" type="ST_Pane" use="optional" default="topLeft"/>
-    <xsd:attribute name="activeCell" type="ST_CellRef" use="optional"/>
+    <xsd:attribute name="activeCell" type="ST_CellRef" use="optional" default="A1"/>
     <xsd:attribute name="activeCellId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="sqref" type="ST_Sqref" use="optional" default="A1"/>
   </xsd:complexType>
@@ -2421,6 +2395,7 @@
     <xsd:attribute name="startLabels" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="topLabels" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="link" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute ref="xml:space" use="optional"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_DataConsolidateFunction">
     <xsd:restriction base="xsd:string">
@@ -2553,9 +2528,9 @@
         maxOccurs="unbounded"/>
     </xsd:sequence>
     <xsd:attribute name="disablePrompts" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="xWindow" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="yWindow" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="xWindow" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="yWindow" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="count" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_DataValidation">
     <xsd:sequence>
@@ -2701,7 +2676,7 @@
       <xsd:element name="iconSet" type="CT_IconSet" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extLst" minOccurs="0" type="CT_ExtensionList"/>
     </xsd:sequence>
-    <xsd:attribute name="type" type="ST_CfType"/>
+    <xsd:attribute name="type" type="ST_CfType" use="required"/>
     <xsd:attribute name="dxfId" type="ST_DxfId" use="optional"/>
     <xsd:attribute name="priority" type="xsd:int" use="required"/>
     <xsd:attribute name="stopIfTrue" type="xsd:boolean" use="optional" default="false"/>
@@ -2711,7 +2686,7 @@
     <xsd:attribute name="operator" type="ST_ConditionalFormattingOperator" use="optional"/>
     <xsd:attribute name="text" type="xsd:string" use="optional"/>
     <xsd:attribute name="timePeriod" type="ST_TimePeriod" use="optional"/>
-    <xsd:attribute name="rank" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="rank" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="stdDev" type="xsd:int" use="optional"/>
     <xsd:attribute name="equalAverage" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
@@ -2742,6 +2717,7 @@
         <xsd:attribute name="ca" type="xsd:boolean" use="optional" default="false"/>
         <xsd:attribute name="si" type="xsd:unsignedInt" use="optional"/>
         <xsd:attribute name="bx" type="xsd:boolean" use="optional" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -2793,7 +2769,7 @@
     <xsd:attribute name="gridLinesSet" type="xsd:boolean" use="optional" default="true"/>
   </xsd:complexType>
   <xsd:complexType name="CT_PageSetup">
-    <xsd:attribute name="paperSize" type="xsd:unsignedInt" use="optional" default="1"/>
+    <xsd:attribute name="paperSize" type="s:ST_PaperSize" use="optional" default="1"/>
     <xsd:attribute name="paperHeight" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="paperWidth" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="scale" type="xsd:unsignedInt" use="optional" default="100"/>
@@ -2835,17 +2811,24 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_HeaderFooter">
     <xsd:sequence>
-      <xsd:element name="oddHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="oddFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="evenHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="evenFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="firstHeader" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="firstFooter" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="oddHeader" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="oddFooter" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="evenHeader" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="evenFooter" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="firstHeader" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="firstFooter" type="CT_HFText" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
     <xsd:attribute name="differentOddEven" type="xsd:boolean" default="false"/>
     <xsd:attribute name="differentFirst" type="xsd:boolean" default="false"/>
     <xsd:attribute name="scaleWithDoc" type="xsd:boolean" default="true"/>
     <xsd:attribute name="alignWithMargins" type="xsd:boolean" default="true"/>
+  </xsd:complexType>
+  <xsd:complexType name="CT_HFText">
+    <xsd:simpleContent>
+      <xsd:extension base="s:ST_String">
+        <xsd:attribute ref="xml:space" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:simpleType name="ST_PrintError">
     <xsd:restriction base="xsd:string">
@@ -2918,7 +2901,7 @@
     <xsd:attribute name="deleted" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="undone" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="val" type="s:ST_Xstring" use="required"/>
-    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional"/>
+    <xsd:attribute name="numFmtId" type="ST_NumFmtId" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CellWatches">
     <xsd:sequence>
@@ -2976,7 +2959,7 @@
     <xsd:attribute name="objects" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CsPageSetup">
-    <xsd:attribute name="paperSize" type="xsd:unsignedInt" use="optional" default="1"/>
+    <xsd:attribute name="paperSize" type="s:ST_PaperSize" use="optional" default="1"/>
     <xsd:attribute name="paperHeight" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="paperWidth" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="firstPageNumber" type="xsd:unsignedInt" use="optional" default="1"/>
@@ -3373,15 +3356,15 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_CellAlignment">
-    <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional"/>
-    <xsd:attribute name="vertical" type="ST_VerticalAlignment" default="bottom" use="optional"/>
-    <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional"/>
-    <xsd:attribute name="wrapText" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="relativeIndent" type="xsd:int" use="optional"/>
-    <xsd:attribute name="justifyLastLine" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="shrinkToFit" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="readingOrder" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="horizontal" type="ST_HorizontalAlignment" use="optional" default="general"/>
+    <xsd:attribute name="vertical" type="ST_VerticalAlignment" use="optional" default="bottom"/>
+    <xsd:attribute name="textRotation" type="ST_TextRotation" use="optional" default="0"/>
+    <xsd:attribute name="wrapText" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="indent" type="xsd:unsignedInt" use="optional" default="0"/>
+    <xsd:attribute name="relativeIndent" type="xsd:int" use="optional" default="0"/>
+    <xsd:attribute name="justifyLastLine" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="shrinkToFit" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="readingOrder" type="xsd:unsignedInt" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TextRotation">
     <xsd:union>
@@ -3431,8 +3414,8 @@
       <xsd:element name="vertical" type="CT_BorderPr" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="horizontal" type="CT_BorderPr" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="diagonalUp" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="diagonalDown" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="diagonalUp" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="diagonalDown" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="outline" type="xsd:boolean" use="optional" default="true"/>
   </xsd:complexType>
   <xsd:complexType name="CT_BorderPr">
@@ -3442,8 +3425,8 @@
     <xsd:attribute name="style" type="ST_BorderStyle" use="optional" default="none"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CellProtection">
-    <xsd:attribute name="locked" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="hidden" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="locked" type="xsd:boolean" use="optional" default="true"/>
+    <xsd:attribute name="hidden" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Fonts">
     <xsd:sequence>
@@ -3471,7 +3454,7 @@
     <xsd:attribute name="patternType" type="ST_PatternType" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Color">
-    <xsd:attribute name="auto" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="auto" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="indexed" type="xsd:unsignedInt" use="optional"/>
     <xsd:attribute name="rgb" type="ST_UnsignedIntHex" use="optional"/>
     <xsd:attribute name="theme" type="xsd:unsignedInt" use="optional"/>
@@ -3506,10 +3489,10 @@
     </xsd:sequence>
     <xsd:attribute name="type" type="ST_GradientType" use="optional" default="linear"/>
     <xsd:attribute name="degree" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="left" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="right" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="top" type="xsd:double" use="optional" default="0"/>
-    <xsd:attribute name="bottom" type="xsd:double" use="optional" default="0"/>
+    <xsd:attribute name="left" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
+    <xsd:attribute name="right" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
+    <xsd:attribute name="top" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
+    <xsd:attribute name="bottom" type="ST_GradientFillLeftRightTopBottom" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_GradientStop">
     <xsd:sequence>
@@ -3521,6 +3504,12 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="linear"/>
       <xsd:enumeration value="path"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ST_GradientFillLeftRightTopBottom">
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="1"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="ST_HorizontalAlignment">
@@ -3655,7 +3644,7 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_RgbColor">
-    <xsd:attribute name="rgb" type="ST_UnsignedIntHex" use="optional"/>
+    <xsd:attribute name="rgb" type="ST_UnsignedIntHex" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TableStyles">
     <xsd:sequence>
@@ -3848,7 +3837,7 @@
     <xsd:sequence>
       <xsd:element name="v" type="s:ST_Xstring" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="r" type="ST_CellRef" use="optional"/>
+    <xsd:attribute name="r" type="ST_CellRef" use="required"/>
     <xsd:attribute name="t" type="ST_CellType" use="optional" default="n"/>
     <xsd:attribute name="vm" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
@@ -3943,7 +3932,7 @@
     <xsd:attribute name="headerRowCellStyle" type="s:ST_Xstring" use="optional"/>
     <xsd:attribute name="dataCellStyle" type="s:ST_Xstring" use="optional"/>
     <xsd:attribute name="totalsRowCellStyle" type="s:ST_Xstring" use="optional"/>
-    <xsd:attribute name="connectionId" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="connectionId" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TableType">
     <xsd:restriction base="xsd:string">
@@ -3954,10 +3943,10 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_TableStyleInfo">
     <xsd:attribute name="name" type="s:ST_Xstring" use="optional"/>
-    <xsd:attribute name="showFirstColumn" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="showColumnStripes" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="showFirstColumn" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showLastColumn" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showRowStripes" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="showColumnStripes" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TableColumns">
     <xsd:sequence>
@@ -3990,6 +3979,7 @@
     <xsd:simpleContent>
       <xsd:extension base="ST_Formula">
         <xsd:attribute name="array" type="xsd:boolean" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -4216,7 +4206,7 @@
     <xsd:attribute name="checkCompatibility" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="autoCompressPictures" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="refreshAllConnections" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="defaultThemeVersion" type="xsd:unsignedInt" use="optional"/>
+    <xsd:attribute name="defaultThemeVersion" type="xsd:unsignedInt" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_UpdateLinks">
     <xsd:restriction base="xsd:string">
@@ -4243,7 +4233,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_SmartTagType">
     <xsd:attribute name="namespaceUri" type="s:ST_Xstring" use="optional"/>
-    <xsd:attribute name="name" type="s:ST_Xstring" use="optional"/>
+    <xsd:attribute name="name" type="s:ST_Xstring" use="required"/>
     <xsd:attribute name="url" type="s:ST_Xstring" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_FileRecoveryPr">
@@ -4253,7 +4243,7 @@
     <xsd:attribute name="repairLoad" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_CalcPr">
-    <xsd:attribute name="calcId" type="xsd:unsignedInt"/>
+    <xsd:attribute name="calcId" type="xsd:unsignedInt" use="optional" default="0"/>
     <xsd:attribute name="calcMode" type="ST_CalcMode" use="optional" default="auto"/>
     <xsd:attribute name="fullCalcOnLoad" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="refMode" type="ST_RefMode" use="optional" default="A1"/>
@@ -4265,7 +4255,7 @@
     <xsd:attribute name="calcOnSave" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="concurrentCalc" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="concurrentManualCount" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="forceFullCalc" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="forceFullCalc" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_CalcMode">
     <xsd:restriction base="xsd:string">
@@ -4303,6 +4293,7 @@
         <xsd:attribute name="shortcutKey" type="s:ST_Xstring" use="optional"/>
         <xsd:attribute name="publishToServer" type="xsd:boolean" use="optional" default="false"/>
         <xsd:attribute name="workbookParameter" type="xsd:boolean" use="optional" default="false"/>
+        <xsd:attribute ref="xml:space" use="optional"/>
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>

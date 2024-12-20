@@ -155,6 +155,24 @@
   <xsd:complexType name="CT_LayoutMode">
     <xsd:attribute name="val" type="ST_LayoutMode" default="factor"/>
   </xsd:complexType>
+  <xsd:simpleType name="ST_LayoutPosition">
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="-1"/>
+      <xsd:maxInclusive value="1"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CT_LayoutPosition">
+    <xsd:attribute name="val" type="ST_LayoutPosition" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType name="ST_LayoutDimension">
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="1"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CT_LayoutDimension">
+    <xsd:attribute name="val" type="ST_LayoutDimension" use="required"/>
+  </xsd:complexType>
   <xsd:complexType name="CT_ManualLayout">
     <xsd:sequence>
       <xsd:element name="layoutTarget" type="CT_LayoutTarget" minOccurs="0" maxOccurs="1"/>
@@ -162,10 +180,10 @@
       <xsd:element name="yMode" type="CT_LayoutMode" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="wMode" type="CT_LayoutMode" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="hMode" type="CT_LayoutMode" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="x" type="CT_Double" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="y" type="CT_Double" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="w" type="CT_Double" minOccurs="0" maxOccurs="1"/>
-      <xsd:element name="h" type="CT_Double" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="x" type="CT_LayoutPosition" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="y" type="CT_LayoutPosition" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="w" type="CT_LayoutDimension" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="h" type="CT_LayoutDimension" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extLst" type="CT_ExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -1454,7 +1472,7 @@
     <xsd:attribute ref="r:id" use="required"/>
   </xsd:complexType>
   <xsd:complexType name="CT_PageSetup">
-    <xsd:attribute name="paperSize" type="xsd:unsignedInt" use="optional" default="1"/>
+    <xsd:attribute name="paperSize" type="s:ST_PaperSize" use="optional" default="1"/>
     <xsd:attribute name="paperHeight" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="paperWidth" type="s:ST_PositiveUniversalMeasure" use="optional"/>
     <xsd:attribute name="firstPageNumber" type="xsd:unsignedInt" use="optional" default="1"/>

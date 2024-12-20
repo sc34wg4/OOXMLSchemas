@@ -596,10 +596,10 @@
   <xsd:complexType name="CT_Spacing">
     <xsd:attribute name="before" type="s:ST_TwipsMeasure" use="optional" default="0"/>
     <xsd:attribute name="beforeLines" type="ST_DecimalNumber" use="optional" default="0"/>
-    <xsd:attribute name="beforeAutospacing" type="s:ST_OnOff" use="optional" default="off"/>
+    <xsd:attribute name="beforeAutospacing" type="s:ST_OnOff" use="optional" default="0"/>
     <xsd:attribute name="after" type="s:ST_TwipsMeasure" use="optional" default="0"/>
     <xsd:attribute name="afterLines" type="ST_DecimalNumber" use="optional" default="0"/>
-    <xsd:attribute name="afterAutospacing" type="s:ST_OnOff" use="optional" default="off"/>
+    <xsd:attribute name="afterAutospacing" type="s:ST_OnOff" use="optional" default="0"/>
     <xsd:attribute name="line" type="ST_SignedTwipsMeasure" use="optional" default="0"/>
     <xsd:attribute name="lineRule" type="ST_LineSpacingRule" use="optional" default="auto"/>
   </xsd:complexType>
@@ -669,7 +669,7 @@
     <xsd:attribute name="lang" type="s:ST_Lang" use="required"/>
     <xsd:attribute name="vendorID" type="s:ST_String" use="required"/>
     <xsd:attribute name="dllVersion" type="s:ST_String" use="required"/>
-    <xsd:attribute name="nlCheck" type="s:ST_OnOff" use="optional" default="off"/>
+    <xsd:attribute name="nlCheck" type="s:ST_OnOff" use="optional" default="0"/>
     <xsd:attribute name="checkStyle" type="s:ST_OnOff" use="required"/>
     <xsd:attribute name="appName" type="s:ST_String" use="required"/>
   </xsd:complexType>
@@ -1312,7 +1312,6 @@
       <xsd:enumeration value="japaneseLegal"/>
       <xsd:enumeration value="japaneseDigitalTenThousand"/>
       <xsd:enumeration value="decimalEnclosedCircle"/>
-      <xsd:enumeration value="decimalFullWidth2"/>
       <xsd:enumeration value="aiueoFullWidth"/>
       <xsd:enumeration value="irohaFullWidth"/>
       <xsd:enumeration value="decimalZero"/>
@@ -1713,6 +1712,7 @@
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="default"/>
       <xsd:enumeration value="eastAsia"/>
+      <xsd:enumeration value="cs"/>      
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="ST_Theme">
@@ -1808,7 +1808,7 @@
     <xsd:complexContent>
       <xsd:extension base="CT_TrackChange">
         <xsd:choice minOccurs="0">
-          <xsd:element name="del" type="CT_RPrChange" minOccurs="1"/>
+          <xsd:element name="del" type="CT_MathCtrlDel" minOccurs="1"/>
           <xsd:element name="rPr" type="CT_RPr" minOccurs="1"/>
         </xsd:choice>
       </xsd:extension>

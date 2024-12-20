@@ -1175,10 +1175,16 @@ a_CT_TransformEffect =
 a_CT_NoFillProperties = empty
 a_CT_SolidColorFillProperties = a_EG_ColorChoice?
 a_CT_LinearShadeProperties =
+  
+  ## default value: 0
   attribute ang { a_ST_PositiveFixedAngle }?,
+  
+  ## default value: 1
   attribute scaled { xsd:boolean }?
 a_ST_PathShadeType = "shape" | "circle" | "rect"
 a_CT_PathShadeProperties =
+  
+  ## default value: shape
   attribute path { a_ST_PathShadeType }?,
   element fillToRect { a_CT_RelativeRect }?
 a_EG_ShadeProperties =
@@ -1704,7 +1710,11 @@ a_CT_LineEndProperties =
   
   ## default value: none
   attribute type { a_ST_LineEndType }?,
+  
+  ## default value: med
   attribute w { a_ST_LineEndWidth }?,
+  
+  ## default value: med
   attribute len { a_ST_LineEndLength }?
 a_EG_LineFillProperties =
   element noFill { a_CT_NoFillProperties }
@@ -1749,6 +1759,8 @@ a_CT_LineProperties =
   attribute w { a_ST_LineWidth }?,
   attribute cap { a_ST_LineCap }?,
   attribute cmpd { a_ST_CompoundLine }?,
+
+  ## default value: ctr
   attribute algn { a_ST_PenAlignment }?,
   a_EG_LineFillProperties?,
   a_EG_LineDashProperties?,
@@ -1835,7 +1847,6 @@ a_CT_ClipboardStyleSheet =
   element clrMap { a_CT_ColorMapping }
 a_theme = element theme { a_CT_OfficeStyleSheet }
 a_themeOverride = element themeOverride { a_CT_BaseStylesOverride }
-a_themeManager = element themeManager { a_CT_EmptyElement }
 a_CT_TableCellProperties =
   
   ## default value: 91440
@@ -2045,26 +2056,62 @@ a_EG_TextAutofit =
   | element normAutofit { a_CT_TextNormalAutofit }
   | element spAutoFit { a_CT_TextShapeAutofit }
 a_CT_TextBodyProperties =
+
+  ## default value: 0
   attribute rot { a_ST_Angle }?,
+
+  ## default value: false
   attribute spcFirstLastPara { xsd:boolean }?,
+
+  ## default value: overflow
   attribute vertOverflow { a_ST_TextVertOverflowType }?,
+
+  ## default value: overflow
   attribute horzOverflow { a_ST_TextHorzOverflowType }?,
+
+  ## default value: horz
   attribute vert { a_ST_TextVerticalType }?,
+
+  ## default value: square
   attribute wrap { a_ST_TextWrappingType }?,
+
+  ## default value: 91440
   attribute lIns { a_ST_Coordinate32 }?,
+
+  ## default value: 45720
   attribute tIns { a_ST_Coordinate32 }?,
+
+  ## default value: 91440
   attribute rIns { a_ST_Coordinate32 }?,
+
+  ## default value: 45720
   attribute bIns { a_ST_Coordinate32 }?,
+
+  ## default value: 1
   attribute numCol { a_ST_TextColumnCount }?,
+
+  ## default value: 0
   attribute spcCol { a_ST_PositiveCoordinate32 }?,
+
+  ## default value: false
   attribute rtlCol { xsd:boolean }?,
+
+  ## default value: false
   attribute fromWordArt { xsd:boolean }?,
+
+  ## default value: t
   attribute anchor { a_ST_TextAnchoringType }?,
+  
+  ## default value: false
   attribute anchorCtr { xsd:boolean }?,
+  
+  ## default value: false
   attribute forceAA { xsd:boolean }?,
   
   ## default value: false
   attribute upright { xsd:boolean }?,
+  
+  ## default value: false
   attribute compatLnSpc { xsd:boolean }?,
   element prstTxWarp { a_CT_PresetTextShape }?,
   a_EG_TextAutofit?,
@@ -2216,10 +2263,14 @@ a_CT_TextCharacterProperties =
   attribute u { a_ST_TextUnderlineType }?,
   attribute strike { a_ST_TextStrikeType }?,
   attribute kern { a_ST_TextNonNegativePoint }?,
+  
+  ## default value: none
   attribute cap { a_ST_TextCapsType }?,
   attribute spc { a_ST_TextPoint }?,
   attribute normalizeH { xsd:boolean }?,
   attribute baseline { a_ST_Percentage }?,
+  
+  ## default value: 0
   attribute noProof { xsd:boolean }?,
   
   ## default value: true

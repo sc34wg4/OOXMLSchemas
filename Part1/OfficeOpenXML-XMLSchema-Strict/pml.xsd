@@ -219,7 +219,7 @@
       <xsd:element name="rtn" type="CT_TLTriggerRuntimeNode"/>
     </xsd:choice>
     <xsd:attribute name="evt" use="optional" type="ST_TLTriggerEvent"/>
-    <xsd:attribute name="delay" type="ST_TLTime" use="optional"/>
+    <xsd:attribute name="delay" type="ST_TLTime" use="optional" default="0"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLTimeConditionList">
     <xsd:sequence>
@@ -306,26 +306,32 @@
     <xsd:attribute name="id" type="ST_TLTimeNodeID" use="optional"/>
     <xsd:attribute name="presetID" type="xsd:int" use="optional"/>
     <xsd:attribute name="presetClass" type="ST_TLTimeNodePresetClassType" use="optional"/>
-    <xsd:attribute name="presetSubtype" type="xsd:int" use="optional"/>
-    <xsd:attribute name="dur" type="ST_TLTime" use="optional"/>
+    <xsd:attribute name="presetSubtype" type="xsd:int" use="optional"
+      default="0"/>
+    <xsd:attribute name="dur" type="ST_TLTime" use="optional"
+      default="0"/>
     <xsd:attribute name="repeatCount" type="ST_TLTime" use="optional" default="1000"/>
     <xsd:attribute name="repeatDur" type="ST_TLTime" use="optional"/>
     <xsd:attribute name="spd" type="a:ST_Percentage" use="optional" default="100%"/>
     <xsd:attribute name="accel" type="a:ST_PositiveFixedPercentage" use="optional" default="0%"/>
     <xsd:attribute name="decel" type="a:ST_PositiveFixedPercentage" use="optional" default="0%"/>
     <xsd:attribute name="autoRev" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="restart" type="ST_TLTimeNodeRestartType" use="optional"/>
+    <xsd:attribute name="restart" type="ST_TLTimeNodeRestartType" use="optional"
+      default="always"/>
     <xsd:attribute name="fill" type="ST_TLTimeNodeFillType" use="optional"/>
     <xsd:attribute name="syncBehavior" type="ST_TLTimeNodeSyncType" use="optional"/>
     <xsd:attribute name="tmFilter" type="xsd:string" use="optional"/>
     <xsd:attribute name="evtFilter" type="xsd:string" use="optional"/>
-    <xsd:attribute name="display" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="display" type="xsd:boolean" use="optional"
+      default="true"/>
     <xsd:attribute name="masterRel" type="ST_TLTimeNodeMasterRelation" use="optional"/>
     <xsd:attribute name="bldLvl" type="xsd:int" use="optional"/>
     <xsd:attribute name="grpId" type="xsd:unsignedInt" use="optional"/>
-    <xsd:attribute name="afterEffect" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="afterEffect" type="xsd:boolean" use="optional"
+      default="false"/>
     <xsd:attribute name="nodeType" type="ST_TLTimeNodeType" use="optional"/>
-    <xsd:attribute name="nodePh" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="nodePh" type="xsd:boolean" use="optional"
+      default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLTimeNodeParallel">
     <xsd:sequence>
@@ -398,14 +404,18 @@
       <xsd:element name="attrNameLst" type="CT_TLBehaviorAttributeNameList" minOccurs="0"
         maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="additive" type="ST_TLBehaviorAdditiveType" use="optional"/>
-    <xsd:attribute name="accumulate" type="ST_TLBehaviorAccumulateType" use="optional"/>
-    <xsd:attribute name="xfrmType" type="ST_TLBehaviorTransformType" use="optional"/>
+    <xsd:attribute name="additive" type="ST_TLBehaviorAdditiveType" use="optional"
+        default="base"/>
+    <xsd:attribute name="accumulate" type="ST_TLBehaviorAccumulateType" use="optional"
+        default="none"/>
+    <xsd:attribute name="xfrmType" type="ST_TLBehaviorTransformType" use="optional"
+        default="pt"/>
     <xsd:attribute name="from" type="xsd:string" use="optional"/>
     <xsd:attribute name="to" type="xsd:string" use="optional"/>
     <xsd:attribute name="by" type="xsd:string" use="optional"/>
     <xsd:attribute name="rctx" type="xsd:string" use="optional"/>
-    <xsd:attribute name="override" type="ST_TLBehaviorOverrideType" use="optional"/>
+    <xsd:attribute name="override" type="ST_TLBehaviorOverrideType" use="optional"
+        default="normal"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLAnimVariantBooleanVal">
     <xsd:attribute name="val" type="xsd:boolean" use="required"/>
@@ -465,8 +475,10 @@
     <xsd:attribute name="by" type="xsd:string" use="optional"/>
     <xsd:attribute name="from" type="xsd:string" use="optional"/>
     <xsd:attribute name="to" type="xsd:string" use="optional"/>
-    <xsd:attribute name="calcmode" type="ST_TLAnimateBehaviorCalcMode" use="optional"/>
-    <xsd:attribute name="valueType" type="ST_TLAnimateBehaviorValueType" use="optional"/>
+    <xsd:attribute name="calcmode" type="ST_TLAnimateBehaviorCalcMode" use="optional"
+        default="lin"/>
+    <xsd:attribute name="valueType" type="ST_TLAnimateBehaviorValueType" use="optional"
+        default="num"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLByRgbColorTransform">
     <xsd:attribute name="r" type="a:ST_FixedPercentage" use="required"/>
@@ -503,7 +515,8 @@
       <xsd:element name="from" type="a:CT_Color" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="to" type="a:CT_Color" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="clrSpc" type="ST_TLAnimateColorSpace" use="optional"/>
+    <xsd:attribute name="clrSpc" type="ST_TLAnimateColorSpace" use="optional"
+        default="rgb"/>
     <xsd:attribute name="dir" type="ST_TLAnimateColorDirection" use="optional"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TLAnimateEffectTransition">
@@ -538,6 +551,11 @@
     <xsd:attribute name="x" type="a:ST_Percentage" use="required"/>
     <xsd:attribute name="y" type="a:ST_Percentage" use="required"/>
   </xsd:complexType>
+  <xsd:simpleType name="ST_AnimMotionPtsTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[AFTSafts]*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:complexType name="CT_TLAnimateMotionBehavior">
     <xsd:sequence>
       <xsd:element name="cBhvr" type="CT_TLCommonBehaviorData" minOccurs="1" maxOccurs="1"/>
@@ -546,11 +564,13 @@
       <xsd:element name="to" type="CT_TLPoint" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="rCtr" type="CT_TLPoint" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="origin" type="ST_TLAnimateMotionBehaviorOrigin" use="optional"/>
-    <xsd:attribute name="path" type="xsd:string" use="optional"/>
-    <xsd:attribute name="pathEditMode" type="ST_TLAnimateMotionPathEditMode" use="optional"/>
-    <xsd:attribute name="rAng" type="a:ST_Angle" use="optional"/>
-    <xsd:attribute name="ptsTypes" type="xsd:string" use="optional"/>
+    <xsd:attribute name="origin" type="ST_TLAnimateMotionBehaviorOrigin" use="optional"
+        default="parent"/>
+    <xsd:attribute name="path" type="xsd:string" use="optional" default=""/>
+    <xsd:attribute name="pathEditMode" type="ST_TLAnimateMotionPathEditMode" use="optional"
+        default="relative"/>
+    <xsd:attribute name="rAng" type="a:ST_Angle" use="optional" default="0"/>
+    <xsd:attribute name="ptsTypes" type="ST_AnimMotionPtsTypes" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLAnimateRotationBehavior">
     <xsd:sequence>
@@ -567,7 +587,8 @@
       <xsd:element name="from" type="CT_TLPoint" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="to" type="CT_TLPoint" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="zoomContents" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="zoomContents" type="xsd:boolean" use="optional"
+        default="false"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_TLCommandType">
     <xsd:restriction base="xsd:token">
@@ -580,7 +601,8 @@
     <xsd:sequence>
       <xsd:element name="cBhvr" type="CT_TLCommonBehaviorData" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute type="ST_TLCommandType" name="type" use="optional"/>
+    <xsd:attribute type="ST_TLCommandType" name="type" use="optional"
+        default="call"/>
     <xsd:attribute name="cmd" type="xsd:string" use="optional"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TLSetBehavior">
@@ -1019,7 +1041,7 @@
     <xsd:attribute name="type" type="ST_SlideSizeType" use="optional" default="custom"/>
   </xsd:complexType>
   <xsd:complexType name="CT_Kinsoku">
-    <xsd:attribute name="lang" type="xsd:string" use="optional"/>
+    <xsd:attribute name="lang" type="xsd:string" use="required"/>
     <xsd:attribute name="invalStChars" type="xsd:string" use="required"/>
     <xsd:attribute name="invalEndChars" type="xsd:string" use="required"/>
   </xsd:complexType>
@@ -1068,16 +1090,6 @@
     <xsd:attribute name="conformance" type="s:ST_ConformanceClass"/>
   </xsd:complexType>
   <xsd:element name="presentation" type="CT_Presentation"/>
-  <xsd:complexType name="CT_HtmlPublishProperties">
-    <xsd:sequence>
-      <xsd:group ref="EG_SlideListChoice" minOccurs="1" maxOccurs="1"/>
-      <xsd:element name="extLst" type="CT_ExtensionList" minOccurs="0" maxOccurs="1"/>
-    </xsd:sequence>
-    <xsd:attribute name="showSpeakerNotes" type="xsd:boolean" use="optional" default="true"/>
-    <xsd:attribute name="target" type="xsd:string" use="optional"/>
-    <xsd:attribute name="title" type="xsd:string" use="optional" default=""/>
-    <xsd:attribute ref="r:id" use="required"/>
-  </xsd:complexType>
   <xsd:simpleType name="ST_PrintWhat">
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="slides"/>
@@ -1268,7 +1280,8 @@
       <xsd:element ref="a:graphic" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="extLst" type="CT_ExtensionListModify" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="bwMode" type="a:ST_BlackWhiteMode" use="optional"/>
+    <xsd:attribute name="bwMode" type="a:ST_BlackWhiteMode" use="optional"
+        default="auto"/>
   </xsd:complexType>
   <xsd:complexType name="CT_GroupShapeNonVisual">
     <xsd:sequence>

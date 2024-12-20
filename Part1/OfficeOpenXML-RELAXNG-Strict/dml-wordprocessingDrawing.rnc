@@ -1,15 +1,11 @@
 default namespace =
   "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
 namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
-namespace o = "urn:schemas-microsoft-com:office:office"
 namespace dpct = "http://purl.oclc.org/ooxml/drawingml/picture"
 namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
-namespace v = "urn:schemas-microsoft-com:vml"
 namespace w = "http://purl.oclc.org/ooxml/wordprocessingml/main"
-namespace w10 = "urn:schemas-microsoft-com:office:word"
 namespace wp =
   "http://purl.oclc.org/ooxml/drawingml/wordprocessingDrawing"
-namespace x = "urn:schemas-microsoft-com:office:excel"
 
 wp_CT_EffectExtent =
   attribute l { a_ST_Coordinate },

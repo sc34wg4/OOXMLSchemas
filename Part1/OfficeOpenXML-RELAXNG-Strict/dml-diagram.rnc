@@ -1,12 +1,8 @@
 default namespace = "http://purl.oclc.org/ooxml/drawingml/diagram"
 namespace a = "http://purl.oclc.org/ooxml/drawingml/main"
 namespace ddgrm = "http://purl.oclc.org/ooxml/drawingml/diagram"
-namespace o = "urn:schemas-microsoft-com:office:office"
 namespace r = "http://purl.oclc.org/ooxml/officeDocument/relationships"
 namespace s = "http://purl.oclc.org/ooxml/officeDocument/sharedTypes"
-namespace v = "urn:schemas-microsoft-com:vml"
-namespace w10 = "urn:schemas-microsoft-com:office:word"
-namespace x = "urn:schemas-microsoft-com:office:excel"
 
 ddgrm_CT_CTName =
   attribute lang { xsd:string }?,
@@ -46,22 +42,6 @@ ddgrm_CT_ColorTransform =
   element styleLbl { ddgrm_CT_CTStyleLabel }*,
   element extLst { a_CT_OfficeArtExtensionList }?
 ddgrm_colorsDef = element colorsDef { ddgrm_CT_ColorTransform }
-ddgrm_CT_ColorTransformHeader =
-  attribute uniqueId { xsd:string },
-  attribute minVer { xsd:string }?,
-  
-  ## default value: 0
-  attribute resId { xsd:int }?,
-  element title { ddgrm_CT_CTName }+,
-  element desc { ddgrm_CT_CTDescription }+,
-  element catLst { ddgrm_CT_CTCategories }?,
-  element extLst { a_CT_OfficeArtExtensionList }?
-ddgrm_colorsDefHdr =
-  element colorsDefHdr { ddgrm_CT_ColorTransformHeader }
-ddgrm_CT_ColorTransformHeaderLst =
-  element colorsDefHdr { ddgrm_CT_ColorTransformHeader }*
-ddgrm_colorsDefHdrLst =
-  element colorsDefHdrLst { ddgrm_CT_ColorTransformHeaderLst }
 ddgrm_ST_PtType =
   "node" | "asst" | "doc" | "pres" | "parTrans" | "sibTrans"
 ddgrm_CT_Pt =
@@ -302,23 +282,6 @@ ddgrm_CT_DiagramDefinition =
   element layoutNode { ddgrm_CT_LayoutNode },
   element extLst { a_CT_OfficeArtExtensionList }?
 ddgrm_layoutDef = element layoutDef { ddgrm_CT_DiagramDefinition }
-ddgrm_CT_DiagramDefinitionHeader =
-  attribute uniqueId { xsd:string },
-  attribute minVer { xsd:string }?,
-  attribute defStyle { xsd:string }?,
-  
-  ## default value: 0
-  attribute resId { xsd:int }?,
-  element title { ddgrm_CT_Name }+,
-  element desc { ddgrm_CT_Description }+,
-  element catLst { ddgrm_CT_Categories }?,
-  element extLst { a_CT_OfficeArtExtensionList }?
-ddgrm_layoutDefHdr =
-  element layoutDefHdr { ddgrm_CT_DiagramDefinitionHeader }
-ddgrm_CT_DiagramDefinitionHeaderLst =
-  element layoutDefHdr { ddgrm_CT_DiagramDefinitionHeader }*
-ddgrm_layoutDefHdrLst =
-  element layoutDefHdrLst { ddgrm_CT_DiagramDefinitionHeaderLst }
 ddgrm_CT_RelIds = r_dm, r_lo, r_qs, r_cs
 ddgrm_relIds = element relIds { ddgrm_CT_RelIds }
 ddgrm_ST_ParameterVal =
@@ -372,8 +335,12 @@ ddgrm_CT_ElemPropSet =
   attribute qsCatId { xsd:string }?,
   attribute csTypeId { xsd:string }?,
   attribute csCatId { xsd:string }?,
+
+  ## default value: false
   attribute coherent3DOff { xsd:boolean }?,
   attribute phldrT { xsd:string }?,
+
+  ## default value: false
   attribute phldr { xsd:boolean }?,
   attribute custAng { xsd:int }?,
   attribute custFlipVert { xsd:boolean }?,
@@ -471,22 +438,6 @@ ddgrm_CT_StyleDefinition =
   element styleLbl { ddgrm_CT_StyleLabel }+,
   element extLst { a_CT_OfficeArtExtensionList }?
 ddgrm_styleDef = element styleDef { ddgrm_CT_StyleDefinition }
-ddgrm_CT_StyleDefinitionHeader =
-  attribute uniqueId { xsd:string },
-  attribute minVer { xsd:string }?,
-  
-  ## default value: 0
-  attribute resId { xsd:int }?,
-  element title { ddgrm_CT_SDName }+,
-  element desc { ddgrm_CT_SDDescription }+,
-  element catLst { ddgrm_CT_SDCategories }?,
-  element extLst { a_CT_OfficeArtExtensionList }?
-ddgrm_styleDefHdr =
-  element styleDefHdr { ddgrm_CT_StyleDefinitionHeader }
-ddgrm_CT_StyleDefinitionHeaderLst =
-  element styleDefHdr { ddgrm_CT_StyleDefinitionHeader }*
-ddgrm_styleDefHdrLst =
-  element styleDefHdrLst { ddgrm_CT_StyleDefinitionHeaderLst }
 ddgrm_ST_AlgorithmType =
   "composite"
   | "conn"

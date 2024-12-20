@@ -1394,8 +1394,8 @@
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CT_LinearShadeProperties">
-    <xsd:attribute name="ang" type="ST_PositiveFixedAngle" use="optional"/>
-    <xsd:attribute name="scaled" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="ang" type="ST_PositiveFixedAngle" use="optional" default="0"/>
+    <xsd:attribute name="scaled" type="xsd:boolean" use="optional" default="1"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_PathShadeType">
     <xsd:restriction base="xsd:token">
@@ -1408,7 +1408,7 @@
     <xsd:sequence>
       <xsd:element name="fillToRect" type="CT_RelativeRect" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="path" type="ST_PathShadeType" use="optional"/>
+    <xsd:attribute name="path" type="ST_PathShadeType" use="optional" default="shape"/>
   </xsd:complexType>
   <xsd:group name="EG_ShadeProperties">
     <xsd:choice>
@@ -2119,8 +2119,8 @@
   </xsd:simpleType>
   <xsd:complexType name="CT_LineEndProperties">
     <xsd:attribute name="type" type="ST_LineEndType" use="optional" default="none"/>
-    <xsd:attribute name="w" type="ST_LineEndWidth" use="optional"/>
-    <xsd:attribute name="len" type="ST_LineEndLength" use="optional"/>
+    <xsd:attribute name="w" type="ST_LineEndWidth" use="optional" default="med"/>
+    <xsd:attribute name="len" type="ST_LineEndLength" use="optional" default="med"/>
   </xsd:complexType>
   <xsd:group name="EG_LineFillProperties">
     <xsd:choice>
@@ -2215,7 +2215,7 @@
     <xsd:attribute name="w" type="ST_LineWidth" use="optional"/>
     <xsd:attribute name="cap" type="ST_LineCap" use="optional"/>
     <xsd:attribute name="cmpd" type="ST_CompoundLine" use="optional"/>
-    <xsd:attribute name="algn" type="ST_PenAlignment" use="optional"/>
+    <xsd:attribute name="algn" type="ST_PenAlignment" use="optional" default="ctr"/>
   </xsd:complexType>
   <xsd:simpleType name="ST_ShapeID">
     <xsd:restriction base="xsd:token"/>
@@ -2343,7 +2343,6 @@
   </xsd:complexType>
   <xsd:element name="theme" type="CT_OfficeStyleSheet"/>
   <xsd:element name="themeOverride" type="CT_BaseStylesOverride"/>
-  <xsd:element name="themeManager" type="CT_EmptyElement"/>
   <xsd:complexType name="CT_TableCellProperties">
     <xsd:sequence>
       <xsd:element name="lnL" type="CT_LineProperties" minOccurs="0" maxOccurs="1"/>
@@ -2630,25 +2629,25 @@
       <xsd:group ref="EG_Text3D" minOccurs="0" maxOccurs="1"/>
       <xsd:element name="extLst" type="CT_OfficeArtExtensionList" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
-    <xsd:attribute name="rot" type="ST_Angle" use="optional"/>
-    <xsd:attribute name="spcFirstLastPara" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="vertOverflow" type="ST_TextVertOverflowType" use="optional"/>
-    <xsd:attribute name="horzOverflow" type="ST_TextHorzOverflowType" use="optional"/>
-    <xsd:attribute name="vert" type="ST_TextVerticalType" use="optional"/>
-    <xsd:attribute name="wrap" type="ST_TextWrappingType" use="optional"/>
-    <xsd:attribute name="lIns" type="ST_Coordinate32" use="optional"/>
-    <xsd:attribute name="tIns" type="ST_Coordinate32" use="optional"/>
-    <xsd:attribute name="rIns" type="ST_Coordinate32" use="optional"/>
-    <xsd:attribute name="bIns" type="ST_Coordinate32" use="optional"/>
-    <xsd:attribute name="numCol" type="ST_TextColumnCount" use="optional"/>
-    <xsd:attribute name="spcCol" type="ST_PositiveCoordinate32" use="optional"/>
-    <xsd:attribute name="rtlCol" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="fromWordArt" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="anchor" type="ST_TextAnchoringType" use="optional"/>
-    <xsd:attribute name="anchorCtr" type="xsd:boolean" use="optional"/>
-    <xsd:attribute name="forceAA" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="rot" type="ST_Angle" use="optional" default="0"/>
+    <xsd:attribute name="spcFirstLastPara" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="vertOverflow" type="ST_TextVertOverflowType" use="optional" default="overflow"/>
+    <xsd:attribute name="horzOverflow" type="ST_TextHorzOverflowType" use="optional" default="overflow"/>
+    <xsd:attribute name="vert" type="ST_TextVerticalType" use="optional" default="horz"/>
+    <xsd:attribute name="wrap" type="ST_TextWrappingType" use="optional" default="square"/>
+    <xsd:attribute name="lIns" type="ST_Coordinate32" use="optional" default="91440"/>
+    <xsd:attribute name="tIns" type="ST_Coordinate32" use="optional" default="45720"/>
+    <xsd:attribute name="rIns" type="ST_Coordinate32" use="optional" default="91440"/>
+    <xsd:attribute name="bIns" type="ST_Coordinate32" use="optional" default="45720"/>
+    <xsd:attribute name="numCol" type="ST_TextColumnCount" use="optional" default="1"/>
+    <xsd:attribute name="spcCol" type="ST_PositiveCoordinate32" use="optional" default="0"/>
+    <xsd:attribute name="rtlCol" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="fromWordArt" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="anchor" type="ST_TextAnchoringType" use="optional" default="t"/>
+    <xsd:attribute name="anchorCtr" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="forceAA" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="upright" type="xsd:boolean" use="optional" default="false"/>
-    <xsd:attribute name="compatLnSpc" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="compatLnSpc" type="xsd:boolean" use="optional" default="false"/>
   </xsd:complexType>
   <xsd:complexType name="CT_TextBody">
     <xsd:sequence>
@@ -2900,7 +2899,7 @@
     <xsd:attribute name="spc" type="ST_TextPoint" use="optional"/>
     <xsd:attribute name="normalizeH" type="xsd:boolean" use="optional"/>
     <xsd:attribute name="baseline" type="ST_Percentage" use="optional"/>
-    <xsd:attribute name="noProof" type="xsd:boolean" use="optional"/>
+    <xsd:attribute name="noProof" type="xsd:boolean" use="optional" default="0"/>
     <xsd:attribute name="dirty" type="xsd:boolean" use="optional" default="true"/>
     <xsd:attribute name="err" type="xsd:boolean" use="optional" default="false"/>
     <xsd:attribute name="smtClean" type="xsd:boolean" use="optional" default="true"/>
