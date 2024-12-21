@@ -841,7 +841,7 @@
   </xsd:complexType>
   <xsd:complexType name="CT_GraphicalObjectData">
     <xsd:sequence>
-      <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="strict"/>
+      <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
     </xsd:sequence>
     <xsd:attribute name="uri" type="xsd:token" use="required"/>
   </xsd:complexType>

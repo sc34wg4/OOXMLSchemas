@@ -677,12 +677,7 @@ a_CT_NonVisualContentPartProperties =
   element extLst { a_CT_OfficeArtExtensionList }?
 a_CT_GraphicalObjectData =
   attribute uri { xsd:token },
-  a_CT_GraphicalObjectData_any*
-a_CT_GraphicalObjectData_any =
-  element * - (o:* | v:* | w10:* | x:*) {
-    anyAttribute*,
-    mixed { anyElement* }
-  }
+  anyElement*
 a_CT_GraphicalObject = element graphicData { a_CT_GraphicalObjectData }
 a_graphic = element graphic { a_CT_GraphicalObject }
 a_ST_ChartBuildStep =
