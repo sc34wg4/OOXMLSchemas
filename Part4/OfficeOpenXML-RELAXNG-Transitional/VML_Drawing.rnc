@@ -17,6 +17,7 @@ include "vml-main.rnc"
 include "vml-spreadsheetDrawing.rnc"
 include "vml-wordprocessingDrawing.rnc"
 include "shared-math.rnc"
+include "dml-compatibility.rnc"
 start = element xml {(vml-main | vml-officeDrawing | vml-spreadsheetDrawing | vml-presentationDrawing)* }
 
 vml-main =

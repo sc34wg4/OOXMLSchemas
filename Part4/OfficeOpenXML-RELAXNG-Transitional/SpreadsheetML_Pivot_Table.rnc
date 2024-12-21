@@ -9,4 +9,5 @@ include "dml-lockedCanvas.rnc"
 include "dml-chart.rnc"
 include "dml-chartDrawing.rnc"
 include "dml-picture.rnc"
+include "dml-compatibility.rnc"
 start = sml_pivotTableDefinition

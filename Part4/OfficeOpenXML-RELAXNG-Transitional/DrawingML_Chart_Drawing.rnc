@@ -7,4 +7,5 @@ include "dml-lockedCanvas.rnc"
 include "any.rnc"
 include "dml-picture.rnc"
 include "dml-chartDrawing.rnc"
+include "dml-compatibility.rnc"
 start = dchrt_userShapes
