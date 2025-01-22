@@ -10,4 +10,5 @@ include "dml-chart.rnc"
 include "dml-chartDrawing.rnc"
 include "dml-picture.rnc"
 include "dml-compatibility.rnc"
+include "xml.rnc"
 start = sml_comments
